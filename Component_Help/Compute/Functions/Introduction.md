@@ -1,4 +1,4 @@
-#  Introduction<a name="Introduction"></a>
+# Introduction<a name="Introduction"></a>
 
 Catalyst Functions are custom-built coding structures which contain the intense business logic of your application. Functions allow you to store the functionality of the application in a centralized and secure place, rather than storing it within the application's main code. The application uses APIs to invoke functions from the Catalyst servers when needed.
 
