@@ -3,7 +3,11 @@ before_script:
 deployToStaging:
   stage: deploy
   script:
+<<<<<<< HEAD
     - echo "Hello"
+=======
+    - echo "Test id generated" >> catalyst-docs.txt
+>>>>>>> 2aff79b5285749276da8def2297dfb67453d954f
 deploy_to_local:
   stage: deploy
   script:
