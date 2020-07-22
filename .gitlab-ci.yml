@@ -19,13 +19,13 @@ build1:
     - echo "Do your build here"
 
 test1:
-  stage: test
+  stage: first
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"
 
 test2:
-  stage: test
+  stage: second
   script:
     - echo "Do another parallel test here"
     - echo "For example run a lint test"
