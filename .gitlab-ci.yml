@@ -14,7 +14,7 @@ after_script:
   - echo "For example you might do some cleanup here"
 
 build1:
-  stage: pre
+  stage: .pre
   script:
     - echo "Do your build here"
 
