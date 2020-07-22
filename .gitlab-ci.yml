@@ -14,18 +14,18 @@ after_script:
   - echo "For example you might do some cleanup here"
 
 build1:
-  stage: build
+  stage: pre
   script:
     - echo "Do your build here"
 
 test1:
-  stage: first
+  stage: build
   script:
     - echo "Do a test here"
     - echo "For example run a test suite"
 
 test2:
-  stage: second
+  stage: test
   script:
     - echo "Do another parallel test here"
     - echo "For example run a lint test"
