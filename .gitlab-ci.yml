@@ -1,15 +1,16 @@
-before_script:
-  - yarn
-deployToStaging:
-  stage: deploy
-  script:
-<<<<<<< HEAD
-    - echo "Hello"
-=======
-    - echo "Test id generated" >> catalyst-docs.txt
->>>>>>> 2aff79b5285749276da8def2297dfb67453d954f
-deploy_to_local:
-  stage: deploy
-  script:
-    - yarn
-    - echo "Bye"
+image: "alpine:3.12"
+
+stages:
+  - first
+  - test
+  
+ first:
+   stage: first
+   script:
+    - echo "First Task Started" >> firsttask.txt
+
+test:
+   stage: test
+   script:
+    - echo "Test Task Started" >> testtask.txt
+
