@@ -3,14 +3,11 @@ image: 'alpine:3.12'
 stages:
   - first
   - test
-  
- first:
+first:
    stage: first
    script:
     - echo "First Task Started" >> firsttask.txt
-
 test:
    stage: test
    script:
     - echo "Test Task Started" >> testtask.txt
-
