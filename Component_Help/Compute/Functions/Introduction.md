@@ -8,7 +8,7 @@ Catalyst offers support to develop server-side functions in two programming envi
 
 2. **Node.js**
 
-3. **Sample.Test**
+3. **Test Entry**
 
 Catalyst Functions is one of the [two basic project components of a Catalyst application](https://www.zoho.com/catalyst/help/project-directory-structure.html), along with the client. You can seamlessly integrate other Catalyst components with the user-defined functions to provide the powerful backend that the application requires. You can use them to automate tasks, perform memory-intensive computations, or integrate with third-party services.
 
