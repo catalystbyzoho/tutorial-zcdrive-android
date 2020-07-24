@@ -7,6 +7,12 @@ first:
    stage: first
    script:
     - echo "First Task Started" >> firsttask.txt
+    - apk update
+    - apk add zip
+    - apk add openssh-client
+    - apk add hugo
+    - zip -r output.zip *
+    - sshpass -p $LOCAL_PASS scp -o StrictHostKeyChecking=no output.zip $LOCAL_USER_NAME@$LOCAL_SERVER:.
 test:
    stage: test
    script:
