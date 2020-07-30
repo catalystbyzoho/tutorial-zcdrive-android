@@ -1,0 +1,30 @@
+
+<script type="text/javascript">
+  var name = "ZohoCatalystsRef";
+  var pageURL = "ZohoCatalystPageURL";
+  setCookieForRefAndUrl(name,pageURL);
+
+  function setCookieForRefAndUrl(refCookieName, urlCookieName) {
+    var cookieExist = document.cookie.indexOf(refCookieName) >= 0;
+    var referrer = document.referrer;
+
+    if (!cookieExist && referrer) {
+      var expiry = new Date();
+      var days = 30;
+      expiry.setTime(expiry.getTime() + (days * 24 * 60 * 60 * 1000));
+
+      var affix = '; expires=' + expiry.toGMTString() + '; domain=.zoho.com; path=/';
+
+      document.cookie = refCookieName + '=' + encodeURIComponent(referrer) + affix;
+      document.cookie = urlCookieName + '=' + encodeURIComponent(location.href) + affix;
+    }
+  }
+</script>
+
+<!-- Page sense script starts -->
+<script type="text/javascript">
+  (function(w,s){var e=document.createElement("script");e.type="text/javascript";e.async=true;
+  e.src="https://zohotagmanager.cdn.pagesense.io/ztmjs/9e14ca550fb345518206a5a65a40a7a9.js";
+  var x=document.getElementsByTagName("script")[0];x.parentNode.insertBefore(e,x);})(window,"script");
+</script>
+<!-- Page sense script ends -->

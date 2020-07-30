@@ -1,0 +1,19 @@
+<div id="searchbox-in-navbar">
+  {{ if .Params.searchresult }}
+    <div class="search-box" id="searchbox">
+      <div class="src-input" id="zws_boxContainer7"></div>
+    </div>
+  {{ else }}
+    {{ $type := $.Scratch.Get "type" }}
+    {{ $.Scratch.Set "editionPrefix" "" }}
+    {{ with .Params.edition }}
+      {{ $.Scratch.Add "editionPrefix" "/" }}
+      {{ $.Scratch.Add "editionPrefix" . }}
+    {{ end }}
+    <div class="search-box" id="searchbox">
+      <form action="{{ $.Scratch.Get "editionPrefix" }}/catalyst/{{ $type }}/search/results.html" class="srchbox clearfix">
+        <input class="src-input" name="query" placeholder="Search Document" type="text">
+      </form>
+    </div>
+  {{ end }}
+</div>

@@ -1,0 +1,357 @@
+.location {
+  margin-top: 75px;
+}
+.location .f-grp{
+  padding: 30px 0;
+  margin: 0 0 0 41px;
+}
+a:hover{
+    color:#333;
+}
+.link:hover{
+    color:#2a6496;
+}
+p{
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+    margin: 25px 0;
+}
+.c-mob, .you-can, .c-so, .c-fb, .c-twt, .c-lin, .loca, .c-meg {
+  background: url(../images/contact-us.png) no-repeat;
+  float: left;
+  margin-top: -15px;
+  margin-right: 15px;
+}
+.loca {
+  background-position: -126px 6px;
+  height: 40px;
+  width: 25px;
+}
+.c-fb {
+  background-position: -170px -3px;
+  height: 32px;
+  width: 33px;
+  margin-top: 10px;
+}
+.c-twt {
+  background-position: -216px -4px;
+  height: 32px;
+  width: 33px;
+  margin-top: 10px;
+}
+.c-lin {
+  background-position: -257px -6px;
+  height: 32px;
+  width: 33px;
+  margin-top: 10px;
+}
+.you-can {
+  height: 40px;
+  width: 25px;
+  background-position: -37px 11px;
+}
+.c-so {
+  height: 40px;
+  width: 25px;
+  background-position: -80px 3px;
+}
+.c-mob {
+  height: 40px;
+  width: 25px;
+  background-position: 2px 3px;
+  margin: 0;
+  margin-left: -30px;
+  margin-top: 45px;
+}
+.c-meg {
+  background-position: -302px -5px;
+  height: 29px;
+  margin-top: 4px;
+  width: 33px;
+}
+.clr-bdr {
+  height: 9px;
+  background: url(../images/contact-us.png) no-repeat;
+  position: absolute;
+  width: 550px;
+  background-position: 0 -392px;
+  top: 0;
+  left: 0;
+  margin-top: -2px;
+}
+.contact .f-grp li{
+  padding: 5px;
+}
+.contact .f-grp p{
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 0;
+}
+.contact ul {
+  padding-top: 0;
+  padding-left:  30px;
+}
+
+.error {
+  display: none;
+}
+
+.contact .f-grp .hd
+{
+	font-size: 18px;
+    font-weight:400;
+    margin: 10px 0;
+	color:#333;
+}
+.tim
+{
+	clear:both;
+	font-size:100px;
+	line-height:80px;
+	color:#333;
+	font-weight:400;
+}
+
+section>.container {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.content h5 {
+  font-size: 15px;
+}
+
+.f-grp {
+  padding: 70px 0 60px 0;
+}
+.f-grp h4 {
+  font-weight: normal;
+}
+.f-grp p {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.f-grp .image {
+  max-height: 450px;
+  min-height: 300px;
+}
+.f-grp .content .image {
+  max-height: 100px;
+  min-height: 60px;
+  text-align: center;
+}
+.f-grp .content img {
+  border: none;
+}
+.f-hori-grp {
+  margin: 0 auto;
+  width: 980px;
+}
+.f-hori-grp li {
+  width: 33%;
+}
+.f-hori-grp li .content{
+  border-right: dashed 1px #DDD;
+}
+.f-hori-grp li:last-child .content{
+  border-right-color: transparent;
+}
+.f-verti-grp {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+.f-verti-grp li{
+  border-bottom: 1px dashed #ddd;
+}
+.f-verti-grp li:last-child{
+  border-bottom-color: transparent;
+}
+
+.contactus-form-stickydiv {
+	display: none;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.content-box {
+	margin-top: 60px;
+}
+
+.content-box >div {
+	width: 55%;
+	float: left;
+	padding-bottom: 30px;
+}
+.content-box .contact {
+	width: 45%;
+}
+.content-box ul {
+	width: 60%;
+}
+
+.container {
+	max-width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+/* Company Address */
+
+.address p {
+	line-height: 28px;
+	margin-bottom: 35px;
+}
+
+.address {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 0 70px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	clear: both;
+}
+.address h4 {
+	color: #333;
+	display: inline-block;
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 30px;
+	padding: 0 30px 50px;
+	text-transform: uppercase;
+}
+.address ul {
+	overflow: hidden;
+}
+.address li {
+	float: left;
+	width: 25%;
+	text-align: left;
+}
+.address li:last-child {
+	width: 21%;
+}
+.address li:nth-child(3) {
+    width: 29%;
+}
+.address h2 {
+	color: #48bbb4;
+	letter-spacing: -1px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+.address h3 {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/* Media Code Starts */
+
+@media screen and (max-width: 1300px){
+.address {
+	margin: 0 5% 40px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.container {
+	max-width: 970px;
+}
+.address {
+	margin: 0 auto;
+	max-width: 650px;
+	padding: 40px 0 50px;
+	text-align: center;
+}
+.address h4 {
+	top: -56px;
+}
+.address ul {
+	margin: 0 auto;
+	max-width: 750px;
+	overflow: hidden;
+}
+.address li,.address li:nth-child(3),.address li:last-child {
+	background: none repeat scroll 0 0 #FFFFFF;
+	float: left;
+	margin: 0 1% 15px;
+	min-height: 350px;
+	padding: 40px 4% 10px 6%;
+	text-align: left;
+	width: 29%;
+}
+}
+
+@media screen and (max-width: 1100px) {
+	.contact-form {
+		width: 340px;
+	}
+	.clr-bdr {
+		width: 420px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.contact-form {
+		width: 300px;
+	}
+	.clr-bdr {
+		width: 380px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: 750px;
+	}
+	.content-box >div {
+		padding-top: 30px;
+		width: 90%;
+	}
+	.content-box .contact {
+		width: 90%;
+		padding:0 0 30px;
+		border-bottom: 1px solid #ddd;
+	}
+	.contact-form {
+		width: 470px;
+	}
+	.clr-bdr {
+		width: 550px;
+	}
+	.content-box ul {
+	width: 90%;
+}
+}
+@media screen and (max-width: 580px) {
+body {
+	min-width: 200px;
+}
+.address {
+	max-width: 100%;
+	padding: 30px 1% 20px;
+}
+.address li, .address li:nth-child(3),.address li:last-child {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: medium none;
+	float: left;
+	margin: 0 auto;
+	min-height: 30px;
+	padding: 10px 5%;
+	text-align: center;
+	width: 90%;
+}
+	.contact-form {
+		width: 280px;
+		padding: 20px 15px;
+	}
+	.clr-bdr {
+		width: 310px;
+	}
+}

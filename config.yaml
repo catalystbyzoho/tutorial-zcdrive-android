@@ -1,0 +1,17 @@
+baseURL: "https://www.zoho.com"
+title: "Zoho Catalyst Web site"
+MetaDataFormat: "yaml"
+contentdir: "content"
+publishdir: "public"
+uglyURLs: true
+disableKinds: ["RSS","sitemap", "taxonomyTerm", "section"]
+watch: false
+
+menu:
+    help:
+        - { name: "Getting Started", weight: -100, identifier: "getting-started", URL: "/catalyst/" }
+
+    main:
+        - { name: "Catalyst Functions", weight: -100, identifier: "cat-func", URL: "/catalyst/" }
+        - { name: "Catalyst Languages", weight: -100, identifier: "cat-lang", URL: "/test/" }
+

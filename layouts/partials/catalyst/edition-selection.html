@@ -1,0 +1,108 @@
+<div class="edition-selection-block">
+  <div onfocusout="hideSelectList()">
+      <div class="edition-select-box" onclick="selectListAction()">
+          <a href="javascript:void(0)">
+              {{ if eq .Params.edition "us"}}
+                  <div class="edition-image-us"></div>
+              {{else if eq .Params.edition "uk"}}
+                  <div class="edition-image-uk"></div>
+              {{else if eq .Params.edition "ca"}}
+                  <div class="edition-image-canada"></div>
+              {{else if eq .Params.edition "au"}}
+                  <div class="edition-image-australia"></div>
+              {{else if eq .Params.edition "in"}}
+                  <div class="edition-image-india"></div>
+              {{else if eq .Params.edition "ae"}}
+                  <div class="edition-image-uae"></div>
+              {{else if eq .Params.edition "sa"}}
+                  <div class="edition-image-sa"></div>
+              {{else if eq .Params.edition "bh"}}
+                  <div class="edition-image-bh"></div>
+              {{else if eq .Params.edition "kw"}}
+                  <div class="edition-image-kw"></div>
+              {{else if eq .Params.edition "om"}}
+                  <div class="edition-image-om"></div>
+              {{else if eq .Params.edition "qa"}}
+                  <div class="edition-image-qa"></div>
+              {{else}}
+                  <div class="edition-image-global"></div>
+              {{end}}
+              <div class="edition-dropdown"><b class="select-caret"></b></div>
+          </a>
+      </div>
+      <div class="edition-select-list">
+          <div class="edition-select-list-item" onclick="switchEdition('global')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-global"></div>
+                  <div class="edition-label">Global</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('us')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-us"></div>
+                  <div class="edition-label">United States</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('uk')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-uk"></div>
+                  <div class="edition-label">United Kingdom</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('ca')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-canada"></div>
+                  <div class="edition-label">Canada</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('au')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-australia"></div>
+                  <div class="edition-label">Australia</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('in')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-india"></div>
+                  <div class="edition-label">India</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('ae')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-uae"></div>
+                  <div class="edition-label">United Arab Emirates</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('sa')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-sa"></div>
+                  <div class="edition-label">Saudi Arabia</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('bh')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-bh"></div>
+                  <div class="edition-label">Bahrain</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('kw')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-kw"></div>
+                  <div class="edition-label">Kuwait</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('om')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-om"></div>
+                  <div class="edition-label">Oman</div>
+              </a>
+          </div>
+          <div class="edition-select-list-item" onclick="switchEdition('qa')">
+              <a href="javascript:void(0)">
+                  <div class="edition-image-qa"></div>
+                  <div class="edition-label">Qatar</div>
+              </a>
+          </div>
+      </div>
+  </div>
+</div>

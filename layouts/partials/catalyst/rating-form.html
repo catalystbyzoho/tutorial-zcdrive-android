@@ -1,0 +1,30 @@
+<div class="rating-form no-print">
+  <div class="request-sec">
+    <div class="yes-no">
+      <div class="rating-qtn"><i>Was this document helpful?</i></div>
+      <div class="yes-no-container">
+        <div class="yes-no-btn yes-btn cursor-pointer" onclick="submitRating('Yes');">
+          <img class="thumbs" src="/catalyst/help/images/common/thumbs-up.svg" />
+          Yes
+        </div>
+        <div class="yes-no-btn no-btn cursor-pointer" onclick="submitRating('No');">
+          <img class="thumbs down no-icon" src="/catalyst/help/images/common/thumbs-up.svg" />
+          No
+        </div>
+      </div>
+    </div>
+    <div class="feedback-sec">
+      <span>Let us know where we can improve</span>
+      <div class="form-group" style="margin-bottom: 0;">
+        <textarea id="comments" placeholder="Comments" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <input class="form-control email-field" type="text" placeholder="Your email" id="feedback_email">
+      </div>
+      <div class="privacy-policy">By clicking <b>Submit</b>, you agree to our <a href="https://www.zoho.com/privacy.html" target="_blank" rel="noopener noreferrer"><u>Privacy Policy</u></a>.</div>
+      <button class="btn btn-xs btn-primary" onclick="submitFeedback();">Submit</button>
+      <button class="btn btn-xs" onclick="hideFeedbackSec();">Cancel</button>
+    </div>
+  </div>
+  <div class="reponse-sec"><img src="/catalyst/help/images/common/smiley.svg" width="20px" height="20px" style="margin: 0 5px 0 0;box-shadow: none;" />Thank you for your feedback!</div>
+</div>

@@ -1,0 +1,224 @@
+{{ "<!-- htmlhint tagname-lowercase: true,attr-lowercase:false,attr-value-double-quotes:false,doctype-first:false,tag-pair: true,id-unique: true,src-not-empty: true,attr-no-duplication: true,title-require: true -->" | safeHTML }}
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>{{ .Title  }}</title>
+  <meta name="description" content="{{ .Description }}"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ if .Params.pageNotIndexedBySearchEngines }}
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+  {{ end }}
+  <link rel="SHORTCUT ICON" href="/catalyst/help/catalyst-line-style.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="/catalyst/styles/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="/catalyst/styles/contact-support.css" rel="stylesheet" type="text/css">
+  <link href="/catalyst/styles/resources.css" rel="stylesheet" type="text/css" inline />
+  <link href="/catalyst/styles/customsearch.css" rel="stylesheet" type="text/css" inline />
+  <link href="/catalyst/help/styles/help.css" rel="stylesheet" type="text/css" inline />
+  {{ if not .Params.hideHrefLang }}
+    <!-- Global -->
+    {{- $.Scratch.Set "path" (.RelPermalink | replaceRE ".*(/catalyst/.*)" "$1") -}}
+    {{ partialCached "catalyst/hreflang.html" . ($.Scratch.Get "path") }}
+  {{ end }}
+
+  <!-- Canonical -->
+  {{ partial "catalyst/canonical.html" . }}
+
+  {{if .Params.searchresult }}
+    <link href="/catalyst/styles/help/single.css" rel="stylesheet" type="text/css" inline />
+  {{end}}
+  <style>
+    @font-face {
+      font-family: 'proxima_nova_rgregular';
+      src: url('/lp/fonts/proxima-nova/proxima_nova-regular-webfont.eot');
+      src: url('/lp/fonts/proxima-nova/proxima_nova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+           url('/lp/fonts/proxima-nova/proxima_nova-regular-webfont.woff2') format('woff2'),
+           url('/lp/fonts/proxima-nova/proxima_nova-regular-webfont.woff') format('woff'),
+           url('/lp/fonts/proxima-nova/proxima_nova-regular-webfont.ttf') format('truetype'),
+           url('/lp/fonts/proxima-nova/proxima_nova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'proxima_novaextrabold';
+      src: url('/lp/fonts/proxima-nova/proxima_nova-extrabold-webfont.eot');
+      src: url('/lp/fonts/proxima-nova/proxima_nova-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+           url('/lp/fonts/proxima-nova/proxima_nova-extrabold-webfont.woff2') format('woff2'),
+           url('/lp/fonts/proxima-nova/proxima_nova-extrabold-webfont.woff') format('woff'),
+           url('/lp/fonts/proxima-nova/proxima_nova-extrabold-webfont.ttf') format('truetype'),
+           url('/lp/fonts/proxima-nova/proxima_nova-extrabold-webfont.svg#proxima_novaextrabold') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar-header no-print">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#help-main-menu" id="main-menu">
+      <div class="mobile-home-icon"></div>
+    </button>
+    <div class="brand-container">
+      <button type="button" class="navbar-toggle collapsed sidebar-toggler" id="toggler">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/catalyst/">
+        <img alt="Zoho Catalyst" src="/catalyst/help/images/help/zb-black.svg" class="zb-logo"/>
+        <p>Help Docs</p>
+      </a>
+    </div>
+    <div class="sm-screen-nav-container">
+      <div class="navbar-collapse collapse no-print" id="help-main-menu">
+        {{ template "partials/catalyst/help/nav-header.html" . }}
+      </div>
+    </div>
+  </div>
+  <div class="searchband no-print">
+    {{ .Scratch.Set "type" "help" }}
+    {{ partialCached "catalyst/customsearch.html" . (string .Params.edition) (string .Params.searchresult) (.Scratch.Get "type")}}
+    <div class="navbar-collapse collapse no-print">
+      {{ template "partials/catalyst/help/nav-header.html" . }}
+    </div>
+  </div>
+     <div class="help-container" id="help-container">
+       <!-- removing print until we find a proper position for it -->
+       <!-- <form class="print-form"> <input type="button" class="print-icon" name="print" value="" title="Print this page" alt="Print this page" onclick="javascript:window.print()"> </form> -->
+       <div class="menu-sidebar no-print" id="sidebar" ss-container>
+         <div class="sidebar-close">
+           <span class="icon-close">x</span>
+           CLOSE
+         </div>
+         {{ template "partials/catalyst/help/sidebar.html" . }}
+       </div>
+
+      <div class="help-content {{ if .Params.searchresult }} result-content {{ end }}" id="content">
+
+        <h1 class="product-logo to-print"><img src="/catalyst/images/catalyst.png"/></h1>
+        <!-- Below container used to insert searchbox for small screens -->
+        <div id="searchbox-in-help-container"></div>
+
+        {{ .Content }}
+
+        <div class="rating-section clearfix">
+          {{ if not .Params.isoverview }}
+              {{ template "partials/catalyst/rating-form.html" . }}
+          {{ end }}
+          <div class="want-feature">
+            <div class="rating-qtn"><i>Want a feature?</i></div> <a class="suggest-btn" href="http://zohocatalyst.com/forums/zoho-catalyst-forums" target="_blank" rel="noopener noreferrer">Suggest</a>
+          </div>
+        </div>
+
+
+        <iframe name="form-success" style="display: none;"></iframe>
+        <form id="ratingForm" target="form-success" name="Rating_form" action="https://creator.zoho.com/addRecordValidateNew.do" method="post" style="display:none;">
+          <input name="scriptembed" value="true" type="hidden" />
+          <input name="formid" value="395563000007105021" type="hidden" />
+          <input name="sharedBy" value="zohoinvoice" type="hidden" />
+          <input name="plan" value="" type="hidden"/>
+          <input name="Edition" value="{{ .Params.edition}}" type="hidden">
+          <input name="was_this_helpful"/>
+          <textarea name="feedback"></textarea>
+          <input name="email"/>
+          <input name="url"/>
+          <input name="documentation_type" value="Help"/>
+          <button type="submit">Submit</button>
+        </form>
+
+      </div>
+      <div id="scroll-top-navigator" class="scroll-top text-center scroll-hidden no-print">
+        <div class="bg-img"></div>
+      </div>
+      {{template "partials/catalyst/help-footer.html" . }}
+      {{ .Scratch.Set "utm_source" "helpdoc"}}
+    </div>
+
+    {{ template "partials/catalyst/edition-banner.html" . }}
+    {{ template "partials/catalyst/custom-scrollbar.html" . }}
+
+    {{ if .Params.searchresult }}
+      {{ partialCached "catalyst/search-js.html" . (string .Params.edition) }}
+    {{ else }}
+      <script type="text/javascript" src="/catalyst/js/jquery-2.1.0.min.js"></script>
+    {{ end }}
+    <script type="text/javascript" src="/catalyst/js/utils/throttle-events.js" inline></script>
+    <script type="text/javascript" src="/catalyst/js/handle-searchbox.js" inline></script>
+    <script type="text/javascript" src="/catalyst/js/handle-user-info.js" inline></script>
+    <script type="text/javascript" src="/catalyst/js/global-search.js"></script>
+    {{ partialCached "catalyst/add-js-dynamic.html" . (string .Params.hideEditionSwitch) }}
+
+    {{ template "partials/catalyst/web-analytics.html" . }}
+    <script src="/catalyst/js/rating-form.js" type="text/javascript" inline></script>
+  <script type="text/javascript">
+        var $helpContainer = $('#help-container');
+        var $sideBar       = $('#sidebar');
+        var $searchband    = $('.searchband');
+        var $navbarHeader  = $('.navbar-header');
+        var $footer;
+        var $footerBoundingRect;
+        var initialFooterTopPos;
+        var lastScrollTop = 0;
+        var isStickySidebar = true;
+
+        $('.nested-menu').click(function (event) {
+          var $target = $(event.target);
+
+          if ($target.closest('.sub-menu-trigger').length) {
+            var $descendantArrow = $('.sub-menu-arrow', this);
+            var $descendantSubMenu = $('ul', this);
+
+            if($descendantSubMenu.is(":visible")) {
+              $descendantSubMenu.slideUp(200);
+              $descendantArrow.addClass("right");
+              $descendantArrow.removeClass("down");
+            } else {
+              $descendantSubMenu.slideDown(200);
+              $descendantArrow.addClass("down");
+              $descendantArrow.removeClass("right");
+            }
+          }
+        });
+        $(document).ready(function() {
+          $('#content').addClass('show');
+          $footer = $('#help-footer');
+          initialFooterTopPos = $footer.offset().top;
+          if (document.domain === 'www.zoho.com') {
+            $('.dev-local').addClass('hide');
+          }
+        });
+  </script>
+  <script type="text/javascript" src="/catalyst/js/header-scroll-style.js" inline></script>
+
+  <script type="text/javascript">
+    function toggleGIF (gif_url, ele) {
+      var $ele = $(ele);
+      if($ele.attr('src').match(/\gif$/) === null) {
+        $ele.attr('src', "/catalyst/help/images/" + gif_url);
+        return;
+      }
+      $ele.attr('src', "/catalyst/dashboard.png");
+    }
+    </script>
+    <script type="text/javascript">
+    /* overriding onload function of catalyst-signup-popup.js inorder to support toprated block*/
+      window.onload = function() {
+        showTopRatedBlock();
+      }
+      function showTopRatedBlock() {
+        var userName = window.zohouser || {};
+        var isUserLoggedIn = userName.DISPLAY_NAME ? true : false;
+        var topRatedElement = document.getElementsByClassName('page-highlight');
+        if (!isUserLoggedIn && topRatedElement.length > 0) {
+          topRatedElement[0].style.display = 'block';
+        }
+      }
+    </script>
+</body>
+
+</html>
