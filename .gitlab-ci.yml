@@ -23,6 +23,7 @@ publishtolocal:
     - cd catalyst-docs/
     - hugo
     - cd public/
+    - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf catalyst/'
     - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" catalyst/ "$LOCAL_SERVER":catalyst/
    only: 
     - master
