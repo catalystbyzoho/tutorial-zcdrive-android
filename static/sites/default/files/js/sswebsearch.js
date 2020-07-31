@@ -33,4 +33,4 @@
     window.wsearch = wsearch
 }(window), document.addEventListener("DOMContentLoaded", function() {
     window.wsearch.init()
-});
+});//No I18N
