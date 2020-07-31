@@ -1,4 +1,4 @@
-"use strict";
+"use strict";//No I18N
 
 function throttleEvents(t, e) {
   var n = void 0,

@@ -1,4 +1,4 @@
-"use strict";
+"use strict";//No I18N
 var $helpContainer = $("#help-container"),
   $searchband = $(".searchband"),
   $navbarHeader = $(".navbar-header"),
@@ -7,7 +7,7 @@ var $helpContainer = $("#help-container"),
 function toggleSideNav(e) {
   var i = $(e.target);
   i.closest("#toggler").length ? $helpContainer.toggleClass("open") : i.closest(".sidebar-close").length ? $helpContainer.removeClass("open") : i.closest(".help-content").length && $helpContainer.removeClass("open"), i.closest("#main-menu").length && $("#help-main-menu").toggleClass("in")
-}
+}//No I18N
 $(window).scroll(function() {
   var e = $("#scroll-top-navigator"),
     i = $(window).scrollTop(),
@@ -38,5 +38,5 @@ $(window).scroll(function() {
   return e.preventDefault(), $("html, body").animate({
     scrollTop: 0
   }, 400), !1
-});
+});//No I18N
 
