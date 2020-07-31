@@ -6,15 +6,15 @@ $.fx.off = true;
 let path = location.pathname;
 let edition = path.split('/')[1];
 if (edition === 'uk') {
-  edition = 'gb';
+  edition = 'gb';//No I18N
 } else if (edition === 'books') {
   edition = '';
 }
-window.wsearch.sitename = 'zoho';
+window.wsearch.sitename = 'zoho';//No I18N
 window.wsearch.language = 'en';
-window.wsearch.productname = 'books';
-window.wsearch.searchtype = 'help,kb';
-window.wsearch.siteregion = edition;
+window.wsearch.productname = 'books';//No I18N
+window.wsearch.searchtype = 'help,kb';//No I18N
+window.wsearch.siteregion = edition;//No I18N
 
 if (typeof DEVELOPMENT !== 'undefined' && DEVELOPMENT) { //eslint-disable-line
   // To support search api for staging
@@ -22,7 +22,7 @@ if (typeof DEVELOPMENT !== 'undefined' && DEVELOPMENT) { //eslint-disable-line
     if (window.wsearch.getDomain) {
       clearInterval(timer);
       window.wsearch.getDomain = function () {
-        return 'https://search.localzoho.com';
+        return 'https://search.localzoho.com';//No I18N
       };
       window.wsearch.getAndRenderResult(window.wsearch.start);
       window.wsearch.getQueryReplacedURL = function(paramName, newVal) {

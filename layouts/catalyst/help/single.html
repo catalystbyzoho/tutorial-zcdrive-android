@@ -18,10 +18,9 @@
   <link href="/catalyst/styles/resources.css" rel="stylesheet" type="text/css" inline />
   <link href="/catalyst/styles/customsearch.css" rel="stylesheet" type="text/css" inline />
   <link href="/catalyst/help/styles/help.css" rel="stylesheet" type="text/css" inline />
-  <link href="/catalyst/styles/books-signup-popup.css" rel="stylesheet" type="text/css" inline />
   {{ if not .Params.hideHrefLang }}
     <!-- Global -->
-    {{- $.Scratch.Set "path" (.RelPermalink | replaceRE ".*(/books/.*)" "$1") -}}
+    {{- $.Scratch.Set "path" (.RelPermalink | replaceRE ".*(/catalyst/.*)" "$1") -}}
     {{ partialCached "catalyst/hreflang.html" . ($.Scratch.Get "path") }}
   {{ end }}
 
@@ -29,7 +28,7 @@
   {{ partial "catalyst/canonical.html" . }}
 
   {{if .Params.searchresult }}
-    <link href="/books/styles/help/single.css" rel="stylesheet" type="text/css" inline />
+    <link href="/catalyst/styles/help/single.css" rel="stylesheet" type="text/css" inline />
   {{end}}
   <style>
     @font-face {
@@ -70,8 +69,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{ if .Params.edition }}/{{ .Params.edition }}{{end}}/books/">
-        <img alt="Zoho Books" src="/catalyst/help/images/help/zb-black.svg" class="zb-logo"/>
+      <a class="navbar-brand" href="/catalyst/help/welcome.html">
+        <img alt="Zoho Catalyst" src="/catalyst/help/images/help/zb-black.png" class="zb-logo"/>
         <p>Help Docs</p>
       </a>
     </div>
@@ -101,7 +100,7 @@
 
       <div class="help-content {{ if .Params.searchresult }} result-content {{ end }}" id="content">
 
-        <h1 class="product-logo to-print"><img src="/catalyst/images/books.png"/></h1>
+        <h1 class="product-logo to-print"><img src="/catalyst/images/catalyst.png"/></h1>
         <!-- Below container used to insert searchbox for small screens -->
         <div id="searchbox-in-help-container"></div>
 
@@ -112,7 +111,7 @@
               {{ template "partials/catalyst/rating-form.html" . }}
           {{ end }}
           <div class="want-feature">
-            <div class="rating-qtn"><i>Want a feature?</i></div> <a class="suggest-btn" href="http://zohofinance.uservoice.com/forums/283818-zoho-books" target="_blank" rel="noopener noreferrer">Suggest</a>
+            <div class="rating-qtn"><i>Want a feature?</i></div> <a class="suggest-btn" href="http://zohocatalyst.com/forums/zoho-catalyst-forums" target="_blank" rel="noopener noreferrer">Suggest</a>
           </div>
         </div>
 
@@ -200,14 +199,14 @@
     function toggleGIF (gif_url, ele) {
       var $ele = $(ele);
       if($ele.attr('src').match(/\gif$/) === null) {
-        $ele.attr('src', "/books/help/images/" + gif_url);
+        $ele.attr('src', "/catalyst/help/images/" + gif_url);
         return;
       }
-      $ele.attr('src', "/books/kb/images/books-dashboard.png");
+      $ele.attr('src', "/catalyst/dashboard.png");
     }
     </script>
     <script type="text/javascript">
-    /* overriding onload function of books-signup-popup.js inorder to support toprated block*/
+    /* overriding onload function of catalyst-signup-popup.js inorder to support toprated block*/
       window.onload = function() {
         showTopRatedBlock();
       }

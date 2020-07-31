@@ -7,7 +7,7 @@ function createCookie(refCookieName, urlCookieName) {
     var days = 30;
     expiry.setTime(expiry.getTime() + (days * 24 * 60 * 60 * 1000));
 
-    var affix = '; expires=' + expiry.toGMTString() + '; domain=.zoho.com; path=/';
+    var affix = '; expires=' + expiry.toGMTString() + '; domain=.zoho.com; path=/';//No I18N
 
     document.cookie = refCookieName + '=' + encodeURIComponent(referrer) + affix;
     document.cookie = urlCookieName + '=' + encodeURIComponent(location.href) + affix;
@@ -133,7 +133,7 @@ function selectListAction(){
     else {
         selectList.addClass('open');
         $('#zb-edition').focus();
-        selectList.css('display','inherit');
+        selectList.css('display','inherit');//No I18N
         $('#select-caret').addClass('open-caret');
     }
 
@@ -142,7 +142,7 @@ function hideSelectList(selectList){
     if(!isMouseOnList){
         var selectList = $('.edition-select-list');
         selectList.removeClass('open');
-        selectList.css('display','none');
+        selectList.css('display','none');//No I18N
         $('#select-caret').removeClass('open-caret');
     }
 }

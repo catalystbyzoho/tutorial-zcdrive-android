@@ -3,7 +3,7 @@ date: 2020-06-27T12:57:09+05:30
 title: "Sample is Getting Started | Help | Zoho Catalyst"
 description: "Zoho Catalyst is an aa accounting application, designed for small businessses to manage their finances."
 linktitle: "Sampleeads Catalyst"
-type: "catalyst"
+type: "catalyst/help"
 menu:
   help:
     parent: Catalyst Functions
