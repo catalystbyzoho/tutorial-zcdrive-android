@@ -24,5 +24,5 @@ publishtolocal:
     - hugo
     - cd public/
     - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" catalyst/ "$LOCAL_SERVER":catalyst/
-  only:
+   only: 
     - master
