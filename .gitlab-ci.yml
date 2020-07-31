@@ -1,20 +1,28 @@
 image: 'alpine:3.12'
 
 stages:
-  - first
   - test
-first:
-   stage: first
-   script:
-    - echo "First Task Started" >> firsttask.txt
-    - apk update
-    - apk add zip
-    - apk add openssh-client
-    - apk add sshpass
-    - apk add hugo
-    - zip -r output.zip *
-    - sshpass -p "$LOCAL_PASS" scp -o StrictHostKeyChecking=no output.zip "$LOCAL_USER_NAME"@"$LOCAL_SERVER":.
+  - publishtolocal
 test:
    stage: test
    script:
     - echo "Test Task Started" >> testtask.txt
+publishtolocal:
+   stage: publishtolocal
+   script:
+    - apk update
+    - apk add zip
+    - apk add openssh-client
+    - apk add sshpass
+    - apk add git
+    - apk add rsync
+    - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.tar.gz
+    - tar -xvf hugo_0.53_Linux-64bit.tar.gz
+    - mv hugo /usr/local/bin/
+    - git clone "https://$GIT_USER:$GIT_PASS@git.csez.zohocorpin.com/BaaS/catalyst-docs.git"
+    - cd catalyst-docs/
+    - hugo
+    - cd public/
+    - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" catalyst/ "$LOCAL_SERVER":catalyst/
+  only:
+    - master
