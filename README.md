@@ -1,4 +1,4 @@
 # Catalyst Documentation
 
-This repo hold all Catalyst related documentation
+This repo hold all the Catalyst related documentation
 
