@@ -1,5 +1,0 @@
-{{ if (.Get 0) }}
-<div class="{{ .Get 0 }}">{{.Inner}}</div>
-{{ else }}
-{{ errorf "missing value for params: %s" .Position }}
-{{ end }}
