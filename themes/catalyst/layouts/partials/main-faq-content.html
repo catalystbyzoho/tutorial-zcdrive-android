@@ -1,0 +1,112 @@
+<style>
+    .accordion1 {
+      background-color: var(--menu-color);
+      color: var(--font-menu-color);
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      margin-bottom:25px;
+      border-radius: 8px;
+      border: none;
+      outline: none !important; 
+      box-shadow: 0 0 0 0;
+    }
+    .accordion2 {
+      background-color: var(--body-color);
+      color: var(--font-blue-color);
+      cursor: pointer;
+      padding: 13px;
+      width: 100%;
+      margin-bottom:25px;
+      border-radius: 8px;
+      outline: none !important; 
+      border: 1px solid var(--hr-color);
+      text-align: center;
+      box-shadow: 0 0 0 0;
+    }
+    
+    .active1, .accordion1:hover {
+      background-color: var(--menu-color);
+    }
+    
+    .accordion1:after {
+      content: '\002B';
+      color: var(--font-menu-color);
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .active1:after {
+      content: "\2212";
+    }
+    
+    .panel1 {
+      padding: 0 18px;
+      background-color: var(--body-color);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+</style>
+    
+{{ with .Params.faq }}
+{{ if .enable }}
+<section id="help_component" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="d-md-none d-lg-none d-sm-block">
+        <ol>
+            {{ range .faq_item }}
+            <button class="accordion1">{{ .question }}</button>
+            <div class="panel1">
+                <p class="feature-p">{{ .answer }}</p>
+            </div>
+            {{ end }}
+        </ol>
+      </div>
+
+      <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-4" id="v-pills-tab"
+        role="tablist" aria-orientation="vertical" style="padding-left: 15px;">
+        <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 30px/38px zoho-puvi-semibold;">Frequently Asked <br> Questions</p>
+        <p class="feature-p">{{ .content }}</p>
+      </div>
+
+      <div class="tab-content col-md-8 d-none d-md-block" style="padding-right:0px;">
+        <div id="accordion1">
+            {{ range .faq_item }}
+            <button class="accordion1">{{ .question }}</button>
+            <div class="panel1">
+                <p class="faq-p">{{ .answer }}</p>
+            </div>
+            {{ end }}
+            <a href="{{ .link }}">
+              <button class="accordion2">View all FAQ</button>
+            </a>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+
+<script>
+    var acc = document.getElementsByClassName("accordion1");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active1");
+        var panel1 = this.nextElementSibling;
+        if (panel1.style.maxHeight) {
+          panel1.style.maxHeight = null;
+        } else {
+          panel1.style.maxHeight = panel1.scrollHeight + "px";
+        } 
+      });
+    }
+</script>
+    

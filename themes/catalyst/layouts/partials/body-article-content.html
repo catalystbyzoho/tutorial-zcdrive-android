@@ -1,0 +1,67 @@
+<div style="margin:123px 25px 0 30px;" class="top-point" id="container">
+    <!-- FIL D'ARIANE -->
+    {{if not (in .Params.hide "breadcrumb")}}
+    <nav id="ariane" aria-label="breadcrumb">
+        <ol class="ariane">
+            {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+        </ol>
+    </nav>
+    {{end}}
+
+    <!-- TITRE -->
+		{{$pagetitle := .Title}}
+        {{if eq $pagetitle ""}}
+        	{{with .File}}{{$pagetitle = .BaseFileName}}{{end}}
+        {{end}}
+		
+		
+		<!-- <p style="font: normal normal 600 24px/29px zoho-puvi-semibold; letter-spacing: 0px; color: var(--body-header-color); opacity: 1; margin-top: 30px; margin-bottom: 0;"><span>{{$pagetitle}}</span></p> -->
+        
+	<div class="content">
+    {{- with .Content -}}
+	    {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+    {{- else -}}
+      {{with index .Pages 0}}
+      <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
+      {{- else -}}
+      	No content
+      {{- end -}}
+    {{- end -}}
+	</div>
+
+	<div class="chevrons">
+		{{ partial "next-prev-page.html" . }}
+	</div>
+  {{ if and (eq .Type "tutorial-apps") (eq .Title "Introduction")}}
+  <div></div>
+  {{else}}
+    {{ if ne .Type "tutorial-apps"}}
+    <div>
+      {{ partial "suggestion-page.html"}}
+    </div>
+    {{ end }}
+  {{ end }}
+
+
+  {{ define "breadcrumbnav" }}
+  {{ if .p1.Parent }}
+      {{ if .p1.Parent.IsHome}}
+          <li>
+              <a class="text-link" href="{{.p1.Site.BaseURL}}">
+                  Resource
+              </a>
+          </li>
+      {{else}}
+        {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}	
+      {{end}}
+  {{ else if not .p1.IsHome }}
+      {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+  {{ end }}
+  {{ if ne .p1.Title "main"}}
+      <li class="{{ if eq .p1 .p2 }}active{{ end }}">
+          {{ if ne .p1 .p2 }}<a class="text-link" href="{{ .p1.RelPermalink }}">{{ end }}
+              {{ .p1.Title }}
+          {{ if ne .p1 .p2 }}</a>{{ end }}
+      </li>
+  {{end}}
+{{ end }}

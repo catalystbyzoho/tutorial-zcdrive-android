@@ -1,0 +1,16 @@
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer; background-color: var(--menu-color); padding:10px; border: 1px solid var(--hr-color);" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-up';});});">
+        <span>
+        {{- $expandMessage := T "Expand-title" -}}
+        {{- if .IsNamedParams -}}
+        {{- .Get "default" | default $expandMessage -}}
+        {{- else -}}
+        {{- .Get 0 | default $expandMessage -}}
+        {{- end -}}
+        </span>
+        <i style="float: right; margin-top: 4px; margin-right: 5px;" class="fas fa-chevron-up"></i>
+    </div>
+    <div class="expand-content" style="display: none; background-color: var(--body-color); padding:10px; border: 1px solid var(--hr-color); border-top: none;">
+{{- .Inner | safeHTML | markdownify -}}
+    </div>
+</div>

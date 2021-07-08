@@ -1,0 +1,28 @@
+<!-- feature -->
+{{ with .Params.feature }}
+{{ if .enable }}
+<section style="margin:50px 0;">
+  <div class="container" style="background-color: var(--body-color);">
+    <div class="row justify-content-left">
+
+      {{ range .feature_item }}
+      <div class="col-md-4 col-sm-6 mb-4">
+        <a href="{{.url}}">
+        <div class="feature-card feature">
+            <div style="display: flex;">
+                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.level}}</p>
+                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.duration}}</p>
+            </div>
+            <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">{{ .name | title }}</p>
+            <p class="feature-p">{{ .content | markdownify }}</p>
+            <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">{{.language}}</p>
+        </div>
+      </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /feature -->

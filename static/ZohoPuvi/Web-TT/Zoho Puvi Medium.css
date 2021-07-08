@@ -1,0 +1,11 @@
+/* Webfont: ZohoPuvi-Medium */@font-face {
+    font-family: 'ZohoPuviMed';
+    src: url('Zoho Puvi Medium.eot'); /* IE9 Compat Modes */
+    src: url('Zoho Puvi Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Zoho Puvi Medium.woff') format('woff'), /* Modern Browsers */
+         url('Zoho Puvi Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

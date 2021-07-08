@@ -1,0 +1,4 @@
+<span {{ with .Get "href" }} onclick="location.href='{{.}}'"{{end}} {{ if .Get "ref" }} onclick="location.href='{{relref . (.Get "ref") }}'"{{end}} class="bold bold-{{ if .IsNamedParams }}{{with .Get `theme`}}{{.}}{{else}}primary{{end}}{{else}}{{with .Get 0}}{{.}}{{else}}primary{{end}}{{end}}" style=" 
+font: normal normal bold 16px/24px zoho-puvi-bold;
+letter-spacing: 0px;
+color: var(--font-body-color);">{{.Inner | markdownify}}</span>

@@ -1,0 +1,63 @@
+<style type="text/css">
+  .shortlist {
+      background: var(--shortlist-icon) no-repeat -76px -30px;
+      width: 15px;
+      height: 15px;
+      margin-top: 7px;
+      margin-right: 10px;
+  }
+  .logo {
+      border-bottom: 1px solid var(--hr-color);
+      height: 74px;
+      position: fixed;
+      width: 370px;
+      z-index: 2;
+      top: 0px;
+      display: flex;
+      background-color: var(--menu-color);
+  }
+  </style>
+  {{- if not .Site.Params.disableSearch}}
+  <div class="logo">
+    <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:30px; margin-top: 22px; height: 35px; width: auto;"/>
+    <a style="text-decoration: none;" href="{{.Site.BaseURL}}">
+      <div style="padding-top: 20px; padding-left: 8px; display: block;">
+        <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
+        <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
+      </div> 
+    </a>
+  </div>
+  <div class="search">
+      <div class="searchbox" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 3px 25px;
+      width: 310px;
+      height: 39px;
+      border: 0px;
+      background-color: transparent;
+      border: 1px solid var(--hr-color);">
+        <div class="shortlist"></div>
+        <input data-search-input id="search-by" type="text" placeholder="Filter Topics" style="border: none; background-color: transparent; outline: none !important; box-shadow: 0 0 0 0;">
+      </div>
+  
+      <script type="text/javascript" src="{{"vendor/lunr/lunr.min.js" | relURL}}"></script>
+      <script type="text/javascript" src="{{"vendor/auto-complete/auto-complete.js" | relURL}}"></script>
+      <link href="{{"vendor/auto-complete/auto-complete.css" | relURL}}" rel="stylesheet">
+      <script type="text/javascript">
+        {{ if .Site.IsMultiLingual }}
+            var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+        {{ else }}
+            var baseurl = "{{.Site.BaseURL}}";
+        {{ end }}
+      </script>
+      <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
+  </div>
+  {{- end}}
+  
+  <div id="close_menu">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+        <i class="fa fa-lg fa-times"></i>
+    </a>
+  </div>
+  
+  <ul class="menu">
+    {{- partial "menu.html" . }}
+  </ul>    

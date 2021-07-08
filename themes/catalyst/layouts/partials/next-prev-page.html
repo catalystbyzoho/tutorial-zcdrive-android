@@ -1,0 +1,119 @@
+<style type="text/css">
+    .forwardArrowIconLight {
+        background: var(--right-icon) no-repeat -213px -30px;
+        width: 16px;
+        height: 14px;
+        margin-top: 1px;
+    }
+    .forwardArrowIconBlue {
+        background: url('/images/DarkPages.svg') no-repeat -559px -30px;
+        width: 16px;
+        height: 14px;
+        margin-top: 1px;
+    }
+    
+    .reverseArrowIconLight {
+        background: var(--left-icon) no-repeat -167px -30px;
+        width: 16px;
+        height: 14px;
+        margin-top: 1px;
+    }
+    @media (max-width: 600px) {
+        .page-title{
+            display: none;
+        }
+    }
+    @media (min-width: 600px) {
+        .page-title{
+            display: flex;
+            font: normal normal normal 14px/17px zoho-puvi-regular;
+            letter-spacing: 0px;
+            color: var(--font-menu-color);
+            opacity: 1;
+        }
+    }
+    </style>
+<!-- Next prev page -->
+{{- $currentNode := . -}}
+
+{{- template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode -}}
+
+{{- define "menu-nextprev" -}}
+    {{- $currentNode := .currentnode -}}
+    {{- if ne .menu.Params.hidden true -}}
+        {{- if hasPrefix $currentNode.Permalink .menu.Permalink -}}
+            {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
+            {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
+        {{- else -}}
+            {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
+                {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
+                {{- $currentNode.Scratch.Set "nextPage" .menu -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
+
+            {{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
+            {{- if .menu.IsHome -}}
+                {{- $currentNode.Scratch.Set "pages" .menu.Sections -}}
+            {{- else if .menu.Sections -}}
+                {{- $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) -}}
+            {{- end -}}
+            {{- $pages := ($currentNode.Scratch.Get "pages") -}}
+
+            {{- range $pages.ByWeight -}}
+                {{- template "menu-nextprev" dict "menu" . "currentnode" $currentNode -}}
+            {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{ if and (eq .Type "tutorial-apps") (eq .Title "Introduction")}}
+    {{- with ($.Scratch.Get "nextPage") -}}
+    {{ if ne .Title "main" }} 
+        <div style="display:flex; justify-content:flex-start; flex:1; margin: 20px;">
+            <div style="border: 1px solid var(--font-blue-color); padding:5px; display: flex;">
+                <div style="display: block; margin-left: 13px;">
+                    <p style="display:flex; margin:15px 0 7px 0; font: normal normal 12px/13px zoho-puvi-medium; letter-spacing: 1.2px; color: var(--font-blue-color); opacity: 1;">START NOW</p>
+                </div>
+                <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
+                    <div style="padding:11px; width: 40px; height: 40px;">
+                        <div class="forwardArrowIconBlue"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {{end}}
+    {{- end }}
+{{ else }}
+{{- if not $.Site.Params.disableNavChevron -}}
+    {{- with ($.Scratch.Get "prevPage") -}}
+    {{ if ne .Title "main" }}
+        <div style="display:flex; justify-content:flex-start; flex:1; margin-left: 20px;">
+            <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-left: 0px; cursor: pointer;">
+                <div style="padding:11px;border: 1px solid var(--font-menu-color); width: 40px; height: 40px;">
+                    <div class="reverseArrowIconLight"></div>
+                </div>
+            </a>
+            <div style="display: block; margin-left: 13px;">
+                <p style="margin:18px 71px 7px 0; font: normal normal 12px/13px zoho-puvi-medium; letter-spacing: 1.2px; color: var(--font-blue-color); opacity: 1;">PREVIOUS</p>
+                <p class="page-title" style="font-size: 15px;">{{.Title}}</p>
+            </div>
+        </div> 
+    {{end}}
+    {{ end -}}
+    {{- with ($.Scratch.Get "nextPage") -}}
+    {{ if ne .Title "main" }} 
+        <div style="display:flex; justify-content:flex-end; flex:1; margin-right: 20px;">
+            <div style="display: block; margin-right: 13px;">
+                <p style="display:flex; justify-content:flex-end; margin:18px 0 7px 0; font: normal normal 12px/13px zoho-puvi-medium; letter-spacing: 1.2px; color: var(--font-blue-color); opacity: 1;">NEXT</p>
+                <p style="font-size: 15px; justify-content:flex-end;" class="page-title">{{.Title}}</p>
+            </div>
+            <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
+                <div style="padding:11px;border: 1px solid var(--font-menu-color); width: 40px; height: 40px;">
+                    <div class="forwardArrowIconLight"></div>
+                </div>
+            </a>
+        </div>
+    {{end}}
+    {{- end }}
+{{- end -}}
+{{ end }}

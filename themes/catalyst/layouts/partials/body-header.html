@@ -1,0 +1,79 @@
+<style type="text/css">
+.access-button{
+	width: 150px;
+	height: 44px;
+	background: #F0483D 0% 0% no-repeat padding-box;
+	text-align: center;
+	border-radius: 1px;
+  padding-top: 7px;
+  font: normal normal normal 15px/30px zoho-puvi-regular;
+  letter-spacing: 0px;
+  color: #F0F0F0;
+  opacity: 1;
+  margin: 0 10px;
+}
+.search-icon{
+  background: var(--shortlist-icon) no-repeat -30px -30px;
+	width: 16px;
+	height: 16px;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+.list{
+    font: normal normal normal 14px/17px zoho-puvi-regular;
+    letter-spacing: 0px;
+    color: var(--font-lite-body-color);
+    opacity: 1;
+    margin:13px 18px 0 18px;
+}
+.list a:hover{
+  color: var(--font-blue-color);
+}
+.search-box {
+	width: 559px;
+	height: 44px;
+	float: left;
+}
+.src-input {
+	padding: 6px 40px;
+  padding-left: 0px;
+  color: var(--font-menu-color);
+  font: normal normal normal 14px/17px zoho-puvi-regular;
+	border: none;
+	float: left;
+	outline: none;
+	background-color: var(--body-color);
+}
+::placeholder{
+  color: var(--font-at-color);
+  font: normal normal normal 13px/16px zoho-puvi-regular;
+}
+</style>
+<div style="padding:0 30px;">
+    {{if not (in .Params.hide "nav")}}
+    <div class="burger {{.Params.layout }}">
+        <a href="javascript:void(0);" style="font-size:25px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    {{end}}
+
+    <div class="srchbox clearfix" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 3px 25px;
+    width: 400px;
+    height: 39px;
+    border: 0px;
+    background-color: transparent;
+    border: 1px solid var(--hr-color);">
+      <div class="search-icon"></div>
+      <input class="src-input" name="query" placeholder="Search documents" type="text">
+    </div>
+
+    <!-- {{- with .Site.Menus.shortcuts}} -->
+    <nav class="shortcuts">
+        <li class="list"><a href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">Docs</a></li>
+        <li class="list"><a href="/tutorial/" target="_self" rel="noopener noreferrer">Tutorials</a></li>
+        <li class="list"><a href="/faq/authentication/" target="_self" rel="noopener noreferrer">FAQ</a></li>
+        <li class="list"><a href="/whats-new/authentication/" target="_self" rel="noopener noreferrer">What’s New</a></li>
+        <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
+    </nav>
+    <!-- {{- end}} -->
+
+</div>

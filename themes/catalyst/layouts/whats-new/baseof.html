@@ -1,0 +1,79 @@
+{{- $redirectURL := "" }}
+{{ with .Params.redirect}}
+  {{ if or (hasPrefix . "http:") (hasPrefix . "https:") }}
+    {{ $redirectURL = . }}
+  {{ else }}
+    {{ $redirectURL = ref $ .}}
+  {{ end }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ partial "html-head.html" . }}
+    {{if ne $redirectURL "" }}
+      <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
+    {{end}}
+  </head>
+
+  <body data-url="{{ .RelPermalink }}" style="background-color: var(--body-color);"
+
+  class="
+  {{- with .Params.render}}render_{{.}} {{end -}}
+  {{if (in .Params.hide "header")}}hideheader {{end -}}
+  {{if (in .Params.hide "nav")}}hidenav {{end -}}
+  {{if (in .Params.hide "breadcrumb")}}hidebreadcrumb {{end -}}
+  {{if (in .Params.hide "toc")}}hidetoc {{end -}}
+  {{if (in .Params.hide "footer")}}hidefooter {{end -}}
+  {{if (in .Params.hide "nextpage")}}hidenextpage {{end -}}
+  ">
+
+{{ if ne $redirectURL ""}}
+    <script type="text/javascript">
+      window.location = '{{ $redirectURL }}'
+    </script>
+    <a href="{{ $redirectURL }}">go to {{ $redirectURL }}</a>
+{{ else if eq .Params.render "raw" }}
+      {{- .Content -}}
+{{ else }}
+    {{if not (in .Params.hide "header")}}
+    <header style="width: 100%;">
+        {{ partial "main-header.html" . }}
+    </header>
+    {{end}}
+    <main style="width: 100%;">
+      {{ partial "main-article-content.html" . }}        
+    </main>
+    <article style="top:80px; width: 100%; margin:0 auto 110px auto; height: auto;">
+      {{if not (in .Params.hide "nav")}}
+      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color);">
+        <ul class="menu" style="margin-top: 0px;">
+          {{- partial "menu.html" . }}
+        </ul> 
+      </aside>
+      {{end}}
+
+      <section class="page {{.Params.layout }}">
+      {{ block "main" . }}
+      {{ end }}
+      </section>
+
+      <section class="right-menu {{.Params.layout }}">
+      {{ block "sidepage" . }}
+      {{ end }}
+      </section>
+
+    </article>
+    {{ partial "scripts.html" . }}
+
+    {{if not (in .Params.hide "footer")}}
+    <footer>
+      {{ partial "body-footer.html" . }}
+    </footer>
+    {{end}}
+    {{ partial "scroll-top.html" . }}
+
+{{end}}
+
+  </body>
+</html>

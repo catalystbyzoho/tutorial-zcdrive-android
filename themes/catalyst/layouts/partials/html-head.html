@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="{{ now.Format "2006-01-02T15:04:05 MST" }}">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+{{ with .Site.Params.author }}
+<meta name="author" content="{{ . }}">
+{{ end }}
+
+<title>{{ .Title }} :: {{ .Site.Title }}</title>
+
+<link rel="shortcut icon" href='{{"/images/catalyst-logo.ico" | relURL}}' type="image/x-icon" />
+
+<!-- vendor css/js -->
+{{- partial "html-head-vendor.html" . }}
+{{- partial "head.html" . }}
+
+<!-- docport css/js -->
+{{ $sass := resources.Get "sass/main.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+<script src='{{"js/docport.js" | relURL}}'></script>
+
+<script type="text/javascript">
+      var baseurl = "{{.Site.BaseURL}}";
+</script>
+
+
+{{ template "_internal/google_analytics.html" . }}

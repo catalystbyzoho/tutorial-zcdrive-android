@@ -1,0 +1,46 @@
+{{ if eq .Title "Introduction" }}
+    <div class="TableOfContents" style="background-color:var(--menu-color); padding-bottom: 5px;">
+        {{ with .Params.component_involved }}
+            {{ if .enable }}
+            <p class="feature-p" style="padding:20px 20px 0px 20px;">Time to Complete : {{ .Duration }}</p>
+            <p class="feature-p" style="margin:5px 20px;">Difficulty Level : {{ .Difficulty_level }}</p>
+            {{ end }}
+        {{ end }}
+    </div>
+{{ end }}
+{{ if eq .Title "Introduction" }}
+    <div class="TableOfContents" style="background-color:var(--menu-color); padding-bottom: 5px;">
+            <label style="font: normal normal 600 12px/13px zoho-puvi-semibold; letter-spacing: 2.4px; color: var(--font-menu-color); opacity: 1; padding:20px 10px 5px 20px; margin-bottom: 0px;">COMPONENTS INVOLVED</label>           
+            {{ with .Params.component_involved }}
+            {{ if .enable }}
+                {{ range .component_item }}
+                <a href="{{ .url }}">
+                    <p class="feature-p" style="margin:10px 20px;">{{ .name }}</p>
+                </a>
+                {{ end }}
+            {{ end }}
+            {{ end }}
+    </div>
+{{ else }}
+    <div class="TableOfContents" style="background-color:var(--menu-color); padding-bottom: 5px;">
+        <label style="font: normal normal 600 12px/13px zoho-puvi-semibold; letter-spacing: 2.4px; color: var(--font-menu-color); opacity: 1; padding:20px 10px 5px 20px; margin-bottom: 0px;">RELATED LINKS</label>           
+        {{ with .Params.related_link }}
+        {{ if .enable }}
+            {{ range .related_link_item }}
+            <a href="{{ .url }}">
+                <p class="feature-p" style="margin:10px 20px;">{{ .name }}</p>
+            </a>
+            {{ end }}
+        {{ end }}
+        {{ end }}
+    </div>
+    <div class="TableOfContents" style="background-color:var(--menu-color); padding-bottom: 5px;">
+        <div>
+            {{ partial "tutorial-suggestion.html"}}
+        </div>
+    </div>
+{{ end }}
+
+
+    
+    

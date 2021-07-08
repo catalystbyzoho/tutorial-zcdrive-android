@@ -1,0 +1,100 @@
+<style type="text/css">
+    .access-button{
+        width: 150px;
+        height: 44px;
+        background: #F0483D 0% 0% no-repeat padding-box;
+        text-align: center;
+        border-radius: 1px;
+        padding-top: 7px;
+        font: normal normal normal 15px/30px zoho-puvi-regular;
+        letter-spacing: 0px;
+        color: #F0F0F0;
+        opacity: 1;
+        margin: 0 10px;
+    }
+    .list{
+        font: normal normal normal 14px/17px zoho-puvi-regular;
+        letter-spacing: 0px;
+        color: var(--font-lite-body-color);
+        opacity: 1;
+        margin:13px 18px 0 18px;
+    }
+    .list a:hover{
+      color: var(--font-blue-color);
+    }
+    .list a:active{
+      color: var(--font-blue-color);
+    }
+    .searchbox {
+        width: 559px;
+        height: 44px;
+        margin-top: 0px !important;
+    }
+    .srcinput {
+        padding: 6px 40px;
+        color: var(--font-menu-color);
+        font: normal normal normal 14px/17px zoho-puvi-regular;
+        border: 1px solid var(--hr-color);
+        border-radius: 30px;
+        outline: none;
+        width: 100%;
+        height: 44px;
+        background: var(--menu-color) url(/images/search.svg) no-repeat scroll 13px 13px/15px 15px;
+    }
+    ::placeholder{
+      color: var(--font-menu-color);
+      font: normal normal normal 14px/17px zoho-puvi-regular;
+    }
+    .logo {
+      height: 84px;
+      position: fixed;
+      width: 400px;
+      top: 0px;
+      display: flex;
+    }
+    </style>
+    <div style="padding:0 30px; display: flex;;">
+        <div class="logo">
+            <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:20px; margin-top: 21px; height: 34px; width: auto;"/>
+            <a style="text-decoration: none;" href="{{.Site.BaseURL}}">
+              <div style="padding-top: 20px; padding-left: 0px; display: block;">
+                <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
+                <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
+              </div> 
+            </a>
+        </div>
+        
+        {{ if or (eq .Type "whats-new") (eq .Type "faq")}}
+          <div style="margin-left: 25%;">
+            {{ if .Params.searchresult }}
+              <div class="searchbox" id="searchbox" style="justify-content: space-between;">
+                <div class="srcinput" id="zws_boxContainer7"></div>
+              </div>
+            {{ else }}
+              {{ $type := $.Scratch.Get "type" }}
+              {{ $.Scratch.Set "editionPrefix" "" }}
+              {{ with .Params.edition }}
+                {{ $.Scratch.Add "editionPrefix" "/" }}
+                {{ $.Scratch.Add "editionPrefix" . }}
+              {{ end }}
+              <div class="searchbox" id="searchbox">
+                <form action="{{ $.Scratch.Get "editionPrefix" }}/catalyst/{{ $type }}/search/results.html" class="srchbox clearfix">
+                  <input class="srcinput" name="query" placeholder="Search documents" type="text">
+                </form>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+        <!-- {{- with .Site.Menus.shortcuts}} -->
+
+        <nav class="shortcuts">
+            <li class="list"><a href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">Docs</a></li>
+            <li class="list"><a href="/tutorial/" target="_self" rel="noopener noreferrer">Tutorials</a></li>
+            <li class="list"><a href="/faq/authentication/" target="_self" rel="noopener noreferrer">FAQ</a></li>
+            <li class="list"><a href="/whats-new/authentication/" target="_self" rel="noopener noreferrer">What’s New</a></li>
+            <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
+          </nav>
+        <!-- {{- end}} -->
+    
+    </div>
+    

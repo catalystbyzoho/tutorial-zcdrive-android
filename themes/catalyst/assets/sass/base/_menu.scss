@@ -1,0 +1,444 @@
+@font-face {
+    font-family: "zoho-puvi-bold";
+    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Bold.ttf);
+}
+@font-face {
+    font-family: "zoho-puvi-regular";
+    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Regular.ttf);
+}
+
+article>aside {
+    background-color: var(--menu-color);
+    z-index: 1;
+    padding: 0;
+    
+    div.search{
+        position: absolute;
+        left: 0px;
+        top: 82px;
+        margin: 30px 20px 30px 30px;
+    }
+
+    .menu {
+        list-style-type: none;
+        margin-top: 11rem;
+        padding-left: 30px !important;
+        h6 {
+            font: normal normal bold 16px/19px zoho-puvi-bold;
+            letter-spacing: 0.8px;
+            color: var(--font-body-color);
+            text-transform: uppercase;
+            opacity: 1;
+            padding:10px 0;
+            margin-left:-6px;
+        }
+        hr {
+            margin-top: 1.8rem;
+            margin-left:-50px;
+        }
+        ul {
+            display: none;
+        } 
+        .ddexp{
+            cursor: pointer;
+        }
+        &.active {
+            a {
+                color: red;
+            }
+        }
+
+        // first menu level
+        >.dd-item {
+            font: normal normal normal 14px/17px zoho-puvi-regular;
+            letter-spacing: 0px;
+            color: var(--font-lite-body-color);
+            margin:20px 0;
+            opacity: 1;
+            margin-top: 0px;
+                >a{
+                    padding-left:0px;
+                    display: none;
+                    color: var(--font-lite-body-color);
+                }
+                > i {
+                    display: none;
+                }
+        } 
+
+        // menu items
+        .dd-item {
+            padding-left: 16px;
+            
+            list-style: none;
+            a {
+                text-decoration: none;
+                padding-left:8px;
+                color: var(--font-lite-body-color);
+            }
+            > a{               
+                padding-left:8px;
+            }
+            > i {
+                    color:var(--font-lite-body-color);
+                    font-size: 12px;
+                    padding-right:5px;
+            }
+            ul {
+                padding-left: 0px;
+            }
+            &.active {
+
+                >ul {
+                    display: block;
+                }
+
+                >div {
+                    * {
+                        color: var(--font-blue-color);
+                    }
+                }
+            }
+
+            &.haschildren{
+                &.parent{
+                    >a {
+                    padding-left:8px;                   
+                    }
+                    ul {
+                        padding-left:0;
+                    }
+                }
+                li {
+                    margin:20px 0;
+                }
+                ul {
+                    padding-left:0px;                    
+                }
+                ul a {
+                    padding-left:0px;
+                }
+                ul i {
+                    margin-left: -19px;
+                    margin-right: 6px;
+                }
+            }
+
+            &.parent{
+                >a {
+                 
+                }
+                >ul {
+                    display: block;
+                }
+            }
+
+            &.active {
+                li {
+                    margin:20px 0;
+                }
+
+                >a{
+                    color:var(--font-blue-color);
+                }
+
+                >ul {
+                    display: block;
+                }
+            }
+            
+            &.alwaysopen>ul {
+                display: block
+            }
+            
+            &.parent>ul {
+                display: block
+            }
+        }
+    }
+
+    .docs-menu {
+        list-style-type: none;
+        margin-top: 7rem;
+        h6 {
+            font: normal normal bold 16px/19px zoho-puvi-bold;
+            letter-spacing: 0.8px;
+            color: var(--font-body-color);
+            text-transform: uppercase;
+            opacity: 1;
+            padding:10px 0;
+            margin-left:-6px;
+        }
+        hr {
+            margin-top: 1.8rem;
+            margin-left:-50px;
+        }
+        ul {
+            display: none;
+        } 
+        .ddexp{
+            cursor: pointer;
+        }
+        &.active {
+            a {
+                color: red;
+            }
+        }
+
+        // first menu level
+        >.dd-item {
+            font: normal normal normal 13px/16px zoho-puvi-regular;
+            letter-spacing: 0px;
+            color: var(--font-lite-body-color);
+            margin:20px 0;
+            opacity: 1;
+            margin-top: 0px;
+                >a{
+                    padding-left:0px;
+                    display: none;
+                    color: var(--font-lite-body-color);
+                }
+                > i {
+                    display: none;
+                }
+        } 
+
+        // menu items
+        .dd-item {
+            padding-left: 16px;
+            
+            list-style: none;
+            a {
+                text-decoration: none;
+                padding-left:8px;
+                color: var(--font-lite-body-color);
+            }
+            > a{               
+                padding-left:8px;
+            }
+            > i {
+                    color:var(--font-lite-body-color);
+                    font-size: 12px;
+                    padding-right:5px;
+            }
+            ul {
+                padding-left: 0px;
+            }
+            &.active {
+
+                >ul {
+                    display: block;
+                }
+
+                >div {
+                    * {
+                        color: var(--font-blue-color);
+                    }
+                }
+            }
+
+            &.haschildren{
+                &.parent{
+                    >a {
+                    padding-left:8px;                   
+                    }
+                    ul {
+                        padding-left:0;
+                    }
+                }
+                li {
+                    margin:20px 0;
+                }
+                ul {
+                    padding-left:0px;                    
+                }
+                ul a {
+                    padding-left:0px;
+                }
+                ul i {
+                    margin-left: -19px;
+                    margin-right: 6px;
+                }
+            }
+
+            &.parent{
+                >a {
+                 
+                }
+                >ul {
+                    display: block;
+                }
+            }
+
+            &.active {
+                li {
+                    margin:20px 0;
+                }
+
+                >a{
+                    color:var(--font-blue-color);
+                }
+
+                >ul {
+                    display: block;
+                }
+            }
+            
+            &.alwaysopen>ul {
+                display: block
+            }
+            
+            &.parent>ul {
+                display: block
+            }
+        }
+    }
+
+    .main-menu {
+        list-style-type: none;
+        h6 {
+            font: normal normal bold 16px/19px zoho-puvi-bold;
+            letter-spacing: 0.8px;
+            color: var(--font-body-color);
+            text-transform: uppercase;
+            opacity: 1;
+            padding:10px 0;
+            margin-left:-6px;
+        }
+        hr {
+            margin-top: 1.8rem;
+            margin-left:-50px;
+        }
+        ul {
+            display: none;
+        } 
+        .ddexp{
+            cursor: pointer;
+        }
+        &.active {
+            a {
+                color: red;
+            }
+        }
+
+        // first menu level
+        >.dd-item {
+            font: normal normal normal 14px/17px zoho-puvi-regular;
+            letter-spacing: 0px;
+            color: var(--font-menu-color);
+            margin:20px 0;
+            opacity: 1;
+            margin-top: 0px;
+                >a{
+                    padding-left:0px;
+                    display: none;
+                    color: var(--font-menu-color);
+                }
+                > i {
+                    display: none;
+                }
+        } 
+
+        // menu items
+        .dd-item {
+            padding-left: 16px;
+            
+            list-style: none;
+            a {
+                text-decoration: none;
+                padding-left:8px;
+                color: var(--font-menu-color);
+            }
+            > a{               
+                padding-left:8px;
+            }
+            > i {
+                    color:var(--font-menu-color);
+                    font-size: 12px;
+                    padding-right:5px;
+            }
+            ul {
+                padding-left: 0px;
+            }
+            &.active {
+
+                >ul {
+                    display: block;
+                }
+
+                >div {
+                    * {
+                        color: var(--font-blue-color);
+                    }
+                }
+            }
+
+            &.haschildren{
+                &.parent{
+                    >a {
+                    padding-left:8px;                   
+                    }
+                    ul {
+                        padding-left:0;
+                    }
+                }
+                li {
+                    margin:20px 0;
+                }
+                ul {
+                    padding-left:0px;                    
+                }
+                ul a {
+                    padding-left:0px;
+                }
+                ul i {
+                    margin-left: -19px;
+                    margin-right: 6px;
+                }
+            }
+
+            &.parent{
+                >a {
+                 
+                }
+                >ul {
+                    display: block;
+                }
+            }
+
+            &.active {
+                li {
+                    margin:20px 0;
+                }
+
+                >a{
+                    color:var(--font-blue-color);
+                }
+
+                >ul {
+                    display: block;
+                }
+            }
+            
+            &.alwaysopen>ul {
+                display: block
+            }
+            
+            &.parent>ul {
+                display: block
+            }
+        }
+    }
+
+
+    section {
+        margin: 2rem 0rem;
+    }
+}
+
+body{
+    a{
+        text-decoration: none;
+    }
+}
+

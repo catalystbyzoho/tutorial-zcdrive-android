@@ -1,0 +1,79 @@
+{{- $redirectURL := "" }}
+{{ with .Params.redirect}}
+  {{ if or (hasPrefix . "http:") (hasPrefix . "https:") }}
+    {{ $redirectURL = . }}
+  {{ else }}
+    {{ $redirectURL = ref $ .}}
+  {{ end }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ partial "html-head.html" . }}
+    {{if ne $redirectURL "" }}
+      <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
+    {{end}}
+  </head>
+
+  <body data-url="{{ .RelPermalink }}"
+
+  class="
+  {{- with .Params.render}}render_{{.}} {{end -}}
+  {{if (in .Params.hide "header")}}hideheader {{end -}}
+  {{if (in .Params.hide "nav")}}hidenav {{end -}}
+  {{if (in .Params.hide "breadcrumb")}}hidebreadcrumb {{end -}}
+  {{if (in .Params.hide "toc")}}hidetoc {{end -}}
+  {{if (in .Params.hide "footer")}}hidefooter {{end -}}
+  {{if (in .Params.hide "nextpage")}}hidenextpage {{end -}}
+  ">
+
+{{ if ne $redirectURL ""}}
+    <script type="text/javascript">
+      window.location = '{{ $redirectURL }}'
+    </script>
+    <a href="{{ $redirectURL }}">go to {{ $redirectURL }}</a>
+{{ else if eq .Params.render "raw" }}
+      {{- .Content -}}
+{{ else }}
+
+    <article>
+      {{if not (in .Params.hide "nav")}}
+      <aside class="{{.Params.layout }}">
+        {{ partial "docs-sidebar.html" . }}
+      </aside>
+      {{end}}
+
+      <section class="page {{.Params.layout }}">
+      {{if not (in .Params.hide "header")}}
+      <header style="">
+          {{ partial "docs-header.html" . }}
+      </header>
+      {{end}}
+      {{ block "main" . }}
+      {{ end }}
+      </section>
+
+      <!-- NAVIGATION DROITE TOC -->
+      {{if not (in .Params.hide "toc")}}
+      <section class="right-menu {{.Params.layout }}">
+      {{ block "sidepage" . }}
+      {{ end }}
+      </section>
+      {{end -}}
+      <!-- FIN NAVIGATION DROITE TOC -->
+
+    </article>
+    {{ partial "scripts.html" . }}
+
+    {{if not (in .Params.hide "footer")}}
+    <footer>
+      {{ partial "body-footer.html" . }}
+    </footer>
+    {{end}}
+    {{ partial "scroll-top.html" . }}
+
+{{end}}
+
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="605" height="74" viewBox="0 0 605 74">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_404" data-name="Rectangle 404" width="16" height="16" transform="translate(490.679 125)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_405" data-name="Rectangle 405" width="15" height="15" fill="#af8888"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Rectangle_406" data-name="Rectangle 406" width="16" height="16" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <rect id="Rectangle_407" data-name="Rectangle 407" width="16" height="16" rx="2" transform="translate(17 7)" fill="#fff" stroke="#dedede" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_408" data-name="Rectangle 408" width="16" height="16" rx="2" fill="#fff" stroke="#dedede" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-6">
+      <rect id="Rectangle_409" data-name="Rectangle 409" width="13" height="13" transform="translate(445 4028)" fill="#448bff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-7">
+      <rect id="Rectangle_410" data-name="Rectangle 410" width="13" height="13" fill="#448bff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-8">
+      <rect id="Rectangle_411" data-name="Rectangle 411" width="13" height="13" transform="translate(36 4393)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-9">
+      <rect id="Rectangle_412" data-name="Rectangle 412" width="13" height="13" transform="translate(30 4409)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-10">
+      <rect id="Rectangle_423" data-name="Rectangle 423" width="13" height="13" transform="translate(30 4410)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-11">
+      <rect id="Rectangle_424" data-name="Rectangle 424" width="13" height="13" transform="translate(30 4410)" fill="#dbdbdb"/>
+    </clipPath>
+    <clipPath id="clip-path-12">
+      <rect id="Rectangle_464" data-name="Rectangle 464" width="16" height="16" rx="2" fill="#fff" stroke="#448bff" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="DarkPages" transform="translate(78 -3485)">
+    <rect id="Rectangle_403" data-name="Rectangle 403" width="605" height="74" transform="translate(-78 3485)" fill="rgba(255,255,255,0)"/>
+    <g id="SearchNormal" transform="translate(-538.679 3390)" clip-path="url(#clip-path)">
+      <g id="search" transform="translate(489.112 123.432)">
+        <circle id="Ellipse_49" data-name="Ellipse 49" cx="6.27" cy="6.27" r="6.27" transform="translate(2.351 2.351)" fill="none" stroke="#656565" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_72" data-name="Line 72" x1="3.409" y1="3.409" transform="translate(13.05 13.05)" fill="none" stroke="#656565" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Filternormal" transform="translate(-2 3515)" clip-path="url(#clip-path-2)">
+      <path id="filter" d="M16,2.182H1.455l5.818,6.45v4.459l2.909,1.364V8.632Z" transform="translate(-0.727 -0.818)" fill="none" stroke="#656565" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g id="Sun" transform="translate(43 3514)" clip-path="url(#clip-path-3)">
+      <g id="sun-2" data-name="sun" transform="translate(0.667 0.667)">
+        <circle id="Ellipse_50" data-name="Ellipse 50" cx="3.333" cy="3.333" r="3.333" transform="translate(4 4)" fill="#dddede" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_73" data-name="Line 73" y2="1.333" transform="translate(7.333)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_74" data-name="Line 74" y2="1.333" transform="translate(7.333 13.333)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_75" data-name="Line 75" x2="0.947" y2="0.947" transform="translate(2.147 2.147)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_76" data-name="Line 76" x2="0.947" y2="0.947" transform="translate(11.573 11.573)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_77" data-name="Line 77" x2="1.333" transform="translate(0 7.333)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_78" data-name="Line 78" x2="1.333" transform="translate(13.333 7.333)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_79" data-name="Line 79" y1="0.947" x2="0.947" transform="translate(2.147 11.573)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_80" data-name="Line 80" y1="0.947" x2="0.947" transform="translate(11.573 2.147)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Left" transform="translate(72 3507)" clip-path="url(#clip-path-4)">
+      <g id="arrow-left_2_" data-name="arrow-left (2)" transform="translate(13.591 3.591)">
+        <line id="Line_81" data-name="Line 81" x1="13.311" transform="translate(4.754 11.409)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_413" data-name="Path 413" d="M11.409,18.065,4.754,11.409l6.655-6.655" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Right" transform="translate(135 3514)" clip-path="url(#clip-path-5)">
+      <g id="arrow-left_2_2" data-name="arrow-left (2)" transform="translate(1.345 1.345)">
+        <line id="Line_82" data-name="Line 82" x2="13.311" transform="translate(0 6.655)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_414" data-name="Path 414" d="M4.754,18.065l6.655-6.655L4.754,4.754" transform="translate(1.902 -4.754)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Like" transform="translate(-264 -513)" clip-path="url(#clip-path-6)">
+      <g id="thumb-up-fill" transform="translate(445 4028)">
+        <path id="Path_415" data-name="Path 415" d="M0,0H13V13H0Z" fill="none"/>
+        <path id="Path_416" data-name="Path 416" d="M1.083,4.875H2.708v6.5H1.083a.542.542,0,0,1-.542-.542V5.417a.542.542,0,0,1,.542-.542Zm2.867-.7L7.417.708A.271.271,0,0,1,7.771.683l.462.347a.812.812,0,0,1,.3.85L7.908,4.333h3.467a1.083,1.083,0,0,1,1.083,1.083v1.14a1.083,1.083,0,0,1-.081.413L10.7,11.04a.542.542,0,0,1-.5.335H4.333a.542.542,0,0,1-.542-.542V4.558a.542.542,0,0,1,.159-.383Z" fill="#448bff"/>
+      </g>
+    </g>
+    <g id="disLike" transform="translate(224 3515)" clip-path="url(#clip-path-7)">
+      <g id="thumb-up-fill-2" data-name="thumb-up-fill">
+        <path id="Path_417" data-name="Path 417" d="M0,13H13V0H0Z" fill="none"/>
+        <path id="Path_418" data-name="Path 418" d="M1.083,7.128H2.708V.628H1.083a.542.542,0,0,0-.542.542V6.587a.542.542,0,0,0,.542.542Zm2.867.7L7.417,11.3a.271.271,0,0,0,.354.025l.462-.347a.812.812,0,0,0,.3-.85L7.908,7.67h3.467a1.083,1.083,0,0,0,1.083-1.083V5.447a1.083,1.083,0,0,0-.081-.413L10.7.964a.542.542,0,0,0-.5-.335H4.333a.542.542,0,0,0-.542.542V7.446a.542.542,0,0,0,.159.383Z" transform="translate(0 0.997)" fill="#448bff"/>
+      </g>
+    </g>
+    <g id="Up" transform="translate(-1256.5 2618.5)">
+      <path id="chevron-down_2_" data-name="chevron-down (2)" d="M6,15l6-6,6,6" transform="translate(1517.5 891.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <g id="Mask_Group_193" data-name="Mask Group 193" transform="translate(273 -878)" clip-path="url(#clip-path-8)">
+      <g id="globe" transform="translate(35.409 4392.409)">
+        <circle id="Ellipse_51" data-name="Ellipse 51" cx="5.909" cy="5.909" r="5.909" transform="translate(1.182 1.182)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_83" data-name="Line 83" x2="11.818" transform="translate(1.182 7.091)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_419" data-name="Path 419" d="M7.091,1.182A9.041,9.041,0,0,1,9.455,7.091,9.041,9.041,0,0,1,7.091,13,9.041,9.041,0,0,1,4.727,7.091,9.041,9.041,0,0,1,7.091,1.182Z" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Mask_Group_194" data-name="Mask Group 194" transform="translate(322 -894)" clip-path="url(#clip-path-9)">
+      <g id="sun-3" data-name="sun" transform="translate(30 4409)">
+        <circle id="Ellipse_52" data-name="Ellipse 52" cx="2.708" cy="2.708" r="2.708" transform="translate(3.792 3.792)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_84" data-name="Line 84" y2="1.083" transform="translate(6.5 0.542)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_85" data-name="Line 85" y2="1.083" transform="translate(6.5 11.375)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_86" data-name="Line 86" x2="0.769" y2="0.769" transform="translate(2.286 2.286)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_87" data-name="Line 87" x2="0.769" y2="0.769" transform="translate(9.945 9.945)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_88" data-name="Line 88" x2="1.083" transform="translate(0.542 6.5)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_89" data-name="Line 89" x2="1.083" transform="translate(11.375 6.5)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_90" data-name="Line 90" y1="0.769" x2="0.769" transform="translate(2.286 9.945)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_91" data-name="Line 91" y1="0.769" x2="0.769" transform="translate(9.945 2.286)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Mask_Group_201" data-name="Mask Group 201" transform="translate(365 -895)" clip-path="url(#clip-path-10)">
+      <path id="moon" d="M13.676,8.329A5.861,5.861,0,1,1,7.3,1.954a4.559,4.559,0,0,0,6.375,6.375Z" transform="translate(28.673 4408.698)" fill="none" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g id="Mask_Group_202" data-name="Mask Group 202" transform="translate(408 -895)" clip-path="url(#clip-path-11)">
+      <path id="moon-2" data-name="moon" d="M13.676,8.329A5.861,5.861,0,1,1,7.3,1.954a4.559,4.559,0,0,0,6.375,6.375Z" transform="translate(28.673 4408.698)" fill="#dddede" stroke="#dedede" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g id="Right-2" data-name="Right" transform="translate(481 3514)" clip-path="url(#clip-path-12)">
+      <g id="arrow-left_2_3" data-name="arrow-left (2)" transform="translate(1.345 1.345)">
+        <line id="Line_157" data-name="Line 157" x2="13.311" transform="translate(0 6.655)" fill="none" stroke="#448bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_854" data-name="Path 854" d="M4.754,18.065l6.655-6.655L4.754,4.754" transform="translate(1.902 -4.754)" fill="none" stroke="#448bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

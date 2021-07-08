@@ -1,0 +1,116 @@
+<style>
+  .accordion1 {
+    background-color: var(--menu-color);
+    color: var(--font-menu-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    border: none;
+    outline: none !important; 
+    box-shadow: 0 0 0 0;
+  }
+  .accordion2 {
+    background-color: var(--body-color);
+    color: var(--font-blue-color);
+    cursor: pointer;
+    padding: 13px;
+    width: 100%;
+    margin-bottom:25px;
+    border-radius: 8px;
+    outline: none !important; 
+    border: 1px solid var(--hr-color);
+    text-align: center;
+    box-shadow: 0 0 0 0;
+  }
+  
+  .active1, .accordion1:hover {
+    background-color: var(--menu-color);
+  }
+  
+  .accordion1:after {
+    content: '\002B';
+    color: var(--font-menu-color);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active1:after {
+    content: "\2212";
+  }
+  
+  .panel1 {
+    padding: 0 18px;
+    background-color: var(--body-color);
+    max-height: 0;
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 25px;
+    transition: max-height 0.2s ease-out;
+  }
+</style>
+<div style="margin:10px 25px 0 30px;" class="top-point" id="container">
+    <!-- TITRE -->
+		{{$pagetitle := .Title}}
+        {{if eq $pagetitle ""}}
+        	{{with .File}}{{$pagetitle = .BaseFileName}}{{end}}
+        {{end}}
+		
+	{{ if eq .Type "faq"}}	
+	<p style="font: normal normal 600 24px/29px zoho-puvi-semibold; letter-spacing: 0px; color: var(--body-header-color); opacity: 1; margin-top: 30px; margin-bottom: 30px;"><span>{{$pagetitle}} FAQ</span></p>
+	<div class="content">
+    {{ with .Params.faq }}
+    {{ if .enable }}
+    <div class="tab-content col-md-12 d-none d-md-block" style="padding:0px;">
+      <div id="accordion1">
+          {{ range .faq_item }}
+          <button class="accordion1">{{ .question }}</button>
+          <div class="panel1">
+              <p class="faq-p">{{ .answer }}</p>
+          </div>
+          {{ end }}
+      </div>  
+    </div>
+    {{ end }}
+    {{ end }}
+	</div>
+  {{ else }}  
+  <p style="font: normal normal 600 24px/29px zoho-puvi-semibold; letter-spacing: 0px; color: var(--body-header-color); opacity: 1; margin-top: 30px; margin-bottom: 30px;"><span>{{$pagetitle}}</span></p>
+  <div class="content" style="text-align: left;">
+    {{- with .Content -}}
+	    {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+    {{- else -}}
+      {{with index .Pages 0}}
+      <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
+      {{- else -}}
+      	No content
+      {{- end -}}
+    {{- end -}}
+	</div>
+  {{ end }}
+
+	<div class="chevrons">
+		{{ partial "next-prev-page.html" . }}
+	</div>
+    <div>
+      {{ partial "suggestion-page.html"}}
+    </div>
+</div>
+<script>
+  var acc = document.getElementsByClassName("accordion1");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active1");
+      var panel1 = this.nextElementSibling;
+      if (panel1.style.maxHeight) {
+        panel1.style.maxHeight = null;
+      } else {
+        panel1.style.maxHeight = panel1.scrollHeight + "px";
+      } 
+    });
+  }
+</script>

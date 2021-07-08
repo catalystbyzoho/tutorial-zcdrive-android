@@ -1,0 +1,12 @@
+span.highlight{	
+	&.highlight-info{
+        font: normal normal normal 16px/24px Roboto-Mono;
+        letter-spacing: 0.8px;
+        color: #8D58C1;
+	}
+	&.highlight-i{
+        font: italic normal normal 16px/24px Roboto;
+        letter-spacing: 0px;
+        color: #8D58C1;
+	}
+}

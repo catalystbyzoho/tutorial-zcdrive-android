@@ -1,0 +1,7 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+<span class="highlight{{- " " -}}{{- if .IsNamedParams -}}
+{{- with .Get "theme" -}}highlight-{{.}}{{- else -}}highlight-info{{- end -}}
+{{- else -}}
+	{{- with .Get 0 -}}highlight-{{.}}{{- else -}}highlight-info{{- end -}}
+{{- end -}} 
+" role="highlight">{{- .Inner -}}</span>

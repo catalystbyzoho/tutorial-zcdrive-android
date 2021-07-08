@@ -1,0 +1,212 @@
+<style>
+    .theme{
+        width: 120px;
+        height: 37px;
+        right: 30px;
+        position: absolute;
+        background-color: var(--menu-color);
+        color: var(--font-lite-body-color);
+        font: normal normal normal 13px/16px zoho-puvi-regular;
+        border: 1px solid var(--hr-color);
+        border-radius: 2px;
+        outline: none !important; 
+        box-shadow: 0 0 0 0;
+        padding:10px;
+        display: flex;
+    }
+    .language{
+        width: 120px;
+        height: 37px;
+        right: 170px;
+        position: absolute;
+        background-color: var(--menu-color);
+        color: var(--font-lite-body-color);
+        font: normal normal normal 13px/16px zoho-puvi-regular;
+        border: 1px solid var(--hr-color);
+        border-radius: 2px;
+        outline: none !important; 
+        box-shadow: 0 0 0 0;
+        padding:10px;
+        display: flex;
+    }
+    .light-icon{
+        background: url('/images/DarkPages.svg') no-repeat -121px -29px;
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
+    .dark-icon{
+        background: url('/images/DarkPages.svg')no-repeat -473px -30px;
+        width: 13px;
+        height: 13px;
+        margin-right: 10px;
+    }
+    .lang-icon{
+        background: var(--lang-icon) no-repeat -387px -30px;
+        width: 13px;
+        height: 13px;
+        margin-right: 10px;
+    }
+    .lightbutton{
+        background: url('/images/DarkPages.svg') no-repeat -121px -29px;
+        width: 16px;
+        height: 16px;
+        margin:3px 5px 0 0;
+    }
+    .darkbutton{
+        background: url('/images/DarkPages.svg')no-repeat -473px -30px;
+        width: 13px;
+        height: 13px;
+        margin: 5px 5px 0 3px;
+    }
+    .themebutton{
+        position: absolute;
+        bottom: 80px;
+        display: none;
+        right: 10px;
+        background-color: var(--body-color);
+        color: var(--font-lite-body-color);
+        width: 206px;
+        height: 123px;
+        padding:15px;
+        border: 1px solid var(--hr-color);
+    }
+</style>
+<div class="themebutton" id="div1">
+    <div style="font: normal normal 600 13px/16px zoho-puvi-semibold; color:var(--font-lite-body-color); margin:5px 10px;">Select theme</div>
+    <div style="display: flex; margin:10px 0; cursor: pointer;" id="setlight">
+        <div class="lightbutton"></div><div style="font: normal normal normal 13px/16px zoho-puvi-regular; color:var(--font-lite-body-color); margin:5px 10px;">Light theme</div>
+    </div>
+    <div style="display: flex; margin:10px 0; cursor: pointer;" id="setdark">
+        <div class="darkbutton"></div><div style="font: normal normal normal 13px/16px zoho-puvi-regular; color:var(--font-lite-body-color); margin:5px 10px;">Dark theme</div>
+    </div>
+</div>
+<button class="language"><div class="lang-icon"></div><div>English (US)</div></button>
+<button id="dark-mode-button" class="theme">
+</button>
+      <script>
+          switchDarkMode = function () {
+          const rootElement = document.documentElement; // <html>
+          const darkModeStorageKey = 'user-color-scheme'; // use as localStorage's key
+          const rootElementDarkModeAttributeName = 'data-user-color-scheme';
+          const darkModeTogglebuttonElement = document.getElementById('dark-mode-button');
+          const visible = document.getElementById("div1");
+          const setLight = document.getElementById('setlight');
+          const setDark = document.getElementById('setdark');
+
+          const setLS = (k, v) => {
+              try {
+                  localStorage.setItem(k, v);
+              } catch (e) { }
+          }
+
+          const removeLS = (k) => {
+              try {
+                  localStorage.removeItem(k);
+              } catch (e) { }
+          }
+
+          const getLS = (k) => {
+              try {
+                  return localStorage.getItem(k);
+              } catch (e) {
+                  return null // the same as localStorage.getItem() get nothing
+              }
+          }
+
+          const getModeFromCSSMediaQuery = () => {
+              // use matchMedia API
+              return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+
+          const resetRootDarkModeAttributeAndLS = () => {
+              rootElement.removeAttribute(rootElementDarkModeAttributeName);
+              removeLS(darkModeStorageKey);
+          }
+
+          const validColorModeKeys = {
+              'dark': true,
+              'light': true
+          }
+
+          const modeIcons = {
+              'dark': '<div class="light-icon"></div><div>Light theme</div>',
+              'light': '<div class="dark-icon"></div><div>Dark theme</div>'
+          }
+
+          const setModeButtonIcon = (mode) => {
+              darkModeTogglebuttonElement.innerHTML = modeIcons[mode]
+          }
+
+          const applyCustomDarkModeSettings = (mode) => {
+              // receive user's operation or get previous mode from localStorage
+              const currentSetting = mode || getLS(darkModeStorageKey);
+
+              if (currentSetting === getModeFromCSSMediaQuery()) {
+                  // When the user selected mode equal prefers-color-scheme 
+                  // reset and restored to automatic mode
+                  nowMode = getModeFromCSSMediaQuery()
+                  resetRootDarkModeAttributeAndLS();
+              } else if (validColorModeKeys[currentSetting]) {
+                  nowMode = currentSetting
+                  rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+              } else {
+                  // 首次访问或从未使用过开关、localStorage 中没有存储的值，currentSetting 是 null
+                  // 或者 localStorage 被篡改，currentSetting 不是合法值
+                  nowMode = getModeFromCSSMediaQuery()
+                  resetRootDarkModeAttributeAndLS();
+              }
+              setModeButtonIcon(nowMode)
+            }
+
+            const invertDarkModeObj = {
+                'dark': 'light',
+                'light': 'dark'
+            }
+
+            const toggleCustomDarkMode = () => {
+                let currentSetting = getLS(darkModeStorageKey);
+
+                if (validColorModeKeys[currentSetting]) {
+                    // get mode from localStorage and set the opposite
+                    currentSetting = invertDarkModeObj[currentSetting];
+                } else if (currentSetting === null) {
+                    // if get null from localStorage
+                    // get mode from prefers-color-scheme and set the opposite
+                    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+                } else {
+                    // get anything error, return
+                    return;
+                }
+                // set opposite mode into localStorage
+                setLS(darkModeStorageKey, currentSetting);
+                return currentSetting;
+            }
+
+            // when page loaded set page mode
+            applyCustomDarkModeSettings();
+
+            darkModeTogglebuttonElement.addEventListener('click', () => {
+                // handle user click switch dark mode button
+                // applyCustomDarkModeSettings(toggleCustomDarkMode());
+                visible.style.display="block";
+            })
+
+            setLight.addEventListener('click', () => {
+                let currentSetting = "light";
+                setLS(darkModeStorageKey, currentSetting);
+                applyCustomDarkModeSettings(currentSetting);
+                darkModeTogglebuttonElement.innerHTML = '<div class="dark-icon"></div><div>Dark theme</div>';
+                visible.style.display="none";
+            })
+
+            setDark.addEventListener('click', () => {
+                let currentSetting = "dark";
+                setLS(darkModeStorageKey, currentSetting);
+                applyCustomDarkModeSettings(currentSetting);
+                darkModeTogglebuttonElement.innerHTML = '<div class="light-icon"></div><div>Light theme</div>';
+                visible.style.display="none";
+            })
+
+        }();
+      </script>

@@ -1,0 +1,36 @@
+<style type="text/css">
+  .filter {
+      background: url('/images/HelpdocsIconLightMode.svg') no-repeat -335px -83px scroll 13px 13px/15px 15px;
+      /* background: scroll 13px 13px/15px 15px; */
+  }
+  .logo {
+      border-bottom: 1px solid var(--hr-color);
+      height: 74px;
+      position: fixed;
+      width: 370px;
+      top: 0px;
+      display: flex;
+      background-color: var(--menu-color);
+  }
+  </style>
+  {{- if not .Site.Params.disableSearch}}
+  <div class="logo">
+    <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:30px; margin-top: 22px; height: 35px; width: auto;"/>
+    <a style="text-decoration: none;" href="{{.Site.BaseURL}}">
+      <div style="padding-top: 20px; padding-left: 8px; display: block;">
+        <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
+        <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
+      </div> 
+    </a>
+  </div>
+  {{- end}}
+  
+  <div id="close_menu">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+        <i class="fa fa-lg fa-times"></i>
+    </a>
+  </div>
+  
+  <ul class="docs-menu">
+    {{- partial "menu.html" . }}
+  </ul>    
