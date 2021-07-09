@@ -138,8 +138,6 @@ body{
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
         color: var(--font-blue-color);
         background-color: var(--body-color);
-        border-left: 2px solid var(--font-blue-color);
-        border-radius: 0px !important;
         padding-left: 14px;
     }
     .scroll-top {
