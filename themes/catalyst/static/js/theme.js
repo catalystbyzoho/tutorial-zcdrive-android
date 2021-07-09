@@ -43,8 +43,8 @@ switchDarkMode = function () {
     }
 
     const modeIcons = {
-        'dark': '<div class="light-icon"></div><div>Light theme</div>',
-        'light': '<div class="dark-icon"></div><div>Dark theme</div>'
+        'dark': '<div class="dark-icon"></div><div>Dark theme</div>',
+        'light': '<div class="light-icon"></div><div>Light theme</div>'
     }
 
     const setModeButtonIcon = (mode) => {
@@ -119,29 +119,27 @@ switchDarkMode = function () {
           applyCustomDarkModeSettings(currentSetting);
           darkModeTogglebuttonElement.innerHTML = '<div class="dark-icon"></div><div>Dark theme</div>';
           visible.style.display="none";
+          const ls = localStorage.getItem('user-color-scheme');
+          if (ls == 'dark') {
+            const themeSwitcher = document.getElementsByName('theme-switch');
+            for (var i = 0; i < themeSwitcher.length; i++) {
+              themeSwitcher[i].checked = true;
+            }
+            const theme = document.getElementsByName('codetheme');
+            for (var i = 0; i < theme.length; i++) {
+              console.log(theme[i]);
+              theme[i].classList.remove('light');
+              theme[i].classList.add('dark');
+            }
+            const icontheme = document.getElementsByName('icontheme');
+            for (var i = 0; i < icontheme.length; i++) {
+              icontheme[i].classList.remove('code-light-icon');
+              icontheme[i].classList.add('code-dark-icon');
+            }
+          }
       })
-
   }();
 
   //code
 
-  window.onload = () => {
-    const ls = localStorage.getItem('user-color-scheme');
-    if (ls == 'dark') {
-      const themeSwitcher = document.getElementsByName('theme-switch');
-      for (var i = 0; i < themeSwitcher.length; i++) {
-        themeSwitcher[i].checked = true;
-      }
-      const theme = document.getElementsByName('codetheme');
-      for (var i = 0; i < theme.length; i++) {
-        console.log(theme[i]);
-        theme[i].classList.remove('light');
-        theme[i].classList.add('dark');
-      }
-      const icontheme = document.getElementsByName('icontheme');
-      for (var i = 0; i < icontheme.length; i++) {
-        icontheme[i].classList.remove('code-light-icon');
-        icontheme[i].classList.add('code-dark-icon');
-      }
-    }
-  };
+   

@@ -135,10 +135,25 @@ body{
     .nav-link{
         margin:10px 0;
     }
+    .nav-div{
+        background-color: transparent; 
+        width: 2px; 
+        height: 10px; 
+        border-radius: 2px; 
+        margin-top: 25px;
+    }
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
         color: var(--font-blue-color);
         background-color: var(--body-color);
-        padding-left: 14px;
+        padding-left: 16px;
+        
+    }
+    .nav-div.active{
+        background-color: var(--font-blue-color);
+        width: 2px; 
+        height: 10px; 
+        border-radius: 2px; 
+        margin-top: 25px;
     }
     .scroll-top {
         position: fixed;

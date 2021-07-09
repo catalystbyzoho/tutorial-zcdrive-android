@@ -55,13 +55,13 @@
     </style>
     <div style="padding:0 30px; display: flex;;">
         <div class="logo">
-            <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:20px; margin-top: 21px; height: 34px; width: auto;"/>
-            <a style="text-decoration: none;" href="{{.Site.BaseURL}}">
-              <div style="padding-top: 20px; padding-left: 0px; display: block;">
-                <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
-                <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
-              </div> 
-            </a>
+          <a style="text-decoration: none; display: flex;" href="{{.Site.BaseURL}}">
+            <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:20px; margin-top: 21px; height: 34px; width: auto;" />
+            <div style="padding-top: 20px; padding-left: 0px; display: block;">
+              <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
+              <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
+            </div> 
+          </a>
         </div>
         
         {{ if or (eq .Type "whats-new") (eq .Type "faq")}}

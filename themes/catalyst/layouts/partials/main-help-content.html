@@ -174,16 +174,17 @@
         <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 30px/38px zoho-puvi-semibold;">Catalyst Component <br> help resources</p>
         {{ range $index, $element := .help_component }}
         {{ if (eq $index 0) }}
-        <div style="display: flex;">
-          <div style="background-color: #448BFF; width: 2px; height: 10px; border-radius: 2px; margin-top: 25px;"></div>
           <a class="nav-link active" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
             aria-controls="{{ .title }}" aria-selected="true">
+            <div class="nav-div active" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
+            aria-controls="{{ .title }}" aria-selected="true"></div>
             {{ .title }}
           </a>
-        </div>
         {{ else }}
         <a class="nav-link" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
           aria-controls="{{ .title }}" aria-selected="false">
+          <div class="nav-div" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
+            aria-controls="{{ .title }}" aria-selected="true"></div>
           {{ .title }}
         </a>
         {{ end }}
