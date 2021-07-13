@@ -771,23 +771,23 @@ article section.page {
         display: list-item; }
         article section.page #ariane ol li:after {
           display: inline-block;
-          padding-right: .3rem;
-          padding-left: .3rem;
-          color: var(--font-lite-body-color);
-          content: '\00bb';
-          font-size: larger; }
+          margin: -1px 8px;
+          content: '';
+          background: url("/images/LightPages.svg") no-repeat -604px -31px;
+          width: 10px;
+          height: 11px; }
         article section.page #ariane ol li a {
-          color: var(--font-lite-body-color);
-          padding-bottom: 4px;
-          padding-right: 0px; }
+          color: var(--font-lite-body-color); }
         article section.page #ariane ol li a:hover {
           color: var(--font-blue-color); }
         article section.page #ariane ol li.active {
           margin-top: 1px; }
           article section.page #ariane ol li.active:after {
             display: inline-block;
-            padding-left: .75rem;
-            content: ""; }
+            content: "";
+            background: url("/images/LightPages.svg") no-repeat -604px -31px;
+            width: 0px;
+            height: 0px; }
   article section.page div.chevrons {
     margin: 2rem 0;
     border-top: 1px solid var(--hr-color);
