@@ -41,6 +41,33 @@
 
 body{
     color: var(--font-body-color);
+    .searchbox{
+        border-radius:35px; 
+        outline: none !important; 
+        box-shadow: 0 0 0 0; 
+        font: normal normal normal 14px/17px zoho-puvi-regular; 
+        color: var(--font-menu-color);
+        padding: 3px 25px;
+        width: 400px;
+        height: 39px;
+        border: 0px;
+        background-color: transparent;
+        border: 1px solid var(--hr-color);
+    }
+    .show-search{
+        border-radius:35px; 
+        outline: none !important; 
+        box-shadow: 0 0 0 0; 
+        font: normal normal normal 14px/17px zoho-puvi-regular; 
+        color: var(--font-menu-color);
+        padding: 3px 25px;
+        width: 400px;
+        margin: 10px auto;
+        height: 39px;
+        border: 0px;
+        background-color: transparent;
+        border: 1px solid var(--hr-color);
+    }
     hr {
         height: 1px;
         background-color: var(--hr-color);
@@ -145,8 +172,10 @@ body{
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
         color: var(--font-blue-color);
         background-color: var(--body-color);
-        padding-left: 16px;
-        
+        padding-left: 16px; 
+    }
+    .nav-link.active div.add_div{
+        background-color: var(--font-blue-color);
     }
     .nav-div.active{
         background-color: var(--font-blue-color);
@@ -156,9 +185,9 @@ body{
         margin-top: 25px;
     }
     .scroll-top {
-        position: fixed;
-        right: 34px;
-        bottom: 23%;
+        position: absolute;
+        right: 0px;
+        bottom: 1px;
         z-index: 3;
         margin-top: -35px;
         padding: 5px;
@@ -201,7 +230,6 @@ body{
         border-bottom: 1px solid var(--hr-color) ;
         // box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
         
-        width: calc(100% - 370px);
 
         // color:($c_light2);
         a, a:hover {
@@ -277,9 +305,8 @@ body{
             font-size:14px;
             margin-right:30px;
             line-height:20px;
-            
+            height: calc(100vh - 74px);
             > div {
-                margin-bottom: 2em;
                 > *{
                     margin-left:0px;
                 } 

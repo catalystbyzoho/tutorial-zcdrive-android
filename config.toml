@@ -11,20 +11,11 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-
 # [Languages]
 # [Languages.en]
 # title = "catalyst"
 # weight = 1
 # languageName = "English"
-# 
-# [Languages.fr]
-# title = "catalyst"
-# weight = 2
-# languageName = "Français"
-
-
-
 
 [params]
 editURL = "https://github.com/"
@@ -50,24 +41,3 @@ home = [ "HTML", "RSS", "JSON"]
       unsafe = true
 
 [[menu.shortcuts]]
-pre = "<h3>More</h3>"
-name = "<i class='fa fa-github'></i> <label>Github repo</label>"
-identifier = "ds"
-url = "https://github.com/"
-weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-cloud-download'></i> <label>Download</label>"
-url = "https://github.com/vjeantet/"
-weight = 11
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-bookmark'></i> <label>catalyst</label>"
-identifier = "catalyst"
-url = "https://gohugo.io/"
-weight = 20
-
-[[menu.shortcuts]]
-name = "<i class='fa fa-bullhorn'></i> <label>Credits</label>"
-url = "/credits"
-weight = 30

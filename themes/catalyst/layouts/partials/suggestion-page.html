@@ -37,7 +37,7 @@
 	border-radius: 2px;
 	float: left;
 	padding: 10px 20px;
-	background-color: var(--body-color);
+	background-color: var(--menu-color);
 }
 .rating-form {
 	width: 250px;
@@ -128,7 +128,7 @@
   }
   
   </style>
-  <div class="rating-form no-print">
+  <div class="rating-form no-print" id="color-change">
     <div class="request-sec">
       <div class="yes-no">
         <p class="rating-qtn">Was this document helpful?</p>
@@ -137,13 +137,13 @@
             <div class="thumbsup"></div>
             <p style="color:var(--font-blue-color);">Yes</p>
           </div>
-          <div class="yes-no-btn no-btn" onclick="submitRating('No');">
+          <div class="yes-no-btn no-btn" onclick="submitRating('No'); document.getElementById('color-change').style.backgroundColor='var(--body-color)'; ">
             <div class="thumbsdown" tabindex="1" style="outline: none !important; box-shadow: 0 0 0 0;"></div>
             <p style="color:var(--font-blue-color);">No</p>
           </div>
         </div>
       </div>
-      <div class="feedback-sec">
+      <div class="feedback-sec" style="background-color: var(--body-color);">
         <p style="font: normal normal 600 13px/16px zoho-puvi-semibold; color:var(--font-body-color);">Send feedback to us</p>
         <div class="form-group">
           <input class="form email-field" type="text" placeholder="Your mail id" id="feedback_email" style="height: 34px; ">
@@ -155,11 +155,11 @@
           <button style="background-color: var(--menu-color); font: normal normal normal 13px/16px zoho-puvi-regular;
           letter-spacing: 0px;
           color: var(--font-menu-color); outline: none !important; box-shadow: 0 0 0 0;
-          opacity: 1; width: 88px; height: 34px; border: none; cursor: pointer;" onclick="hideFeedbackSec();">Skip</button>
+          opacity: 1; width: 88px; height: 34px; border: none; cursor: pointer;" onclick="hideFeedbackSec(); document.getElementById('color-change').style.backgroundColor='var(--menu-color)'; ">Skip</button>
           <button style="background-color: var(--font-blue-color); font: normal normal normal 13px/16px zoho-puvi-regular;
           letter-spacing: 0px;
           color: #FFFFFF; outline: none !important; box-shadow: 0 0 0 0;
-          opacity: 1; margin-left: 95px; width: 88px; height: 34px; border: none; cursor: pointer;" onclick="submitFeedback();">Submit</button> 
+          opacity: 1; margin-left: 95px; width: 88px; height: 34px; border: none; cursor: pointer;" onclick="submitFeedback(); document.getElementById('color-change').style.backgroundColor='var(--menu-color)';">Submit</button> 
         </div>
       </div>
     </div>

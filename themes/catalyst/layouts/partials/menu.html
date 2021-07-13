@@ -1,18 +1,8 @@
-<style>
-  .font-bold{
-    color:red;
-  }
-</style>
 {{- $currentNode := . }}
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
-{{- if eq .Site.Params.ordersectionsby "title"}}
-  {{- range .Site.Home.Sections.ByTitle}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-  {{- end}}
-{{- else}}
-  {{- range .Site.Home.Sections.ByWeight}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-  {{- end}}
+
+{{- range .Site.Home.Sections.ByWeight}}
+{{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
 {{- end}}
 
 <!-- templates -->
@@ -28,7 +18,7 @@
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
-      {{ if ne .Title "main" }}
+      {{ if (ne .Title "main") }}
       <div>
         {{- if ne $numberOfPages 0 }}
           {{- if .Params.alwaysopen }}
@@ -47,21 +37,12 @@
           {{- $pages = (.Pages | union .Sections) }}
           {{- end}}
 
-        {{- if eq .Site.Params.ordersectionsby "title"}}
-          {{- range $pages.ByTitle }}
-            {{- if and .Params.hidden (not $.showhidden) }}
-            {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
-            {{- end}}
-          {{- end}}
-        {{- else}}
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
             {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
             {{- end}}
           {{- end}}
-        {{- end}}
         </ul>
       {{- end}}
     </li>
@@ -73,7 +54,7 @@
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
         </div>
-    </li>
+      </li>
      {{- end}}
   {{- end}}
  {{- end}}

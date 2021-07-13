@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="468" height="74" viewBox="0 0 468 74">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="605" height="74" viewBox="0 0 605 74">
   <defs>
     <clipPath id="clip-path">
       <rect id="Rectangle_404" data-name="Rectangle 404" width="16" height="16" transform="translate(490.679 125)" fill="#fff"/>
@@ -27,9 +27,18 @@
     <clipPath id="clip-path-9">
       <rect id="Rectangle_412" data-name="Rectangle 412" width="13" height="13" transform="translate(30 4409)" fill="#fff"/>
     </clipPath>
+    <clipPath id="clip-path-10">
+      <rect id="Rectangle_519" data-name="Rectangle 519" width="13" height="13" transform="translate(30 4410)" fill="#393939"/>
+    </clipPath>
+    <clipPath id="clip-path-11">
+      <rect id="Rectangle_520" data-name="Rectangle 520" width="13" height="13" transform="translate(30 4410)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-12">
+      <rect id="Rectangle_521" data-name="Rectangle 521" width="16" height="16" rx="2" fill="#fff" stroke="#448bff" stroke-width="1"/>
+    </clipPath>
   </defs>
   <g id="LightPages" transform="translate(78 -3485)">
-    <rect id="Rectangle_403" data-name="Rectangle 403" width="468" height="74" transform="translate(-78 3485)" fill="rgba(255,255,255,0)"/>
+    <rect id="Rectangle_403" data-name="Rectangle 403" width="605" height="74" transform="translate(-78 3485)" fill="rgba(255,255,255,0)"/>
     <g id="SearchNormal" transform="translate(-538.679 3390)" clip-path="url(#clip-path)">
       <g id="search" transform="translate(489.112 123.432)">
         <circle id="Ellipse_49" data-name="Ellipse 49" cx="6.27" cy="6.27" r="6.27" transform="translate(2.351 2.351)" fill="none" stroke="#989898" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
@@ -97,6 +106,18 @@
         <line id="Line_89" data-name="Line 89" x2="1.083" transform="translate(11.375 6.5)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
         <line id="Line_90" data-name="Line 90" y1="0.769" x2="0.769" transform="translate(2.286 9.945)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
         <line id="Line_91" data-name="Line 91" y1="0.769" x2="0.769" transform="translate(9.945 2.286)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Mask_Group_236" data-name="Mask Group 236" transform="translate(408 -895)" clip-path="url(#clip-path-10)">
+      <path id="moon" d="M13.676,8.329A5.861,5.861,0,1,1,7.3,1.954a4.559,4.559,0,0,0,6.375,6.375Z" transform="translate(28.673 4408.698)" fill="#393939" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g id="Mask_Group_237" data-name="Mask Group 237" transform="translate(365 -895)" clip-path="url(#clip-path-11)">
+      <path id="moon-2" data-name="moon" d="M13.676,8.329A5.861,5.861,0,1,1,7.3,1.954a4.559,4.559,0,0,0,6.375,6.375Z" transform="translate(28.673 4408.698)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <g id="Right-2" data-name="Right" transform="translate(481 3514)" clip-path="url(#clip-path-12)">
+      <g id="arrow-left_2_3" data-name="arrow-left (2)" transform="translate(1.345 1.345)">
+        <line id="Line_163" data-name="Line 163" x2="13.311" transform="translate(0 6.655)" fill="none" stroke="#448bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_1184" data-name="Path 1184" d="M4.754,18.065l6.655-6.655L4.754,4.754" transform="translate(1.902 -4.754)" fill="none" stroke="#448bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
     </g>
   </g>

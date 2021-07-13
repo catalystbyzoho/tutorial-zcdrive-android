@@ -16,6 +16,14 @@
       display: flex;
       background-color: var(--menu-color);
   }
+  .input-filter{
+    border: none; 
+    background-color: transparent; 
+    outline: none !important; 
+    box-shadow: 0 0 0 0; 
+    color: var(--font-menu-color);
+    font: normal normal normal 14px/17px zoho-puvi-regular;
+  }
   ::placeholder{
     color: var(--font-at-color);
     font: normal normal normal 13px/16px zoho-puvi-regular;
@@ -39,7 +47,7 @@
       background-color: transparent;
       border: 1px solid var(--hr-color);">
         <div class="shortlist"></div>
-        <input data-search-input id="search-by" type="text" placeholder="Filter Topics" style="border: none; background-color: transparent; outline: none !important; box-shadow: 0 0 0 0;">
+        <input data-search-input id="search-by" type="text" placeholder="Filter Topics" class="input-filter">
       </div>
   
       <script type="text/javascript" src="{{"vendor/lunr/lunr.min.js" | relURL}}"></script>

@@ -140,11 +140,23 @@
       width: 29px;
       height: 31px;
     }
-
+    .container a:hover{
+      color: var(--font-body-color);
+    }
+    .add_div{
+      width: 2px;
+      height: 10px;
+      margin-top: 7px;
+      margin-right: 15px;
+      border-radius: 2px;
+      opacity: 1;
+    }
 </style>
 {{ with .Params.help }}
 {{ if .enable }}
-<section id="help_component" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+<div id="help-components" style="position: absolute; top:530px;"></div>
+
+<section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
   <div class="container">
 
     <div class="row justify-content-center">
@@ -175,18 +187,16 @@
         {{ range $index, $element := .help_component }}
         {{ if (eq $index 0) }}
           <a class="nav-link active" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
-            aria-controls="{{ .title }}" aria-selected="true">
-            <div class="nav-div active" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
-            aria-controls="{{ .title }}" aria-selected="true"></div>
+            aria-controls="{{ .title }}" aria-selected="true" style="display: flex; padding-left: 0px;">
+            <div class="add_div"></div>
             {{ .title }}
           </a>
         {{ else }}
-        <a class="nav-link" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
-          aria-controls="{{ .title }}" aria-selected="false">
-          <div class="nav-div" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
-            aria-controls="{{ .title }}" aria-selected="true"></div>
-          {{ .title }}
-        </a>
+          <a class="nav-link" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
+            aria-controls="{{ .title }}" aria-selected="false" style="display: flex; padding-left: 0px;">
+            <div class="add_div"></div>
+            {{ .title }}
+          </a>
         {{ end }}
         {{ end }}
       </div>
@@ -232,3 +242,9 @@
 </section>
 {{ end }}
 {{ end }}
+
+<script>
+  var dis = document.getElementsByTagName("A");
+  console.log(dis);
+  
+</script>

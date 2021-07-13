@@ -5,6 +5,9 @@
 	}
 	.panel{
 		margin-bottom: 0;
+		background-color: var(--main-background);
+		box-shadow: none;
+		border-radius: 0px;
 	}
 	.panelswitch {
 		position: relative;
@@ -78,7 +81,7 @@
 </style>
 
 <pre name="codetheme" class="light1 preblock">
-	<div class="panel" style="border: 1px solid var(--main-background); ">
+	<div class="panel" style="border: 1.5px solid var(--main-background); ">
 		{{- with .Get "header" -}}
 			<div class="panel-heading" style="background-color: var(--main-background); color:var(--main-font); border-color:var(--main-background); margin-bottom: -47px;     border-bottom-width: 2px;">
 				{{- htmlUnescape . | markdownify -}}
