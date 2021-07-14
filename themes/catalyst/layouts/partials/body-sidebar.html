@@ -3,12 +3,12 @@
       background: var(--shortlist-icon) no-repeat -76px -30px;
       width: 15px;
       height: 15px;
-      margin-top: 7px;
-      margin-right: 10px;
+      margin-top: 8px;
+      margin-right: 11px;
   }
   .logo {
       border-bottom: 1px solid var(--hr-color);
-      height: 74px;
+      height: 75px;
       position: fixed;
       width: 370px;
       z-index: 2;
@@ -16,13 +16,18 @@
       display: flex;
       background-color: var(--menu-color);
   }
+  .catalyst-logo{
+    background: url('/images/CatalystLogo.svg') no-repeat 0 0;
+    width: 28px;
+    height: 32px;
+  }
   .input-filter{
     border: none; 
     background-color: transparent; 
     outline: none !important; 
     box-shadow: 0 0 0 0; 
     color: var(--font-menu-color);
-    font: normal normal normal 14px/17px zoho-puvi-regular;
+    font: 15px/18px zoho-puvi-regular;
   }
   ::placeholder{
     color: var(--font-at-color);
@@ -31,23 +36,23 @@
   </style>
   {{- if not .Site.Params.disableSearch}}
   <div class="logo">
-    <a style="text-decoration: none; display: flex;" href="{{.Site.BaseURL}}">
-      <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:30px; margin-top: 22px; height: 35px; width: auto;"/>
-      <div style="padding-top: 20px; padding-left: 8px; display: block;">
-        <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
-        <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
+    <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
+      <div class="catalyst-logo"></div>
+      <div style="display: block; margin-left: 12px; margin-top:1px;">
+        <p style="font: 20px/20px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px; margin-top: -2px;">Catalyst</p>
+        <p style="font: 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 0px;">by Zoho</p>
       </div> 
     </a>
   </div>
   <div class="search">
-      <div class="searchbox" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 3px 25px;
+      <div class="searchbox" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 4px 11px;
       width: 310px;
       height: 39px;
       border: 0px;
       background-color: transparent;
       border: 1px solid var(--hr-color);">
         <div class="shortlist"></div>
-        <input data-search-input id="search-by" type="text" placeholder="Filter Topics" class="input-filter">
+        <input data-search-input id="search-by" type="text" placeholder="Filter topics" class="input-filter">
       </div>
   
       <script type="text/javascript" src="{{"vendor/lunr/lunr.min.js" | relURL}}"></script>

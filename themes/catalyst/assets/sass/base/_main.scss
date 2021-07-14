@@ -45,12 +45,13 @@ body{
         border-radius:35px; 
         outline: none !important; 
         box-shadow: 0 0 0 0; 
-        font: normal normal normal 14px/17px zoho-puvi-regular; 
+        font: 14px/17px zoho-puvi-regular; 
         color: var(--font-menu-color);
-        padding: 3px 25px;
+        padding: 3px 13px;
         width: 400px;
         height: 44px;
-        border: 0px;
+        margin-top: 1px;
+        margin-left: 1px;
         background-color: transparent;
         border: 1px solid var(--hr-color);
     }
@@ -58,13 +59,14 @@ body{
         border-radius:35px; 
         outline: none !important; 
         box-shadow: 0 0 0 0; 
-        font: normal normal normal 14px/17px zoho-puvi-regular; 
+        font: 14px/17px zoho-puvi-regular; 
         color: var(--font-menu-color);
-        padding: 3px 25px;
+        padding: 3px 13px;
         width: 400px;
         margin: 10px auto;
         height: 44px;
-        border: 0px;
+        margin-top: 1px;
+        margin-left: 1px;
         background-color: transparent;
         border: 1px solid var(--hr-color);
     }
@@ -226,37 +228,16 @@ body{
     header {
         
         background-color: var(--body-color);    
-
         border-bottom: 1px solid var(--hr-color) ;
-        // box-shadow: 0 0 0.2rem rgba(0,0,0,.1), 0 0.2rem 0.4rem rgba(0,0,0,.2);
-        
 
-        // color:($c_light2);
-        a, a:hover {
-            // color:invert($c_dark2);
-        }
         > div {
             display: flex; 
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: stretch ;
-
             white-space: nowrap;
-            
-
-            img {
-                height: 32px;
-                margin-right: 0.5rem;
-            }
-            .burger {
-                margin-right: 1rem; 
-            }
-
         }
-
-
-
 
         nav.shortcuts {
             margin-left: auto;
@@ -301,24 +282,23 @@ body{
         }
 
         section.right-menu {
-            padding-top: 101px;
+            padding-top: 113px;
             font-size:14px;
             margin-right:30px;
             line-height:20px;
-            height: calc(100vh - 74px);
+            height: calc(100vh - 75px);
             > div {
                 > *{
                     margin-left:0px;
                 } 
                 nav>ul{
-                    padding: 0px 20px 0px 20px;
-                    margin:  0px 0px 0px 0px;
+                    padding: 0px 20px;
+                    margin: 0px;
                     ul{
                         padding: 0px 0px 0px 0px;
                         margin:  0px 0px 0px 0px;
-                        // border-left: 1px solid $c_light2;
                         li{
-                            font-size: 90%;
+                            padding-bottom: 15px;
                         }
                     }
                 }
@@ -327,32 +307,21 @@ body{
                     list-style-type: none;
                 }
                 li{
-                    padding: 4px 0px 0px 0px;
-                    font: normal normal normal 14px/26px zoho-puvi-regular;
-                    letter-spacing: 0px;
-                    opacity: 1;
                     &.active a{
                         color: var(--font-blue-color);
-                        padding: 8px 0px 0px 0px;
-                        font: normal normal normal 14px/26px zoho-puvi-regular;
+                        font: 15px/18px zoho-puvi-regular;
                         letter-spacing: 0px;
                         opacity: 1;
                     }
                     a {
                         color: var(--font-lite-body-color);
-                        padding: 8px 0px 0px 0px;
-                        font: normal normal normal 14px/26px zoho-puvi-regular;
+                        font: 15px/18px zoho-puvi-regular;
                         letter-spacing: 0px;
                         opacity: 1;
                     }
                     
                 }
             }
-
-            .Actions{
-                font-size: 75%;
-            }
-
         }
     }
 
@@ -370,9 +339,9 @@ body{
 article section.page {
     background-color: var(--body-color);
     #ariane{
-        display: block;
-        font: normal normal normal 14px/17px zoho-puvi-regular;
+        font: 13px/16px zoho-puvi-regular;
         letter-spacing: 0px;
+        display: block;
         color: var(--font-lite-body-color);
 
         ol{
@@ -385,7 +354,7 @@ article section.page {
                 display: list-item;
                 &:after{
                     display: inline-block;
-                    margin:-1px 8px; 
+                    margin:-2px 5px; 
                     content: '';
                     background: url('/images/LightPages.svg') no-repeat -604px -31px;
                     width: 10px;
@@ -480,26 +449,31 @@ article section.page div.content{
     }
 
     p {
-            margin: 20px 0;
-            font: normal normal normal 16px/24px zoho-puvi-regular;
+            margin: 16px 0;
+            font: 16px/24px zoho-puvi-regular;
             letter-spacing: 0px;
             color: var(--font-body-color);
             opacity: 1;
     }
+    ul{
+        padding-left: 36px;
+        margin-top: 22px;
+    }
 
     li {
         margin: 1rem 0;
-        font: normal normal normal 16px/24px zoho-puvi-regular;
+        font: 16px/24px zoho-puvi-regular;
         letter-spacing: 0px;
         color: var(--font-body-color);
         opacity: 1;
     }
     h1 {     
-        font: normal normal bold 24px/29px zoho-puvi-bold;   
+        font: 24px/29px zoho-puvi-bold;   
         letter-spacing: 0px;
         color: var(--font-body-color);
         opacity: 1;
-        margin-top:30px;
+        margin-top:38px;
+        margin-bottom: 0px;
    }
 
     // h2 {
@@ -515,7 +489,7 @@ article section.page div.content{
         letter-spacing: 0px;
         color: var(--font-body-color);
         opacity: 1;
-        margin-top:30px;
+        margin-top:38px;
     }
 
     h4 {

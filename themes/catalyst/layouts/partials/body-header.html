@@ -10,21 +10,25 @@
   letter-spacing: 0px;
   color: #F0F0F0;
   opacity: 1;
-  margin: 0 10px;
+  margin-left: 22px;
+  margin-top:1px;
 }
 .search-icon{
   background: var(--shortlist-icon) no-repeat -30px -30px;
 	width: 16px;
 	height: 16px;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 14px;
+  margin-left: 0px;
 }
-.list{
-    font: normal normal normal 14px/17px zoho-puvi-regular;
+.list {
+  margin:9px 22.5px 0 22px;
+}
+.list a{
+    font: 15px/18px zoho-puvi-regular;
     letter-spacing: 0px;
     color: var(--font-lite-body-color);
     opacity: 1;
-    margin:14px 22px 0 22px;
 }
 .list a:hover{
   color: var(--font-blue-color);
@@ -35,7 +39,7 @@
 	float: left;
 }
 .src-input {
-	padding: 6px 40px;
+	padding: 12px 40px;
   padding-left: 0px;
   color: var(--font-menu-color);
   font: normal normal normal 14px/17px zoho-puvi-regular;
@@ -49,7 +53,7 @@
   font: 15px/18px zoho-puvi-regular;
 }
 </style>
-<div style="padding:0 30px;">
+<div style="padding:0 29px 0 40px;">
     {{if not (in .Params.hide "nav")}}
     <div class="burger {{.Params.layout }}">
         <a href="javascript:void(0);" style="font-size:25px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>

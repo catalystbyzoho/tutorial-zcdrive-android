@@ -17,11 +17,11 @@ You can perform the following actions using Authentication from the remote conso
 * Enable or disable their user accounts in your application
 * Create templates for emails to invite new users to access the application
 * Reset their passwords
-1. Access Catalyst's user sign-in code snippet that you can include in your application
-2. Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
-3. Create and manage roles to define the levels of access and permissions for users
-4. Authorize external domains and enable {{% highlight%}}CORS{{%/ highlight%}} and {{% highlight%}}iFrame{{%/ highlight%}} for your application in them
-5. Authorize external domains and enable {{% badge%}}CORS{{%/ badge%}} and {{% badge%}}iFrame{{%/ badge%}} for your application in them
+* Access Catalyst's user sign-in code snippet that you can include in your application
+* Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
+* Create and manage roles to define the levels of access and permissions for users
+* Authorize external domains and enable {{% highlight%}}CORS{{%/ highlight%}} and {{% highlight%}}iFrame{{%/ highlight%}} for your application in them
+* Authorize external domains and enable {{% badge%}}CORS{{%/ badge%}} and {{% badge%}}iFrame{{%/ badge%}} for your application in them
 
 The document is divided into five pages to cover the five features of Catalyst Authentication: {{% bold %}}Users, Email Templates, Sign-in Method, Roles, Authorized Domains.{{%/ bold %}} Each section explains the key concepts, benefits, and implementation of each feature.
 
