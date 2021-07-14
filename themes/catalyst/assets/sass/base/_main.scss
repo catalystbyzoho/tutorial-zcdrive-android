@@ -224,6 +224,16 @@ body{
         -o-transition: visibility 0s .2s, opacity .2s linear;
         transition: visibility 0s .2s, opacity .2s linear
     }
+    .w10 { width: 10%; }
+    .w20 { width: 20%; }
+    .w30 { width: 30%; }
+    .w40 { width: 40%; }
+    .w50 { width: 50%; }
+    .w60 { width: 60%; }
+    .w70 { width: 70%; }
+    .w80 { width: 80%; }
+    .w90 { width: 90%; }
+    .w100 { width: 100%; }
 
     header {
         
@@ -572,6 +582,7 @@ article section.page div.content{
         max-width: 100%;
         margin: 1.5rem auto 1.5rem 0;
         display: block;
+
 
         &.inline {
             display: inline !important;
