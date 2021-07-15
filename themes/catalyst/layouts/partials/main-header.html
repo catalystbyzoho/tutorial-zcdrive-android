@@ -52,17 +52,22 @@
       top: 0px;
       display: flex;
     }
+    .catalyst-logo{
+      background: url('/images/CatalystLogo.svg') no-repeat 0 0;
+      width: 28px;
+      height: 32px;
+    }
     </style>
     <div style="padding:0 30px; display: flex;;">
-        <div class="logo">
-          <a style="text-decoration: none; display: flex;" href="{{.Site.BaseURL}}">
-            <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:20px; margin-top: 21px; height: 34px; width: auto;" />
-            <div style="padding-top: 20px; padding-left: 0px; display: block;">
-              <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
-              <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
-            </div> 
-          </a>
-        </div>
+      <div class="logo">
+        <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
+          <div class="catalyst-logo"></div>
+          <div style="display: block; margin-left: 12px; margin-top:1px;">
+            <p style="font: 20px/20px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px; margin-top: -2px;">Catalyst</p>
+            <p style="font: 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 0px;">by Zoho</p>
+          </div> 
+        </a>
+      </div>
         
         {{ if or (eq .Type "whats-new") (eq .Type "faq")}}
           <div style="margin-left: 25%;">
