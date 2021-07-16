@@ -143,12 +143,12 @@
     </div>
 </div>
 <button class="language"><div class="lang-icon"></div><div>English (US)</div></button>
-<button id="dark-mode-button" class="theme" onclick="themeswitching()">
+<button id="dark-mode-button" class="theme" onclick="themeswitching(this)" data="true">
 </button>
 <script src='{{"js/theme.js" | relURL}}'></script>
 
 <script>
-    function themeswitching(){
+    function themeswitching(e){
     const rootElement = document.documentElement; 
     const darkModeStorageKey = 'user-color-scheme'; 
     const rootElementDarkModeAttributeName = 'data-user-color-scheme';
@@ -156,142 +156,141 @@
     const visible = document.getElementById("div1");
     const setLight = document.getElementById('setlight');
     const setDark = document.getElementById('setdark');
-
-    const setLS = (k, v) => {
-        try {
-            localStorage.setItem(k, v);
-        } catch (e) { }
-    }
-
-    const removeLS = (k) => {
-        try {
-            localStorage.removeItem(k);
-        } catch (e) { }
-    }
-
-    const getLS = (k) => {
-        try {
-            return localStorage.getItem(k);
-        } catch (e) {
-            return null 
+    if(e.getAttribute("data") == "true"){
+        visible.style.display="block";
+        const setLS = (k, v) => {
+            try {
+                localStorage.setItem(k, v);
+            } catch (e) { }
         }
-    }
 
-    const getModeFromCSSMediaQuery = () => {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    }
-
-    const resetRootDarkModeAttributeAndLS = () => {
-        rootElement.removeAttribute(rootElementDarkModeAttributeName);
-        removeLS(darkModeStorageKey);
-    }
-
-    const validColorModeKeys = {
-        'dark': true,
-        'light': true
-    }
-
-    const modeIcons = {
-        'dark': '<div class="dark-icon"></div><div>Dark theme</div>',
-        'light': '<div class="light-icon"></div><div>Light theme</div>'
-    }
-
-    const setModeButtonIcon = (mode) => {
-        darkModeTogglebuttonElement.innerHTML = modeIcons[mode]
-    }
-
-    const applyCustomDarkModeSettings = (mode) => {
-        const currentSetting = mode || getLS(darkModeStorageKey);
-
-        if (currentSetting === getModeFromCSSMediaQuery()) {
-            nowMode = getModeFromCSSMediaQuery()
-            resetRootDarkModeAttributeAndLS();
-        } else if (validColorModeKeys[currentSetting]) {
-            nowMode = currentSetting
-            rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-        } else {
-            nowMode = getModeFromCSSMediaQuery()
-            resetRootDarkModeAttributeAndLS();
+        const removeLS = (k) => {
+            try {
+                localStorage.removeItem(k);
+            } catch (e) { }
         }
-        setModeButtonIcon(nowMode)
-      }
 
-      if(visible.style.display == 'none') visible.style.display = 'none'; else visible.style.display = 'block';
-      const localstorage = localStorage.getItem('user-color-scheme');
-        if(localstorage == "dark"){
+        const getLS = (k) => {
+            try {
+                return localStorage.getItem(k);
+            } catch (e) {
+                return null 
+            }
+        }
+
+        const getModeFromCSSMediaQuery = () => {
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+
+        const resetRootDarkModeAttributeAndLS = () => {
+            rootElement.removeAttribute(rootElementDarkModeAttributeName);
+            removeLS(darkModeStorageKey);
+        }
+
+        const validColorModeKeys = {
+            'dark': true,
+            'light': true
+        }
+
+        const modeIcons = {
+            'dark': '<div class="dark-icon"></div><div>Dark theme</div>',
+            'light': '<div class="light-icon"></div><div>Light theme</div>'
+        }
+
+        const setModeButtonIcon = (mode) => {
+            darkModeTogglebuttonElement.innerHTML = modeIcons[mode]
+        }
+
+        const applyCustomDarkModeSettings = (mode) => {
+            const currentSetting = mode || getLS(darkModeStorageKey);
+
+            if (currentSetting === getModeFromCSSMediaQuery()) {
+                nowMode = getModeFromCSSMediaQuery()
+                resetRootDarkModeAttributeAndLS();
+            } else if (validColorModeKeys[currentSetting]) {
+                nowMode = currentSetting
+                rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+            } else {
+                nowMode = getModeFromCSSMediaQuery()
+                resetRootDarkModeAttributeAndLS();
+            }
+            setModeButtonIcon(nowMode)
+        }
+
+        const localstorage = localStorage.getItem('user-color-scheme');
+            if(localstorage == "dark"){
+                document.getElementById("checkbox-light").checked=false;
+                document.getElementById("checkbox-dark").checked=true;
+            }
+            else{
+                document.getElementById("checkbox-light").checked=true;
+                document.getElementById("checkbox-dark").checked=false;
+            }
+
+        setLight.addEventListener('click', () => {
+            e.setAttribute("data","true");
+            let currentSetting = "light";
+            setLS(darkModeStorageKey, currentSetting);
+            applyCustomDarkModeSettings(currentSetting);
+            visible.style.display="none";
+            minitheme(currentSetting);
+        })
+
+        setDark.addEventListener('click', () => {
+            e.setAttribute("data","true");
+            let currentSetting = "dark";
+            setLS(darkModeStorageKey, currentSetting);
+            applyCustomDarkModeSettings(currentSetting);
             document.getElementById("checkbox-light").checked=false;
             document.getElementById("checkbox-dark").checked=true;
-        }
-        else{
-            document.getElementById("checkbox-light").checked=true;
-            document.getElementById("checkbox-dark").checked=false;
-        }
+            visible.style.display="none";
+            minitheme(currentSetting);
+        })
 
-      darkModeTogglebuttonElement.addEventListener('click', () => {
-        visible.style.display="block";
-      })
-
-      setLight.addEventListener('click', () => {
-          let currentSetting = "light";
-          setLS(darkModeStorageKey, currentSetting);
-          applyCustomDarkModeSettings(currentSetting);
-          visible.style.display="none";
-          minitheme(currentSetting);
-      })
-
-      setDark.addEventListener('click', () => {
-          let currentSetting = "dark";
-          setLS(darkModeStorageKey, currentSetting);
-          applyCustomDarkModeSettings(currentSetting);
-          document.getElementById("checkbox-light").checked=false;
-          document.getElementById("checkbox-dark").checked=true;
-          visible.style.display="none";
-          minitheme(currentSetting);
-      })
-
-      const minitheme = (change) => {
-        const ls = localStorage.getItem('user-color-scheme');
-        if (ls == 'dark') {
-        const themeSwitcher = document.getElementsByName('theme-switch');
-        for (var i = 0; i < themeSwitcher.length; i++) {
-            themeSwitcher[i].checked = true;
-            console.log("hello")
-        }
-        const theme = document.getElementsByName('codetheme');
-        for (var i = 0; i < theme.length; i++) {
-            console.log(theme[i]);
-            theme[i].classList.remove('light');
-            theme[i].classList.add('dark');
-            theme[i].classList.remove('light1');
-            theme[i].classList.add('dark1');
-        }
-        const icontheme = document.getElementsByName('icontheme');
-        for (var i = 0; i < icontheme.length; i++) {
-            icontheme[i].classList.remove('code-light-icon');
-            icontheme[i].classList.add('code-dark-icon');
-        }
-        }
-        else{
+        const minitheme = (change) => {
+            if (change == 'dark') {
             const themeSwitcher = document.getElementsByName('theme-switch');
             for (var i = 0; i < themeSwitcher.length; i++) {
                 themeSwitcher[i].checked = true;
-                console.log("hellolight")
             }
             const theme = document.getElementsByName('codetheme');
             for (var i = 0; i < theme.length; i++) {
-                console.log(theme[i]);
-                theme[i].classList.remove('dark');
-                theme[i].classList.add('light');
-                theme[i].classList.remove('dark1');
-                theme[i].classList.add('light1');
+                theme[i].classList.remove('light');
+                theme[i].classList.add('dark');
+                theme[i].classList.remove('light1');
+                theme[i].classList.add('dark1');
             }
             const icontheme = document.getElementsByName('icontheme');
             for (var i = 0; i < icontheme.length; i++) {
-                icontheme[i].classList.remove('code-dark-icon');
-                icontheme[i].classList.add('code-light-icon');
+                icontheme[i].classList.remove('code-light-icon');
+                icontheme[i].classList.add('code-dark-icon');
+            }
+            }
+            else{
+                const themeSwitcher = document.getElementsByName('theme-switch');
+                for (var i = 0; i < themeSwitcher.length; i++) {
+                    themeSwitcher[i].checked = false;
+                }
+                const theme = document.getElementsByName('codetheme');
+                for (var i = 0; i < theme.length; i++) {
+                    theme[i].classList.remove('dark');
+                    theme[i].classList.add('light');
+                    theme[i].classList.remove('dark1');
+                    theme[i].classList.add('light1');
+                }
+                const icontheme = document.getElementsByName('icontheme');
+                for (var i = 0; i < icontheme.length; i++) {
+                    icontheme[i].classList.remove('code-dark-icon');
+                    icontheme[i].classList.add('code-light-icon');
+                }
             }
         }
-      }
+        e.setAttribute("data","false");
+    }
+    else{
+        visible.style.display="none";
+        e.setAttribute("data","true");
+    }
   }
 
 </script>

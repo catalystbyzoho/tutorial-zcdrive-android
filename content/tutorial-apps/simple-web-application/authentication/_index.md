@@ -22,16 +22,8 @@ related_link:
 
 Catalyst Authentication feature enables you to add end-users to your Catalyst serverless applications, configure their user accounts and roles, and manage user sign-in and authentication of your application directly from the Catalyst console.
 
-
 ### Introduction
 
-{{%code%}}
-hugo new site 
-{{%/code%}}
-
-{{%code%}}
-hugo new site 
-{{%/code%}}
 You can perform the following actions using Authentication from the remote console:
 
 * Add or remove the end-users of your application

@@ -16,37 +16,21 @@
     {{end}}
   </head>
 
-  <body data-url="{{ .RelPermalink }}" style="text-rendering: optimizeSpeed;"
-
-  class="
-  {{- with .Params.render}}render_{{.}} {{end -}}
-  {{if (in .Params.hide "header")}}hideheader {{end -}}
-  {{if (in .Params.hide "nav")}}hidenav {{end -}}
-  {{if (in .Params.hide "breadcrumb")}}hidebreadcrumb {{end -}}
-  {{if (in .Params.hide "toc")}}hidetoc {{end -}}
-  {{if (in .Params.hide "footer")}}hidefooter {{end -}}
-  {{if (in .Params.hide "nextpage")}}hidenextpage {{end -}}
-  ">
-
-{{ if ne $redirectURL ""}}
-    <script type="text/javascript">
-      window.location = '{{ $redirectURL }}'
-    </script>
-    <a href="{{ $redirectURL }}">go to {{ $redirectURL }}</a>
-{{ else if eq .Params.render "raw" }}
-      {{- .Content -}}
-{{ else }}
+  <body data-url="{{ .RelPermalink }}">
 
     <article>
       {{if not (in .Params.hide "nav")}}
       <aside class="{{.Params.layout }}">
-        {{ partial "body-sidebar.html" . }}
+        {{ partial "body-sidebar.html" . }}     
+        <ul class="menu">
+          {{- partial "help-menu.html" . }}
+        </ul> 
       </aside>
       {{end}}
 
       <section class="page {{.Params.layout }}">
       {{if not (in .Params.hide "header")}}
-      <header style="">
+      <header>
           {{ partial "body-header.html" . }}
       </header>
       {{end}}
@@ -64,13 +48,13 @@
       <!-- FIN NAVIGATION DROITE TOC -->
 
     </article>
-    {{ partial "scripts.html" . }}
     {{if not (in .Params.hide "footer")}}
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>
     {{end}}
-{{end}}
+
+    {{ partial "scripts.html" . }}
 
   </body>
 </html>

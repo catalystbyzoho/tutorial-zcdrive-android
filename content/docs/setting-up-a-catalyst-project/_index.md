@@ -3,7 +3,6 @@ date= "2020-09-08T22:11:57.883Z"
 title= "Setting up a Catalyst Project"
 type= "docs"
 layout= "single"
-alwaysopen = true
 weight= 4
 +++
 

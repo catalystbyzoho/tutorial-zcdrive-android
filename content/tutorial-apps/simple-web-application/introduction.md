@@ -5,8 +5,8 @@ layout: "single"
 weight: -1
 component_involved:
   enable : true
-  duration: "45 mins"
-  difficulty_level: "Beginners"
+  duration: "40 mins"
+  difficulty_level: "Intermediate"
   component_item:
     - name : "Function"
       url: "/help/authentication"
@@ -19,14 +19,10 @@ component_involved:
 ---
 
 
-### Simple Web Application
+### Microservice
 Catalyst Authentication feature enables you to add end-users to your Catalyst serverless applications, configure their user accounts and roles, and manage user sign-in and authentication of your application directly from the Catalyst console.
 
-
 ### Introduction
-{{%code%}}
-hugo new site 
-{{%/code%}}
 
 You can perform the following actions using Authentication from the remote console:
 
@@ -42,6 +38,9 @@ You can perform the following actions using Authentication from the remote conso
 The document is divided into five pages to cover the five features of Catalyst Authentication: **Users, Email Templates, Sign-in Method, Roles, Authorized Domains.** Each section explains the key concepts, benefits, and implementation of each feature.
 
 To install it manually, you must execute this command from the Node.js function's directory using your terminal:
+
+
+If we enter the number of jobs as 2, the associated function, which returns the name object, is called two times parallelly and the input is passed to it. The output of the first iteration is generated as:
 
 
 To learn about using Authentication in the development and production environments, visit the [Environments help page](/help/cache/test).

@@ -16,26 +16,7 @@
     {{end}}
   </head>
 
-  <body data-url="{{ .RelPermalink }}"
-
-  class="
-  {{- with .Params.render}}render_{{.}} {{end -}}
-  {{if (in .Params.hide "header")}}hideheader {{end -}}
-  {{if (in .Params.hide "nav")}}hidenav {{end -}}
-  {{if (in .Params.hide "breadcrumb")}}hidebreadcrumb {{end -}}
-  {{if (in .Params.hide "toc")}}hidetoc {{end -}}
-  {{if (in .Params.hide "footer")}}hidefooter {{end -}}
-  {{if (in .Params.hide "nextpage")}}hidenextpage {{end -}}
-  ">
-
-{{ if ne $redirectURL ""}}
-    <script type="text/javascript">
-      window.location = '{{ $redirectURL }}'
-    </script>
-    <a href="{{ $redirectURL }}">go to {{ $redirectURL }}</a>
-{{ else if eq .Params.render "raw" }}
-      {{- .Content -}}
-{{ else }}
+  <body data-url="{{ .RelPermalink }}">
 
     <article>
       {{if not (in .Params.hide "nav")}}
@@ -72,7 +53,5 @@
     </footer>
     {{end}}
     
-{{end}}
-
   </body>
 </html>

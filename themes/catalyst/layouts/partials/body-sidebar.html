@@ -34,7 +34,6 @@
     font: normal normal normal 13px/16px zoho-puvi-regular;
   }
   </style>
-  {{- if not .Site.Params.disableSearch}}
   <div class="logo">
     <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
       <div class="catalyst-logo"></div>
@@ -44,6 +43,7 @@
       </div> 
     </a>
   </div>
+  {{ if ne .Type "docs" }}
   <div class="search">
       <div class="searchbox" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 4px 11px;
       width: 310px;
@@ -67,14 +67,5 @@
       </script>
       <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
   </div>
-  {{- end}}
-  
-  <div id="close_menu">
-    <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
-        <i class="fa fa-lg fa-times"></i>
-    </a>
-  </div>
-  
-  <ul class="menu">
-    {{- partial "menu.html" . }}
-  </ul>    
+  {{end}}
+   

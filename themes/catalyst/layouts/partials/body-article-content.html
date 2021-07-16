@@ -3,7 +3,7 @@
       <div class="search-icon"></div>
       <input class="src-input" name="query" placeholder="Search documents" type="text">
     </div>
-    <!-- FIL D'ARIANE -->
+
     {{if not (in .Params.hide "breadcrumb")}}
     <nav id="ariane" aria-label="breadcrumb">
         <ol class="ariane">
@@ -11,15 +11,6 @@
         </ol>
     </nav>
     {{end}}
-
-    <!-- TITRE -->
-		{{$pagetitle := .Title}}
-        {{if eq $pagetitle ""}}
-        	{{with .File}}{{$pagetitle = .BaseFileName}}{{end}}
-        {{end}}
-		
-		
-		<!-- <p style="font: normal normal 600 24px/29px zoho-puvi-semibold; letter-spacing: 0px; color: var(--body-header-color); opacity: 1; margin-top: 30px; margin-bottom: 0;"><span>{{$pagetitle}}</span></p> -->
         
 	<div class="content">
     {{- with .Content -}}

@@ -2,7 +2,9 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
+{{if eq .Type "help"}}
 {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+{{end}}
 {{- end}}
 
 <!-- templates -->
@@ -18,15 +20,17 @@
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
 
-      {{if ne .Title "main"}}
       <div>
         {{- if ne $numberOfPages 0 }}
+          {{- if .Params.alwaysopen}} 
+            <i class="fa fa-angle-right category-icon" style="display: none;"></i>
+            <a href="{{ .RelPermalink}}" style="display: none;">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+          {{else}}
             <i class="fa fa-angle-right category-icon"></i>
             <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+          {{end}}
         {{- end}}
       </div>
-      {{end}}
-
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- $pages := .Pages }}

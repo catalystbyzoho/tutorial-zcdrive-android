@@ -13,7 +13,9 @@
 
 <!-- vendor css/js -->
 {{- partial "html-head-vendor.html" . }}
-{{- partial "head.html" . }}
+
+<link href="{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
+<link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
 
 <!-- docport css/js -->
 {{ $sass := resources.Get "sass/main.scss" }}
@@ -28,6 +30,3 @@
 <script type="text/javascript">
       var baseurl = "{{.Site.BaseURL}}";
 </script>
-
-
-{{ template "_internal/google_analytics.html" . }}

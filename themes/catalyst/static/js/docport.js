@@ -1,15 +1,3 @@
-jQuery(document).ready(function() {
-	// Open/Close left menu elements
-    jQuery('article aside i.ddexp').on('click', function() {
-    	console.log($(this))
-        $( this ).toggleClass("fa-chevron-right fa-chevron-down") ;
-        $( this ).parent().children('ul').toggle() ;
-        return false;
-    });
-
-});
-
-
 (function scrollSpy() {
   var OFFSET = 10;
   var timer;
@@ -67,24 +55,3 @@ jQuery(document).ready(function() {
     onScroll();
   });
 })();
-
-
-
-
-// Get Parameters from some url
-var getUrlParameter = function getUrlParameter(sPageURL) {
-    var url = sPageURL.split('?');
-    var obj = {};
-    if (url.length == 2) {
-        var sURLVariables = url[1].split('&'),
-            sParameterName,
-            i;
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-            obj[sParameterName[0]] = sParameterName[1];
-        }
-        return obj;
-    } else {
-        return undefined;
-    }
-};

@@ -4,7 +4,6 @@ head= "<h6>DEVELOP</h6>"
 title= "Authentication"
 type= "help"
 layout= "single"
-alwaysopen = true
 weight= 1
 +++
 

@@ -54,16 +54,13 @@
 }
 </style>
 <div style="padding:0 29px 0 40px;">
-    {{if not (in .Params.hide "nav")}}
-    <div class="burger {{.Params.layout }}">
-        <a href="javascript:void(0);" style="font-size:25px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
-    </div>
-    {{end}}
 
+  {{ if ne .Type "docs" }}
     <div class="searchbox">
       <div class="search-icon"></div>
       <input class="src-input" name="query" placeholder="Search documents" type="text">
     </div>
+  {{end}}
 
     <!-- {{- with .Site.Menus.shortcuts}} -->
     <nav class="shortcuts">

@@ -15,7 +15,7 @@
 		width: 60px;
 		height: 30px;
 		right: -20px;
-    	top: 2px;
+    	top: -1px;
 		float: right;
 	}
 
@@ -115,7 +115,6 @@
 		}
 	}
 	function clickHandler(e) {
-		console.log(e);
 	    const themeSwitcher = document.getElementsByName("theme-switch");
 	    if(e.checked)
 	    {
@@ -126,7 +125,6 @@
 		    const theme = document.getElementsByName("codetheme");
 			for(var i=0;i<theme.length;i++)
 	    	{
-			    console.log(theme[i]);
 			 	theme[i].classList.remove("light1");
 			    theme[i].classList.add("dark1");	  
 			}
