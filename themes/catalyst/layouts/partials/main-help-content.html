@@ -154,7 +154,7 @@
 </style>
 {{ with .Params.help }}
 {{ if .enable }}
-<div id="help-components" style="position: absolute; top:530px;"></div>
+<div id="help-components" style="position: absolute; top:770px;"></div>
 
 <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
   <div class="container">
@@ -183,7 +183,7 @@
 
       <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-5" id="v-pills-tab"
         role="tablist" aria-orientation="vertical" style="padding-left: 15px;">
-        <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 30px/38px zoho-puvi-semibold;">Catalyst Component <br> help resources</p>
+        <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 40px/60px zoho-puvi-semibold; margin-bottom: 40px;">Catalyst Component <br> help resources</p>
         {{ range $index, $element := .help_component }}
         {{ if (eq $index 0) }}
           <a class="nav-link active" id="{{ .title }}-tab" data-toggle="pill" href="#{{ .title }}" role="tab"
@@ -206,7 +206,7 @@
         {{ if (eq $index 0) }}
         <div class="tab-pane fade show active" id="{{ .title }}" role="tabpanel" aria-labelledby="{{ .title }}-tab">
             {{ range .featuredpoints }}
-              <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; margin-bottom: 15px;">
+              <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
                 <div class="feature-card help text-left" >
                   <a href="{{.link}}">
                   <div class="{{.icon}}" style="margin:16px 0;"></div>
@@ -220,7 +220,7 @@
         {{ else }}
         <div class="tab-pane fade" id="{{ .title }}" role="tabpanel" aria-labelledby="{{ .title }}-tab">
             {{ range .featuredpoints }}
-              <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px;">
+              <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
                 <div class="feature-card help text-left">
                   <a href="{{.link}}">
                   <div class="{{.icon}}" style="margin:16px 0;"></div>
@@ -242,9 +242,3 @@
 </section>
 {{ end }}
 {{ end }}
-
-<script>
-  var dis = document.getElementsByTagName("A");
-  console.log(dis);
-  
-</script>

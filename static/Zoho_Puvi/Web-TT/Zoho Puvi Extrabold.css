@@ -1,0 +1,11 @@
+/* Webfont: ZohoPuvi-Extrabold */@font-face {
+    font-family: 'ZohoPuviExtBd';
+    src: url('Zoho Puvi Extrabold.eot'); /* IE9 Compat Modes */
+    src: url('Zoho Puvi Extrabold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Zoho Puvi Extrabold.woff') format('woff'), /* Modern Browsers */
+         url('Zoho Puvi Extrabold.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

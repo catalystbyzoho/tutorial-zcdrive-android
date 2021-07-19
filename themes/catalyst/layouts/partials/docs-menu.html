@@ -3,12 +3,12 @@
 
 {{- range .Site.Home.Sections.ByWeight}}
 {{if eq .Type "docs"}}
-{{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+{{- template "section-tree-nav-docs" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
 {{end}}
 {{- end}}
 
 <!-- templates -->
-{{- define "section-tree-nav" }}
+{{- define "section-tree-nav-docs" }}
 {{- $showvisitedlinks := .showvisitedlinks }}
 {{- $currentNode := .currentnode }}
  {{- with .sect}}
@@ -41,7 +41,7 @@
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
+            {{- template "section-tree-nav-docs" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
             {{- end}}
           {{- end}}
         </ul>

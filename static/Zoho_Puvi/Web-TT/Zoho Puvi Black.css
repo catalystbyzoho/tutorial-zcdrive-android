@@ -1,0 +1,11 @@
+/* Webfont: ZohoPuvi-Black */@font-face {
+    font-family: 'ZohoPuviBlack';
+    src: url('Zoho Puvi Black.eot'); /* IE9 Compat Modes */
+    src: url('Zoho Puvi Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('Zoho Puvi Black.woff') format('woff'), /* Modern Browsers */
+         url('Zoho Puvi Black.ttf') format('truetype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

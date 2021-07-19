@@ -1,14 +1,16 @@
 <style>
     .accordion1 {
+      font: normal normal normal 16px/24px zoho-puvi-regular;
       background-color: var(--menu-color);
       color: var(--font-menu-color);
+      border: 1px solid var(--hr-color);
       cursor: pointer;
-      padding: 18px;
+      padding: 20px 21px 20px 16px;
       width: 100%;
+      display: flex;
       text-align: left;
-      margin-bottom:25px;
-      border-radius: 8px;
-      border: none;
+      margin-bottom:16px;
+      border-radius: 2px;
       outline: none !important; 
       box-shadow: 0 0 0 0;
     }
@@ -18,8 +20,8 @@
       cursor: pointer;
       padding: 13px;
       width: 100%;
-      margin-bottom:25px;
-      border-radius: 8px;
+      margin-bottom:16px;
+      border-radius: 2px;
       outline: none !important; 
       border: 1px solid var(--hr-color);
       text-align: center;
@@ -32,10 +34,11 @@
     
     .accordion1:after {
       content: '\002B';
-      color: var(--font-menu-color);
-      font-weight: bold;
+      color: var(--font-lite-body-color);
+      font-weight: 0;
       float: right;
-      margin-left: 5px;
+      font-size: 30px;
+      margin-left: auto;
     }
     
     .active1:after {
@@ -53,7 +56,7 @@
     
 {{ with .Params.faq }}
 {{ if .enable }}
-<section id="help_component" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+<section id="help_component" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true" style="margin-bottom: 51px;">
   <div class="container">
 
     <div class="row justify-content-center">
@@ -68,13 +71,13 @@
         </ol>
       </div>
 
-      <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-4" id="v-pills-tab"
-        role="tablist" aria-orientation="vertical" style="padding-left: 15px;">
-        <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 30px/38px zoho-puvi-semibold;">Frequently Asked <br> Questions</p>
+      <div id="nav-pills-out" class="d-none d-md-block nav flex-column nav-pills col-md-5" id="v-pills-tab"
+        role="tablist" aria-orientation="vertical" style="padding-right: 0px !important;">
+        <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 40px/60px zoho-puvi-semibold; margin-bottom: 24px !important;">Frequently Asked <br> Questions</p>
         <p class="feature-p">{{ .content }}</p>
       </div>
 
-      <div class="tab-content col-md-8 d-none d-md-block" style="padding-right:0px;">
+      <div class="tab-content col-md-6 d-none d-md-block" style="padding-right:0px; padding-left: 0px !important; margin-left: auto;">
         <div id="accordion1">
             {{ range .faq_item }}
             <button class="accordion1">{{ .question }}</button>

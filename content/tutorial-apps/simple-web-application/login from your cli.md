@@ -1,8 +1,8 @@
 ---
-title: "Authentication"
+title: "Login from your CLI"
 type: "tutorial-apps"
 layout: "single"
-weight: 1
+weight: 6
 related_link:
   enable : true
   related_link_item:
@@ -22,7 +22,7 @@ related_link:
 
 Catalyst Authentication feature enables you to add end-users to your Catalyst serverless applications, configure their user accounts and roles, and manage user sign-in and authentication of your application directly from the Catalyst console.
 
-### Introduction
+### Login from your CLI
 
 You can perform the following actions using Authentication from the remote console:
 

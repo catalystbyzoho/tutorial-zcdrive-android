@@ -48,6 +48,7 @@
       <!-- FIN NAVIGATION DROITE TOC -->
 
     </article>
+    {{ partial "scroll-top.html" . }}
     {{if not (in .Params.hide "footer")}}
     <footer>
       {{ partial "body-footer.html" . }}

@@ -1,23 +1,24 @@
 @font-face {
     font-family: "zoho-puvi-semibold";
-    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Semibold.ttf);
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Semibold.otf);
 }
 @font-face {
     font-family: "zoho-puvi-bold";
-    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Bold.ttf);
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Bold.otf);
 }
 @font-face {
     font-family: "zoho-puvi-regular";
-    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Regular.ttf);
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Regular.otf);
 }
 @font-face {
     font-family: "zoho-puvi-medium";
-    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Medium.ttf);
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Medium.otf);
 }
 @font-face {
     font-family: "zoho-puvi-thin";
-    src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Thin.ttf);
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Thin.otf);
 }
+
 @font-face {
     font-family:"Roboto-Mono";
     font-weight:400;
@@ -41,6 +42,7 @@
 
 body{
     color: var(--font-body-color);
+    background-color: var(--body-color);
     .searchbox{
         border-radius:35px; 
         outline: none !important; 
@@ -162,14 +164,7 @@ body{
         flex-wrap: wrap !important;
     }
     .nav-link{
-        margin:10px 0;
-    }
-    .nav-div{
-        background-color: transparent; 
-        width: 2px; 
-        height: 10px; 
-        border-radius: 2px; 
-        margin-top: 25px;
+        margin:15px 0;
     }
     .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
         color: var(--font-blue-color);
@@ -179,17 +174,10 @@ body{
     .nav-link.active div.add_div{
         background-color: var(--font-blue-color);
     }
-    .nav-div.active{
-        background-color: var(--font-blue-color);
-        width: 2px; 
-        height: 10px; 
-        border-radius: 2px; 
-        margin-top: 25px;
-    }
     .scroll-top {
         position: absolute;
-        right: 0px;
-        bottom: 1px;
+        right: 50px;
+        bottom: 50px;
         z-index: 3;
         margin-top: -35px;
         padding: 5px;

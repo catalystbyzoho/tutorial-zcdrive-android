@@ -64,7 +64,6 @@ switchDarkMode = function () {
       }
 
       applyCustomDarkModeSettings();
-
   }(); 
 
   

@@ -49,6 +49,8 @@
 
     </article>
     {{if not (in .Params.hide "footer")}}
+    {{ partial "scroll-top.html" . }}
+
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>

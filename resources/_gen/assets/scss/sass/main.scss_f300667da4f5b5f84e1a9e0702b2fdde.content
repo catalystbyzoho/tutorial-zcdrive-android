@@ -231,11 +231,11 @@ body.hideheader article {
 
 @font-face {
   font-family: "zoho-puvi-bold";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Bold.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Bold.otf); }
 
 @font-face {
   font-family: "zoho-puvi-regular";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Regular.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Regular.otf); }
 
 article > aside {
   background-color: var(--menu-color);
@@ -476,6 +476,80 @@ article > aside {
         display: block; }
       article > aside .main-menu .dd-item.parent > ul {
         display: block; }
+  article > aside .stepper-menu {
+    list-style-type: none;
+    margin-top: 147px; }
+    article > aside .stepper-menu h6 {
+      font: 16px/19px zoho-puvi-semibold;
+      letter-spacing: 0px;
+      color: var(--font-body-color);
+      text-transform: uppercase;
+      opacity: 1;
+      padding: 10px 0 0 0;
+      margin-left: -6px;
+      margin-bottom: 0px; }
+    article > aside .stepper-menu hr {
+      margin-top: 1.8rem;
+      margin-left: -50px; }
+    article > aside .stepper-menu ul {
+      display: none; }
+    article > aside .stepper-menu .ddexp {
+      cursor: pointer; }
+    article > aside .stepper-menu > .dd-item {
+      font: 14px/18px zoho-puvi-regular;
+      letter-spacing: 0px;
+      color: var(--font-lite-body-color);
+      opacity: 1;
+      margin-top: 0px; }
+      article > aside .stepper-menu > .dd-item > a {
+        padding-left: 0px;
+        display: none;
+        color: var(--font-lite-body-color); }
+      article > aside .stepper-menu > .dd-item > i {
+        display: none; }
+    article > aside .stepper-menu .dd-item {
+      list-style: none; }
+      article > aside .stepper-menu .dd-item a {
+        text-decoration: none;
+        padding-left: 8px;
+        color: var(--font-lite-body-color); }
+      article > aside .stepper-menu .dd-item > a {
+        padding-left: 8px; }
+      article > aside .stepper-menu .dd-item > i {
+        color: var(--font-lite-body-color);
+        font-size: 12px;
+        padding-right: 5px; }
+      article > aside .stepper-menu .dd-item ul {
+        padding-left: 0px; }
+      article > aside .stepper-menu .dd-item.active > ul {
+        display: block; }
+      article > aside .stepper-menu .dd-item.active > div * {
+        color: var(--font-blue-color); }
+      article > aside .stepper-menu .dd-item.haschildren.parent > a {
+        padding-left: 8px; }
+      article > aside .stepper-menu .dd-item.haschildren.parent ul {
+        padding-left: 0; }
+      article > aside .stepper-menu .dd-item.haschildren li {
+        margin: 20px 0; }
+      article > aside .stepper-menu .dd-item.haschildren ul {
+        padding-left: 0px; }
+      article > aside .stepper-menu .dd-item.haschildren ul a {
+        padding-left: 0px; }
+      article > aside .stepper-menu .dd-item.haschildren ul i {
+        margin-left: -19px;
+        margin-right: 6px; }
+      article > aside .stepper-menu .dd-item.parent > ul {
+        display: block; }
+      article > aside .stepper-menu .dd-item.active li {
+        margin: 20px 0; }
+      article > aside .stepper-menu .dd-item.active > a {
+        color: var(--font-blue-color); }
+      article > aside .stepper-menu .dd-item.active > ul {
+        display: block; }
+      article > aside .stepper-menu .dd-item.alwaysopen > ul li {
+        display: none; }
+      article > aside .stepper-menu .dd-item.parent > ul {
+        display: block; }
   article > aside section {
     margin: 2rem 0rem; }
 
@@ -484,23 +558,23 @@ body a {
 
 @font-face {
   font-family: "zoho-puvi-semibold";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Semibold.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Semibold.otf); }
 
 @font-face {
   font-family: "zoho-puvi-bold";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Bold.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Bold.otf); }
 
 @font-face {
   font-family: "zoho-puvi-regular";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Regular.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Regular.otf); }
 
 @font-face {
   font-family: "zoho-puvi-medium";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Medium.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Medium.otf); }
 
 @font-face {
   font-family: "zoho-puvi-thin";
-  src: url(/ZohoPuvi/OpenType-TT/Zoho-Puvi-Thin.ttf); }
+  src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Thin.otf); }
 
 @font-face {
   font-family: "Roboto-Mono";
@@ -517,7 +591,8 @@ body a {
   src: url("//static.zohocdn.com/webfonts/robotoitalic/font.eot?#iefix") format("eot"), url("//static.zohocdn.com/webfonts/robotoitalic/font.woff2") format("woff2"), url("//static.zohocdn.com/webfonts/robotoitalic/font.woff") format("woff"), url("//static.zohocdn.com/webfonts/robotoitalic/font.ttf") format("truetype"), url("//static.zohocdn.com/webfonts/robotoitalic/font.svg#Roboto-Italic") format("svg"); }
 
 body {
-  color: var(--font-body-color); }
+  color: var(--font-body-color);
+  background-color: var(--body-color); }
   body .searchbox {
     border-radius: 35px;
     outline: none !important;
@@ -622,29 +697,17 @@ body {
     background-color: var(--body-color);
     flex-wrap: wrap !important; }
   body .nav-link {
-    margin: 10px 0; }
-  body .nav-div {
-    background-color: transparent;
-    width: 2px;
-    height: 10px;
-    border-radius: 2px;
-    margin-top: 25px; }
+    margin: 15px 0; }
   body .nav-pills .nav-link.active, body .nav-pills .show > .nav-link {
     color: var(--font-blue-color);
     background-color: var(--body-color);
     padding-left: 16px; }
   body .nav-link.active div.add_div {
     background-color: var(--font-blue-color); }
-  body .nav-div.active {
-    background-color: var(--font-blue-color);
-    width: 2px;
-    height: 10px;
-    border-radius: 2px;
-    margin-top: 25px; }
   body .scroll-top {
     position: absolute;
-    right: 0px;
-    bottom: 1px;
+    right: 50px;
+    bottom: 50px;
     z-index: 3;
     margin-top: -35px;
     padding: 5px;

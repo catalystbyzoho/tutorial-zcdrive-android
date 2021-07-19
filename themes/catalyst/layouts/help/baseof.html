@@ -23,7 +23,7 @@
       <aside class="{{.Params.layout }}">
         {{ partial "body-sidebar.html" . }}     
         <ul class="menu">
-          {{- partial "help-menu.html" . }}
+          {{ partial "help-menu.html" . }}
         </ul> 
       </aside>
       {{end}}
@@ -46,8 +46,8 @@
       </section>
       {{end -}}
       <!-- FIN NAVIGATION DROITE TOC -->
-
     </article>
+    {{ partial "scroll-top.html" . }}
     {{if not (in .Params.hide "footer")}}
     <footer>
       {{ partial "body-footer.html" . }}

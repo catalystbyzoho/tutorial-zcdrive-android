@@ -16,18 +16,7 @@
     {{end}}
   </head>
 
-  <body data-url="{{ .RelPermalink }}"
-
-  class="
-  {{- with .Params.render}}render_{{.}} {{end -}}
-  {{if (in .Params.hide "header")}}hideheader {{end -}}
-  {{if (in .Params.hide "nav")}}hidenav {{end -}}
-  {{if (in .Params.hide "breadcrumb")}}hidebreadcrumb {{end -}}
-  {{if (in .Params.hide "toc")}}hidetoc {{end -}}
-  {{if (in .Params.hide "footer")}}hidefooter {{end -}}
-  {{if (in .Params.hide "nextpage")}}hidenextpage {{end -}}
-  ">
-
+  <body data-url="{{ .RelPermalink }}">
     <article>
       {{if not (in .Params.hide "header")}}
       <header style="width: 100%;">
@@ -40,13 +29,10 @@
         {{ partial "main-help-content.html" . }}
         {{ partial "main-sdk-content.html" . }}
         {{ partial "main-faq-content.html" . }}
-
       </main>
-      {{ partial "scroll-top.html" . }}
-
     </article>
     {{ partial "scripts.html" . }}
-
+    {{ partial "scroll-top.html" . }}
     {{if not (in .Params.hide "footer")}}
     <footer>
       {{ partial "body-footer.html" . }}

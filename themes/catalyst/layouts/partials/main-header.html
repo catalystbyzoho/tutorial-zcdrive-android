@@ -1,28 +1,28 @@
 <style type="text/css">
     .access-button{
-        width: 150px;
-        height: 44px;
-        background: #F0483D 0% 0% no-repeat padding-box;
-        text-align: center;
-        border-radius: 1px;
-        padding-top: 7px;
-        font: normal normal normal 15px/30px zoho-puvi-regular;
-        letter-spacing: 0px;
-        color: #F0F0F0;
-        opacity: 1;
-        margin: 0 10px;
+      width: 150px;
+      height: 44px;
+      background: #F0483D 0% 0% no-repeat padding-box;
+      text-align: center;
+      border-radius: 1px;
+      padding-top: 7px;
+      font: normal normal normal 15px/30px zoho-puvi-regular;
+      letter-spacing: 0px;
+      color: #F0F0F0;
+      opacity: 1;
+      margin-left: 22px;
+      margin-top:1px;
     }
-    .list{
-        font: normal normal normal 14px/17px zoho-puvi-regular;
+    .list {
+      margin:9px 22.5px 0 22px;
+    }
+    .list a{
+        font: 15px/18px zoho-puvi-regular;
         letter-spacing: 0px;
         color: var(--font-lite-body-color);
         opacity: 1;
-        margin:13px 18px 0 18px;
     }
     .list a:hover{
-      color: var(--font-blue-color);
-    }
-    .list a:active{
       color: var(--font-blue-color);
     }
     .searchbox {
@@ -58,7 +58,7 @@
       height: 32px;
     }
     </style>
-    <div style="padding:0 30px; display: flex;;">
+    <div style="padding:0 29px 0 0; display: flex;">
       <div class="logo">
         <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
           <div class="catalyst-logo"></div>
@@ -93,12 +93,12 @@
         <!-- {{- with .Site.Menus.shortcuts}} -->
 
         <nav class="shortcuts">
-            <li class="list"><a href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">Docs</a></li>
-            <li class="list"><a href="/tutorial/" target="_self" rel="noopener noreferrer">Tutorials</a></li>
-            <li class="list"><a href="/faq/authentication/" target="_self" rel="noopener noreferrer">FAQ</a></li>
-            <li class="list"><a href="/whats-new/authentication/" target="_self" rel="noopener noreferrer">What’s New</a></li>
-            <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
-          </nav>
+          <li class="list"><a href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">Docs</a></li>
+          <li class="list"><a href="/tutorial/" target="_self" rel="noopener noreferrer">Tutorials</a></li>
+          <li class="list"><a href="/faq/authentication/" target="_self" rel="noopener noreferrer">FAQ</a></li>
+          <li class="list"><a href="/whats-new/authentication/" target="_self" rel="noopener noreferrer">What’s New</a></li>
+          <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
+        </nav>
         <!-- {{- end}} -->
     
     </div>
