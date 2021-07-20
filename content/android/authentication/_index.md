@@ -2,8 +2,9 @@
 date= "2020-09-08T22:11:57.883Z"
 head= "<h6>DEVELOP</h6>"
 title= "Authentication"
-type= "help"
+type= "sdk"
 layout= "single"
+link = "android"
 weight= 1
 +++
 

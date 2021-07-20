@@ -1,6 +1,7 @@
 +++
 title = "main"
-description = ""
+description = "CLI"
 weight = 0
-
+type= "sdk"
+layout= "single"
 +++
