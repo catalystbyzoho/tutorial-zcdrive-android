@@ -1,8 +1,8 @@
 ---
-title: "Zcql Console"
+title: "Security Rules"
 type: "faq"
 layout: "single"
-weight: 6
+weight: 9
 
 article:
   title : "Frequently asked Questions"
@@ -10,7 +10,7 @@ article:
   type : "faq"
 ---
 
-### ZCQL-Console FAQ
+### Security Rules FAQ
 
 {{%expand "How do I deploy a project to the Catalyst remote console?" %}}
 

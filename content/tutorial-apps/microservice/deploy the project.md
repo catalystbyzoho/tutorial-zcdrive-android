@@ -1,8 +1,8 @@
 ---
-title: "Test the application"
+title: "Deploy the project"
 type: "tutorial-apps"
 layout: "single"
-weight: 9
+weight: 8
 related_link:
   enable : true
   related_link_item:
@@ -18,4 +18,5 @@ related_link:
       url: "/help/authentication"
 ---
 
-# Test the application
+
+# Deploy the project

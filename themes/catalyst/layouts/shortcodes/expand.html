@@ -1,5 +1,5 @@
 <div class="expand">
-    <div class="expand-label" style="cursor: pointer; background-color: var(--menu-color); padding:10px; border: 1px solid var(--hr-color);" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-up';});});">
+    <div class="expand-label" style="cursor: pointer; background-color: var(--menu-color); padding:10px; border: 1px solid var(--hr-color); margin-top: 20px;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-up';});});">
         <span>
         {{- $expandMessage := T "Expand-title" -}}
         {{- if .IsNamedParams -}}

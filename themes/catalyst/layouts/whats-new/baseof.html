@@ -18,40 +18,32 @@
 
   <body data-url="{{ .RelPermalink }}" style="background-color: var(--body-color);">
 
-{{ if ne $redirectURL ""}}
-    <script type="text/javascript">
-      window.location = '{{ $redirectURL }}'
-    </script>
-    <a href="{{ $redirectURL }}">go to {{ $redirectURL }}</a>
-{{ else if eq .Params.render "raw" }}
-      {{- .Content -}}
-{{ else }}
-    {{if not (in .Params.hide "header")}}
     <header style="width: 100%;">
         {{ partial "main-header.html" . }}
     </header>
-    {{end}}
     <main style="width: 100%;">
       {{ partial "main-article-content.html" . }}        
     </main>
-    <article style="top:80px; width: 100%; margin:0 auto 110px auto; height: auto;">
+    <article style="top:80px; width: 90%; margin:30px auto 30px auto;">
       {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color);">
+      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); position: absolute; width: 240px;">
         <ul class="menu" style="margin-top: 0px;">
-          {{- partial "menu.html" . }}
+          {{- partial "faq-menu.html" . }}
         </ul> 
       </aside>
       {{end}}
 
-      <section class="page {{.Params.layout }}">
-      {{ block "main" . }}
-      {{ end }}
+      <section class="page {{.Params.layout }}" style="margin-left: 240px;">
+        {{ block "main" . }}
+        {{ end }}
       </section>
 
+      {{if not (in .Params.hide "toc")}}
       <section class="right-menu {{.Params.layout }}">
       {{ block "sidepage" . }}
       {{ end }}
       </section>
+      {{end -}}
 
     </article>
     {{ partial "scripts.html" . }}
@@ -62,8 +54,5 @@
       {{ partial "body-footer.html" . }}
     </footer>
     {{end}}
-
-{{end}}
-
   </body>
 </html>

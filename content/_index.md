@@ -23,7 +23,7 @@ feature:
       content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
       
     - name : "What’s New?"
-      url: "/whats-new/authentication"
+      url: "/whats-new/release-notes"
       icon : "whats-new-icon"
       content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 

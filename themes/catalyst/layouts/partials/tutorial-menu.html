@@ -27,8 +27,8 @@
           {{- if .Params.alwaysopen}} 
             <a href="{{ .RelPermalink}}" style="display: none;">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
           {{else}}
-            <a href="{{ .RelPermalink}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
-            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            <a href="{{ .RelPermalink}}" >STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
+            <a href="{{ .RelPermalink}}" style="color: var(--font-menu-color);">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
           {{end}}
         {{- end}}
       </div>
@@ -50,17 +50,42 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item
-        {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
-        {{- if .Params.alwaysopen}} {{else}} StepProgress-item{{end}}
-      ">
-        <div>
-          <a href="{{ .RelPermalink}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
-          <a href="{{ .RelPermalink}}">
-            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
-          </a>
-        </div>
-      </li>
+      {{if lt .Weight 0}}
+        {{if eq .LinkTitle "Introduction"}}
+          <li data-nav-id="{{.Permalink}}" class="dd-item
+            {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
+          " >
+            <div>
+              <a href="{{ .RelPermalink}}">
+                {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+              </a>
+            </div>
+          </li>
+        {{else}}
+          <li data-nav-id="{{.Permalink}}" class="dd-item
+            {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
+          " style="padding-left: 10px;">
+            <div style="display: flex;">
+              <div class="StepProgress-child"></div>
+              <a href="{{ .RelPermalink}}" style="margin-left: 10px;">
+                {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+              </a>
+            </div>
+          </li>
+        {{end}}
+      {{else}}
+        <li data-nav-id="{{.Permalink}}" class="dd-item
+          {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
+          {{- if .Params.alwaysopen}} {{else}} StepProgress-item{{end}}
+        ">
+          <div>
+            <a href="{{ .RelPermalink}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
+            <a href="{{ .RelPermalink}}" style="color: var(--font-menu-color);">
+              {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+            </a>
+          </div>
+        </li>
+      {{end}}
      {{- end}}
   {{- end}}
  {{- end}}

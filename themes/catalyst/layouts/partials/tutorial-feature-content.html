@@ -1,12 +1,12 @@
 <!-- feature -->
 {{ with .Params.feature }}
 {{ if .enable }}
-<section style="margin:50px 0;">
+<section style="margin:150px 0;">
   <div class="container" style="background-color: var(--body-color);">
     <div class="row justify-content-left">
 
       {{ range .feature_item }}
-      <div class="col-md-4 col-sm-6 mb-4">
+      <div class="col-md-4 col-sm-6 mb-4" style="padding-left:18px; margin-bottom: 18px !important;">
         <a href="{{.url}}">
         <div class="feature-card feature">
             <div style="display: flex;">

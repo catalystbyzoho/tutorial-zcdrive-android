@@ -1,8 +1,8 @@
 ---
-title: "Test"
+title: "Test the application"
 type: "tutorial-apps"
 layout: "single"
-weight: 1
+weight: 7
 related_link:
   enable : true
   related_link_item:
@@ -17,5 +17,5 @@ related_link:
     - name : "Github Integration"
       url: "/help/authentication"
 ---
- 
-Test
+
+# Test the application

@@ -20,14 +20,17 @@
 
     <article>
       {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="background-color: var(--body-color); flex: 0 0 22em;">
+      <aside class="{{.Params.layout }}" style="background-color: var(--body-color);">
         {{ partial "tutorial-sidebar.html" . }}
+        <ul class="stepper-menu StepProgress" style="margin-top: 185px; margin-left: 30px;">
+          {{- partial "tutorial-menu.html" . }}
+        </ul> 
       </aside>
       {{end}}
 
       <section class="page {{.Params.layout }}">
       {{if not (in .Params.hide "header")}}
-      <header style="width: calc( 100% - 22em );">
+      <header >
           {{ partial "body-header.html" . }}
       </header>
       {{end}}

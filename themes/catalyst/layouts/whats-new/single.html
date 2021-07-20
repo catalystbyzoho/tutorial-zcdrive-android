@@ -3,11 +3,41 @@
 {{ end }}
 
 {{ define "main" }}
-	{{ partial "faq-body-content.html" . }}
+	<div style="margin:-22px 25px 0 41px;" class="top-point" id="container">
+		<div class="show-search">
+		<div class="search-icon"></div>
+		<input class="src-input" name="query" placeholder="Search documents" type="text">
+		</div>
+        
+		<div class="content" style="text-align: left; height: auto;">
+		{{- with .Content -}}
+			{{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
+		{{- else -}}
+		{{with index .Pages 0}}
+		<meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
+		{{- else -}}
+			No content
+		{{- end -}}
+		{{- end -}}
+		</div>
+
+		<div class="chevrons">
+			{{ partial "next-prev-page.html" . }}
+		</div>
+		{{ if and (eq .Type "tutorial-apps") (eq .Title "Introduction")}}
+		<div></div>
+		{{else}}
+			{{ if ne .Type "tutorial-apps"}}
+			<div>
+			{{ partial "suggestion-page.html"}}
+			</div>
+			{{ end }}
+  		{{ end }}
 {{ end }}
 
 {{ define "sidepage" }}
-	{{ partial "body-article-sidepage.html" . }}
+	<div class="TableOfContents" style="background-color:var(--menu-color); border: 1px solid var(--hr-color); margin-top: -87px!important;">
+		<label style="font: 13px/16px zoho-puvi-semibold; letter-spacing: 2.6px; color: var(--font-menu-color); opacity: 1; padding:18px 10px 17px 19px; margin-bottom: 0px;">TIMELINES</label>
+		{{ .TableOfContents }}
+	</div>
 {{ end }}
-
-

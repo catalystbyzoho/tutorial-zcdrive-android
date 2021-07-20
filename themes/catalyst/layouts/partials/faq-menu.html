@@ -1,18 +1,14 @@
 {{- $currentNode := . }}
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
-{{- if eq .Site.Params.ordersectionsby "title"}}
-  {{- range .Site.Home.Sections.ByTitle}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-  {{- end}}
-{{- else}}
-  {{- range .Site.Home.Sections.ByWeight}}
-  {{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-  {{- end}}
+{{- range .Site.Home.Sections.ByWeight}}
+{{if or (eq .Type "faq") (eq .Type "whats-new")}}
+{{- template "section-tree-nav-faq" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+{{end}}
 {{- end}}
 
 <!-- templates -->
-{{- define "section-tree-nav" }}
+{{- define "section-tree-nav-faq" }}
 {{- $showvisitedlinks := .showvisitedlinks }}
 {{- $currentNode := .currentnode }}
  {{- with .sect}}
@@ -20,22 +16,16 @@
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
     <li data-nav-id="{{.Permalink}}" class="dd-item
-        {{- if .Params.alwaysopen}} alwaysopen{{end -}}
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
-      {{ if ne .Title "main" }}
+      {{ if ne .Title "main"}}
       <div>
         {{- if ne $numberOfPages 0 }}
-          {{- if .Params.alwaysopen }}
-            <i class="fa fa-angle-down fa-md category-icon"></i>
-          {{- else -}}
-            <i class="fa fa-angle-right fa-md category-icon"></i>
-          {{- end}}
+          <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
         {{- end}}
-      <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
       </div>
-      {{end}}
+      {{ end }}
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- $pages := .Pages }}
@@ -43,21 +33,12 @@
           {{- $pages = (.Pages | union .Sections) }}
           {{- end}}
 
-        {{- if eq .Site.Params.ordersectionsby "title"}}
-          {{- range $pages.ByTitle }}
-            {{- if and .Params.hidden (not $.showhidden) }}
-            {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
-            {{- end}}
-          {{- end}}
-        {{- else}}
           {{- range $pages.ByWeight }}
             {{- if and .Params.hidden (not $.showhidden) }}
             {{- else}}
-            {{- template "section-tree-nav" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
+            {{- template "section-tree-nav-faq" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
             {{- end}}
           {{- end}}
-        {{- end}}
         </ul>
       {{- end}}
     </li>
@@ -65,11 +46,18 @@
     {{- if not .Params.Hidden }}
       <li data-nav-id="{{.Permalink}}" class="dd-item">
         <div>
+          {{- if .Params.head}} 
+          <h6 style="padding:0 0 20px 0; margin-left: -1px; color: var(--font-body-color);">{{safeHTML .Params.Pre}}{{.Params.head}}{{safeHTML .Params.Post}}</h6>
           <a href="{{ .RelPermalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
+        {{else}}
+          <a href="{{ .RelPermalink}}">
+            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+          </a>
+          {{end}}
         </div>
-    </li>
+      </li>
      {{- end}}
   {{- end}}
  {{- end}}
@@ -85,12 +73,6 @@
         var nextAncestor = menu.closest("li[data-nav-id]");
         while (maxDepth-- >= 0 && nextAncestor !== null) {
             nextAncestor.classList.add("parent");
-            var icon = nextAncestor.querySelector('i.category-icon');
-            if (icon !== null) {
-                icon.classList.remove('fa-angle-right');
-                icon.classList.add('fa-angle-down');
-            }
-
             nextAncestor = nextAncestor.parentNode.closest("li[data-nav-id]");
         }
     }

@@ -2,85 +2,82 @@
 date= "2020-09-08T22:11:57.883Z"
 head= "<h6>DEVELOP</h6>"
 title= "Authentication"
-type= "sdk"
+type= "help"
 layout= "single"
 weight= 1
 +++
 
+# Authentication
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
 
-
-Catalyst Authentication feature enables you to add end-users to your Catalyst serverless applications, configure their user accounts and roles, and manage user sign-in and authentication of your application directly from the Catalyst console.
-
+{{%image src="/images/help/data-store/delete.jpg" class="w70" alt="delete-table" %}}{{%/image%}}
 
 ### Introduction
-```
-$ hugo new site .
-```
-
 You can perform the following actions using Authentication from the remote console:
-
 * Add or remove the end-users of your application
 * Enable or disable their user accounts in your application
 * Create templates for emails to invite new users to access the application
 * Reset their passwords
 * Access Catalyst's user sign-in code snippet that you can include in your application
-* Configure *Google and Zoho sign-in providers* for your application
+* Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
 * Create and manage roles to define the levels of access and permissions for users
-* Authorize external domains and enable `CORS` and `iFrame` for your application in them
+* Authorize external domains and enable {{% highlight%}}CORS{{%/ highlight%}} and {{% highlight%}}iFrame{{%/ highlight%}} for your application in them
+* Authorize external domains and enable {{% badge%}}CORS{{%/ badge%}} and {{% badge%}}iFrame{{%/ badge%}} for your application in them
 
-The document is divided into five pages to cover the five features of Catalyst Authentication: **Users, Email Templates, Sign-in Method, Roles, Authorized Domains.** Each section explains the key concepts, benefits, and implementation of each feature.
+The document is divided into five pages to cover the five features of Catalyst Authentication: {{% bold %}}Users, Email Templates, Sign-in Method, Roles, Authorized Domains.{{%/ bold %}} Each section explains the key concepts, benefits, and implementation of each feature.
 
-To install it manually, you must execute this command from the Node.js function's directory using your terminal:
+To install it manually, you must execute this command from the Node.js function’s directory using your terminal.
 
-    npm install zcatalyst-integ-cliq
-
+{{%code%}}
+scope=ZohoCatalyst.cache.CREATE
+{{%/code%}}
 
 If we enter the number of jobs as 2, the associated function, which returns the name object, is called two times parallelly and the input is passed to it. The output of the first iteration is generated as:
 
-    {
-        "project_details": {
-            "id": 57127989012782,
-            "project_name": "ShipmentTracking"
-        },
-        "event_bus_details": {
-            "name": "Default",
-            "id": 12083622901983
-        },
-        "data": {
-            "platform_type": web,
-            "user_details": {
-                "email_id": "emma@zylker.com",
-                "role_details": {
-                    "role_name": "App Admin",
-                    "role_id": 2817903788190
-                },
-                "zaaid": 1002347509,
-                "created_time": "Sep 10, 2019 11:47 PM",
-                "invited_time": "Sep 10, 2019 11:47 PM",
-                "modified_time": "Sep 10, 2019 11:47 PM",
-                "user_id": 4310838901733,
-                "is_confirmed": true,
-                "last_name": "Burrows",
-                "first_name": "Amelia",
-                "zuid": 1002342431,
-                "status": "ACTIVE"
+{{%code%}}
+{
+    "project_details": {
+    "id": 57127989012782,
+    "project_name": "ShipmentTracking"
+    },
+    "event_bus_details": {
+        "name": "Default",
+        "id": 12083622901983
+    },
+    "data": {
+        "platform_type": web,
+        "user_details": {
+            "email_id": "emma@zylker.com",
+            "role_details": {
+                "role_name": "App Admin",
+                "role_id": 2817903788190
             },
-            "org_id": 1002347509,
-            "zaid": 10023451351,
-            "redirect_url": null
+            "zaaid": 1002347509,
+            "created_time": "Sep 10, 2019 11:47 PM",
+            "invited_time": "Sep 10, 2019 11:47 PM",
+            "modified_time": "Sep 10, 2019 11:47 PM",
+            "user_id": 4310838901733,
+            "is_confirmed": true,
+            "last_name": "Burrows",
+            "first_name": "Amelia",
+            "zuid": 1002342431,
+            "status": "ACTIVE"
         },
-        "current_project": {
-            "id": 579089178290,
-            "project_name": "ShipmentTracking"
-        },
-        "action": "SignUp",
-        "source": "UserManagement",
-        "event_time": 1568139437092
-    }
+        "org_id": 1002347509,
+        "zaid": 10023451351,
+        "redirect_url": null
+    },
+    "current_project": {
+        "id": 579089178290,
+        "project_name": "ShipmentTracking"
+    },
+    "action": "SignUp",
+    "source": "UserManagement",
+    "event_time": 1568139437092
+}
+{{%/code%}}
 
-
-To learn about using Authentication in the development and production environments, visit the [Environments help page](/help/cache/test).
-
+To learn about using Authentication in the development and production environments, visit the {{%link href="/help/authentication/#sdk-and-api-documentation"%}}Environments help page{{%/link%}}
 
 ### Key Concepts
 
@@ -91,12 +88,14 @@ Before you configure definitions in Security Rules, understand its fundamental c
 Security rules enable you to configure HTTP access and authentication for each Basic I/O and Advanced I/O function in your project, by defining values for each of those parameters in the JSON file.
 
 The following values can be set for each parameter definition for a function:
+{{% divtag table-width%}}
 
-| Available Parameters      | Allowed Values |
-| :--- | :---: |
-| `methods`      | GET, POST, DELETE, PUT, PATCH       |
-| `authentication`   | optional, required        |
+|  | Predicted False    | Predicted True |
+| :--- | :---: | :---: |
+| Actual False      | TN       | FP |
+| Actual True   | FP       | TN    |
 
+{{%/divtag%}}
 
 #### The Default Event Listener
 
@@ -104,23 +103,24 @@ Every Catalyst project contains a default event listener that is created when th
 
 The following table describes the list of Catalyst components and the event occurrences in them that can be associated with the default event listener:
 
-| Component      | Event | Description |
-| :--- | :---: | :---: |
-| Data Store | Insert <br> checking for new line | Insert data in a table\ |
-|            | Update\ | Update a table\ |
-|            | Delete  | Delete a table |
-| Cache      | Put     | Put data in a segment |
+| Format      | Example |
+| :--- | :---: |
+| YYYY-MM-DD      | 2020-01-20      |
+| YYYY-MM-DD      | 2020-01-20      |
+| YYYY/MM/DD hh:mm:ss      | 2020/01/20 23:54:30     |
+| YYYY-MM-DDThh:mm:ss.sTZD      | 2020-01-20T05:19:31.665523 + 00:00      |
 
-
+{{%note%}} **Note:** Specifying the platform does not prevent the user from accessing other platforms of the application. However, it defines the primary platform that the user will access from their device and sets default values for opening the application in the appropriate medium.{{%/note%}}
 
 ### SDK and API documentation
 
-You can also add and manage the end-users of your application, and obtain user details using `Catalyst API and SDK`. For more information and code samples on working in these programming environments, refer to these help pages:
+You can also add and manage the end-users of your application, and obtain user details using {{% highlight%}}Catalyst API{{%/ highlight%}} and {{% highlight%}}SDK{{%/ highlight%}}. For more information and code samples on working in these programming environments, refer to these help pages:
 
 * [Authentication - Java SDK](/help/authentication)
 * [Authentication - Node.js SDK](/help/authentication)
 * [Authentication - Web SDK](/help/authentication)
 * [Authentication - API](/help/authentication)
+* {{%link href="/help/authentication" %}}Authentication - API{{%/link%}}
 
 
 ### Use Cases

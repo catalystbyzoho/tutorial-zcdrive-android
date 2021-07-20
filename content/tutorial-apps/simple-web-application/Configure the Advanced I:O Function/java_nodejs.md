@@ -2,7 +2,7 @@
 title: "Java, Node.js"
 type: "tutorial-apps"
 layout: "single"
-weight: 1
+weight: -1
 related_link:
   enable : true
   related_link_item:
@@ -18,4 +18,4 @@ related_link:
       url: "/help/authentication"
 ---
  
-Test
+# Java, Node.JS file

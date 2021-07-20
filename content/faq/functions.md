@@ -1,8 +1,9 @@
 ---
-title: "Zcql Console"
+title: "Functions"
 type: "faq"
+head: "COMPUTE"
 layout: "single"
-weight: 6
+weight: 7
 
 article:
   title : "Frequently asked Questions"
@@ -10,7 +11,7 @@ article:
   type : "faq"
 ---
 
-### ZCQL-Console FAQ
+### Functions FAQ
 
 {{%expand "How do I deploy a project to the Catalyst remote console?" %}}
 

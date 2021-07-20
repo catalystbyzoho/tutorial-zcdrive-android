@@ -1,14 +1,15 @@
 <style type="text/css">
-    .filter {
-        background: url('/images/HelpdocsIconLightMode.svg') no-repeat -335px -83px scroll 13px 13px/15px 15px;
-        /* background: scroll 13px 13px/15px 15px; */
+    .catalyst-logo{
+        background: url('/images/CatalystLogo.svg') no-repeat 0 0;
+        width: 28px;
+        height: 32px;
     }
     .logo {
         border-bottom: 1px solid var(--hr-color);
-        height: 74px;
+        height: 75px;
         position: fixed;
-        z-index: 5;
         width: 370px;
+        z-index: 2;
         top: 0px;
         display: flex;
         background-color: var(--body-color);
@@ -20,6 +21,16 @@
         color: var(--font-body-color);
         opacity: 1;
         margin-bottom: 20px;
+    }
+    .custom-select{
+        text-align: left;
+        font: normal normal normal 14px/17px zoho-puvi-regular !important;
+        padding: 8.5px 10px !important;
+        color: var(--font-body-color);
+        background-color: var(--menu-color);
+        border: 1px solid var(--hr-color) !important;
+        outline: none !important; 
+        box-shadow: 0 0 0 0 !important; 
     }
     /* stepper menu style */
 
@@ -35,80 +46,91 @@
         top: 0;
         left: 15px;
         width: 10px;
-        height: 100%;
-        border-left: 2px solid #CCC;
+        height: 88%;
+        border-left: 1px solid var(--font-lite-body-color);
+        margin-top: 50px;
     }
     .StepProgress-item {
         position: relative;
         counter-increment: list;
     }
     .StepProgress-item:not(:last-child) {
-        padding-bottom: 20px;
+        padding-bottom: 5px;
     }
     .StepProgress-item::before {
         display: inline-block;
         content: '';
         position: absolute;
         left: -30px;
-        height: 130%;
+        top: 5px;
+        height: 62px;
         width: 10px;
     }
     .StepProgress-item::after {
-        content: '\2297';
+        content: '\2022';
         display: inline-block;
         position: absolute;
-        padding-top: 1px;
-        width: 23px;
-        height: 25px;
-        top: -4px;
-        left: -39px;
-        font-size: 24px;
-        border: 2px solid #CCC;
+        padding-top: 0px;
+        width: 21px;
+        height: 21px;
+        top: 5px;
+        left: -40.4px;
+        text-align: center;
+        font-size: 30px;
+        border: 1px solid var(--font-lite-body-color);
+        color: var(--font-menu-color);
         border-radius: 50%;
-        background-color: transparent;
-        
+        background-color: var(--body-color);
     }
     .StepProgress-item.is-done::before {
-        border-left: 2px solid var(--font-blue-color);
+        border-left: 1px solid var(--font-blue-color);
     }
     .StepProgress-item.is-done::after {
-        content: "✔";
-        font-size: 10px;
-        color: white;
+        content: "\2713";
+        font-size: 12px;
+        padding-top: 1px;
+        color: var(--font-blue-color);
         text-align: center;
-        border: 2px solid var(--font-blue-color);
-        background-color: var(--font-blue-color);
+        border: 1px solid var(--font-blue-color);
+        background-color: var(--body-color);
     }
     .StepProgress-item.current::after {
-        content: '\2297';
-        padding-top: 1px;
-        width: 24px;
-        height: 25px;
-        top: -4px;
-        left: -41px;
-        font-size: 24px;
+        content: '\2022';
+        padding-top: 0px;
+        width: 21px;
+        height: 21px;
+        top: 5px;
+        left: -40.4px;
+        font-size: 30px;
         text-align: center;
-        color: var(--font-blue-color);
-        border: 2px solid var(--font-blue-color);
-        background-color: transparent;
+        color: var(--font-blue-color) !important;
+        border: 1px solid var(--font-blue-color);
+        background-color: var(--body-color);
     }
-    .StepProgress strong {
-        display: block;
+    .StepProgress-child{
+        background-color: var(--font-lite-body-color); 
+        width:5px; 
+        height: 5px; 
+        border-radius: 50%; 
+        margin-top: 7px;
+    }
+    .childactive{
+        background-color: var(--font-blue-color);
     }
 </style>
     {{- if not .Site.Params.disableSearch}}
     <div class="logo">
-        <a style="text-decoration: none; display: flex;" href="{{.Site.BaseURL}}">
-          <img alt="Zoho Catalyst" src="/images/catalyst-logo.ico" style="padding-left:20px; margin-top: 24px; height: 34px; width: auto;"/>
-          <div style="padding-top: 20px; padding-left: 8px; display: block;">
-            <p style="font: normal normal normal 20px/24px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px;">Catalyst</p>
-            <p style="font: normal normal normal 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 2px;">by Zoho</p>
+        <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
+          <div class="catalyst-logo"></div>
+          <div style="display: block; margin-left: 12px; margin-top:1px;">
+            <p style="font: 20px/20px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px; margin-top: -2px;">Catalyst</p>
+            <p style="font: 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 0px;">by Zoho</p>
           </div> 
         </a>
     </div>
-    <div class="search">
+    <div class="search" style="margin-left: 40px;">
         <p class="menu-title">ON THIS TUTORIAL</p>
-        <div style="width:270px;">
+        <div style="width: 210px; height: 34px;">
             <select class="custom-select">
                 <option value="0">Select language:</option>
                 <option value="1" selected>Java</option>
@@ -116,8 +138,4 @@
             </select>
         </div>
     </div>
-    {{- end}}
-    
-    <ul class="stepper-menu StepProgress" style="margin-top: 13rem;">
-      {{- partial "tutorial-menu.html" . }}
-    </ul>    
+    {{- end}}   

@@ -24,41 +24,23 @@
     <main style="width: 100%;">
       {{ partial "main-article-content.html" . }}        
     </main>
-    <article style="top:80px; width: 90%; margin:0 auto 110px auto; height: auto;">
+    <article style="top:80px; width: 90%; margin:30px auto 30px auto;">
       {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color);">
+      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); position: absolute; width: 240px;">
         <ul class="menu" style="margin-top: 0px;">
-          {{- partial "menu.html" . }}
+          {{- partial "faq-menu.html" . }}
         </ul> 
       </aside>
       {{end}}
 
-      <section class="page {{.Params.layout }}">
-      {{if not (in .Params.hide "header")}}
-      <header style="position: relative; width: 100%;">
-        <div>
-          {{ if .Params.searchresult }}
-            <div class="search-box" id="searchbox">
-              <div class="src-input" id="zws_boxContainer7"></div>
-            </div>
-          {{ else }}
-            {{ $type := $.Scratch.Get "type" }}
-            {{ $.Scratch.Set "editionPrefix" "" }}
-            {{ with .Params.edition }}
-              {{ $.Scratch.Add "editionPrefix" "/" }}
-              {{ $.Scratch.Add "editionPrefix" . }}
-            {{ end }}
-            <div class="search-box" id="searchbox" style="margin-top: 0px; margin-left: 10px;">
-              <form action="{{ $.Scratch.Get "editionPrefix" }}/catalyst/{{ $type }}/search/results.html" class="srchbox clearfix">
-                <input class="src-input" name="query" placeholder="Search documents" type="text" style="width: 30% !important;">
-              </form>
-            </div>
-          {{ end }}
-        </div>
-      </header>
-      {{end}}
-      {{ block "main" . }}
-      {{ end }}
+      <section class="page {{.Params.layout }}" style="margin-left: 240px;">
+        {{if not (in .Params.hide "header")}}
+        <header style="position: absolute; padding-top: 0px; width: 80%;">
+            {{ partial "faq-header.html" . }}
+        </header>
+        {{end}}
+        {{ block "main" . }}
+        {{ end }}
       </section>
 
     </article>
@@ -70,7 +52,5 @@
       {{ partial "body-footer.html" . }}
     </footer>
     {{end}}
-    {{ partial "scroll-top.html" . }}
-
   </body>
 </html>

@@ -1,8 +1,8 @@
 ---
-title: "Test the application"
+title: "Configure the client"
 type: "tutorial-apps"
 layout: "single"
-weight: 9
+weight: 6
 related_link:
   enable : true
   related_link_item:
@@ -18,4 +18,4 @@ related_link:
       url: "/help/authentication"
 ---
 
-# Test the application
+# Configure the client

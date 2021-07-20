@@ -57,6 +57,29 @@
       width: 28px;
       height: 32px;
     }
+    .search-icon{
+      background: var(--shortlist-icon) no-repeat -30px -30px;
+      width: 16px;
+      height: 16px;
+      margin-top: 10px;
+      margin-right: 14px;
+      margin-left: 0px;
+    }
+    .search-box {
+      width: 559px;
+      height: 44px;
+      float: left;
+    }
+    .src-input {
+      padding: 12px 40px;
+      padding-left: 0px;
+      color: var(--font-menu-color);
+      font: normal normal normal 14px/17px zoho-puvi-regular;
+      border: none;
+      float: left;
+      outline: none;
+      background-color: var(--body-color);
+    }
     </style>
     <div style="padding:0 29px 0 0; display: flex;">
       <div class="logo">
@@ -70,25 +93,10 @@
       </div>
         
         {{ if or (eq .Type "whats-new") (eq .Type "faq")}}
-          <div style="margin-left: 25%;">
-            {{ if .Params.searchresult }}
-              <div class="searchbox" id="searchbox" style="justify-content: space-between;">
-                <div class="srcinput" id="zws_boxContainer7"></div>
-              </div>
-            {{ else }}
-              {{ $type := $.Scratch.Get "type" }}
-              {{ $.Scratch.Set "editionPrefix" "" }}
-              {{ with .Params.edition }}
-                {{ $.Scratch.Add "editionPrefix" "/" }}
-                {{ $.Scratch.Add "editionPrefix" . }}
-              {{ end }}
-              <div class="searchbox" id="searchbox">
-                <form action="{{ $.Scratch.Get "editionPrefix" }}/catalyst/{{ $type }}/search/results.html" class="srchbox clearfix">
-                  <input class="srcinput" name="query" placeholder="Search documents" type="text">
-                </form>
-              </div>
-            {{ end }}
-          </div>
+        <div class="searchbox" style="margin-left: 410px;">
+          <div class="search-icon"></div>
+          <input class="src-input" name="query" placeholder="Search documents" type="text">
+        </div>
         {{ end }}
         <!-- {{- with .Site.Menus.shortcuts}} -->
 
@@ -96,7 +104,7 @@
           <li class="list"><a href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">Docs</a></li>
           <li class="list"><a href="/tutorial/" target="_self" rel="noopener noreferrer">Tutorials</a></li>
           <li class="list"><a href="/faq/authentication/" target="_self" rel="noopener noreferrer">FAQ</a></li>
-          <li class="list"><a href="/whats-new/authentication/" target="_self" rel="noopener noreferrer">What’s New</a></li>
+          <li class="list"><a href="/whats-new/release-notes/" target="_self" rel="noopener noreferrer">What’s New</a></li>
           <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
         </nav>
         <!-- {{- end}} -->
