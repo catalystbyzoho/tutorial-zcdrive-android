@@ -24,7 +24,7 @@
     <main style="width: 100%;">
       {{ partial "main-article-content.html" . }}        
     </main>
-    <article style="top:80px; width: 90%; margin:30px auto 30px auto;">
+    <article style="top:100px; width: 90%; margin:30px auto 30px auto;">
       {{if not (in .Params.hide "nav")}}
       <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); position: absolute; width: 240px;">
         <ul class="menu" style="margin-top: 0px;">
@@ -33,9 +33,9 @@
       </aside>
       {{end}}
 
-      <section class="page {{.Params.layout }}" style="margin-left: 240px;">
+      <section class="page {{.Params.layout }}" style="margin-left: 240px; margin-top: 10px;">
         {{if not (in .Params.hide "header")}}
-        <header style="position: absolute; padding-top: 0px; width: 80%;">
+        <header style="position: absolute; padding: 0px; margin-left: 40px; width: 80%; height: 60px;">
             {{ partial "faq-header.html" . }}
         </header>
         {{end}}

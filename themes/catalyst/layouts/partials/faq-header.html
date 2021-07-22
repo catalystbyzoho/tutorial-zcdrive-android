@@ -40,9 +40,10 @@
     }
     .src-input {
         padding: 12px 40px;
-      padding-left: 0px;
-      color: var(--font-menu-color);
-      font: normal normal normal 14px/17px zoho-puvi-regular;
+        width: 100%;
+        padding-left: 0px;
+        color: var(--font-menu-color);
+        font: normal normal normal 14px/17px zoho-puvi-regular;
         border: none;
         float: left;
         outline: none;
@@ -52,13 +53,29 @@
       color: var(--font-at-color);
       font: 15px/18px zoho-puvi-regular;
     }
+    .tutorial-filter{
+      background-color: var(--menu-color); 
+      font: 14px/17px zoho-puvi-regular; 
+      padding-left: 8px;         
+      outline: none !important; 
+      box-shadow: 0 0 0 0 !important;
+      border-color: var(--hr-color);
+    }
     </style>
-    <div style="padding:0 29px 0 40px;">
+    <div style="padding:0">
     
       {{ if ne .Type "docs" }}
         <div class="searchbox">
           <div class="search-icon"></div>
-          <input class="src-input" name="query" placeholder="Search documents" type="text">
+          <input class="src-input" name="query" placeholder="Search Topics & Tutorials" type="text">
+        </div>
+        <div style="width: 135px; height: 34px; margin-left: auto; margin-top: 10px;">
+          <select class="custom-select tutorial-filter">
+              <option value="0" selected>All Languages</option>
+              <option value="1">Java</option>
+              <option value="2">Node JS</option>
+              <option value="3">Python</option>
+          </select>
         </div>
       {{end}}
     

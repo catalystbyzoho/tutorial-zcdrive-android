@@ -1,27 +1,74 @@
+<style>
+  .tutorial-filter{
+    background-color: var(--menu-color); 
+    font: 14px/17px zoho-puvi-regular; 
+    padding-left: 8px;         
+    outline: none !important; 
+    box-shadow: 0 0 0 0 !important;
+    border-color: var(--hr-color);
+  }
+</style>
 <!-- feature -->
 {{ with .Params.feature }}
 {{ if .enable }}
-<section style="margin:150px 0;">
-  <div class="container" style="background-color: var(--body-color);">
-    <div class="row justify-content-left">
 
-      {{ range .feature_item }}
-      <div class="col-md-4 col-sm-6 mb-4" style="padding-left:18px; margin-bottom: 18px !important;">
-        <a href="{{.url}}">
+<section style="margin:100px 0;">
+
+  <div class="container" style="background-color: var(--body-color);">
+
+  <div style="width: 100%; margin: 0 auto; display: flex; padding-bottom: 20px; border-bottom: 1px solid var(--hr-color); margin-bottom: 40px;">
+    <div class="searchbox" style="float: left;">
+      <div class="search-icon"></div>
+      <input class="src-input" name="query" placeholder="Search Topics & Tutorials" type="text">
+    </div>
+    <div style="display: flex; margin-left: auto;">
+      <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
+        <select class="custom-select tutorial-filter">
+            <option value="0" selected>All Levels</option>
+            <option value="1">Easy</option>
+            <option value="2">Intermediate</option>
+            <option value="3">Hard</option>
+        </select>
+      </div>
+      <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
+        <select class="custom-select tutorial-filter">
+            <option value="0" selected>All Languages</option>
+            <option value="1">Java</option>
+            <option value="2">Node JS</option>
+            <option value="3">Python</option>
+        </select>
+      </div>
+      <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
+        <select class="custom-select tutorial-filter">
+            <option value="0" selected>All durations</option>
+            <option value="1">30 mins</option>
+            <option value="2">45 mins</option>
+            <option value="3">60 mins</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-left">
+    {{ range .feature_item }}
+    <div class="col-md-4 col-sm-6 mb-4" style="padding-left:18px; margin-bottom: 18px !important;">
+      <a href="{{.url}}">
         <div class="feature-card feature">
-            <div style="display: flex;">
-                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.level}}</p>
-                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.duration}}</p>
-            </div>
+          <div style="display: flex;">
+            <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.level}}</p>
+            <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.duration}}</p>
+          </div>
             <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">{{ .name | title }}</p>
             <p class="feature-p">{{ .content | markdownify }}</p>
             <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">{{.language}}</p>
         </div>
       </a>
-      </div>
-      {{ end }}
     </div>
+    {{ end }}
   </div>
+
+  </div>
+
 </section>
 {{ end }}
 {{ end }}

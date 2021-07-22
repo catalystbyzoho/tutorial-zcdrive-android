@@ -63,9 +63,12 @@ var autoComplete = (function(){
 
             that.updateSC = function(resize, next){
                 var rect = that.getBoundingClientRect();
-                that.sc.style.left = Math.round(rect.left + (window.pageXOffset || document.documentElement.scrollLeft) + o.offsetLeft) + 'px';
-                that.sc.style.top = Math.round(rect.bottom + (window.pageYOffset || document.documentElement.scrollTop) + o.offsetTop) + 'px';
-                that.sc.style.width = Math.round(rect.right - rect.left) + 'px'; // outerWidth
+                that.sc.style.left = '47px';
+                that.sc.style.top = '129px';
+                that.sc.style.width = '276px'; // outerWidth
+                that.sc.style.maxHeight = '320px';
+                that.sc.style.border = '1px solid var(--hr-color)';
+                that.sc.style.borderRadius = '0px 0px 5px 5px';
                 if (!resize) {
                     that.sc.style.display = 'block';
                     if (!that.sc.maxHeight) { that.sc.maxHeight = parseInt((window.getComputedStyle ? getComputedStyle(that.sc, null) : that.sc.currentStyle).maxHeight); }

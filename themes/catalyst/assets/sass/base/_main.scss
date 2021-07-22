@@ -43,6 +43,9 @@
 body{
     color: var(--font-body-color);
     background-color: var(--body-color);
+    .activelink{
+        color: var(--font-blue-color);
+    }
     .searchbox{
         border-radius:35px; 
         outline: none !important; 
@@ -78,11 +81,10 @@ body{
         border-top: 0;
     }
     label {       
-        font: normal normal 600 12px/13px zoho-puvi-semibold;
-        letter-spacing: 2.4px;
+        font: 15px/19px zoho-puvi-regular;
+        letter-spacing: 0px;
         color: var(--font-lite-body-color);
         margin-left: 30px;
-        text-transform: uppercase;
     }
     a{
         color: var(--font-lite-body-color);

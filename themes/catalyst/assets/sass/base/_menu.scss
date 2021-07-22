@@ -13,10 +13,11 @@ article>aside {
     padding: 0;
     
     div.search{
-        position: absolute;
+        position: fixed;
         left: 0px;
         top: 75px;
-        margin: 13px 20px 30px 30px;
+        background-color: var(--menu-color);
+        padding: 13px 20px 30px 30px;
     }
 
     .menu {
@@ -507,7 +508,7 @@ article>aside {
                     }
                 }
                 li {
-                    margin:20px 0;
+                    margin:10px 0;
                 }
                 ul {
                     padding-left:0px;                    
@@ -532,7 +533,7 @@ article>aside {
 
             &.active {
                 li {
-                    margin:20px 0;
+                    margin:10px 0;
                 }
 
                 >a{

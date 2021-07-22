@@ -242,10 +242,11 @@ article > aside {
   z-index: 1;
   padding: 0; }
   article > aside div.search {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 75px;
-    margin: 13px 20px 30px 30px; }
+    background-color: var(--menu-color);
+    padding: 13px 20px 30px 30px; }
   article > aside .menu {
     list-style-type: none;
     margin-top: 147px;
@@ -530,7 +531,7 @@ article > aside {
       article > aside .stepper-menu .dd-item.haschildren.parent ul {
         padding-left: 0; }
       article > aside .stepper-menu .dd-item.haschildren li {
-        margin: 20px 0; }
+        margin: 10px 0; }
       article > aside .stepper-menu .dd-item.haschildren ul {
         padding-left: 0px; }
       article > aside .stepper-menu .dd-item.haschildren ul a {
@@ -541,7 +542,7 @@ article > aside {
       article > aside .stepper-menu .dd-item.parent > ul {
         display: block; }
       article > aside .stepper-menu .dd-item.active li {
-        margin: 20px 0; }
+        margin: 10px 0; }
       article > aside .stepper-menu .dd-item.active > a {
         color: var(--font-blue-color); }
       article > aside .stepper-menu .dd-item.active > ul {
@@ -593,6 +594,8 @@ body a {
 body {
   color: var(--font-body-color);
   background-color: var(--body-color); }
+  body .activelink {
+    color: var(--font-blue-color); }
   body .searchbox {
     border-radius: 35px;
     outline: none !important;
@@ -625,11 +628,10 @@ body {
     background-color: var(--hr-color);
     border-top: 0; }
   body label {
-    font: normal normal 600 12px/13px zoho-puvi-semibold;
-    letter-spacing: 2.4px;
+    font: 15px/19px zoho-puvi-regular;
+    letter-spacing: 0px;
     color: var(--font-lite-body-color);
-    margin-left: 30px;
-    text-transform: uppercase; }
+    margin-left: 30px; }
   body a {
     color: var(--font-lite-body-color);
     text-decoration: none;
@@ -1060,7 +1062,8 @@ div.note {
     width: 100%;
     margin-top: -1px;
     border-top: 1px solid var(--hr-color);
-    padding: 1em 1em; }
+    padding: 1em 0;
+    padding-top: 40px; }
   .tabs > input[type=radio] {
     height: 0;
     width: 0;
@@ -1095,6 +1098,7 @@ span.highlight.highlight-i {
   --font-menu-color: #000000;
   --font-suggestion-color: #989898;
   --font-at-color: #989898;
+  --step-color: #d1d1d1;
   --font-blue-color: #448BFF;
   --button-background-color: #F0483D;
   --shadow-color:#A2A2A21A;
@@ -1166,6 +1170,7 @@ span.highlight.highlight-i {
     --font-menu-color: #F0F0F0;
     --font-suggestion-color: #656565;
     --font-at-color: #656565;
+    --step-color: #454545;
     --font-blue-color: #448BFF;
     --button-background-color: #F0483D;
     --shadow-color:#A2A2A20D;
@@ -1234,6 +1239,7 @@ span.highlight.highlight-i {
   --font-menu-color: #B6B6B6;
   --font-suggestion-color: #8E8E8E;
   --font-at-color: #656565;
+  --step-color: #454545;
   --font-blue-color: #448BFF;
   --button-background-color: #F0483D;
   --shadow-color:#A2A2A20D;

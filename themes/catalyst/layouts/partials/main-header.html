@@ -25,6 +25,9 @@
     .list a:hover{
       color: var(--font-blue-color);
     }
+    .activa a {
+      color: red;
+    }
     .searchbox {
         width: 559px;
         height: 44px;
@@ -72,6 +75,7 @@
     }
     .src-input {
       padding: 12px 40px;
+      width: 100%;
       padding-left: 0px;
       color: var(--font-menu-color);
       font: normal normal normal 14px/17px zoho-puvi-regular;
@@ -79,6 +83,13 @@
       float: left;
       outline: none;
       background-color: var(--body-color);
+    }
+    .add_div1{
+      width: 11px;
+      height: 2px;
+      margin-top: 0px;
+      border-radius: 2px;
+      opacity: 1;
     }
     </style>
     <div style="padding:0 29px 0 0; display: flex;">
@@ -101,13 +112,33 @@
         <!-- {{- with .Site.Menus.shortcuts}} -->
 
         <nav class="shortcuts">
-          <li class="list"><a href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">Docs</a></li>
-          <li class="list"><a href="/tutorial/" target="_self" rel="noopener noreferrer">Tutorials</a></li>
-          <li class="list"><a href="/faq/authentication/" target="_self" rel="noopener noreferrer">FAQ</a></li>
-          <li class="list"><a href="/whats-new/release-notes/" target="_self" rel="noopener noreferrer">What’s New</a></li>
-          <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
-        </nav>
+            <li class="list">
+                <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">
+                Docs
+                <div class="add_div1" id="docs-line"></div>
+              </a>
+            </li>
+            <li class="list">
+              <a id="tutorial" href="/tutorial/" target="_self" rel="noopener noreferrer">
+                Tutorials
+                <div class="add_div1" id="tutorial-line"></div>
+              </a>
+            </li>
+            <li class="list">
+              <a id="faq" href="/faq/authentication/" target="_self" rel="noopener noreferrer">
+                FAQ
+                <div class="add_div1" id="faq-line"></div>
+              </a>
+            </li>
+            <li class="list">
+              <a id="whats-new" href="/whats-new/release-notes/" target="_self" rel="noopener noreferrer">
+                What’s New
+                <div class="add_div1" id="whats-new-line"></div>
+              </a>
+            </li>
+            <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
+          </nav>
         <!-- {{- end}} -->
     
     </div>
-    
+    <script src='{{"js/activelink.js" | relURL}}'></script>
