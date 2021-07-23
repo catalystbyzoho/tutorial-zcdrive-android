@@ -12,64 +12,135 @@
 {{ with .Params.feature }}
 {{ if .enable }}
 
-<section style="margin:100px 0;">
+<section style="margin:100px 0 0 0;">
 
   <div class="container" style="background-color: var(--body-color);">
 
   <div style="width: 100%; margin: 0 auto; display: flex; padding-bottom: 20px; border-bottom: 1px solid var(--hr-color); margin-bottom: 40px;">
-    <div class="searchbox" style="float: left;">
+    <div class="searchbox" style="float: left; display: flex;">
       <div class="search-icon"></div>
       <input class="src-input" name="query" placeholder="Search Topics & Tutorials" type="text">
     </div>
     <div style="display: flex; margin-left: auto;">
       <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
-        <select class="custom-select tutorial-filter">
-            <option value="0" selected>All Levels</option>
-            <option value="1">Easy</option>
-            <option value="2">Intermediate</option>
-            <option value="3">Hard</option>
+        <select class="custom-select tutorial-filter" onchange="filterContent()">
+            <option value="AllLevels" selected>All Levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Hard">Hard</option>
         </select>
       </div>
       <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
-        <select class="custom-select tutorial-filter">
-            <option value="0" selected>All Languages</option>
-            <option value="1">Java</option>
-            <option value="2">Node JS</option>
-            <option value="3">Python</option>
+        <select class="custom-select tutorial-filter" onchange="filterContent()">
+            <option value="AllLanguages" selected>All Languages</option>
+            <option value="Java">Java</option>
+            <option value="NodeJS">Node JS</option>
+            <option value="Python">Python</option>
         </select>
       </div>
       <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
-        <select class="custom-select tutorial-filter">
-            <option value="0" selected>All durations</option>
-            <option value="1">30 mins</option>
-            <option value="2">45 mins</option>
-            <option value="3">60 mins</option>
+        <select class="custom-select tutorial-filter" onchange="filterContent()">
+            <option value="AllDurations" selected>All durations</option>
+            <option value="forty-mins">40 mins</option>
+            <option value="fortyfive-mins">45 mins</option>
+            <option value="sixty-mins">60 mins</option>
         </select>
       </div>
     </div>
   </div>
 
-  <div class="row justify-content-left">
+  <div class="row justify-content-left" style="margin-left: 0px;">
     {{ range .feature_item }}
-    <div class="col-md-4 col-sm-6 mb-4" style="padding-left:18px; margin-bottom: 18px !important;">
-      <a href="{{.url}}">
-        <div class="feature-card feature">
-          <div style="display: flex;">
-            <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.level}}</p>
-            <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px;">{{.duration}}</p>
-          </div>
-            <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">{{ .name | title }}</p>
-            <p class="feature-p">{{ .content | markdownify }}</p>
-            <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">{{.language}}</p>
-        </div>
-      </a>
+    <div 
+      class="filterContent {{.level}} {{.duration}} {{.language1}} {{.language2}} {{.language3}}" 
+      url="{{.url}}" 
+      level="{{.level}}"
+      duration="{{.duration}}"
+      name="{{.name}}"
+      content="{{.content}}" 
+      language1="{{.language1}}"
+      language2="{{.language2}}"
+      language3="{{.language3}}"
+     >
     </div>
     {{ end }}
+    <div class="row justify-content-left" id="demo"></div>
   </div>
-
   </div>
 
 </section>
 {{ end }}
 {{ end }}
 <!-- /feature -->
+<script>
+  var initialLoading = function(){
+    filterContent();
+  }();
+  function filterContent(){
+    document.getElementById("demo").innerHTML="";
+    var a = document.querySelectorAll("select.custom-select");
+    var level = a[0].value;
+    var language = a[1].value;
+    var duration = a[2].value;
+
+    if(level == "AllLevels" && language =="AllLanguages" && duration == "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent`);
+    }
+    else if(level != "AllLevels" && language =="AllLanguages" && duration == "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${level}`);
+    }
+    else if(level == "AllLevels" && language !="AllLanguages" && duration == "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${language}`);
+    }
+    else if(level == "AllLevels" && language =="AllLanguages" && duration != "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${duration}`);
+    }
+    else if(level != "AllLevels" && language !="AllLanguages" && duration == "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${level}.${language}`);
+    }
+    else if(level == "AllLevels" && language !="AllLanguages" && duration != "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${language}.${duration}`);
+    }
+    else if(level != "AllLevels" && language =="AllLanguages" && duration != "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${level}.${duration}`);
+    }
+    else if(level != "AllLevels" && language !="AllLanguages" && duration != "AllDurations"){
+      var showableContent = document.querySelectorAll(`.filterContent.${level}.${language}.${duration}`);
+    }
+    
+    for(var i=0;i<=showableContent.length;i++){
+        var url = showableContent[i].getAttribute("url");
+        var time = showableContent[i].getAttribute("duration");
+        if(time == "forty-mins"){
+          time = "40 mins";
+        }
+        if(time == "fortyfive-mins"){
+          time = "45 mins";
+        }
+        if(time == "sixty-mins"){
+          time = "60 mins";
+        }
+        var node = document.createElement("div");
+        
+        node.innerHTML = `
+        <div class="col-md-4 col-sm-6 mb-4" style="padding-left:5px; margin-bottom: 18px !important;">
+          <a href=${url}>
+            <div class="feature-card feature">
+              <div style="display: flex;">
+                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${showableContent[i].getAttribute("level")}</p>
+                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${time}</p>
+              </div>
+                <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">${showableContent[i].getAttribute("name")}</p>
+                <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
+                <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">
+                  ${showableContent[i].getAttribute("language1")}
+                  ${showableContent[i].getAttribute("language2")}
+                  ${showableContent[i].getAttribute("language3")}
+                </p>
+            </div>
+          </a>
+        </div>`;
+        document.getElementById("demo").appendChild(node);
+    }
+  }
+</script>
