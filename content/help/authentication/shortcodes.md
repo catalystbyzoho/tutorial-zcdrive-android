@@ -1,8 +1,6 @@
 +++
 date= "2020-09-08T22:11:57.883Z"
 title= "Shortcodes"
-type= "sdk"
-layout= "single"
 weight= 1
 +++
  
@@ -91,8 +89,8 @@ Java allow you to highlight information or put it in a box. They create a colore
 
 {{%expand "Is this docport theme rocks ?" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
 
-### Panel
-{{% panel header="Lorem Ipsum is simply dummy text of the printing" footer="button" %}}
+### Panel with Adjustment
+{{% panel_with_adjustment header="Lorem Ipsum is simply dummy text of the printing" footer="button" %}}
     {
         "project_details_help_docs": {
             "id": 57127989012782,
@@ -133,26 +131,74 @@ Java allow you to highlight information or put it in a box. They create a colore
         "source": "UserManagement",
         "event_time": 1568139437092
     }
-{{% /panel %}}
+{{% /panel_with_adjustment %}}
 
-{{% panel header="Who invented the Light Bulb?" footer="button" %}}
+{{% panel_with_adjustment header="Who invented the Light Bulb?" footer="button" %}}
    The story of the light bulb begins long before Edison patented the first commercially successful bulb in 1879. In 1800, Italian inventor Alessandro Volta developed the first practical method of generating electricity, the voltaic pile. Made of alternating discs of zinc and copper — interspersed with layers of cardboards soaked in salt water — the pile conducted electricity when a copper wire was connected at either end. While actually a predecessor of the modern battery, Volta's glowing copper wire is also considered to be one of the earliest manifestations of incandescent lighting.
 
     Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
-{{% /panel %}}
+{{% /panel_with_adjustment %}}
 
-{{% panel header="Who invented the Light Bulb?" footer="button" %}}
+{{% panel_with_adjustment header="Who invented the Light Bulb?" footer="button" %}}
    The story of the light bulb begins long before Edison patented the first commercially successful bulb in 1879. In 1800, Italian inventor Alessandro Volta developed the first practical method of generating electricity, the voltaic pile. Made of alternating discs of zinc and copper — interspersed with layers of cardboards soaked in salt water — the pile conducted electricity when a copper wire was connected at either end. While actually a predecessor of the modern battery, Volta's glowing copper wire is also considered to be one of the earliest manifestations of incandescent lighting.
 
     Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
-{{% /panel %}}
+{{% /panel_with_adjustment %}}
 
-{{% panel header="Who invented the Light Bulb?" footer="button" %}}
+{{% panel_with_adjustment header="Who invented the Light Bulb?" footer="button" %}}
    The story of the light bulb begins long before Edison patented the first commercially successful bulb in 1879. In 1800, Italian inventor Alessandro Volta developed the first practical method of generating electricity, the voltaic pile. Made of alternating discs of zinc and copper — interspersed with layers of cardboards soaked in salt water — the pile conducted electricity when a copper wire was connected at either end. While actually a predecessor of the modern battery, Volta's glowing copper wire is also considered to be one of the earliest manifestations of incandescent lighting.
 
     Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
-{{% /panel %}}
+{{% /panel_with_adjustment %}}
 ### Button
 
 {{%divtag red%}}Success{{%/divtag%}}
 {{%divtag green%}}Success{{%/divtag%}}
+
+### Columns
+{{< columns >}}
+#### Left Content
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. 
+
+<--->
+
+#### Mid Content
+Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. 
+
+<--->
+
+#### Right Content
+Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+{{< /columns >}}
+
+### Panel without Adjustment
+
+{{% panel_without_adjustment header="Who invented the Light Bulb?" %}}
+   The story of the light bulb begins long before Edison patented the first commercially successful bulb in 1879. In 1800, Italian inventor Alessandro Volta developed the first practical method of generating electricity, the voltaic pile. Made of alternating discs of zinc and copper — interspersed with layers of cardboards soaked in salt water — the pile conducted electricity when a copper wire was connected at either end. While actually a predecessor of the modern battery, Volta's glowing copper wire is also considered to be one of the earliest manifestations of incandescent lighting.
+
+    Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
+{{% /panel_without_adjustment %}}
+
+### Panel with Plane Content
+
+{{% panel header="Who invented the Light Bulb?" %}}
+   The story of the light bulb begins long before Edison patented the first commercially successful bulb in 1879. In 1800, Italian inventor Alessandro Volta developed the first practical method of generating electricity, the voltaic pile. Made of alternating discs of zinc and copper — interspersed with layers of cardboards soaked in salt water — the pile conducted electricity when a copper wire was connected at either end. While actually a predecessor of the modern battery, Volta's glowing copper wire is also considered to be one of the earliest manifestations of incandescent lighting.
+
+    Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
+{{% /panel%}}
+
+### Panel with Select
+{{% panel_with_select header="Who invented the Light Bulb?" %}}
+    "project_details": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{% /panel_with_select %}}

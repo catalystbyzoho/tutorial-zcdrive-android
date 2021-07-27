@@ -1,13 +1,11 @@
 +++
-date= "2020-09-08T22:11:57.883Z"
-head= "<h6>DEVELOP</h6>"
-title= "Authentication"
-type= "sdk"
+title= "AbstractClass"
+type= "cli"
 layout= "single"
 weight= 1
 +++
 
-# Authentication
+# Abstract Class
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
 
 {{%image src="/images/help/data-store/delete.jpg" class="w70" alt="delete-table" %}}{{%/image%}}

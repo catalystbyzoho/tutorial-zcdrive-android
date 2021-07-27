@@ -36,7 +36,7 @@ sdk:
 
     - name : "Command Line Interface (CLI)"
       icon : "cli-icon"
-      link : "/cli/authentication/"
+      link : "/cli/java-applet/"
       
     - name : "Java"
       icon : "java-icon"

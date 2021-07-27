@@ -65,6 +65,7 @@
     </div>
     {{ end }}
     <div class="row justify-content-left" id="demo"></div>
+    <div class="row justify-content-center" id="demo1" style="margin-left: auto; margin-right: auto;"></div>
   </div>
   </div>
 
@@ -107,40 +108,44 @@
     else if(level != "AllLevels" && language !="AllLanguages" && duration != "AllDurations"){
       var showableContent = document.querySelectorAll(`.filterContent.${level}.${language}.${duration}`);
     }
-    
-    for(var i=0;i<=showableContent.length;i++){
-        var url = showableContent[i].getAttribute("url");
-        var time = showableContent[i].getAttribute("duration");
-        if(time == "forty-mins"){
-          time = "40 mins";
-        }
-        if(time == "fortyfive-mins"){
-          time = "45 mins";
-        }
-        if(time == "sixty-mins"){
-          time = "60 mins";
-        }
-        var node = document.createElement("div");
-        
-        node.innerHTML = `
-        <div class="col-md-4 col-sm-6 mb-4" style="padding-left:5px; margin-bottom: 18px !important;">
-          <a href=${url}>
-            <div class="feature-card feature">
-              <div style="display: flex;">
-                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${showableContent[i].getAttribute("level")}</p>
-                <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${time}</p>
+    if(showableContent.length == 0){
+      document.getElementById("demo1").innerHTML = `<p style="margin: auto;">No Tutorial is available for this search</p> `;
+    }
+    else{
+      for(var i=0;i<=showableContent.length;i++){
+          var url = showableContent[i].getAttribute("url");
+          var time = showableContent[i].getAttribute("duration");
+          if(time == "forty-mins"){
+            time = "40 mins";
+          }
+          if(time == "fortyfive-mins"){
+            time = "45 mins";
+          }
+          if(time == "sixty-mins"){
+            time = "60 mins";
+          }
+          var node = document.createElement("div");
+          
+          node.innerHTML = `
+          <div class="col-md-4 col-sm-6 mb-4" style="padding-left:5px; margin-bottom: 18px !important;">
+            <a href=${url}>
+              <div class="feature-card feature">
+                <div style="display: flex;">
+                  <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${showableContent[i].getAttribute("level")}</p>
+                  <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${time}</p>
+                </div>
+                  <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">${showableContent[i].getAttribute("name")}</p>
+                  <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
+                  <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">
+                    ${showableContent[i].getAttribute("language1")}
+                    ${showableContent[i].getAttribute("language2")}
+                    ${showableContent[i].getAttribute("language3")}
+                  </p>
               </div>
-                <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">${showableContent[i].getAttribute("name")}</p>
-                <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
-                <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">
-                  ${showableContent[i].getAttribute("language1")}
-                  ${showableContent[i].getAttribute("language2")}
-                  ${showableContent[i].getAttribute("language3")}
-                </p>
-            </div>
-          </a>
-        </div>`;
-        document.getElementById("demo").appendChild(node);
+            </a>
+          </div>`;
+          document.getElementById("demo").appendChild(node);
+      }
     }
   }
 </script>

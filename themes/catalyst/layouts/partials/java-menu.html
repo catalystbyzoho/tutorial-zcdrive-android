@@ -1,0 +1,83 @@
+{{- $currentNode := . }}
+{{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
+
+{{- range .Site.Home.Sections.ByWeight}}
+{{- template "section-tree-java" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+{{- end}}
+
+<!-- templates -->
+{{- define "section-tree-java" }}
+{{- $showvisitedlinks := .showvisitedlinks }}
+{{- $currentNode := .currentnode }}
+ {{- with .sect}}
+  {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
+    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    {{- safeHTML .Params.head}}
+    <li data-nav-id="{{.Permalink}}" class="dd-item
+        {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
+        {{- if ne $numberOfPages 0 }} haschildren{{end}}
+        ">
+
+      {{if ne .Title "main"}}
+      {{if lt .Weight 0}}
+      <div>
+        {{- if ne $numberOfPages 0 }}
+            <i class="fa fa-angle-right category-icon"></i>
+            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+        {{- end}}
+      </div>
+      {{end}}
+      {{end}}
+
+      {{- if ne $numberOfPages 0 }}
+        <ul>
+          {{- $pages := .Pages }}
+          {{- if .Sections}}
+          {{- $pages = (.Pages | union .Sections) }}
+          {{- end}}
+
+          {{- range $pages.ByWeight }}
+            {{- if and .Params.hidden (not $.showhidden) }}
+            {{- else}}
+            {{- template "section-tree-java" dict "sect" . "showvisitedlinks" $showvisitedlinks }}
+            {{- end}}
+          {{- end}}
+        </ul>
+      {{- end}}
+    </li>
+  {{- else}}
+    {{- if not .Params.Hidden }}
+    {{if lt .Weight 0}}
+      <li data-nav-id="{{.Permalink}}" class="dd-item">
+        <div>
+          <a href="{{ .RelPermalink}}">
+            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+          </a>
+        </div>
+      </li>
+    {{end}}
+    {{- end}}
+  {{- end}}
+ {{- end}}
+{{- end}}
+
+<script type="text/javascript">
+    var matches = document.querySelectorAll(`li[data-nav-id$="${window.location.pathname}"]`);
+    if (matches.length > 0) {
+        var menu = matches[0];
+        menu.classList.add("active");
+
+        var maxDepth = 10; // Avoid infinite loop !
+        var nextAncestor = menu.closest("li[data-nav-id]");
+        while (maxDepth-- >= 0 && nextAncestor !== null) {
+            nextAncestor.classList.add("parent");
+            var icon = nextAncestor.querySelector('i.category-icon');
+            if (icon !== null) {
+                icon.classList.remove('fa-angle-right');
+                icon.classList.add('fa-angle-down');
+            }
+
+            nextAncestor = nextAncestor.parentNode.closest("li[data-nav-id]");
+        }
+    }
+</script>

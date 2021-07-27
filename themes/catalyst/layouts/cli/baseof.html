@@ -1,0 +1,79 @@
+{{- $redirectURL := "" }}
+{{ with .Params.redirect}}
+  {{ if or (hasPrefix . "http:") (hasPrefix . "https:") }}
+    {{ $redirectURL = . }}
+  {{ else }}
+    {{ $redirectURL = ref $ .}}
+  {{ end }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ partial "html-head.html" . }}
+    {{if ne $redirectURL "" }}
+      <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
+    {{end}}
+  </head>
+
+  <body data-url="{{ .RelPermalink }}">
+
+    <article>
+      {{if not (in .Params.hide "nav")}}
+      <aside class="{{.Params.layout }}">
+        {{ partial "body-sidebar.html" . }}     
+        <ul class="menu" style="margin-top: 200px;">
+          {{- partial "java-menu.html" . }}
+        </ul> 
+        <div style="background-color: var(--menu-color); padding: 13px 20px 5px 30px; border-top: 7px solid var(--body-color);">
+          <h6 style="font: 16px/19px zoho-puvi-bold; letter-spacing: 0.8px; margin: 10px 0 20px 0;">ALL CLASSES</h6>
+          <div class="searchbox" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 4px 11px;
+          width: 310px;
+          height: 39px;
+          border: 0px;
+          background-color: transparent;
+          border: 1px solid var(--hr-color);">
+            <div class="shortlist"></div>
+            <input data-search-input id="search-by" type="text" placeholder="Filter topics" class="input-filter">
+          </div>
+      
+          <script type="text/javascript" src="{{"vendor/lunr/lunr.min.js" | relURL}}"></script>
+          <script type="text/javascript" src="{{"vendor/auto-complete/auto-complete.js" | relURL}}"></script>
+          <link href="{{"vendor/auto-complete/auto-complete.css" | relURL}}" rel="stylesheet">
+          <script type="text/javascript">
+            {{ if .Site.IsMultiLingual }}
+                var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
+            {{ else }}
+                var baseurl = "{{.Site.BaseURL}}";
+            {{ end }}
+          </script>
+          <script type="text/javascript" src="{{"js/search.js" | relURL}}"></script>
+        </div>
+        <ul class="menu" style="margin-top: 10px;">
+          {{- partial "abstract-menu.html" . }}
+        </ul> 
+      </aside>
+      {{end}}
+
+      <section class="page {{.Params.layout }}">
+      {{if not (in .Params.hide "header")}}
+      <header>
+          {{ partial "body-header.html" . }}
+      </header>
+      {{end}}
+      {{ block "main" . }}
+      {{ end }}
+      </section>
+
+    </article>
+    {{ partial "scroll-top.html" . }}
+    {{if not (in .Params.hide "footer")}}
+    <footer>
+      {{ partial "body-footer.html" . }}
+    </footer>
+    {{end}}
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>

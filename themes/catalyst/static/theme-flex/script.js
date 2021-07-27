@@ -63,6 +63,12 @@ jQuery(document).ready(function() {
                 $(this).attr('aria-label', null).removeClass('tooltipped tooltipped-s tooltipped-w');
             });
         }
+        
+        $(document).ready(function(){
+            if(document.getElementById("hidecopy")){
+                document.querySelectorAll("pre#hidecopy span.copy-to-clipboard")[0].style.display="none";
+            }
+        });
     });
 
     // allow keyboard control for prev/next links

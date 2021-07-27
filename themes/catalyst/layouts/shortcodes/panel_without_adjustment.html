@@ -1,0 +1,139 @@
+<style type="text/css"> 	  
+	.panel{
+		margin-bottom: 0;
+		background-color: var(--main-background);
+		box-shadow: none;
+		border-radius: 0px;
+	}
+	.panelswitch {
+		position: relative;
+		display: flex;
+		width: 60px;
+		height: 30px;
+		right: -30px;
+    	top: 0px;
+		margin: 11px 29px 0 12px;
+		float: right;
+	}
+
+	.panelswitch input {
+		opacity: 0;
+	}
+
+	.code-light-icon{
+        background: url('/images/LightPages.svg') no-repeat -121px -29px;
+        width: 16px;
+        height: 16px;
+		margin-left: 4px;
+		cursor: pointer;
+    }
+
+	.code-dark-icon{
+        background: url('/images/DarkPages.svg')no-repeat -516px -30px;
+        width: 13px;
+        height: 13px;
+        margin-left: 6px;
+		margin-top: 1.5px;
+		cursor: pointer;
+    }
+
+	.dark1 {
+		--main-background: #222222;
+		--main-font: #B6B6B6;
+		--copy-background: #171717;
+		--copy-font: #DEDEDE;
+	}
+
+	.light1 {
+		--main-background: #F6F7F8;
+		--main-font: #000000;
+		--copy-background: #FFFFFF;
+		--copy-font: #393939;
+	}
+
+	.code-block1 {
+		background: var(--copy-background);
+		color: var(--copy-font);
+	}
+	.theme-icon {
+		padding-top: 4.7px;
+		box-shadow: 0px 0px 6px #C7C7C729; 
+		background-color: var(--copy-background); 
+		width: 24px; 
+		height: 24px; 
+		margin-top:-4px;
+	}
+	.preblock{
+	background: var(--main-background); 
+	color: var(--main-font); 
+	border-color: var(--main-background);
+	overflow: hidden; 
+	margin: 15px 0; 
+	padding:0px !important; 
+	}
+	pre.preblock .copy-to-clipboard{
+		right: -40px !important;
+    	top: -5px !important;
+	}
+</style>
+
+<pre name="codetheme" class="light1 preblock">
+	<div class="panel" style="border: 1.8px solid var(--main-background);">
+		{{- with .Get "header" -}}
+			<div class="panel-heading" style="background-color: var(--main-background); color:var(--main-font); border-color:var(--main-background); margin-bottom: -47px;     border-bottom-width: 2px;">
+				{{- htmlUnescape . | markdownify -}}
+			</div>
+		{{- end -}}
+			<label class="panelswitch">
+				<input name="theme-switch" type="checkbox" onclick="clickHandler(this)">
+				<div class="theme-icon">
+					<div name="icontheme" class="code-light-icon"></div>
+				</div>
+			</label>
+			<code class="code-block1 view" style="height: auto; margin-top: 0px; width: 100%; overflow:hidden; padding: 0 25px 25px 25px;">{{.Inner}}</code>
+	</div>
+</pre>
+
+<script>
+	function clickHandler(e) {
+	    const themeSwitcher = document.getElementsByName("theme-switch");
+	    if(e.checked)
+	    {
+	    	for(var i=0;i<themeSwitcher.length;i++)
+		    {
+		    	themeSwitcher[i].checked=true;
+		 	}
+		    const theme = document.getElementsByName("codetheme");
+			for(var i=0;i<theme.length;i++)
+	    	{
+			 	theme[i].classList.remove("light1");
+			    theme[i].classList.add("dark1");	  
+			}
+	        const icontheme = document.getElementsByName("icontheme");
+			for(var i=0;i<icontheme.length;i++)
+	    	{
+			 	icontheme[i].classList.remove("code-light-icon");
+			    icontheme[i].classList.add("code-dark-icon");	  
+			}
+	    }
+	    else 
+	    {
+	    	for(var i=0;i<themeSwitcher.length;i++)
+		    {
+		    	themeSwitcher[i].checked=false;
+		 	}
+		    const theme = document.getElementsByName("codetheme");
+		 	for(var i=0;i<theme.length;i++)
+		    {
+		    	theme[i].classList.add("light1");
+			    theme[i].classList.remove("dark1");	  
+		    }
+			const icontheme = document.getElementsByName("icontheme");
+			for(var i=0;i<icontheme.length;i++)
+	    	{
+			 	icontheme[i].classList.add("code-light-icon");
+			    icontheme[i].classList.remove("code-dark-icon");	  
+			}
+	    }
+	}
+</script>
