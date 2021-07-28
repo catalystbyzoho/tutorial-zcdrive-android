@@ -17,9 +17,9 @@
   <div class="container" style="background-color: var(--body-color);">
 
   <div style="width: 100%; margin: 0 auto; display: flex; padding-bottom: 20px; border-bottom: 1px solid var(--hr-color); margin-bottom: 40px;">
-    <div class="searchbox" style="float: left; display: flex;">
+    <div class="searchbox" style="float: left; display: flex; height: 44px!important;">
       <div class="search-icon"></div>
-      <input class="src-input" name="query" placeholder="Search Topics & Tutorials" type="text">
+      <input class="src-input" style="padding: 0px;" name="query" placeholder="Search Topics & Tutorials" type="text">
     </div>
     <div style="display: flex; margin-left: auto;">
       <div style="width: 130px; height: 36px; margin-left: 40px; margin-top: 10px;">
@@ -109,7 +109,7 @@
       var showableContent = document.querySelectorAll(`.filterContent.${level}.${language}.${duration}`);
     }
     if(showableContent.length == 0){
-      document.getElementById("demo1").innerHTML = `<p style="margin: auto;">No Tutorial is available for this search</p> `;
+      document.getElementById("demo1").innerHTML = `<p style="margin: auto;">No Tutorial is available for this filter</p> `;
     }
     else{
       for(var i=0;i<=showableContent.length;i++){

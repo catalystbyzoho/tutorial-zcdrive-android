@@ -45,6 +45,7 @@
     }
     .src-input1 {
         padding: 12px 40px;
+        padding-bottom: 0;
         width: 100%;
         padding-left: 0px;
         color: var(--font-menu-color);
@@ -536,7 +537,7 @@
     {{ if and (ne .Type "faq") (ne .Type "whats-new")}}
     <div class="search-box1">
         <div class="search-icon1"></div>
-        <input class="src-input1" name="query" placeholder="Search documents" type="text">
+        <input class="src-input1 docsearch-input" name="query" placeholder="Search documents" type="text">
     </div>
     {{ end }}
 </div>

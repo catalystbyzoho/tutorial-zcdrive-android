@@ -48,15 +48,15 @@
       <!-- FIN NAVIGATION DROITE TOC -->
 
     </article>
-    {{if not (in .Params.hide "footer")}}
+    
     {{ partial "scroll-top.html" . }}
 
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>
-    {{end}}
 
     {{ partial "scripts.html" . }}
+    {{ partial "algolia.html" . }}
 
   </body>
 </html>

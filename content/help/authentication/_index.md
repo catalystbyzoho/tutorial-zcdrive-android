@@ -13,6 +13,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 {{%image src="/images/help/data-store/delete.jpg" class="w70" alt="delete-table" %}}{{%/image%}}
 
 ### Introduction
+
 You can perform the following actions using Authentication from the remote console:
 * Add or remove the end-users of your application
 * Enable or disable their user accounts in your application

@@ -35,6 +35,7 @@
     }
     .srcinput {
         padding: 6px 40px;
+        padding-bottom: 0px;
         color: var(--font-menu-color);
         font: normal normal normal 14px/17px zoho-puvi-regular;
         border: 1px solid var(--hr-color);
@@ -74,7 +75,9 @@
       float: left;
     }
     .src-input {
-      padding: 12px 40px;
+      padding: 10px 40px;
+      padding-bottom: 0;
+      margin-left: 1px;
       width: 100%;
       padding-left: 0px;
       color: var(--font-menu-color);
@@ -104,9 +107,9 @@
       </div>
         
         {{ if or (eq .Type "whats-new") (eq .Type "faq")}}
-        <div class="searchbox" style="margin-left: 410px;">
+        <div class="searchbox" style="margin-left: 410px; height: 44px !important;">
           <div class="search-icon"></div>
-          <input class="src-input" name="query" placeholder="Search documents" type="text">
+          <input class="src-input docsearch-input" name="query" placeholder="Search documents" type="text">
         </div>
         {{ end }}
         <!-- {{- with .Site.Menus.shortcuts}} -->

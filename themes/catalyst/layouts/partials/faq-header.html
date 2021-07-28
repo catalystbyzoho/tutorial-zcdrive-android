@@ -39,7 +39,9 @@
         float: left;
     }
     .src-input {
-        padding: 12px 40px;
+        padding: 10px 40px;
+        padding-bottom: 0;
+        margin-left: 1px;
         width: 100%;
         padding-left: 0px;
         color: var(--font-menu-color);
@@ -65,9 +67,9 @@
     <div style="padding:0">
     
       {{ if ne .Type "docs" }}
-        <div class="searchbox">
+        <div class="searchbox" style="height: 44px !important;">
           <div class="search-icon"></div>
-          <input class="src-input" name="query" placeholder="Search Topics & Tutorials" type="text">
+          <input class="src-input"style="padding: 0px;" name="query" placeholder="Search Topics & Tutorials" type="text">
         </div>
         <div style="width: 135px; height: 34px; margin-left: auto; margin-top: 10px;">
           <select class="custom-select tutorial-filter">

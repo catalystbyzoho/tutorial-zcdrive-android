@@ -13,9 +13,11 @@
 
 <!-- vendor css/js -->
 {{- partial "html-head-vendor.html" . }}
-
 <link href="{{(printf "theme-%s/style.css" (.Site.Params.themeStyle| default "flex")  ) | relURL}}" rel="stylesheet">
 <link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
+
+<!-- Algolia -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
 
 <!-- docport css/js -->
 {{ $sass := resources.Get "sass/main.scss" }}

@@ -29,7 +29,7 @@
           <h6 style="font: 16px/19px zoho-puvi-bold; letter-spacing: 0.8px; margin: 10px 0 20px 0;">ALL CLASSES</h6>
           <div class="searchbox" style="display: flex; border-radius:35px; outline: none !important; box-shadow: 0 0 0 0; font: normal normal normal 14px/17px zoho-puvi-regular; color: var(--font-menu-color); padding: 4px 11px;
           width: 310px;
-          height: 39px;
+          height: 39px !important;
           border: 0px;
           background-color: transparent;
           border: 1px solid var(--hr-color);">
@@ -74,6 +74,7 @@
     {{end}}
 
     {{ partial "scripts.html" . }}
+    {{ partial "algolia.html" . }}
 
   </body>
 </html>
