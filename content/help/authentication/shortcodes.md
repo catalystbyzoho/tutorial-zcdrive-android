@@ -3,11 +3,15 @@ date= "2020-09-08T22:11:57.883Z"
 title= "Shortcodes"
 weight= 1
 +++
- 
+
+#
+
 ### Note
+
 {{%note%}}**This is** an note !{{%/note%}}
 
 ### Code
+
 {{%code%}}
 hugo server
 {{%/code%}}
@@ -56,6 +60,7 @@ hugo server
 {{%/code%}}
 
 ### Table
+
 | Component      | Event | Description |
 | :--- | :---: | :---: |
 | Data Store | Insert <br> checking for new line | Insert data in a table |
@@ -64,6 +69,7 @@ hugo server
 | Cache      | Put     | Put data in a segment |
 
 ### Tabs
+
 {{< tabs >}}
 {{% tab "PHP" %}} 
 Php allow you to highlight information or put it in a box. They create a colored box surrounding your text
@@ -87,9 +93,14 @@ Java allow you to highlight information or put it in a box. They create a colore
 
 ### Expand
 
-{{%expand "Is this docport theme rocks ?" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
+{{%expand 
+question="How do I resolve the error “HTTP Error: 409 - The given function_name already exists”?" 
+id="hello4" %}}
+YAllow you to highlight information or put it in a box. They create a colored box surrounding your text
+{{% /expand%}}
 
 ### Panel with Adjustment
+
 {{% panel_with_adjustment header="Lorem Ipsum is simply dummy text of the printing" footer="button" %}}
     {
         "project_details_help_docs": {
@@ -150,23 +161,18 @@ Java allow you to highlight information or put it in a box. They create a colore
 
     Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
 {{% /panel_with_adjustment %}}
+
 ### Button
 
 {{%divtag red%}}Success{{%/divtag%}}
 {{%divtag green%}}Success{{%/divtag%}}
 
 ### Columns
+
 {{< columns >}}
 #### Left Content
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. 
-
-<--->
-
-#### Mid Content
-Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. 
 
 <--->
 
