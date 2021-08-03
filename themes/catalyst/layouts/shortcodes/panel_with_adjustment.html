@@ -109,7 +109,7 @@
 			<code class="code-block1 view fadecontent" style="margin-top: 0px; height: 150px; width: 100%; overflow:hidden; padding: 0 25px 25px 25px;" id="view-adjust">{{.Inner}}</code>
 		{{- with .Get "footer" -}}
 			<div class="panel-footer" style="background-color: var(--main-background); border:none; text-align: center;">
-				<div onclick="adjustview(this)" id="myBtn" style="color: #1E90FF; cursor: pointer;">view more</div>
+				<div onclick="adjustview(this)" id="myBtn" style="color: #1E90FF; cursor: pointer;">View more</div>
 			</div>
 		{{- end -}}
 	</div>
@@ -118,13 +118,13 @@
 <script>
 	function adjustview(e){
 		var data = e.innerHTML;
-		if(data == "view more"){
-			e.innerHTML = "view less";
+		if(data == "View more"){
+			e.innerHTML = "View less";
 			e.parentNode.parentNode.querySelectorAll("code#view-adjust.code-block1.view")[0].style.height="auto";
 			e.parentNode.parentNode.querySelectorAll("code#view-adjust.code-block1.view")[0].classList.remove("fadecontent");
 		}
 		else{
-			e.innerHTML = "view more";
+			e.innerHTML = "View more";
 			e.parentNode.parentNode.querySelectorAll("code#view-adjust.code-block1.view")[0].style.height="150px";
 			e.parentNode.parentNode.querySelectorAll("code#view-adjust.code-block1.view")[0].classList.add("fadecontent");
 		}

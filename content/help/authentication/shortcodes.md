@@ -96,8 +96,7 @@ Java allow you to highlight information or put it in a box. They create a colore
 {{%expand 
 question="How do I resolve the error “HTTP Error: 409 - The given function_name already exists”?" 
 id="hello4" %}}
-YAllow you to highlight information or put it in a box. They create a colored box surrounding your text
-{{% /expand%}}
+YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
 
 ### Panel with Adjustment
 
@@ -198,8 +197,10 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 {{% /panel%}}
 
 ### Panel with Select
+
 {{% panel_with_select header="Who invented the Light Bulb?" %}}
-    "project_details": {
+{{% precode id="java"%}}
+    "project_details java1": {
         "id": 57127989012782,
         "project_name": "ShipmentTracking"
         },
@@ -207,4 +208,25 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             "name": "Default",
             "id": 12083622901983
         }
+{{%/ precode %}}
+{{% precode id="nodejs"%}}
+    "project_details nodejs1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
+{{% precode id="python"%}}
+    "project_details python1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
 {{% /panel_with_select %}}

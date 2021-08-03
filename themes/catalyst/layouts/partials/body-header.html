@@ -62,16 +62,111 @@
   border-radius: 2px;
   opacity: 1;
 }
+
+/* opensearch */
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+#Overlay1 {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #8E8E8E 0% 0% no-repeat padding-box;
+  opacity: 0.43;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20px;
+  width: 70%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  padding-top: 14px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: var(--search-background-color);
+  color: var(--font-menu-color);
+}
+
+.overlay .closebtn:hover {
+  color: var(--font-menu-color);
+}
+
+.overlay input[type=text] {
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  background-color: var(--search-background-color);
+  opacity: none;
+  outline: none !important; 
+  box-shadow: 0 0 0 0; 
+}
+
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: var(--search-background-color) 0% 0% no-repeat padding-box;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.algolia-autocomplete{
+  width: 90% !important;
+}
+.algolia-autocomplete .ds-dropdown-menu:before{
+  background: none !important;
+  border: none !important;
+}
+.algolia-autocomplete .ds-dropdown-menu{
+  margin-top: 0px !important;
+}
+.ds-dataset-1{
+  left: -56px !important;
+  width: 1177px !important;
+}
+
 </style>
 <div style="padding:0 29px 0 40px;">
 
   {{ if ne .Type "docs" }}
     <div class="searchbox" style="height: 44px !important;">
       <div class="search-icon"></div>
-      <input class="src-input docsearch-input" name="query" placeholder="Search documents" type="text">
+      <input class="src-input" onclick="openSearch()" name="query" type="button" value="Search documents" style="color: var(--font-at-color);
+      font: 15px/18px zoho-puvi-regular; text-align: left !important; padding-top: 2px;">
     </div>
   {{end}}
-
+  <!-- opensearch -->
+  <div id="myOverlay" class="overlay">
+    <div class="overlay-content" style="z-index: 2;">
+      <form>
+        <div style="display: flex; background-color: var(--search-background-color); height: 54px;">
+          <div class="search-icon" style=" margin: 20px 10px 0px 30px;"></div>
+          <input type="text" class="src-input docsearch-input" name="query" type="text" id="myInput" placeholder="Search documents">
+          <span class="closebtn" style="color: var(--font-menu-color);" title="Close Overlay" onclick="document.getElementById('myInput').value = ''">×</span>
+          <div onclick="closeSearch()" style="background-color: var(--search-background-color); padding: 20px 20px 0px 50px; cursor: pointer; font:14px/17px zoho-puvi-regular; color: var(--font-menu-color);">Cancel</div>
+        </div>
+      </form>
+    </div>
+    <div id="Overlay1"></div>
+  </div>
+  <!-- end -->
     <!-- {{- with .Site.Menus.shortcuts}} -->
     <nav class="shortcuts">
       <li class="list">
@@ -105,3 +200,14 @@
 </div>
 
 <script src='{{"js/activelink.js" | relURL}}'></script>
+<script>
+  function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+    document.getElementById("Overlay1").style.display = "block";
+  }
+
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+    document.getElementById("Overlay1").style.display = "none";
+  }
+</script>

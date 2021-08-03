@@ -14,53 +14,101 @@ article:
 
 ### Release notes
 
+
 {{< tabs >}}
 
 {{% tab "All" %}} 
 
+{{% tag class="newfeature" %}}
 {{%bold%}}
 2020 - 19, December
 {{%/bold%}}
 
 **Java - 1.2.4**
 
-{{%divtag green%}}New feature{{%/divtag%}}
+{{% divtag red %}}New feature{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
 {{%link%}}Application Performance Monitoring{{%/link%}}
 
-{{%divtag red%}}New feature{{%/divtag%}}
+{{%/tag%}}
+
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
 {{%link%}}Application Performance Monitoring{{%/link%}}
 
-{{%divtag green%}}New feature{{%/divtag%}}
+{{%/tag%}}
+
+{{% tag class="bugfixes" %}}
+
+{{% divtag red %}}Bug-Fixes{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="deprecated" %}}
+
+{{% divtag green %}}Deprecated{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="removed" %}}
+
+{{% divtag red %}}Removed{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
 
 {{% /tab %}}
 
-{{< tab "Enhancements" >}} 
-Golang allow you to highlight information or put it in a box. They create a colored box surrounding your text
+{{< tab "Enhancements">}} 
 {{< /tab >}}
 
-{{< tab "Bug-Fixes" >}} 
-Java allow you to highlight information or put it in a box. They create a colored box surrounding your text
+{{< tab "Bug-Fixes">}} 
 {{< /tab >}}
 
-{{< tab "New Features" >}} 
-Java allow you to highlight information or put it in a box. They create a colored box surrounding your text
+{{< tab "New Features">}} 
 {{< /tab >}}
 
-{{< tab "Deprecated" >}} 
-Java allow you to highlight information or put it in a box. They create a colored box surrounding your text
+{{< tab "Deprecated">}} 
 {{< /tab >}}
 
-{{< tab "Removed" >}} 
-Java allow you to highlight information or put it in a box. They create a colored box surrounding your text
+{{< tab "Removed">}} 
 {{< /tab >}}
 
 {{< /tabs >}}

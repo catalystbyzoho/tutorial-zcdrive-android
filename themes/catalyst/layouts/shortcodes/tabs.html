@@ -9,9 +9,39 @@
   <label for="{{ printf "%s-%d" $group $index }}">
     {{- $tab.Name -}}
   </label>
-  <div class="tab">
+  <div class="tab" id="{{ replaceRE "(\\s)" ""  $tab.Name }}">
     {{- .Content |  markdownify -}}
   </div>
 {{- end -}}
 </div>
+<script>
+  var enhancement = document.querySelectorAll("div#Enhancements.tab");
+  var enhancement_values = document.querySelectorAll("div#All.tab div.enhancements");
+  for(var i=0;i<enhancement_values.length;i++){
+    enhancement[0].appendChild(enhancement_values[i].cloneNode(true));
+  }
 
+  var newfeature = document.querySelectorAll("div#NewFeatures.tab");
+  var newfeature_values = document.querySelectorAll("div#All.tab div.newfeature");
+  for(var i=0;i<newfeature_values.length;i++){
+    newfeature[0].appendChild(newfeature_values[i].cloneNode(true));
+  }
+
+  var bugfixes = document.querySelectorAll("div#Bug-Fixes.tab");
+  var bugfixes_values = document.querySelectorAll("div#All.tab div.bugfixes");
+  for(var i=0;i<bugfixes_values.length;i++){
+    bugfixes[0].appendChild(bugfixes_values[i].cloneNode(true));
+  }
+
+  var deprecated = document.querySelectorAll("div#Deprecated.tab");
+  var deprecated_values = document.querySelectorAll("div#All.tab div.deprecated");
+  for(var i=0;i<deprecated_values.length;i++){
+    deprecated[0].appendChild(deprecated_values[i].cloneNode(true));
+  }
+
+  var removed = document.querySelectorAll("div#Removed.tab");
+  var removed_values = document.querySelectorAll("div#All.tab div.removed");
+  for(var i=0;i<removed_values.length;i++){
+    removed[0].appendChild(removed_values[i].cloneNode(true));
+  }
+</script>

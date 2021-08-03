@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
         var link = url + "#" + element[0].getAttribute("ref");
         
         return " <span class='anchor' data-clipboard-text='" + link + "'>" +
-            "<i class='fa fa-link fa-lg'></i>" +
+            "<i class='fa fa-link fa-lg' style='font-size:13px; color: var(--font-blue-color); margin:3px 0 0 3px;'></i>" +
             "</span>";
     });
 
@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
 
     clip.on('success', function (e) {
         e.clearSelection();
-        $(e.trigger).attr('aria-label', 'Link copied to clipboard!').addClass('tooltipped tooltipped-s');
+        $(e.trigger).attr('aria-label', 'Copied').addClass('tooltipped tooltipped-s');
     });
 
     // clipboard
@@ -45,14 +45,14 @@ jQuery(document).ready(function() {
                 clip.on('success', function(e) {
                     e.clearSelection();
                     inPre = $(e.trigger).parent().prop('tagName') == 'PRE';
-                    $(e.trigger).attr('aria-label', 'Copied to clipboard!').addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
+                    $(e.trigger).attr('aria-label', 'Copied').addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
                 });
 
                 clip.on('error', function(e) {
                     inPre = $(e.trigger).parent().prop('tagName') == 'PRE';
                     $(e.trigger).attr('aria-label', fallbackMessage(e.action)).addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
                     $(document).one('copy', function(){
-                        $(e.trigger).attr('aria-label', 'Copied to clipboard!').addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
+                        $(e.trigger).attr('aria-label', 'Copied').addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
                     });
                 });
 
@@ -69,6 +69,9 @@ jQuery(document).ready(function() {
             if(document.getElementById("hidecopy")){
                 document.querySelectorAll("pre#hidecopy span.copy-to-clipboard")[0].style.display="none";
             }
+            document.querySelector("code[data] div#java pre span").remove();
+            document.querySelector("code[data] div#nodejs pre span").remove();
+            document.querySelector("code[data] div#python pre span").remove();
         });
     });
 

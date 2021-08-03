@@ -1,0 +1,58 @@
+{{- $redirectURL := "" }}
+{{ with .Params.redirect}}
+  {{ if or (hasPrefix . "http:") (hasPrefix . "https:") }}
+    {{ $redirectURL = . }}
+  {{ else }}
+    {{ $redirectURL = ref $ .}}
+  {{ end }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ partial "html-head.html" . }}
+    {{if ne $redirectURL "" }}
+      <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
+    {{end}}
+  </head>
+
+  <body data-url="{{ .RelPermalink }}">
+
+    <article>
+      {{if not (in .Params.hide "nav")}}
+      <aside class="{{.Params.layout }}">
+        {{ partial "body-sidebar.html" . }}     
+        <ul class="menu">
+          {{ partial "help-menu.html" . }}
+        </ul> 
+      </aside>
+      {{end}}
+
+      <section class="page {{.Params.layout }}">
+      {{if not (in .Params.hide "header")}}
+      <header>
+          {{ partial "body-header.html" . }}
+      </header>
+      {{end}}
+      {{ block "main" . }}
+      {{ end }}
+      </section>
+
+      <!-- NAVIGATION DROITE TOC -->
+      {{if not (in .Params.hide "toc")}}
+      <section class="right-menu {{.Params.layout }}">
+      {{ block "sidepage" . }}
+      {{ end }}
+      </section>
+      {{end -}}
+      <!-- FIN NAVIGATION DROITE TOC -->
+    </article>
+    {{ partial "scroll-top.html" . }}
+    <footer>
+      {{ partial "body-footer.html" . }}
+    </footer>
+    {{ partial "scripts.html" . }}
+    {{ partial "algolia.html" . }}
+
+  </body>
+</html>

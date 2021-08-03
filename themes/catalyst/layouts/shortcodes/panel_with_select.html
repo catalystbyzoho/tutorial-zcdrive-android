@@ -101,22 +101,51 @@
 			</div>
 		{{- end -}}
 			<label class="panelswitch">
-				
 				<input name="theme-switch" type="checkbox" onclick="clickHandler(this)">
 				<div class="theme-icon">
 					<div name="icontheme" class="code-light-icon"></div>
 				</div>
-				<select class="lang-select" onchange="filterContent()">
+				<select class="lang-select" onchange="filterLanguage(this)">
 					<option value="Java" selected>Java</option>
 					<option value="NodeJS">NodeJS</option>
 					<option value="Python">Python</option>
 				</select>
 			</label>
-			<code class="code-block1 view" style="margin-top: 0px; height: auto; width: 100%; overflow:hidden; padding: 0 25px 25px 25px;">{{.Inner}}</code>
+			<code class="code-block1 view" data="selectlang" style="margin-top: 0px; height: auto; width: 100%; overflow:hidden; padding: 0 25px 0 25px;">{{.Inner}}</code>
 	</div>
 </pre>
 
 <script>
+	for(var i=0;i<document.querySelectorAll("code[data] div#java pre").length;i++){
+	document.querySelectorAll("code[data] div#java pre code")[i].style.marginTop="0px";
+	document.querySelectorAll("code[data] div#java pre")[i].style.backgroundColor="var(--body-color)";
+	document.querySelectorAll("code[data] div#nodejs pre code")[i].style.marginTop="0px";
+	document.querySelectorAll("code[data] div#nodejs pre")[i].style.backgroundColor="var(--body-color)";
+	document.querySelectorAll("code[data] div#python pre code")[i].style.marginTop="0px";
+	document.querySelectorAll("code[data] div#python pre")[i].style.backgroundColor="var(--body-color)";
+	document.querySelectorAll("code[data] div#python")[i].style.display="none";
+	document.querySelectorAll("code[data] div#nodejs")[i].style.display="none";
+	document.querySelectorAll("code[data] div pre")[i].style.padding="0px";
+	document.querySelectorAll("code[data] div pre")[i].style.margin="0px";
+	}
+	function filterLanguage(e){
+		console.log(e.parentNode.parentNode.childNodes[4].querySelectorAll("div"))
+		if(e.value == "Java"){
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#java")[0].style.display="block";
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#nodejs")[0].style.display="none";
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#python")[0].style.display="none";
+		}
+		else if(e.value == "NodeJS"){
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#java")[0].style.display="none";
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#nodejs")[0].style.display="block";
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#python")[0].style.display="none";
+		}
+		if(e.value == "Python"){
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#java")[0].style.display="none";
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#nodejs")[0].style.display="none";
+			e.parentNode.parentNode.childNodes[4].querySelectorAll("div#python")[0].style.display="block";
+		}
+	}
 	function clickHandler(e) {
 	    const themeSwitcher = document.getElementsByName("theme-switch");
 	    if(e.checked)
