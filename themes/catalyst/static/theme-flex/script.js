@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
         var link = url + "#" + element[0].getAttribute("ref");
         
         return " <span class='anchor' data-clipboard-text='" + link + "'>" +
-            "<i class='fa fa-link fa-lg' style='font-size:13px; color: var(--font-blue-color); margin:3px 0 0 3px;'></i>" +
+            "<div class='fa hovlink'></div>" +
             "</span>";
     });
 

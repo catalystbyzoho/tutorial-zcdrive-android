@@ -22,7 +22,7 @@
       {{ if ne .Title "main"}}
       <div>
         {{- if ne $numberOfPages 0 }}
-          <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+          <a href="{{ .RelPermalink}}#faq-components">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
         {{- end}}
       </div>
       {{ end }}
@@ -48,11 +48,11 @@
         <div>
           {{- if .Params.head}} 
           <h6 style="padding:0 0 20px 0; margin-left: -1px; color: var(--font-body-color);">{{safeHTML .Params.Pre}}{{.Params.head}}{{safeHTML .Params.Post}}</h6>
-          <a href="{{ .RelPermalink}}">
+          <a href="{{ .RelPermalink}}#faq-components">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
         {{else}}
-          <a href="{{ .RelPermalink}}">
+          <a href="{{ .RelPermalink}}#faq-components">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
           {{end}}

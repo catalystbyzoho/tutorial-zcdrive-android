@@ -2,7 +2,7 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-{{if eq .Type "help"}}
+{{if or (eq .Type "help") (eq .Type "api")}}
 {{- template "section-tree-nav-help" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
 {{end}}
 {{- end}}

@@ -60,7 +60,7 @@ sdk:
 
     - name : "REST API"
       icon : "api-icon"
-      link : "/rest-api/authentication/"
+      link : "/api/authentication/"
 
 #help_component
 help:

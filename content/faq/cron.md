@@ -12,7 +12,7 @@ article:
 
 ### Cron FAQ
 
-{{%expand "How do I deploy a project to the Catalyst remote console?" %}}
+{{%expand question="How do I deploy a project to the Catalyst remote console?" id="hello" %}}
 
 Once you create and test your application in your local machine using the CLI or any other tool, you can deploy the project to the Catalyst remote console in three ways:
 
@@ -32,10 +32,10 @@ You can deploy the client and functions together or individually from your GitHu
 
 {{% /expand%}}
 
-{{%expand "What does the “Deploy to Production” button in the Catalyst console do?" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
+{{%expand question="What does the “Deploy to Production” button in the Catalyst console do?" id="hello1" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
 
-{{%expand "How do I delete an existing project in Zoho Catalyst?" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
+{{%expand question="How do I delete an existing project in Zoho Catalyst?" id="hello2" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
 
-{{%expand "How do I deploy a project to the Catalyst remote console?" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
+{{%expand question="How do I deploy a project to the Catalyst remote console?" id="hello3" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
 
-{{%expand "How do I resolve the error “HTTP Error: 409 - The given function_name already exists”?" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}
+{{%expand question="How do I resolve the error “HTTP Error: 409 - The given function_name already exists”?" id="hello4" %}}YAllow you to highlight information or put it in a box. They create a colored box surrounding your text{{% /expand%}}

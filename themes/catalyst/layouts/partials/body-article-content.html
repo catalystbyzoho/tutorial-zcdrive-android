@@ -15,12 +15,6 @@
 	<div class="content">
     {{- with .Content -}}
 	    {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
-    {{- else -}}
-      {{with index .Pages 0}}
-      <meta http-equiv = "refresh" content = "0; url = {{.RelPermalink}}"/>
-      {{- else -}}
-      	No content
-      {{- end -}}
     {{- end -}}
 	</div>
 

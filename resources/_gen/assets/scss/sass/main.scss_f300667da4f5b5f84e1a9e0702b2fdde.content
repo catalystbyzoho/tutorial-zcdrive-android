@@ -596,6 +596,11 @@ body {
   background-color: var(--body-color); }
   body .activelink {
     color: var(--font-blue-color); }
+  body .hovlink {
+    background: url("/images/DarkPages.svg") no-repeat -644px -30px;
+    width: 14px;
+    height: 14px;
+    margin: 5px 0 0 3px; }
   body .searchbox {
     border-radius: 35px;
     outline: none !important;
@@ -770,6 +775,14 @@ body {
   body .w100 {
     width: 100%;
     box-shadow: 0px 0px 16px var(--image-shadow-color); }
+  body .c1 {
+    width: 100%;
+    display: flex; }
+  body .c2 {
+    width: 55%;
+    padding-right: 30px; }
+  body .c3 {
+    width: 45%; }
   body header {
     background-color: var(--body-color);
     border-bottom: 1px solid var(--hr-color); }
@@ -1032,6 +1045,7 @@ article section.page div.content {
   position: relative;
   background-color: var(--menu-color);
   color: var(--font-menu-color);
+  border-radius: 5px;
   border: 1px solid var(--hr-color); }
 
 .customselect select {
