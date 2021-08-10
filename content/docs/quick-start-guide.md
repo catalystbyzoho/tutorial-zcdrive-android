@@ -5,7 +5,7 @@ weight= 1
 type= "docs"
 layout= "single"
 +++
- 
+#
 This quick start guide will familiarize you with setting up the Catalyst work environment in under ten minutes. With this guide, you can quickly learn the basic steps involved in developing a Catalyst application.
 
 You can access detailed step-by-step tutorials on building applications and microservices involving different Catalyst components from the Tutorials section.

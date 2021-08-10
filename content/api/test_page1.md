@@ -1,14 +1,14 @@
 +++
 date= "2020-09-08T22:11:57.883Z"
-title= "Request Method and End point"
+title= "Test Page 1"
 type= "api"
 layout= "single"
 weight= 2
 +++
 
-{{% section path="authentication/shortcodes/" id="RequestMethodandEndpoint" %}}
+{{% section path="test_page1/" id="TestPage1" %}}
 
-### Second File
+### Third File 
 
 {{%divtag c1%}}
 {{%divtag c2%}}
@@ -54,6 +54,7 @@ DELETE
 {{% /panel_with_select %}} -->
 {{%/divtag%}}
 {{%/divtag%}}
+
 
 <!-- second page -->
 

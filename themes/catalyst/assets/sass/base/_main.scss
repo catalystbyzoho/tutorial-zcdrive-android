@@ -39,6 +39,17 @@
         url("//static.zohocdn.com/webfonts/robotoitalic/font.woff") format("woff"),
         url("//static.zohocdn.com/webfonts/robotoitalic/font.ttf") format("truetype"),
         url("//static.zohocdn.com/webfonts/robotoitalic/font.svg#Roboto-Italic") format("svg");}
+ @font-face {
+    font-family:"Inconsolata";
+    font-weight:400;
+    font-style:normal;
+    src:url("//static.zohocdn.com/webfonts/inconsolataregular/font.eot");
+    src:url("//static.zohocdn.com/webfonts/inconsolataregular/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.svg#Inconsolata-Regular") format("svg");}
+         
 
 body{
     color: var(--font-body-color);
@@ -231,8 +242,28 @@ body{
     .w90 { width: 90%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
     .w100 { width: 100%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
     .c1 { width: 100%; display: flex; }
-    .c2 { width: 55%; padding-right: 30px;}
-    .c3 { width: 45%; }
+    .c21 { width: 100%; display: flex;}
+    .c2 { width: 63%;padding-right: 30px;}
+    .c2 b{margin-right: 15px;}
+    .c3 { width: 37%; }
+    .c3 pre { margin-top: -16px !important; }
+    .apired { width: 15%; height: 55px; padding:15px 0px; background-color: transparent; border: 1px solid #F0483D; border-radius: 5px; margin-right: 10px;}
+    .apired p {font: 14px/26px Inconsolata !important; color: #F0483D !important; margin: 0 auto !important; width: fit-content;}
+    .apigray { width: 85%; height: 55px; padding:15px 0; background-color: var(--menu-color); border: 1px solid var(--hr-color); border-radius: 5px; overflow-x: auto;}
+    .apigray p { font: 15px/26px Inconsolata !important; color: var(--font-menu-color) !important; margin: 0 auto 0 20px!important; width: fit-content;}
+    .inline { display: flex;}
+    .bold { font: 14px/26px Inconsolata; font-weight: bold; margin-right: 15px;}
+    .light { font: 12px/26px zoho-puvi-regular; text-transform: lowercase; }
+    .ft-st { font: 14px/20px zoho-puvi-regular;}
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: yellow;
+        padding: 50px;
+        font-size: 20px;
+    }
+
     header {
         
         background-color: var(--body-color);    
@@ -602,6 +633,7 @@ article section.page div.content{
         overflow: auto;
         padding: 0px 10px 8px 20px;
         overflow: hidden;
+        margin-bottom: 15px;
         code {
             font: normal normal normal 13px/19px Roboto-Mono;
             display: block;

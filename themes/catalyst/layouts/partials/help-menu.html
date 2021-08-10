@@ -2,7 +2,7 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-{{if or (eq .Type "help") (eq .Type "api")}}
+{{if (eq .Type "help")}}
 {{- template "section-tree-nav-help" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
 {{end}}
 {{- end}}
@@ -70,7 +70,6 @@
         var maxDepth = 10; // Avoid infinite loop !
         var nextAncestor = menu.closest("li[data-nav-id]");
         while (maxDepth-- >= 0 && nextAncestor !== null) {
-          console.log("hello");
             nextAncestor.classList.add("parent");
             var icon = nextAncestor.querySelector('i.category-icon');
             if (icon !== null) {
