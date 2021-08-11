@@ -27,20 +27,28 @@
     <div id="faq-components" style="position: absolute; top:370px;"></div>
     <article style="top:100px; width: 97%; margin:30px auto 30px auto;">
       {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); position: absolute; width: 240px;">
+      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); width: 240px;
+      position: -webkit-sticky; /* for Safari */
+      position: sticky;
+      top: 100px;
+      align-self: flex-start;
+      flex: 0 0 20em ">
         <ul class="menu" style="margin-top: 0px;">
           {{- partial "faq-menu.html" . }}
         </ul> 
       </aside>
       {{end}}
 
-      <section class="page {{.Params.layout }}" style="margin-left: 240px;">
+      <section class="page {{.Params.layout }}" style="margin-left: 0px;">
         {{ block "main" . }}
         {{ end }}
       </section>
 
       {{if not (in .Params.hide "toc")}}
-      <section class="right-menu {{.Params.layout }}">
+      <section class="right-menu {{.Params.layout }}" style=" position: -webkit-sticky; /* for Safari */
+      position: sticky;
+      top: 100px;
+      align-self: flex-start; ">
       {{ block "sidepage" . }}
       {{ end }}
       </section>

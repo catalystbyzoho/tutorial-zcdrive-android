@@ -94,6 +94,46 @@ article:
 
 {{%/tag%}}
 
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
+{{% tag class="enhancements" %}}
+
+{{% divtag green %}}Enhancements{{%/divtag%}}
+
+**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+
+{{%link%}}Application Performance Monitoring{{%/link%}}
+
+{{%/tag%}}
+
 {{% /tab %}}
 
 {{< tab "Enhancements">}} 

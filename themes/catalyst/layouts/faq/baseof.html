@@ -27,16 +27,21 @@
     <div id="faq-components" style="position: absolute; top:370px;"></div>
     <article style="top:100px; width: 90%; margin:30px auto 30px auto;">
       {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); position: absolute; width: 240px;">
+      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); width: 240px;
+        position: -webkit-sticky; /* for Safari */
+        position: sticky;
+        top: 100px;
+        align-self: flex-start; 
+        flex: 0 0 17em">
         <ul class="menu" style="margin-top: 0px;">
           {{- partial "faq-menu.html" . }}
         </ul> 
       </aside>
       {{end}}
 
-      <section class="page {{.Params.layout }}" style="margin-left: 240px; margin-top: 10px;">
+      <section class="page {{.Params.layout }}" style="margin-left: 0px; margin-top: 10px;">
         {{if not (in .Params.hide "header")}}
-        <header style="position: absolute; padding: 0px; margin-left: 40px; width: 80%; height: 60px;">
+        <header style="position: relative; padding: 0px; height: 60px; width: -webkit-fill-available;">
             {{ partial "faq-header.html" . }}
         </header>
         {{end}}
