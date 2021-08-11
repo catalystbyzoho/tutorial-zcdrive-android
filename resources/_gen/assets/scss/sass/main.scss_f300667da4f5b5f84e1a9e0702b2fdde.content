@@ -783,8 +783,7 @@ body {
     width: 100%;
     box-shadow: 0px 0px 16px var(--image-shadow-color); }
   body .c1 {
-    width: 100%;
-    display: flex; }
+    width: 100%; }
   body .c21 {
     width: 100%;
     display: flex; }
@@ -797,6 +796,19 @@ body {
     width: 37%; }
   body .c3 pre {
     margin-top: -16px !important; }
+  body .apigreen {
+    width: 15%;
+    height: 55px;
+    padding: 15px 0px;
+    background-color: transparent;
+    border: 1px solid #239835;
+    border-radius: 5px;
+    margin-right: 10px; }
+  body .apigreen p {
+    font: 14px/26px Inconsolata !important;
+    color: #239835 !important;
+    margin: 0 auto !important;
+    width: fit-content; }
   body .apired {
     width: 15%;
     height: 55px;
@@ -813,13 +825,13 @@ body {
   body .apigray {
     width: 85%;
     height: 55px;
-    padding: 15px 0;
+    padding: 13px 0;
     background-color: var(--menu-color);
     border: 1px solid var(--hr-color);
     border-radius: 5px;
     overflow-x: auto; }
   body .apigray p {
-    font: 15px/26px Inconsolata !important;
+    font: 14px/26px Inconsolata !important;
     color: var(--font-menu-color) !important;
     margin: 0 auto 0 20px !important;
     width: fit-content; }
@@ -834,13 +846,16 @@ body {
     text-transform: lowercase; }
   body .ft-st {
     font: 14px/20px zoho-puvi-regular; }
-  body .sticky {
+  body .LeftContent {
+    width: 60%;
+    margin-right: 15px; }
+  body .RightContent {
     position: -webkit-sticky;
+    /* for Safari */
     position: sticky;
-    top: 0;
-    background-color: yellow;
-    padding: 50px;
-    font-size: 20px; }
+    top: 80px;
+    align-self: flex-start;
+    width: 40%; }
   body header {
     background-color: var(--body-color);
     border-bottom: 1px solid var(--hr-color); }

@@ -7,10 +7,11 @@ layout= "single"
 weight= 1
 +++
 
-{{% section path="authentication/" id="TrucateTable" %}}
-{{%divtag c1%}}
-{{%divtag c2%}}
-# Truncate Table
+{{% section path="/api/authentication/" id="TrucateTable" %}}
+<!-- Leftcontent -->
+{{%divtag LeftContent%}}
+
+### First File
 
 ### Description
 
@@ -19,13 +20,10 @@ This API enables you to truncate a specific table in the Data Store, by referrin
 The truncate operation deletes all the records in the table, while retaining its schema. The columns of the table and the table’s metadata will still be available, after the operation has ended. 
 
 You will receive notifications in your Catalyst console about the updates of the operation.
-{{%/divtag%}}
-{{%/divtag%}}
 
-### Request Method & End point
-
+### Request Method & End point 1
+<!-- shortcode 1 -->
 {{%divtag c1%}}
-{{%divtag c2%}}
 {{%divtag c21 %}}
 {{%divtag apired%}}
 DELETE
@@ -48,21 +46,13 @@ DELETE
 {{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
 <hr/>
 {{%/divtag%}}
-{{%divtag c3%}}
-<!-- {{% panel_with_select header="Sample Request" key="firstone" %}}
-{{% /panel_with_select %}} -->
-{{%/divtag%}}
-{{%/divtag%}}
+<!-- shortcode 1 ends -->
 
-
-<!-- second page -->
-
-### Request Method & End point
-
+### Request Method & End point 2
+<!-- shortcode 2 -->
 {{%divtag c1%}}
-{{%divtag c2%}}
 {{%divtag c21 %}}
-{{%divtag apired%}}
+{{%divtag apigreen%}}
 DELETE
 {{%/divtag%}}
 {{%divtag apigray%}}
@@ -83,9 +73,50 @@ DELETE
 {{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
 <hr/>
 {{%/divtag%}}
-{{%divtag c3%}}
-<!-- {{% panel_with_select header="Sample Request1" key="secondone" %}}{{% /panel_with_select %}} -->
-{{%/divtag%}}
-{{%/divtag%}}
+<!-- shortcode 2 ends -->
 
+{{%/divtag%}}
+<!-- Rightcontent -->
+{{%divtag RightContent%}}
+{{% precode id="java" key="firstone" %}}
+    "project_details java1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
+{{% precode id="nodejs" key="firstone" %}}
+    "project_details nodejs1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
+{{% precode id="python" key="firstone" %}}
+    "project_details python1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
+{{% panel_with_select header="Who invented the Light Bulb?" key="firstone" %}}{{% /panel_with_select %}}
+
+{{% panel_without_adjustment header="Sample Code" %}}
+    import java.io.InputStreamReader; 
+    import java.util.ArrayList; 
+    import java.util.logging.Level; 
+    import java.util.logging.Logger; 
+    import javax.servlet.ServletInputStream; 
+{{% /panel_without_adjustment %}}
+
+{{%/divtag%}}
 {{%/section%}}

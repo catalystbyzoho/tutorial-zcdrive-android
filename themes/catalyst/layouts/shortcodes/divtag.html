@@ -1,1 +1,13 @@
 <div class="{{ .Get 0 }}">{{.Inner}}</div>
+
+
+<script>
+    $(document).ready(function(){
+        if(document.getElementById("hidecopy")){
+            document.querySelectorAll("pre#hidecopy span.copy-to-clipboard")[0].style.display="none";
+        }
+        document.querySelector("code[data] div#java pre span").remove();
+        document.querySelector("code[data] div#nodejs pre span").remove();
+        document.querySelector("code[data] div#python pre span").remove();
+    });
+</script>

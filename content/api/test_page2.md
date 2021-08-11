@@ -6,12 +6,12 @@ layout= "single"
 weight= 3
 +++
 
-{{% section path="test_page2" id="TestPage2" %}}
+{{% section path="/api/test_page2/" id="TestPage2" %}}
 
-### Fourth File 
+<!-- Leftcontent -->
+{{%divtag LeftContent%}}
 
-{{%divtag c1%}}
-{{%divtag c2%}}
+### Fourth File
 
 ### Description
 
@@ -20,13 +20,10 @@ This API enables you to truncate a specific table in the Data Store, by referrin
 The truncate operation deletes all the records in the table, while retaining its schema. The columns of the table and the table’s metadata will still be available, after the operation has ended. 
 
 You will receive notifications in your Catalyst console about the updates of the operation.
-{{%/divtag%}}
-{{%/divtag%}}
 
-### Request Method & End point
-
+### Request Method & End point 1
+<!-- shortcode 1 -->
 {{%divtag c1%}}
-{{%divtag c2%}}
 {{%divtag c21 %}}
 {{%divtag apired%}}
 DELETE
@@ -49,21 +46,13 @@ DELETE
 {{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
 <hr/>
 {{%/divtag%}}
-{{%divtag c3%}}
-<!-- {{% panel_with_select header="Sample Request" key="firstone" %}}
-{{% /panel_with_select %}} -->
-{{%/divtag%}}
-{{%/divtag%}}
+<!-- shortcode 1 ends -->
 
-
-<!-- second page -->
-
-### Request Method & End point
-
+### Request Method & End point 2
+<!-- shortcode 2 -->
 {{%divtag c1%}}
-{{%divtag c2%}}
 {{%divtag c21 %}}
-{{%divtag apired%}}
+{{%divtag apigreen%}}
 DELETE
 {{%/divtag%}}
 {{%divtag apigray%}}
@@ -84,9 +73,20 @@ DELETE
 {{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
 <hr/>
 {{%/divtag%}}
-{{%divtag c3%}}
-<!-- {{% panel_with_select header="Sample Request1" key="secondone" %}}{{% /panel_with_select %}} -->
+<!-- shortcode 2 ends -->
+
 {{%/divtag%}}
+<!-- Rightcontent -->
+{{%divtag RightContent%}}
+
+{{% panel_without_adjustment header="Sample Code" %}}
+    import java.io.InputStreamReader; 
+    import java.util.ArrayList; 
+    import java.util.logging.Level; 
+    import java.util.logging.Logger; 
+    import javax.servlet.ServletInputStream; 
+{{% /panel_without_adjustment %}}
+
 {{%/divtag%}}
 
 {{%/section%}}
