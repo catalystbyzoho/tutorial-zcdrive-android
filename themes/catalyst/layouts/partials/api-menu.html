@@ -122,7 +122,7 @@
     }
 
     function addMargin() {
-        window.scrollTo(0, window.pageYOffset - 50);
+        window.scrollTo(0, window.pageYOffset - 40);
         var anc = document.querySelectorAll(`li[data-nav-id]`);
         for(var i=1;i<anc.length;i++){
           if(document.querySelectorAll(`li[data-nav-id]`)[i].classList.value.includes("active")){
@@ -132,7 +132,6 @@
         var icons = document.querySelectorAll("li.dd-item.haschildren.parent div i");
         for(var i=1;i<icons.length;i++){
           if((document.querySelectorAll("li.dd-item.haschildren.parent div i")[i].classList.value.includes("fa-angle-down")) ){
-            debugger;
             document.querySelectorAll("li.dd-item.haschildren.parent div i")[i].classList.remove('fa-angle-down');
             document.querySelectorAll("li.dd-item.haschildren.parent div i")[i].classList.add('fa-angle-right');
             document.querySelectorAll("li.dd-item.haschildren.parent div i")[i].parentNode.parentNode.childNodes[3].style.display="none";

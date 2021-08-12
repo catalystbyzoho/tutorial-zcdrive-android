@@ -7,38 +7,6 @@ layout= "single"
 weight= 1
 +++
 
-{{% precode id="java" key="firstone" %}}
-    "project_details java1": {
-        "id": 57127989012782,
-        "project_name": "ShipmentTracking"
-        },
-        "event_bus_details": {
-            "name": "Default",
-            "id": 12083622901983
-        }
-{{%/ precode %}}
-{{% precode id="nodejs" key="firstone" %}}
-    "project_details nodejs1": {
-        "id": 57127989012782,
-        "project_name": "ShipmentTracking"
-        },
-        "event_bus_details": {
-            "name": "Default",
-            "id": 12083622901983
-        }
-{{%/ precode %}}
-{{% precode id="python" key="firstone" %}}
-    "project_details python1": {
-        "id": 57127989012782,
-        "project_name": "ShipmentTracking"
-        },
-        "event_bus_details": {
-            "name": "Default",
-            "id": 12083622901983
-        }
-{{%/ precode %}}
-{{% panel_with_select header="Who invented the Light Bulb?" key="firstone" %}}{{% /panel_with_select %}}
-
 
 {{% section path="/api/authentication/" id="TrucateTable" %}}
 <!-- Leftcontent -->
@@ -121,6 +89,39 @@ DELETE
 <!-- Rightcontent -->
 {{%divtag RightContent%}}
 
+{{% precode id="java" key="firstone" %}}
+    "project_details java1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+    },
+    "event_bus_details": {
+        "name": "Default",
+        "id": 12083622901983
+    }
+{{%/ precode %}}
+{{% precode id="nodejs" key="firstone" %}}
+    "project_details nodejs1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
+{{% precode id="python" key="firstone" %}}
+    "project_details python1": {
+        "id": 57127989012782,
+        "project_name": "ShipmentTracking"
+        },
+        "event_bus_details": {
+            "name": "Default",
+            "id": 12083622901983
+        }
+{{%/ precode %}}
+{{% panel_with_select header="Who invented the Light Bulb?" key="firstone" %}}
+
+{{% /panel_with_select %}}
 
 {{% panel_without_adjustment header="Sample Code" %}}
     import java.io.InputStreamReader; 

@@ -4,7 +4,7 @@
       <input class="src-input" name="query" placeholder="Search documents" type="text">
     </div>
     {{range where .Site.Pages "Type" "=" "api"}}        
-      <div class="content">
+      <div class="content api">
         {{- with .Content -}}
           {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
         {{- end -}}

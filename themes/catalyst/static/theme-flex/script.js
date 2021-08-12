@@ -69,9 +69,12 @@ jQuery(document).ready(function() {
             if(document.getElementById("hidecopy")){
                 document.querySelectorAll("pre#hidecopy span.copy-to-clipboard")[0].style.display="none";
             }
-            document.querySelector("code[data] div#java pre span").remove();
-            document.querySelector("code[data] div#nodejs pre span").remove();
-            document.querySelector("code[data] div#python pre span").remove();
+            if(document.querySelector("code[data] div#java pre span"))
+                document.querySelector("code[data] div#java pre span").remove();
+            if(document.querySelector("code[data] div#nodejs pre span"))
+                document.querySelector("code[data] div#nodejs pre span").remove();
+            if(document.querySelector("code[data] div#python pre span"))
+                document.querySelector("code[data] div#python pre span").remove();
         });
     });
 
@@ -201,3 +204,12 @@ $('.burger').on('click', function(e){
     $('#shortcuts').toggleClass("responsive") ;
     e.preventDefault();
 });
+
+// clear auto create pre code block
+var autoclear = document.querySelectorAll("pre code pre code");
+for(var i=0;i<autoclear.length;i++){
+    autoclear[i].parentNode.parentNode.parentNode.querySelectorAll("label.panelswitch div.theme-icon")[0].style.marginTop = "0px";
+    var temp = autoclear[i].innerHTML;
+    autoclear[i].parentNode.parentNode.style.paddingTop = "25px";
+    autoclear[i].parentNode.parentNode.innerHTML = temp;
+}

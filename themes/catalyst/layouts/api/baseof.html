@@ -16,7 +16,7 @@
     {{end}}
   </head>
 
-  <body data-url="{{ .RelPermalink }}">
+  <body data-url="{{ .RelPermalink }}" style="overflow-x: hidden;">
 
     <article>
       {{if not (in .Params.hide "nav")}}
@@ -47,3 +47,7 @@
 
   </body>
 </html>
+<script>
+  var len = document.getElementsByClassName("api-hr").length;
+  document.getElementsByClassName("api-hr")[len-1].remove();
+</script>

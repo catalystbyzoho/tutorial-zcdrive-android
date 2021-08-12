@@ -95,7 +95,7 @@
 <pre name="codetheme" class="light1 preblock">
 	<div class="panel" style="border: 1.8px solid var(--main-background);">
 		{{- with .Get "header" -}}
-			<div class="panel-heading" style="background-color: var(--main-background); color:var(--main-font); border-color:var(--main-background); margin-bottom: -47px;     border-bottom-width: 2px;">
+			<div class="panel-heading" style="background-color: var(--main-background); color:var(--main-font); border-color:var(--main-background); margin-bottom: -47px; border-bottom-width: 2px;">
 				{{- htmlUnescape . | markdownify -}}
 			</div>
 		{{- end -}}
@@ -115,7 +115,6 @@
 </pre>
 
 <script>		
-	debugger;
 	for(var i=0;i<document.querySelectorAll("code[key]").length;i++){
 		var keytab = document.querySelectorAll("code[key]")[i].getAttribute("key");
 		for(var j=0;j<document.querySelectorAll(`div[key='${keytab}']`).length;j++){
@@ -134,6 +133,13 @@
 		}
 		else if(e.value == "Python"){
 			keytab.innerHTML=document.querySelectorAll(`div#python[key='${getkey}']`)[0].innerHTML;
+		}
+		var autoclear = document.querySelectorAll("pre code pre code");
+		for(var i=0;i<autoclear.length;i++){
+			autoclear[i].parentNode.parentNode.parentNode.querySelectorAll("label.panelswitch div.theme-icon")[0].style.marginTop = "0px";
+			var temp = autoclear[i].innerHTML;
+			autoclear[i].parentNode.parentNode.style.paddingTop = "25px";
+			autoclear[i].parentNode.parentNode.innerHTML = temp;
 		}
 	}
 
