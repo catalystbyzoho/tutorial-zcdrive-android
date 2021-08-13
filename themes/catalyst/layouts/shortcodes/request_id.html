@@ -1,0 +1,10 @@
+<div class="c21">
+    {{- with .Get "id" -}}
+        <div class="bold">{{- htmlUnescape . | markdownify -}}</div>
+    {{- end -}}
+    {{- with .Get "data" -}}
+        <div class="light">{{- htmlUnescape . | markdownify -}}</div>
+    {{- end -}}
+</div>
+<div class="ft-st">{{.Inner}}</div>
+<hr/>

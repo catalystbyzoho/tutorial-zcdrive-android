@@ -104,6 +104,7 @@ The following values can be set for each parameter definition for a function:
 Every Catalyst project contains a default event listener that is created when the project is created. The behavior and functionality of the default event listener is completely different from that of a custom event listener. The default event listener is used to link a Catalyst component to a target function, and passes the component data to the function when it is invoked. 
 
 The following table describes the list of Catalyst components and the event occurrences in them that can be associated with the default event listener:
+{{%divtag%}}
 
 | Format      | Example |
 | :--- | :---: |
@@ -111,6 +112,8 @@ The following table describes the list of Catalyst components and the event occu
 | YYYY-MM-DD      | 2020-01-20      |
 | YYYY/MM/DD hh:mm:ss      | 2020/01/20 23:54:30     |
 | YYYY-MM-DDThh:mm:ss.sTZD      | 2020-01-20T05:19:31.665523 + 00:00      |
+
+{{%/divtag%}}
 
 {{%note%}} **Note:** Specifying the platform does not prevent the user from accessing other platforms of the application. However, it defines the primary platform that the user will access from their device and sets default values for opening the application in the appropriate medium.{{%/note%}}
 

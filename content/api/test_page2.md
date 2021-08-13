@@ -23,56 +23,16 @@ You will receive notifications in your Catalyst console about the updates of the
 
 ### Request Method & End point 1
 <!-- shortcode 1 -->
-{{%divtag c1%}}
-{{%divtag c21 %}}
-{{%divtag apired%}}
-DELETE
-{{%/divtag%}}
-{{%divtag apigray%}}
-/v1/project/{project_id}/segment/{segment_id}/cache
-{{%/divtag%}}
-{{%/divtag%}}
-<hr style="margin-top:30px;"/>
-{{%divtag c21%}}
-{{%divtag bold%}}project_id{{%/divtag%}}
-{{%divtag light%}}Numerical{{%/divtag%}}
-{{%/divtag%}}
-{{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
-<hr/>
-{{%divtag c21%}}
-{{%divtag bold%}}segment_id{{%/divtag%}}
-{{%divtag light%}}The unique ID of the cache segment{{%/divtag%}}
-{{%/divtag%}}
-{{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
-<hr/>
-{{%/divtag%}}
+{{%request class="apired" req="DELETE" %}}/v1/project/{project_id}/segment/{segment_id}/cache{{%/request%}}
+{{%request_id id="project_id" data="Numerical" %}}The unique ID of the project{{%/request_id%}}
+{{%request_id id="segment_id" data="The unique ID of the cache segment" %}}The unique ID of the project{{%/request_id%}}
 <!-- shortcode 1 ends -->
 
 ### Request Method & End point 2
 <!-- shortcode 2 -->
-{{%divtag c1%}}
-{{%divtag c21 %}}
-{{%divtag apigreen%}}
-DELETE
-{{%/divtag%}}
-{{%divtag apigray%}}
-/v1/project/{project_id}/segment/{segment_id}/cache
-{{%/divtag%}}
-{{%/divtag%}}
-<hr style="margin-top:30px;"/>
-{{%divtag c21%}}
-{{%divtag bold%}}project_id{{%/divtag%}}
-{{%divtag light%}}Numerical{{%/divtag%}}
-{{%/divtag%}}
-{{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
-<hr/>
-{{%divtag c21%}}
-{{%divtag bold%}}segment_id{{%/divtag%}}
-{{%divtag light%}}The unique ID of the cache segment{{%/divtag%}}
-{{%/divtag%}}
-{{%divtag ft-st %}}The unique ID of the project{{%/divtag%}}
-<hr/>
-{{%/divtag%}}
+{{%request class="apigreen" req="DELETE" %}}/v1/project/{project_id}/segment/{segment_id}/cache{{%/request%}}
+{{%request_id id="project_id" data="Numerical" %}}The unique ID of the project{{%/request_id%}}
+{{%request_id id="segment_id" data="The unique ID of the cache segment" %}}The unique ID of the project{{%/request_id%}}
 <!-- shortcode 2 ends -->
 
 {{%/divtag%}}
@@ -80,13 +40,11 @@ DELETE
 {{%divtag RightContent%}}
 
 {{% panel_without_adjustment header="Sample Code" %}}
-    import java.io.InputStreamReader; 
-    import java.util.ArrayList; 
-    import java.util.logging.Level; 
-    import java.util.logging.Logger; 
-    import javax.servlet.ServletInputStream; 
+    { 
+        “status”: “success”, 
+        “data”: “The table will be truncated Shortly. Kindly Check 
+    }
 {{% /panel_without_adjustment %}}
 
 {{%/divtag%}}
-
 {{%/section%}}

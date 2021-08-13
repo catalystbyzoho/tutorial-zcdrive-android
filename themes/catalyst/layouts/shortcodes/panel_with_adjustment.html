@@ -78,14 +78,15 @@
 	.fadecontent{
 		overflow: hidden;
 		position: relative;
-		mix-blend-mode: hard-light;
+		/* mix-blend-mode: hard-light; */
+		mix-blend-mode: normal;
 	}
 
 	.fadecontent::after {
 		position: absolute;
 		content: "";
 		left: 0px;
-		top: 80px;
+		top: 30px;
 		height: 100%;
 		width: 100%;
 		background: linear-gradient(transparent, var(--copy-background));
