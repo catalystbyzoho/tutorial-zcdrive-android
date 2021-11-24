@@ -10,7 +10,7 @@
 <html>
   <head>
     <title>{{ block "title" . }}{{ end }}</title>
-    {{ partial "html-head.html" . }}
+    {{ partial "html-head-link.html" . }}
     {{if ne $redirectURL "" }}
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
@@ -53,7 +53,6 @@
       {{ partial "body-footer.html" . }}
     </footer>
     {{ partial "scripts.html" . }}
-    {{ partial "algolia.html" . }}
-    
+    {{ partial "html-body-link.html" . }}
   </body>
 </html>

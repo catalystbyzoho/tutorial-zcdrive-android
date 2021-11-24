@@ -1,0 +1,108 @@
+/* Search bar style */
+
+    input::placeholder {/* Firefox */
+        color: var(--font-at-color);
+        font: 15px/18px zoho-puvi-regular;
+    }
+    input:-ms-input-placeholder {/* Internet Explorer 10-11 */
+        color: var(--font-at-color);
+        font: 15px/18px zoho-puvi-regular;
+    }
+    input::-ms-input-placeholder { /* Microsoft Edge */
+        color: var(--font-at-color);
+        font: 15px/18px zoho-puvi-regular;
+    }
+    .input-search {
+        width: 100%;
+        position: relative;
+    }
+    .search-icon{
+        background: var(--shortlist-icon) no-repeat -30px -30px;
+        width: 16px;
+        height: 16px;
+        margin: 15px 0 0 15px;
+        position: absolute;
+    }
+    #innerSearchBar{
+        display: none;
+        margin: auto;
+    }
+    .input-field {
+        width: 400px;
+        padding: 10px 10px 10px 40px;
+        text-align: left; 
+        border-radius:35px; 
+        outline: none !important; 
+        box-shadow: 0 0 0 0; 
+        color: var(--font-at-color);
+        font: 15px/18px zoho-puvi-regular;
+        height: 44px;
+        margin-top: 1px;
+        margin-left: 1px;
+        background-color: transparent;
+        border: 1px solid var(--hr-color);           
+    }
+    /* Responsive styles */
+    @media only screen and (max-width: 1400px) {
+        #outerSearchBar{
+            display: none;
+        }
+        #innerSearchBar{
+            display: block;
+            width: 400px;
+        }
+        .input-field{
+            width: 400px;
+        }
+    }
+    @media only screen and (max-width: 450px) {
+        #innerSearchBar{
+            display: block;
+            width: 350px;
+        }
+        .input-field{
+            width: 350px;
+        }
+    }
+
+/* Sidebar */
+.close-sidebar-icon{
+    margin: 25px 5px 0 25px;
+    background: var(--github-lite-icon) no-repeat -766px -135px;
+    background-size: 850px auto;
+    width: 30px;
+    height: 30px;
+}
+.close-sidebar {
+    border-bottom: 1px solid var(--hr-color);
+    height: 75px;
+    position: fixed;
+    width: 370px;
+    z-index: 5;
+    top: 0px;
+    display: none;
+    cursor: pointer;
+    background-color: var(--menu-color);
+}
+#responsiveSidebarToHide{
+    display: block;
+}
+@media only screen and (max-width: 936px) {
+    aside.hide-sidebar{
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        display: none !important;
+    }
+    .close-sidebar {
+        display: flex !important;
+    }
+    #responsiveSidebarToHide{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 937px) {
+    aside.hide-sidebar{
+        display: block;
+    }
+}

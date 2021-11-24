@@ -218,7 +218,6 @@ body.hideheader article {
     padding-left: 0px;
     padding-right: 0px; }
     body article aside {
-      display: none;
       flex: 0 0 100%; }
     body article aside.responsive {
       display: block; }
@@ -239,7 +238,7 @@ body.hideheader article {
 
 article > aside {
   background-color: var(--menu-color);
-  z-index: 1;
+  z-index: 3;
   padding: 0; }
   article > aside div.search {
     position: fixed;
@@ -608,33 +607,6 @@ body {
     width: 14px;
     height: 14px;
     margin: 5px 0 0 3px; }
-  body .searchbox {
-    border-radius: 35px;
-    outline: none !important;
-    box-shadow: 0 0 0 0;
-    font: 14px/17px zoho-puvi-regular;
-    color: var(--font-menu-color);
-    padding: 3px 13px;
-    width: 400px;
-    height: 44px;
-    margin-top: 1px;
-    margin-left: 1px;
-    background-color: transparent;
-    border: 1px solid var(--hr-color); }
-  body .show-search {
-    border-radius: 35px;
-    outline: none !important;
-    box-shadow: 0 0 0 0;
-    font: 14px/17px zoho-puvi-regular;
-    color: var(--font-menu-color);
-    padding: 3px 13px;
-    width: 400px;
-    margin: 10px auto;
-    height: 44px;
-    margin-top: 1px;
-    margin-left: 1px;
-    background-color: transparent;
-    border: 1px solid var(--hr-color); }
   body hr {
     height: 1px;
     background-color: var(--hr-color);

@@ -1,0 +1,118 @@
+.access-button{
+	width: 150px;
+	height: 44px;
+	background: #F0483D 0% 0% no-repeat padding-box;
+	text-align: center;
+	border-radius: 1px;
+  padding-top: 7px;
+  font: normal normal normal 15px/30px zoho-puvi-regular;
+  color: #F0F0F0;
+  margin-left: 22px;
+  margin-top:1px;
+  list-style: none;
+}
+.list {
+  margin:9px 22.5px 0 22px;
+}
+.list a{
+    font: 15px/18px zoho-puvi-regular;
+    letter-spacing: 0px;
+    color: var(--font-lite-body-color);
+    opacity: 1;
+}
+.list a:hover{
+  color: var(--font-blue-color);
+}
+.add_div1{
+  width: 11px;
+  height: 2px;
+  margin-top: 0px;
+  border-radius: 2px;
+  opacity: 1;
+}
+.header-block{
+  padding:0 29px 0 40px;
+}
+.header-menu-list{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 76px;
+  left: 0;
+  background-color: var(--body-color);
+  box-shadow: 5px 5px 20px var(--shadow-color);
+}
+.header-menu-list .list:hover{
+  background-color: var(--menu-color);
+}
+.header-menu-list .list{
+  list-style: none;
+  margin: 0;
+  padding: 9px;
+}
+.header-menu-list a{
+  display: grid;
+  text-align: center;
+  color: var(--font-lite-body-color) !important;
+}
+.show{
+  display: block !important;
+}
+.hide{
+  display: none !important;
+}
+.header-menu-list .access-button{
+  margin: 10px auto 15px auto;
+}
+.header-block .logo{
+  display: none;
+  border: none;
+  background: transparent;
+  left: 50px;
+}
+
+/* Icons */
+.left-menu-icon{
+  display: none;
+  background: var(--github-lite-icon) no-repeat -516px -100px;
+  background-size: 630px auto;
+  width: 30px;
+  height: 30px;
+  margin: 13px 0 0 30px;
+  cursor: pointer;
+}
+.right-menu-icon{
+  display: none;
+  margin: 12px 0 0 auto;
+  background: var(--github-lite-icon) no-repeat -465px -100px;
+  background-size: 630px auto;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 990px) {
+  .header-block{
+    padding:0 29px 0 0;
+  }
+}
+@media only screen and (max-width: 936px) {
+  nav.shortcuts{
+    display: none !important;
+  }
+  .left-menu-icon{
+    display: block !important;
+  }
+  .right-menu-icon{
+    display: block !important;
+  }
+  .header-block .logo{
+    display: block;
+  }
+}
+@media only screen and (min-width: 937px) {
+  nav.header-menu-list{
+    display:  none !important;
+  }
+}

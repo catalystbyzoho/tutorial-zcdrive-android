@@ -1,17 +1,20 @@
 <div style="margin:101px 25px 0 41px;" class="top-point" id="container">
-    <div class="show-search">
-      <div class="search-icon"></div>
-      <input class="src-input" name="query" placeholder="Search documents" type="text">
-    </div>
 
-    {{if not (in .Params.hide "breadcrumb")}}
+  {{if not (in .Params.hide "breadcrumb")}}
     <nav id="ariane" aria-label="breadcrumb">
         <ol class="ariane">
             {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
         </ol>
     </nav>
-    {{end}}
-        
+  {{end}}
+
+  {{ if ne .Type "docs" }}
+    <div class="input-icons" id="innerSearchBar">
+      <div class="search-icon"></div>
+      <input class="input-field" type="button" onclick="openSearch()" value="Search documents">
+    </div>
+  {{end}}
+
 	<div class="content">
     {{- with .Content -}}
 	    {{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}

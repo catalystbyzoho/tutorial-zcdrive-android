@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+
+<link rel="shortcut icon" href='{{"/images/catalyst-logo.ico" | relURL}}' type="image/x-icon" />
+
+<!-- Assets Css -->
+{{ $sass := resources.Get "sass/main.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+<!-- Static Folder Css -->
+<link rel="stylesheet" href="{{"css/body-header.css" | relURL}}">
+<link rel="stylesheet" href="{{"css/bootstrap.min.css" | relURL}}">
+<link rel="stylesheet" href="{{"css/common-styles.css" | relURL}}">
+<link rel="stylesheet" href="{{"css/footer.css" | relURL}}">
+<link rel="stylesheet" href="{{"css/global-search.css" | relURL}}">
+
+<!-- Static Folder Js -->
+<script src='{{"js/bootstrap.min.js" | relURL}}'></script>
+<script src='{{"js/clipboard.min.js" | relURL}}'></script>
+<script src='{{"js/code-theme.js" | relURL}}'></script>
+<script src='{{"js/codeblock-fontcolor.js" | relURL}}'></script>
+<script src='{{"js/docport.js" | relURL}}'></script>
+<script src='{{"js/global-search.js" | relURL}}'></script>
+<script src='{{"js/search.js" | relURL}}'></script>
+<script src='{{"js/select.js" | relURL}}'></script>
+<script src='{{"js/theme.js" | relURL}}'></script>
+
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<!-- vendor css/js -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>

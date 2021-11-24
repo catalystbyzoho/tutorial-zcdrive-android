@@ -63,35 +63,6 @@ body{
         height: 14px;
         margin: 5px 0 0 3px;
     }
-    .searchbox{
-        border-radius:35px; 
-        outline: none !important; 
-        box-shadow: 0 0 0 0; 
-        font: 14px/17px zoho-puvi-regular; 
-        color: var(--font-menu-color);
-        padding: 3px 13px;
-        width: 400px;
-        height: 44px;
-        margin-top: 1px;
-        margin-left: 1px;
-        background-color: transparent;
-        border: 1px solid var(--hr-color);
-    }
-    .show-search{
-        border-radius:35px; 
-        outline: none !important; 
-        box-shadow: 0 0 0 0; 
-        font: 14px/17px zoho-puvi-regular; 
-        color: var(--font-menu-color);
-        padding: 3px 13px;
-        width: 400px;
-        margin: 10px auto;
-        height: 44px;
-        margin-top: 1px;
-        margin-left: 1px;
-        background-color: transparent;
-        border: 1px solid var(--hr-color);
-    }
     hr {
         height: 1px;
         background-color: var(--hr-color);

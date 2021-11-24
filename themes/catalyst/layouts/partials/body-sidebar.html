@@ -35,7 +35,7 @@
     font: normal normal normal 13px/16px zoho-puvi-regular;
   }
   </style>
-  <div class="logo">
+  <div class="logo" id="responsiveSidebarToHide">
     <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
       <div class="catalyst-logo"></div>
       <div style="display: block; margin-left: 12px; margin-top:1px;">
@@ -43,6 +43,10 @@
         <p style="font: 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 0px;">by Zoho</p>
       </div> 
     </a>
+  </div>
+  <div class="close-sidebar" onclick="showSideBar()">
+    <div class="close-sidebar-icon"></div>
+    <p style="font: 17px/18px zoho-puvi-regular; color: var(--font-at-color); margin-top: 29px;">Close</p>
   </div>
   {{ if ne .Type "docs" }}
     {{ if eq .Type "cli"}}

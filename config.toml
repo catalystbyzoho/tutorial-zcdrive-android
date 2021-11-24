@@ -1,13 +1,12 @@
 baseURL = "https://www.catalyst.zoho.com"
-
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "catalyst"
 theme = "catalyst"
 
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
 
-
-# To Render HTML Tag in Markdown files to set "unsafe = true"
 [markup]
     defaultMarkdownHandler = "goldmark"
 	

@@ -33,6 +33,15 @@
     <clipPath id="clip-path-14">
       <rect id="Rectangle_495" data-name="Rectangle 495" width="20" height="20" transform="translate(-0.321)" fill="#b6b6b6"/>
     </clipPath>
+    <clipPath id="clip-path-15">
+      <rect id="Rectangle_503" data-name="Rectangle 503" width="20" height="20" transform="translate(-5107 -1514)" fill="#b6b6b6"/>
+    </clipPath>
+    <clipPath id="clip-path-16">
+      <rect id="Rectangle_508" data-name="Rectangle 508" width="14" height="14" transform="translate(-5080 -1512)" fill="#b6b6b6"/>
+    </clipPath>
+    <clipPath id="clip-path-17">
+      <rect id="Rectangle_509" data-name="Rectangle 509" width="16" height="16" transform="translate(-5017 -1514)" fill="#b6b6b6"/>
+    </clipPath>
   </defs>
   <g id="HelpdocsIconDarkMode" transform="translate(5468 1592)">
     <rect id="Rectangle_471" data-name="Rectangle 471" width="502" height="125" transform="translate(-5468 -1592)" fill="rgba(255,255,255,0)"/>
@@ -163,6 +172,28 @@
       <g id="search-line" transform="translate(-0.053)">
         <path id="Path_464" data-name="Path 464" d="M0,0H20V20H0Z" fill="none"/>
         <path id="Path_465" data-name="Path 465" d="M15.359,14.181l3.569,3.568-1.179,1.179-3.568-3.569a7.5,7.5,0,1,1,1.178-1.178Zm-1.672-.618a5.831,5.831,0,1,0-.125.125l.125-.125Z" transform="translate(-0.333 -0.333)" fill="#b6b6b6"/>
+      </g>
+    </g>
+    <g id="Mask_Group_219" data-name="Mask Group 219" transform="translate(10 -1)" clip-path="url(#clip-path-15)">
+      <g id="menu-line" transform="translate(-5107 -1514)">
+        <path id="Path_468" data-name="Path 468" d="M0,0H20V20H0Z" fill="none"/>
+        <path id="Path_469" data-name="Path 469" d="M2.5,3.333h15V5H2.5Zm0,5.833h15v1.667H2.5ZM2.5,15h15v1.667H2.5Z" fill="#b6b6b6"/>
+      </g>
+    </g>
+    <g id="Mask_Group_220" data-name="Mask Group 220" transform="translate(25)" clip-path="url(#clip-path-16)">
+      <g id="streamline-icon-interface-dashboard-layout-square_48x48" data-name="streamline-icon-interface-dashboard-layout-square@48x48" transform="translate(-5079.5 -1511.5)">
+        <g id="Group_539" data-name="Group 539">
+          <rect id="Rectangle_504" data-name="Rectangle 504" width="5" height="5" rx="1.143" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143"/>
+          <rect id="Rectangle_505" data-name="Rectangle 505" width="5" height="5" rx="1.143" transform="translate(8)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143"/>
+          <rect id="Rectangle_506" data-name="Rectangle 506" width="5" height="5" rx="1.143" transform="translate(0 8)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143"/>
+          <rect id="Rectangle_507" data-name="Rectangle 507" width="5" height="5" rx="1.143" transform="translate(8 8)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.143"/>
+        </g>
+      </g>
+    </g>
+    <g id="Mask_Group_221" data-name="Mask Group 221" clip-path="url(#clip-path-17)">
+      <g id="close-line" transform="translate(-5017 -1514)">
+        <path id="Path_470" data-name="Path 470" d="M0,0H16V16H0Z" fill="none"/>
+        <path id="Path_471" data-name="Path 471" d="M8,7.057l3.3-3.3.943.943L8.943,8l3.3,3.3-.943.943L8,8.943l-3.3,3.3L3.757,11.3,7.057,8l-3.3-3.3L4.7,3.757Z" fill="#b6b6b6"/>
       </g>
     </g>
   </g>
