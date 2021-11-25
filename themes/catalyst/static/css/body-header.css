@@ -37,10 +37,10 @@
   width: 100%;
   height: auto;
   position: absolute;
-  top: 76px;
+  top: 75px;
   left: 0;
   background-color: var(--body-color);
-  box-shadow: 5px 5px 20px var(--shadow-color);
+  box-shadow: 5px 5px 5px var(--shadow-color);
 }
 .header-menu-list .list:hover{
   background-color: var(--menu-color);
@@ -69,6 +69,46 @@
   border: none;
   background: transparent;
   left: 50px;
+}
+.logo-anchor{
+  text-decoration: none; 
+  display: flex; 
+  margin:19px 0 21px 30px; 
+  padding:3px;
+}
+.logo-title-block{
+  display: block; 
+  margin-left: 12px; 
+  margin-top:1px;
+}
+.logo-product-name{
+  font: 20px/20px zoho-puvi-medium; 
+  color: var(--font-body-color); 
+  margin-bottom: 0px; 
+  margin-top: -2px;
+}
+.logo-company-name{
+  font: 12px/14px zoho-puvi-regular; 
+  color: var(--font-body-color); 
+  padding-left: 0px;
+}
+.close-p{
+  font: 17px/18px zoho-puvi-regular; 
+  color: var(--font-at-color); 
+  margin-top: 29px;
+}
+.filterbox{
+  display: flex; 
+  border-radius:35px; 
+  outline: none !important; 
+  box-shadow: 0 0 0 0; 
+  font: normal normal normal 14px/17px zoho-puvi-regular; 
+  color: var(--font-menu-color); 
+  padding: 4px 11px;
+  width: 310px;
+  height: 39px !important;
+  background-color: transparent;
+  border: 1px solid var(--hr-color);
 }
 
 /* Icons */

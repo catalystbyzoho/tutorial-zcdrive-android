@@ -17,44 +17,27 @@
   </head>
 
   <body data-url="{{ .RelPermalink }}">
-
     <article>
-      {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}">
+      <aside class="hide-sidebar" id="responsiveSidebar">
         {{ partial "body-sidebar.html" . }}     
         <ul class="menu" style="margin-top: 100px;">
-          {{- partial "docs-menu.html" . }}
+          {{ partial "help-menu.html" . }}
         </ul> 
       </aside>
-      {{end}}
-
-      <section class="page {{.Params.layout }}">
-      {{if not (in .Params.hide "header")}}
-      <header>
-          {{ partial "body-header.html" . }}
-      </header>
-      {{end}}
-      {{ block "main" . }}
-      {{ end }}
+      <section class="page">
+        <header>
+            {{ partial "body-header.html" . }}
+        </header>
+        {{ block "main" . }}{{ end }}
       </section>
-
-      <!-- NAVIGATION DROITE TOC -->
-      {{if not (in .Params.hide "toc")}}
-      <section class="right-menu {{.Params.layout }}">
-      {{ block "sidepage" . }}
-      {{ end }}
+      <section class="right-menu">
+        {{ block "sidepage" . }}{{ end }}
       </section>
-      {{end -}}
-      <!-- FIN NAVIGATION DROITE TOC -->
-
     </article>
-    
     {{ partial "scroll-top.html" . }}
-
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>
-
     {{ partial "scripts.html" . }}
     {{ partial "html-body-link.html" . }}
   </body>

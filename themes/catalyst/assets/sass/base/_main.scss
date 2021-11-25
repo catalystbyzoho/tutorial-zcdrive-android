@@ -165,6 +165,10 @@ body{
         background-color: var(--font-blue-color);
     }
     .scroll-top {
+        position: sticky;
+        right: 30px;
+        bottom: 30px;
+        margin: 0 50px 50px auto;
         z-index: 3;
         padding: 5px;
         cursor: pointer;
