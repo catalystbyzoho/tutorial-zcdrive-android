@@ -17,36 +17,23 @@
   </head>
 
   <body data-url="{{ .RelPermalink }}">
-
+    {{ partial "global-search.html" . }}
     <article>
-      {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="background-color: var(--body-color);">
-        {{ partial "tutorial-sidebar.html" . }}
+      <aside class="hide-sidebar" id="responsiveSidebar" style="background-color: var(--body-color);">
+        {{ partial "tutorial-sidebar.html" . }}    
         <ul class="stepper-menu StepProgress" style="margin-top: 185px; margin-left: 30px;">
           {{- partial "tutorial-menu.html" . }}
         </ul> 
       </aside>
-      {{end}}
-
-      <section class="page {{.Params.layout }}">
-      {{if not (in .Params.hide "header")}}
-      <header >
-          {{ partial "body-header.html" . }}
-      </header>
-      {{end}}
-      {{ block "main" . }}
-      {{ end }}
+      <section class="page">
+        <header>
+            {{ partial "body-header.html" . }}
+        </header>
+        {{ block "main" . }}{{ end }}
       </section>
-
-      <!-- NAVIGATION DROITE TOC -->
-      {{if not (in .Params.hide "toc")}}
-      <section class="right-menu {{.Params.layout }}">
-      {{ block "sidepage" . }}
-      {{ end }}
+      <section class="right-menu">
+        {{ block "sidepage" . }}{{ end }}
       </section>
-      {{end -}}
-      <!-- FIN NAVIGATION DROITE TOC -->
-
     </article>
     {{ partial "scroll-top.html" . }}
     <footer>

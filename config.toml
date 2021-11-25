@@ -1,7 +1,7 @@
 baseURL = "https://www.catalyst.zoho.com"
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "catalyst"
+title = "Zoho Catalyst"
 theme = "catalyst"
 
 [outputs]

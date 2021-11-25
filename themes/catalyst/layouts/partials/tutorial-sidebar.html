@@ -118,24 +118,26 @@
         background-color: var(--font-blue-color);
     }
 </style>
-    {{- if not .Site.Params.disableSearch}}
-    <div class="logo">
-        <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
+    <div class="logo" id="responsiveSidebarToHide">
+        <a class="logo-anchor" href="{{.Site.BaseURL}}">
           <div class="catalyst-logo"></div>
-          <div style="display: block; margin-left: 12px; margin-top:1px;">
-            <p style="font: 20px/20px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px; margin-top: -2px;">Catalyst</p>
-            <p style="font: 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 0px;">by Zoho</p>
+          <div class="logo-title-block">
+            <p class="logo-product-name">Catalyst</p>
+            <p class="logo-company-name">by Zoho</p>
           </div> 
         </a>
     </div>
-    <div class="search" style="margin-left: 40px; background-color: var(--body-color);">
+    <div class="close-sidebar" style="background: var(--body-color);" onclick="showSideBar()">
+        <div class="close-sidebar-icon"></div>
+        <p class="close-p">Close</p>
+    </div>
+    <div class="search" style="padding-left: 70px; z-index: 1; background-color: var(--body-color);">
         <p class="menu-title">ON THIS TUTORIAL</p>
-        <div style="width: 210px; height: 34px;">
-            <select class="custom-select">
-                <option value="0">Select language:</option>
-                <option value="1" selected>Java</option>
-                <option value="2">Node JS</option>
+        <div class="customselect" style="width: 210px; height: 34px;">
+            <select class="custom-select tutorial-filter">
+                <option value="Java" selected>Java</option>
+                <option value="NodeJS">Node JS</option>
+                <option value="Python">Python</option>
             </select>
         </div>
     </div>
-    {{- end}}   
