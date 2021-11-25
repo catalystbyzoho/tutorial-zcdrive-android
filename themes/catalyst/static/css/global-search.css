@@ -1,40 +1,30 @@
-.overlay {
-  height: 100%;
-  width: 100%;
+.search-modal {
   display: none;
   position: fixed;
-  z-index: 5;
-  top: 0;
+  z-index: 10;
+  padding-top: 50px;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--search-outer-background-color);
 }
-#Overlay1 {
-  height: 100%;
-  width: 100%;
-  display: none;
-  position: fixed;
-  z-index: 6;
-  top: 0;
-  left: 0;
-  background: #8E8E8E;
-  opacity: 0.43;
-} 
-.overlay-content {
-  position: relative;
-  top: 20px;
-  width: 70%;
-  text-align: center;
-  margin-top: 30px;
+.modal-content-block {
   margin: auto;
-  z-index: 7;
+  background: var(--search-background-color);
+  border-radius: 5px 5px 0px 0px;
+  width: 80%;
 }
-.overlay .closebtn {
-  padding-top: 14px;
+.search-modal .closebtn {
+  padding-top: 13px;
   font-size: 25px;
   cursor: pointer;
   background-color: var(--search-background-color);
   color: var(--font-menu-color);
+  cursor: pointer;
 }
-.overlay input[type=text] {
+.search-modal input[type=text] {
   border: none;
   background-color: var(--search-background-color);
   opacity: none;
@@ -45,15 +35,29 @@
   font: normal normal normal 14px/17px zoho-puvi-regular;
   padding: 2px 0 0 60px;
 }
-.overlay .cancel-btn{
+.search-modal .cancel-btn{
   background-color: var(--search-background-color); 
-  padding: 20px 20px 0px 50px; 
+  padding: 26px 20px 0px 50px; 
   cursor: pointer; 
   font:14px/17px zoho-puvi-regular; 
   color: var(--font-menu-color);
+  cursor: pointer;
 }
 .global-search-block{
   display: flex; 
   background-color: var(--search-background-color); 
-  height: 54px;
+  height: 64px;
+}
+.search-results{
+  max-height: 600px;
+  height: auto;
+  display: flex;
+}
+.left-search-results{
+  width: 50%;
+  background-color: var(--body-color);
+}
+.right-search-results{
+  width: 50%;
+  background-color: var(--menu-color);
 }

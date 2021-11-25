@@ -53,7 +53,7 @@
 
 body{
     color: var(--font-body-color);
-    background-color: var(--body-color);
+    background-color: var(--body-color) !important;
     .activelink{
         color: var(--font-blue-color);
     }
@@ -165,17 +165,11 @@ body{
         background-color: var(--font-blue-color);
     }
     .scroll-top {
-        position: absolute;
-        right: 50px;
-        bottom: 50px;
         z-index: 3;
-        margin-top: -35px;
         padding: 5px;
-        border-radius: 5px;
         cursor: pointer;
         height: 40px;
         width: 40px;
-        margin: 5px;
         background-color: #448bff;
         border-radius: 22px;
         -webkit-box-shadow: -1px 4px 6px 0 rgba(60, 113, 220, .28);

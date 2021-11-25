@@ -28,3 +28,13 @@
         var ele = document.getElementById("responsiveSidebar");
         ele.classList.toggle("hide-sidebar");  
     }
+
+// Global Search Modal
+    function openGlobalsearch(){
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    }
+    function closeGlobalsearch(){
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }

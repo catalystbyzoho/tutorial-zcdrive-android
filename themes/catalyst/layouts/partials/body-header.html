@@ -14,23 +14,9 @@
   {{ if ne .Type "docs" }}
     <div class="input-icons" id="outerSearchBar">
       <div class="search-icon"></div>
-      <input class="input-field" type="button" onclick="openSearch()" value="Search documents">
+      <input class="input-field" type="button" onclick="openGlobalsearch()" value="Search documents">
     </div>
   {{end}}
-
-  <!-- opensearch --> 
-  <div id="myOverlay" class="overlay">
-    <div class="overlay-content">
-        <div class="global-search-block">
-          <div class="search-icon" style=" margin: 20px 10px 0px 30px;"></div>
-          <input type="text" name="query" type="text" id="myInput" placeholder="Search documents">
-          <span class="closebtn" onclick="document.getElementById('myInput').value = ''">×</span>
-          <div onclick="closeSearch()" class="cancel-btn">Cancel</div>
-        </div>
-    </div>
-    <div id="Overlay1"></div>
-  </div>
-  <!-- end -->
 
   <nav class="shortcuts">
     <li class="list">
@@ -90,5 +76,3 @@
   <div class="right-menu-icon" onclick="showHeaderDowndown()"></div>  
     
 </div>
-
-<script src='{{"js/activelink.js" | relURL}}'></script>

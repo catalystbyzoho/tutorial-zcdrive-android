@@ -17,6 +17,7 @@
   </head>
 
   <body data-url="{{ .RelPermalink }}">
+    {{ partial "global-search.html" . }}
     <article>
       <aside class="hide-sidebar" id="responsiveSidebar">
         {{ partial "body-sidebar.html" . }}     
@@ -24,7 +25,6 @@
           {{ partial "help-menu.html" . }}
         </ul> 
       </aside>
-
       <section class="page">
         <header>
             {{ partial "body-header.html" . }}

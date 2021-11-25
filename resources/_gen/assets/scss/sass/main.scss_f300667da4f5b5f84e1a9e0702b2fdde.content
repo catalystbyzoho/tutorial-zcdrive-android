@@ -599,7 +599,7 @@ body a {
 
 body {
   color: var(--font-body-color);
-  background-color: var(--body-color); }
+  background-color: var(--body-color) !important; }
   body .activelink {
     color: var(--font-blue-color); }
   body .hovlink {
@@ -691,17 +691,11 @@ body {
   body .nav-link.active div.add_div {
     background-color: var(--font-blue-color); }
   body .scroll-top {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
     z-index: 3;
-    margin-top: -35px;
     padding: 5px;
-    border-radius: 5px;
     cursor: pointer;
     height: 40px;
     width: 40px;
-    margin: 5px;
     background-color: #448bff;
     border-radius: 22px;
     -webkit-box-shadow: -1px 4px 6px 0 rgba(60, 113, 220, 0.28);
@@ -1221,6 +1215,7 @@ span.highlight.highlight-i {
   --gray-color: #8D58C14D;
   --gray-border-color: #8D58C134;
   --search-background-color: #EAEBEB;
+  --search-outer-background-color: rgba(142,142,142,0.4);
   --github-lite-icon: url('/images/DiscussionLightMode.svg');
   --edit-icon: url('/images/LightPages.svg');
   --share-icon: url('/images/LightPages.svg');
@@ -1294,6 +1289,7 @@ span.highlight.highlight-i {
     --gray-color: #A3ACDB80;
     --gray-border-color: #8D58C134;
     --search-background-color: #2C2F2F;
+    --search-outer-background-color: rgba(142,142,142,0.4);
     --github-lite-icon: url('/images/DiscussionDarkMode.svg');
     --edit-icon: url('/images/DarkPages.svg');
     --share-icon: url('/images/DarkPages.svg');
@@ -1364,6 +1360,7 @@ span.highlight.highlight-i {
   --gray-color: #8D58C14D;
   --gray-border-color: #8D58C133;
   --search-background-color: #2C2F2F;
+  --search-outer-background-color: rgba(142,142,142,0.4);
   --github-lite-icon: url('/images/DiscussionDarkMode.svg');
   --edit-icon: url('/images/DarkPages.svg');
   --share-icon: url('/images/DarkPages.svg');
