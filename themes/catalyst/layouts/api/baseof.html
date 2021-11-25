@@ -15,29 +15,21 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-
   <body data-url="{{ .RelPermalink }}" style="overflow-x: hidden;">
-
+    {{ partial "global-search.html" . }}
     <article>
-      {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}">
+      <aside class="hide-sidebar" id="responsiveSidebar">
         {{ partial "body-sidebar.html" . }}     
         <ul class="menu">
           {{ partial "api-menu.html" . }}
         </ul> 
       </aside>
-      {{end}}
-
-      <section class="page {{.Params.layout }}">
-      {{if not (in .Params.hide "header")}}
+      <section class="page">
       <header>
           {{ partial "body-header.html" . }}
       </header>
-      {{end}}
-      {{ block "main" . }}
-      {{ end }}
+      {{ block "main" . }}{{ end }}
       </section>
-
     </article>
     {{ partial "scroll-top.html" . }}
     <footer>
@@ -45,10 +37,5 @@
     </footer>
     {{ partial "scripts.html" . }}
     {{ partial "html-body-link.html" . }}
-
   </body>
 </html>
-<script>
-  var len = document.getElementsByClassName("api-hr").length;
-  document.getElementsByClassName("api-hr")[len-1].remove();
-</script>

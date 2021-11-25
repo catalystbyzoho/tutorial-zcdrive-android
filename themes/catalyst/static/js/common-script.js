@@ -38,3 +38,9 @@
         var modal = document.getElementById("myModal");
         modal.style.display = "none";
     }
+
+//To Avoid last line in API Template
+    var len = document.getElementsByClassName("api-hr").length;
+    if(len > 0){
+        document.getElementsByClassName("api-hr")[len-1].remove();
+    }

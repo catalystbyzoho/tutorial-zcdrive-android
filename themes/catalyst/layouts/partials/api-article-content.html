@@ -1,7 +1,7 @@
 <div style="margin:76px 25px 0 41px;" class="top-point" id="container">
-    <div class="show-search">
+    <div class="input-icons" id="innerSearchBar" style="margin-top: 90px;">
       <div class="search-icon"></div>
-      <input class="src-input" name="query" placeholder="Search documents" type="text">
+      <input class="input-field" type="button" onclick="openGlobalsearch()" value="Search documents">
     </div>
     {{range where .Site.Pages "Type" "=" "api"}}        
       <div class="content api">

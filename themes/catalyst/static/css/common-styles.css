@@ -175,3 +175,16 @@
     box-shadow: 0 0 0 0 !important;
     border-color: var(--hr-color);
   }
+
+  /* API Responsive styles */
+  @media only screen and (max-width: 1400px) {
+      section.hash{
+          display:  block !important;
+      }
+      section.hash .LeftContent{
+          width: 100%;
+      }
+      section.hash .RightContent{
+          width: 100%;
+      }
+  }
