@@ -1,171 +1,18 @@
-<style>
-    .character-icon{
-      background: var(--character-icon) no-repeat -277px -45px;
-      width: 26px;
-      height: 30px;
-    }
-    .app-icon{
-      background: var(--app-icon) no-repeat -339px -45px;
-      width: 22px;
-      height: 30px;
-    }
-    .barcode-icon{
-      background: var(--barcode-icon) no-repeat -575px -45px;
-      width: 30px;
-      height: 30px;
-    }
-    .face-icon{
-      background: var(--face-icon) no-repeat -395px -45px;
-      width: 30px;
-      height: 30px;
-    }
-    .image-icon{
-      background: var(--image-icon) no-repeat -515px -45px;
-      width: 29px;
-      height: 29px;
-    }
-    .object-icon{
-      background: var(--object-icon) no-repeat -455px -45px;
-      width: 30px;
-      height: 30px;
-    }
-    .auth-icon{
-      background: var(--auth-icon) no-repeat -61px -188px;
-      width: 32px;
-      height: 30px;
-    }
-    .data-store-icon{
-      background: var(--data-store-icon) no-repeat -116px -188px;
-      width: 26px;
-      height: 32px;
-    }
-    .file-store-icon{
-      background: var(--file-store-icon) no-repeat -166px -188px;
-      width: 32px;
-      height: 22px;
-    }
-    .cache-icon{
-      background: var(--cache-icon) no-repeat -221px -188px;
-      width: 30px;
-      height: 32px;
-    }
-    .zcql-icon{
-      background: var(--zcql-icon) no-repeat -274px -188px;
-      width: 26px;
-      height: 32px;
-    }
-    .cron-icon{
-      background: var(--cron-icon) no-repeat -324px -188px;
-      width: 32px;
-      height: 32px;
-    }
-    .functions-icon{
-      background: var(--functions-icon) no-repeat -379px -188px;
-      width: 28px;
-      height: 32px;
-    }
-    .circuits-icon{
-      background: var(--circuits-icon) no-repeat -431px -188px;
-      width: 30px;
-      height: 32px;
-    }
-    .security-rules-icon{
-      background: var(--security-rules-icon) no-repeat -484px -188px;
-      width: 26px;
-      height: 32px;
-    }
-    .search-icon{
-      background: var(--search-icon) no-repeat -533px -188px;
-      width: 29px;
-      height: 31px;
-    }
-    .mail-icon{
-      background: var(--mail-icon) no-repeat -971px -193px;
-      width: 32px;
-      height: 22px;
-    }
-    .push-notifications-icon{
-      background: var(--push-notifications-icon) no-repeat -587px -188px;
-      width: 28px;
-      height: 32px;
-    }
-    .event-listeners-icon{
-      background: var(--event-listeners-icon) no-repeat -693px -188px;
-      width: 32px;
-      height: 28px;
-    }
-    .git-icon{
-      background: var(--git-icon) no-repeat -638px -188px;
-      width: 32px;
-      height: 32px;
-    }
-    .api-gateway-icon{
-      background: var(--api-gateway-icon) no-repeat -62px -79px;
-      width: 30px;
-      height: 30px;
-      
-    }
-    .mobile-device-management-icon{
-      background: var(--mobile-device-management-icon) no-repeat -122px -82px;
-      width: 30px;
-      height: 23px;
-    }
-    .crashes-icon{
-      background: var(--crashes-icon) no-repeat -182px -81px;
-      width: 30px;
-      height: 25px;
-    }
-    .apm-icon{
-        background: var(--apm-icon) no-repeat -602px -79px;
-        width: 30px;
-        height: 30px;
-    }
-    .web-client-icon{
-      background: var(--web-client-icon) no-repeat -804px -188px;
-      width: 32px;
-      height: 32px;
-    }
-    .domain-mapping-icon{
-      background: var(--domain-mapping-icon) no-repeat -750px -189px;
-      width: 30px;
-      height: 30px;
-    }
-    .logs-icon{
-      background: var(--logs-icon) no-repeat -860px -188px;
-      width: 30px;
-      height: 32px;
-    }
-    .metrics-icon{
-      background: var(--metrics-icon) no-repeat -913px -189px;
-      width: 29px;
-      height: 31px;
-    }
-    .container a:hover{
-      color: var(--font-body-color);
-    }
-    .add_div{
-      width: 2px;
-      height: 10px;
-      margin-top: 7px;
-      margin-right: 15px;
-      border-radius: 2px;
-      opacity: 1;
-    }
-</style>
 {{ with .Params.help }}
 {{ if .enable }}
 <div id="help-components" style="position: absolute; top:770px;"></div>
-
 <section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
   <div class="container">
 
     <div class="row justify-content-center">
       <div class="d-md-none d-lg-none d-sm-block">
+        <h1 class="faq-text">Catalyst Component help resources</h1>
         <ol>
           {{ range .help_component }}
-          <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true">
+          <h3 class="faq-text" style="font-size: 30px;">{{ replaceRE "_" " " .title }}</h3>
+          <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true" style="justify-content: center; display: grid;">
               {{ range .featuredpoints }}
-                <div class="col-md-5 col-sm-6 mb-4">
+                <div style="margin-bottom: 20px;">
                   <div class="feature-card help text-left">
                     <div class="{{.icon}}" style="margin:16px 0;"></div>
                       <a href="{{.link}}">

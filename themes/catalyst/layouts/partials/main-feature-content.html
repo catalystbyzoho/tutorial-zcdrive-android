@@ -1,34 +1,10 @@
-<!-- feature -->
-<style>
-    .githubLight{
-        background: var(--github-icon) no-repeat -159px -79px;;
-        width: 18px;
-        height: 18px;
-    }
-    .getting-started-icon{
-      background: var(--getting-started-icon) no-repeat -39px -40px;
-      width: 43px;
-      height: 39px;
-    }
-    .tutorial-icon{
-      background: var(--tutorial-icon) no-repeat -118px -41px;
-      width: 40px;
-      height: 38px;
-    }
-    .whats-new-icon{
-      background: var(--whats-new-icon) no-repeat -199px -40px;
-      width: 40px;
-      height: 40px;
-    }
-</style>
 {{ with .Params.feature }}
 {{ if .enable }}
-<section style="margin:150px 0;">
-  <div class="container" style="background-color: var(--body-color);">
-    <div class="row justify-content-center">
-
+<section style="margin:150px 0;" id="indexFeatures">
+  <div class="container">
+    <div class="row">
       {{ range .feature_item }}
-      <div class="col-md-4 col-sm-6 mb-4" style="padding-left: 19px;">
+      <div style="padding: 0 0 19px 19px;">
         <a href="{{.url}}">
         <div class="feature-card feature" style="height: 218px; width: 360px;">
             <div class="{{.icon}}" style="margin:20px 0;"></div>
@@ -38,10 +14,8 @@
         </a>
       </div>
       {{ end }}
-
     </div>
   </div>
 </section>
 {{ end }}
 {{ end }}
-<!-- /feature -->

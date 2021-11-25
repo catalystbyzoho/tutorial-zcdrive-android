@@ -1,49 +1,11 @@
-<style>
-  .cli-icon{
-    background: var(--cli-icon) no-repeat -635px -42px;
-    width: 37px;
-    height: 36px;
-  }
-  .nodejs-icon{
-    background: var(--nodejs-icon) no-repeat -769px -49px;
-    width: 36px;
-    height: 23px;
-  }
-  .java-icon{
-    background: var(--java-icon) no-repeat -710px -42px;
-    width: 21px;
-    height: 36px;
-  }
-  .android-icon{
-    background: var(--android-icon) no-repeat -839px -41px;
-    width: 32px;
-    height: 39px;
-  }
-  .ios-icon{
-    background: var(--ios-icon) no-repeat -977px -45px;
-    width: 24px;
-    height: 31px;
-  }
-  .api-icon{
-    background: var(--api-icon) no-repeat -905px -42px;
-    width: 36px;
-    height: 36px;
-  }
-  .js-icon{
-    background: var(--js-icon) no-repeat -1041px -43px;
-    width: 29px;
-    height: 36px;
-  }
-</style>
-<!-- sdk -->
 {{ with .Params.sdk }}
 {{ if .enable }}
-<section style="margin:132px 0 150px 0;">
+<section style="margin:132px 0 150px 0;" id="indexSdk">
   <div class="container" style="background-color: var(--body-color);">
     <p style="text-align: left; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; font: normal normal 600 40px/60px zoho-puvi-semibold; margin-bottom: 40px;">SDK’s and Toolkits</p>
-    <div class="row">
+    <div class="row" style="margin: 0 -10px;">
       {{ range .sdk_item }}
-      <div class="col-md-3 col-sm-6 mb-4" style="margin-bottom: 20px !important;">
+      <div style="margin: 0 10px 20px 10px !important; justify-content: space-around;">
         <a href="{{.link}}">
           <div class="feature-card sdk text-center">
               <div class="{{.icon}}" style="margin:10px auto; "></div>
@@ -58,4 +20,3 @@
 </section>
 {{ end }}
 {{ end }}
-<!-- /sdk -->

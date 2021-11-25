@@ -109,7 +109,7 @@ help:
       - title: "Amplify"
         featuredpoints:
           - name: "Search"
-            icon: "search-icon"
+            icon: "big-search-icon"
             link: "/help/search/"
             content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
           - name: "Mail"

@@ -1,147 +1,76 @@
-<style type="text/css">
-    .access-button{
-      width: 150px;
-      height: 44px;
-      background: #F0483D 0% 0% no-repeat padding-box;
-      text-align: center;
-      border-radius: 1px;
-      padding-top: 7px;
-      font: normal normal normal 15px/30px zoho-puvi-regular;
-      letter-spacing: 0px;
-      color: #F0F0F0;
-      opacity: 1;
-      margin-left: 22px;
-      margin-top:1px;
-    }
-    .list {
-      margin:9px 22.5px 0 22px;
-    }
-    .list a{
-        font: 15px/18px zoho-puvi-regular;
-        letter-spacing: 0px;
-        color: var(--font-lite-body-color);
-        opacity: 1;
-    }
-    .list a:hover{
-      color: var(--font-blue-color);
-    }
-    .activa a {
-      color: red;
-    }
-    .searchbox {
-        width: 559px;
-        height: 44px;
-        margin-top: 0px !important;
-    }
-    .srcinput {
-        padding: 6px 40px;
-        padding-bottom: 0px;
-        color: var(--font-menu-color);
-        font: normal normal normal 14px/17px zoho-puvi-regular;
-        border: 1px solid var(--hr-color);
-        border-radius: 30px;
-        outline: none;
-        width: 100%;
-        height: 44px;
-        background: var(--menu-color) url(/images/search.svg) no-repeat scroll 13px 13px/15px 15px;
-    }
-    ::placeholder{
-      color: var(--font-menu-color);
-      font: normal normal normal 14px/17px zoho-puvi-regular;
-    }
-    .logo {
-      height: 84px;
-      position: fixed;
-      width: 400px;
-      top: 0px;
-      display: flex;
-    }
-    .catalyst-logo{
-      background: url('/images/CatalystLogo.svg') no-repeat 0 0;
-      width: 28px;
-      height: 32px;
-    }
-    .search-icon{
-      background: var(--shortlist-icon) no-repeat -30px -30px;
-      width: 16px;
-      height: 16px;
-      margin-top: 10px;
-      margin-right: 14px;
-      margin-left: 0px;
-    }
-    .search-box {
-      width: 559px;
-      height: 44px;
-      float: left;
-    }
-    .src-input {
-      padding: 10px 40px;
-      padding-bottom: 0;
-      margin-left: 1px;
-      width: 100%;
-      padding-left: 0px;
-      color: var(--font-menu-color);
-      font: normal normal normal 14px/17px zoho-puvi-regular;
-      border: none;
-      float: left;
-      outline: none;
-      background-color: var(--body-color);
-    }
-    .add_div1{
-      width: 11px;
-      height: 2px;
-      margin-top: 0px;
-      border-radius: 2px;
-      opacity: 1;
-    }
-    </style>
     <div style="padding:0 29px 0 0; display: flex;">
-      <div class="logo">
-        <a style="text-decoration: none; display: flex; margin:19px 0 21px 30px; padding:3px;" href="{{.Site.BaseURL}}">
+      <div class="logo" style="background: var(--body-color); width: auto;">
+        <a class="logo-anchor" href="{{.Site.BaseURL}}">
           <div class="catalyst-logo"></div>
-          <div style="display: block; margin-left: 12px; margin-top:1px;">
-            <p style="font: 20px/20px zoho-puvi-medium; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; margin-bottom: 0px; margin-top: -2px;">Catalyst</p>
-            <p style="font: 12px/14px zoho-puvi-regular; letter-spacing: 0px; color: var(--font-body-color); opacity: 1; padding-left: 0px;">by Zoho</p>
+          <div class="logo-title-block">
+            <p class="logo-product-name">Catalyst</p>
+            <p class="logo-company-name">by Zoho</p>
           </div> 
         </a>
       </div>
         
-        {{ if or (eq .Type "whats-new") (eq .Type "faq")}}
-        <div class="searchbox" style="margin-left: 410px; height: 44px !important;">
+        <!-- {{ if or (eq .Type "whats-new") (eq .Type "faq")}}
+        <div class="input-icons" id="outerSearchBar">
           <div class="search-icon"></div>
-          <input class="src-input docsearch-input" name="query" placeholder="Search documents" type="text">
+          <input class="input-field" type="button" onclick="openGlobalsearch()" value="Search documents">
         </div>
-        {{ end }}
-        <!-- {{- with .Site.Menus.shortcuts}} -->
+        {{ end }} -->
 
         <nav class="shortcuts">
-            <li class="list">
-                <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">
-                Docs
-                <div class="add_div1" id="docs-line"></div>
-              </a>
-            </li>
-            <li class="list">
-              <a id="tutorial" href="/tutorial/" target="_self" rel="noopener noreferrer">
-                Tutorials
-                <div class="add_div1" id="tutorial-line"></div>
-              </a>
-            </li>
-            <li class="list">
-              <a id="faq" href="/faq/authentication/" target="_self" rel="noopener noreferrer">
-                FAQ
-                <div class="add_div1" id="faq-line"></div>
-              </a>
-            </li>
-            <li class="list">
-              <a id="whats-new" href="/whats-new/release-notes/" target="_self" rel="noopener noreferrer">
-                What’s New
-                <div class="add_div1" id="whats-new-line"></div>
-              </a>
-            </li>
-            <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://console.catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
-          </nav>
-        <!-- {{- end}} -->
-    
+          <li class="list">
+            <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">
+              Docs
+              <div class="add_div1" id="docs-line"></div>
+            </a>
+          </li>
+          <li class="list">
+            <a id="tutorial" href="/tutorial/" target="_self" rel="noopener noreferrer">
+              Tutorials
+              <div class="add_div1" id="tutorial-line"></div>
+            </a>
+          </li>
+          <li class="list">
+            <a id="faq" href="/faq/authentication/" target="_self" rel="noopener noreferrer">
+              FAQ
+              <div class="add_div1" id="faq-line"></div>
+            </a>
+          </li>
+          <li class="list">
+            <a id="whats-new" href="/whats-new/release-notes/" target="_self" rel="noopener noreferrer">
+              What’s New
+              <div class="add_div1" id="whats-new-line"></div>
+            </a>
+          </li>
+          <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://console.catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
+        </nav>
+        <nav class="header-menu-list hide" id="headerMenuList">
+          <li class="list">
+            <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">
+              Docs
+              <div class="add_div1" id="docs-line"></div>
+            </a>
+          </li>
+          <li class="list">
+            <a id="tutorial" href="/tutorial/" target="_self" rel="noopener noreferrer">
+              Tutorials
+              <div class="add_div1" id="tutorial-line"></div>
+            </a>
+          </li>
+          <li class="list">
+            <a id="faq" href="/faq/authentication/" target="_self" rel="noopener noreferrer">
+              FAQ
+              <div class="add_div1" id="faq-line"></div>
+            </a>
+          </li>
+          <li class="list">
+            <a id="whats-new" href="/whats-new/release-notes/" target="_self" rel="noopener noreferrer">
+              What’s New
+              <div class="add_div1" id="whats-new-line"></div>
+            </a>
+          </li>
+          <li class="access-button"><a style="color: #F0F0F0 !important;" href="https://accounts.zoho.com/register?newsignup=true&servicename=ZOHOCATALYST&serviceurl=https://console.catalyst.zoho.com/baas/index" target="_blank" rel="noopener noreferrer">Go to console</a></li>
+        </nav>
+      
+        <div class="right-menu-icon" onclick="showHeaderDowndown()"></div>  
+          
     </div>
-    <script src='{{"js/activelink.js" | relURL}}'></script>

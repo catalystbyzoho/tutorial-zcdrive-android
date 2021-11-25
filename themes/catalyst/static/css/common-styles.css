@@ -1,5 +1,11 @@
-/* Search bar style */
+/* To bold the text for menu open in sidebar */
+i.fa-angle-down + a{
+    font: normal normal 600 15px/18px zoho-puvi-semibold;
+    color: #000000;
+}
 
+
+/* Search bar style */
     input::placeholder {/* Firefox */
         color: var(--font-at-color);
         font: 15px/18px zoho-puvi-regular;
@@ -66,6 +72,41 @@
     }
 
 /* Sidebar */
+.shortlist {
+    background: var(--shortlist-icon) no-repeat -76px -30px;
+    width: 15px;
+    height: 15px;
+    margin-top: 8px;
+    margin-right: 11px;
+}
+.logo {
+    border-bottom: 1px solid var(--hr-color);
+    height: 75px;
+    position: fixed;
+    width: 370px;
+    z-index: 2;
+    top: 0px;
+    display: flex;
+    background-color: var(--menu-color);
+}
+.catalyst-logo{
+  background: url('/images/CatalystLogo.svg') no-repeat 0 0;
+  width: 28px;
+  height: 32px;
+}
+.input-filter{
+  border: none; 
+  background-color: transparent; 
+  outline: none !important; 
+  box-shadow: 0 0 0 0; 
+  width: 260px;
+  color: var(--font-menu-color);
+  font: 15px/18px zoho-puvi-regular;
+}
+::placeholder{
+  color: var(--font-at-color);
+  font: normal normal normal 13px/16px zoho-puvi-regular;
+}
 .close-sidebar-icon{
     margin: 25px 5px 0 25px;
     background: var(--github-lite-icon) no-repeat -766px -135px;
@@ -109,7 +150,7 @@
 
 /* select style */
 
-.customselect {
+  .customselect {
     position: relative;
     background-color: var(--menu-color);
     color: var(--font-menu-color);
@@ -188,3 +229,331 @@
           width: 100%;
       }
   }
+
+  /* Main Article Content */
+    .main{
+        margin:191px auto 0 auto; 
+        width: fit-content;
+        width: -moz-fit-content;
+    }
+    .main .title {
+        font: normal normal 600 40px/48px zoho-puvi-bold;
+        letter-spacing: 0px;
+        color: var(--body-header-color);
+        opacity: 1;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .main .content {
+        font: normal normal normal 15px/26px zoho-puvi-regular;
+        letter-spacing: 0px;
+        color: var(--font-body-color);
+        opacity: 1;
+        text-align: center;
+        margin-bottom: 34px;
+    }
+    @media only screen and (max-width: 991px) {
+        .main{
+            margin:115px auto 0 auto; 
+        }
+    }
+
+
+  /* Main Feature Content */
+    .githubLight{
+        background: var(--github-icon) no-repeat -159px -79px;;
+        width: 18px;
+        height: 18px;
+    }
+    .getting-started-icon{
+      background: var(--getting-started-icon) no-repeat -39px -40px;
+      width: 43px;
+      height: 39px;
+    }
+    .tutorial-icon{
+      background: var(--tutorial-icon) no-repeat -118px -41px;
+      width: 40px;
+      height: 38px;
+    }
+    .whats-new-icon{
+      background: var(--whats-new-icon) no-repeat -199px -40px;
+      width: 40px;
+      height: 40px;
+    }
+    @media only screen and (max-width: 991px) {
+        #indexFeatures .row{
+            justify-content: space-around;
+        }
+        #indexFeatures{
+          margin: 0 !important;
+          margin-bottom: 30px !important;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        #indexFeatures .row{
+            justify-content: space-between;
+        }
+    }
+
+
+  /* Main SDK Content */
+    .cli-icon{
+        background: var(--cli-icon) no-repeat -635px -42px;
+        width: 37px;
+        height: 36px;
+      }
+      .nodejs-icon{
+        background: var(--nodejs-icon) no-repeat -769px -49px;
+        width: 36px;
+        height: 23px;
+      }
+      .java-icon{
+        background: var(--java-icon) no-repeat -710px -42px;
+        width: 21px;
+        height: 36px;
+      }
+      .android-icon{
+        background: var(--android-icon) no-repeat -839px -41px;
+        width: 32px;
+        height: 39px;
+      }
+      .ios-icon{
+        background: var(--ios-icon) no-repeat -977px -45px;
+        width: 24px;
+        height: 31px;
+      }
+      .api-icon{
+        background: var(--api-icon) no-repeat -905px -42px;
+        width: 36px;
+        height: 36px;
+      }
+      .js-icon{
+        background: var(--js-icon) no-repeat -1041px -43px;
+        width: 29px;
+        height: 36px;
+      }
+      @media only screen and (max-width: 991px) {
+            #indexSdk .row{
+                justify-content: space-around;
+            }
+            #indexSdk{
+                margin-top: 50px !important;
+            }
+      }
+      @media (min-width:992px) and (max-width:1199px){
+            #indexSdk .row{
+                justify-content: space-between;
+            }
+      }
+    
+
+    /* Main FAQ Content */
+      .faq-text{
+        text-align: left; 
+        color: var(--font-body-color); 
+        font: normal normal 600 40px/60px zoho-puvi-semibold;
+        margin-bottom: 15px !important;
+      }
+      .accordion1 {
+        font: normal normal normal 16px/24px zoho-puvi-regular;
+        background-color: var(--menu-color);
+        color: var(--font-menu-color);
+        border: 1px solid var(--hr-color);
+        cursor: pointer;
+        padding: 20px 21px 20px 16px;
+        width: 100%;
+        display: flex;
+        text-align: left;
+        margin-bottom:16px;
+        border-radius: 2px;
+        outline: none !important; 
+        box-shadow: 0 0 0 0;
+      }
+      .accordion2 {
+        background-color: var(--body-color);
+        color: var(--font-blue-color);
+        cursor: pointer;
+        padding: 13px;
+        width: 100%;
+        margin-bottom:16px;
+        border-radius: 2px;
+        outline: none !important; 
+        border: 1px solid var(--hr-color);
+        text-align: center;
+        box-shadow: 0 0 0 0;
+      }
+      .active1, .accordion1:hover {
+        background-color: var(--menu-color);
+      }
+      .accordion1:after {
+        content: '\002B';
+        color: var(--font-lite-body-color);
+        font-weight: 0;
+        float: right;
+        font-size: 30px;
+        margin-left: auto;
+      } 
+      .active1:after {
+        content: "\2212";
+      }
+      .panel1 {
+        padding: 0 18px;
+        background-color: var(--body-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+    /* Main Help Content */
+      .character-icon{
+        background: var(--character-icon) no-repeat -277px -45px;
+        width: 26px;
+        height: 30px;
+      }
+      .app-icon{
+        background: var(--app-icon) no-repeat -339px -45px;
+        width: 22px;
+        height: 30px;
+      }
+      .barcode-icon{
+        background: var(--barcode-icon) no-repeat -575px -45px;
+        width: 30px;
+        height: 30px;
+      }
+      .face-icon{
+        background: var(--face-icon) no-repeat -395px -45px;
+        width: 30px;
+        height: 30px;
+      }
+      .image-icon{
+        background: var(--image-icon) no-repeat -515px -45px;
+        width: 29px;
+        height: 29px;
+      }
+      .object-icon{
+        background: var(--object-icon) no-repeat -455px -45px;
+        width: 30px;
+        height: 30px;
+      }
+      .auth-icon{
+        background: var(--auth-icon) no-repeat -61px -188px;
+        width: 32px;
+        height: 30px;
+      }
+      .data-store-icon{
+        background: var(--data-store-icon) no-repeat -116px -188px;
+        width: 26px;
+        height: 32px;
+      }
+      .file-store-icon{
+        background: var(--file-store-icon) no-repeat -166px -188px;
+        width: 32px;
+        height: 22px;
+      }
+      .cache-icon{
+        background: var(--cache-icon) no-repeat -221px -188px;
+        width: 30px;
+        height: 32px;
+      }
+      .zcql-icon{
+        background: var(--zcql-icon) no-repeat -274px -188px;
+        width: 26px;
+        height: 32px;
+      }
+      .cron-icon{
+        background: var(--cron-icon) no-repeat -324px -188px;
+        width: 32px;
+        height: 32px;
+      }
+      .functions-icon{
+        background: var(--functions-icon) no-repeat -379px -188px;
+        width: 28px;
+        height: 32px;
+      }
+      .circuits-icon{
+        background: var(--circuits-icon) no-repeat -431px -188px;
+        width: 30px;
+        height: 32px;
+      }
+      .security-rules-icon{
+        background: var(--security-rules-icon) no-repeat -484px -188px;
+        width: 26px;
+        height: 32px;
+      }
+      .big-search-icon{
+        background: var(--search-icon) no-repeat -533px -188px;
+        width: 29px;
+        height: 31px;
+      }
+      .mail-icon{
+        background: var(--mail-icon) no-repeat -971px -193px;
+        width: 32px;
+        height: 22px;
+      }
+      .push-notifications-icon{
+        background: var(--push-notifications-icon) no-repeat -587px -188px;
+        width: 28px;
+        height: 32px;
+      }
+      .event-listeners-icon{
+        background: var(--event-listeners-icon) no-repeat -693px -188px;
+        width: 32px;
+        height: 28px;
+      }
+      .git-icon{
+        background: var(--git-icon) no-repeat -638px -188px;
+        width: 32px;
+        height: 32px;
+      }
+      .api-gateway-icon{
+        background: var(--api-gateway-icon) no-repeat -62px -79px;
+        width: 30px;
+        height: 30px;
+        
+      }
+      .mobile-device-management-icon{
+        background: var(--mobile-device-management-icon) no-repeat -122px -82px;
+        width: 30px;
+        height: 23px;
+      }
+      .crashes-icon{
+        background: var(--crashes-icon) no-repeat -182px -81px;
+        width: 30px;
+        height: 25px;
+      }
+      .apm-icon{
+          background: var(--apm-icon) no-repeat -602px -79px;
+          width: 30px;
+          height: 30px;
+      }
+      .web-client-icon{
+        background: var(--web-client-icon) no-repeat -804px -188px;
+        width: 32px;
+        height: 32px;
+      }
+      .domain-mapping-icon{
+        background: var(--domain-mapping-icon) no-repeat -750px -189px;
+        width: 30px;
+        height: 30px;
+      }
+      .logs-icon{
+        background: var(--logs-icon) no-repeat -860px -188px;
+        width: 30px;
+        height: 32px;
+      }
+      .metrics-icon{
+        background: var(--metrics-icon) no-repeat -913px -189px;
+        width: 29px;
+        height: 31px;
+      }
+      .container a:hover{
+        color: var(--font-body-color);
+      }
+      .add_div{
+        width: 2px;
+        height: 10px;
+        margin-top: 7px;
+        margin-right: 15px;
+        border-radius: 2px;
+        opacity: 1;
+      }

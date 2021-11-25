@@ -109,9 +109,10 @@ body{
         background-color: var(--body-color); 
         border: 1px solid var(--hr-color); 
         border-radius: 5px;
-        width: 511px !important;
-        height: 193px !important;
+        width: 300px !important;
+        height: 200px !important;
         padding:10px 15px;
+        overflow: auto;
     }
     .help:hover{
         box-shadow: 5px 5px 16px var(--shadow-color); 
