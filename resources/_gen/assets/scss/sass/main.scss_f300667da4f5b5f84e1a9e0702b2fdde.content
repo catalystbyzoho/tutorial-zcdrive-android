@@ -600,6 +600,8 @@ body a {
 body {
   color: var(--font-body-color);
   background-color: var(--body-color) !important; }
+  body div {
+    color: var(--font-body-color); }
   body .activelink {
     color: var(--font-blue-color); }
   body .hovlink {

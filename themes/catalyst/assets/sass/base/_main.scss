@@ -53,6 +53,9 @@
 
 body{
     color: var(--font-body-color);
+    div{
+        color: var(--font-body-color);
+    }
     background-color: var(--body-color) !important;
     .activelink{
         color: var(--font-blue-color);
