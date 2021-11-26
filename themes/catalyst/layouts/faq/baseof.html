@@ -15,43 +15,29 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-
-  <body data-url="{{ .RelPermalink }}" style="background-color: var(--body-color);">
-
+  <body data-url="{{ .RelPermalink }}">
+    {{ partial "global-search.html" . }}
     <header style="width: 100%;">
         {{ partial "main-header.html" . }}
     </header>
     <main style="width: 100%;">
       {{ partial "main-article-content.html" . }}        
     </main>
-    <div id="faq-components" style="position: absolute; top:370px;"></div>
-    <article style="top:100px; width: 90%; margin:30px auto 30px auto;">
-      {{if not (in .Params.hide "nav")}}
-      <aside class="{{.Params.layout }}" style="height: auto !important; background-color: var(--body-color); width: 240px;
-        position: -webkit-sticky; /* for Safari */
-        position: sticky;
-        top: 100px;
-        align-self: flex-start; 
-        flex: 0 0 17em">
+    <div id="faq-components"></div>
+    <article class="faq-article">
+      <aside class="faq-sidebar hide-sidebar">
         <ul class="menu" style="margin-top: 0px;">
           {{- partial "faq-menu.html" . }}
         </ul> 
       </aside>
-      {{end}}
-
-      <section class="page {{.Params.layout }}" style="margin-left: 0px; margin-top: 10px;">
-        {{if not (in .Params.hide "header")}}
+      <section class="page" style="margin-left: 0px; margin-top: 10px;">
         <header style="position: relative; padding: 0px; height: 60px; width: -webkit-fill-available;">
             {{ partial "faq-header.html" . }}
         </header>
-        {{end}}
-        {{ block "main" . }}
-        {{ end }}
+        {{ block "main" . }}{{ end }}
       </section>
-
     </article>
     {{ partial "scroll-top.html" . }}
-
     <footer>
       {{ partial "body-footer.html" . }}
     </footer>

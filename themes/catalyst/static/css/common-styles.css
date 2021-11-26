@@ -327,13 +327,16 @@ display: block;
         border-radius:35px; 
         outline: none !important; 
         box-shadow: 0 0 0 0; 
-        color: var(--font-at-color);
+        color: var(--font-body-color);
         font: 15px/18px zoho-puvi-regular;
         height: 44px;
         margin-top: 1px;
         margin-left: 1px;
         background-color: transparent;
         border: 1px solid var(--hr-color);           
+    }
+    [type=button].input-field {
+      color: var(--font-at-color);
     }
     /* Responsive styles */
     @media only screen and (max-width: 1400px) {
@@ -866,5 +869,42 @@ display: block;
   }
   .tutorial-block{
     justify-content: space-around;
+  }
+}
+
+/* FAQ page style */
+.faq-sidebar{
+  height: auto !important; 
+  background-color: var(--body-color); 
+  width: 240px;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 100px;
+  align-self: flex-start; 
+  flex: 0 0 17em
+}
+.faq-article{
+  top:100px; 
+  width: 90%; 
+  margin:30px auto 30px auto;
+}
+#faq-components{
+  position: absolute; 
+  top:370px;
+}
+@media only screen and (max-width: 450px) {
+  .faq-header .input-icons{
+    width: 100%;
+  }
+  .faq-header .input-field{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 936px) {
+  .faq-article{
+    top:0px; 
+  }
+  #faq-components{
+    top:280px;
   }
 }
