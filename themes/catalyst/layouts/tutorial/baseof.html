@@ -15,15 +15,12 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-
   <body data-url="{{ .RelPermalink }}">
-
+    {{ partial "global-search.html" . }}
     <article>
-      {{if not (in .Params.hide "header")}}
       <header style="width: 100%;">
           {{ partial "main-header.html" . }}
       </header>
-      {{end}}
       <main style="width: 100%;">
         {{ partial "main-article-content.html" . }}
         {{ partial "tutorial-feature-content.html" . }}

@@ -1,25 +1,18 @@
-<style>
-  .tutorial-filter{
-    background-color: var(--menu-color); 
-    font: 14px/17px zoho-puvi-regular; 
-    padding-left: 8px;         
-    outline: none !important; 
-    box-shadow: 0 0 0 0 !important;
-    border-color: var(--hr-color);
-  }
-</style>
 <!-- feature -->
 {{ with .Params.feature }}
 {{ if .enable }}
 
-<section style="margin:100px 0 0 0;">
+<section class="tutorial-page">
 
-  <div class="container" style="background-color: var(--body-color);">
+  <div class="container" style="padding: 0;">
 
-  <div style="width: 100%; margin: 0 auto; display: flex; padding-bottom: 20px; border-bottom: 1px solid var(--hr-color); margin-bottom: 40px;">
-    <div class="searchbox" style="float: left; display: flex; height: 44px!important;">
+  <div class="tutorial-list">
+    <div class="input-icons">
       <div class="search-icon"></div>
-      <input class="src-input" style="padding: 0px;" name="query" placeholder="Search Topics & Tutorials" type="text">
+      <input class="input-field" 
+      type="text" 
+      placeholder="Search Topics & Tutorials"
+      >
     </div>
     <div style="display: flex; margin-left: auto;">
       <div class="customselect" style="margin-top: 10px;">
@@ -49,7 +42,7 @@
     </div>
   </div>
 
-  <div class="row justify-content-left" style="margin-left: 0px;">
+  <div class="tutorial-block">
     {{ range .feature_item }}
     <div 
       class="filterContent {{.level}} {{.duration}} {{.language1}} {{.language2}} {{.language3}}" 
@@ -64,8 +57,8 @@
      >
     </div>
     {{ end }}
-    <div class="row justify-content-left" id="demo"></div>
-    <div class="row justify-content-center" id="demo1" style="margin-left: auto; margin-right: auto;"></div>
+    <div class="tutorial-block" id="demo"></div>
+    <div class="tutorial-block" id="demo1" style="margin-left: auto; margin-right: auto;"></div>
   </div>
   </div>
 
@@ -128,7 +121,6 @@
           var node = document.createElement("div");
           
           node.innerHTML = `
-          <div class="col-md-4 col-sm-6 mb-4" style="padding-left:5px; margin-bottom: 18px !important;">
             <a href=${url}>
               <div class="feature-card feature">
                 <div style="display: flex;">
@@ -143,8 +135,7 @@
                     ${showableContent[i].getAttribute("language3")}
                   </p>
               </div>
-            </a>
-          </div>`;
+            </a>`;
           document.getElementById("demo").appendChild(node);
       }
     }

@@ -253,7 +253,7 @@
     }
     .zcf-banner-shapes {
         position: absolute;
-        top: 310px;
+        top: 265px;
         left: 15%;
         right: 15%;
         transform: translateY(-50%);
@@ -265,10 +265,10 @@
     .zcf-banner-shapes {
         position: absolute;
         top: 310px;
-        left: 12%;
-        right: 12%;
+        left: 5%;
+        right: 5%;
         transform: translateY(-50%);
-        width: 76%;
+        width: 90%;
     }
     .shape1 {
         left:10px
@@ -306,18 +306,18 @@
 @media only screen and (min-width: 768px) and (max-width:991px) {
     .zcf-banner-shapes {
         position: absolute;
-        top: 310px;
-        left: 10%;
-        right: 10%;
+        top: 230px;
+        left: 3%;
+        right: 3%;
         transform: translateY(-50%);
-        width: 80%;
+        width: 94%;
     }
     .content-wrap {
         max-width:650px
     }
 
     .zcf-banner-section {
-        padding: 60px 0;
+        padding: 30px 0;
         text-align: center
     }
 

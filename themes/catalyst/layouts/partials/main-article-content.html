@@ -2,14 +2,25 @@
 <div class="main">
     <p class="title">{{ .title | markdownify }}</p>
     <p class="content">{{ .content | markdownify }}</p>
-    <div class="input-icons">
-        <div class="search-icon" style="margin: 13px 0 0 45px;"></div>
-        <input class="input-field" 
-        type="button" 
-        style="background: var(--menu-color); width: 90%; display: block; margin: 0 auto;"
-        onclick="openGlobalsearch()" 
-        value="Search documents">
-    </div>
+    {{ if (ne .Type "home")}}
+        <div class="input-icons" id="mainArticleSearch">
+            <div class="search-icon" style="margin: 13px 0 0 45px;"></div>
+            <input class="input-field" 
+            type="button" 
+            style="width: 90%; display: block; margin: 0 auto;"
+            onclick="openGlobalsearch()" 
+            value="Search documents">
+        </div>
+    {{ else }}
+        <div class="input-icons" id="homeArticleSearch">
+            <div class="search-icon" style="margin: 13px 0 0 45px;"></div>
+            <input class="input-field" 
+            type="button" 
+            style="width: 90%; display: block; margin: 0 auto;"
+            onclick="openGlobalsearch()" 
+            value="Search documents">
+        </div>
+    {{ end }}
 </div>
 {{ end }}
 

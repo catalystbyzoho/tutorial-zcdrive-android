@@ -629,7 +629,8 @@ body {
     border-radius: 2px;
     width: 360px;
     height: 317px;
-    padding: 15px 30px; }
+    padding: 15px 30px;
+    margin: 0 10px 20px 10px; }
   body .feature:hover {
     box-shadow: 5px 5px 16px var(--shadow-color); }
   body .sdk {
@@ -1165,7 +1166,7 @@ span.highlight.highlight-i {
   --gray-border-color: #8D58C134;
   --search-background-color: #EAEBEB;
   --search-outer-background-color: rgba(142,142,142,0.4);
-  --github-lite-icon: url('/images/DiscussionLightMode.svg');
+  --github-lite-icon: url('/images/LightPages.svg');
   --edit-icon: url('/images/LightPages.svg');
   --share-icon: url('/images/LightPages.svg');
   --download-icon: url('/images/LightPages.svg');
@@ -1239,7 +1240,7 @@ span.highlight.highlight-i {
     --gray-border-color: #8D58C134;
     --search-background-color: #2C2F2F;
     --search-outer-background-color: rgba(142,142,142,0.4);
-    --github-lite-icon: url('/images/DiscussionDarkMode.svg');
+    --github-lite-icon: url('/images/DarkPages.svg');
     --edit-icon: url('/images/DarkPages.svg');
     --share-icon: url('/images/DarkPages.svg');
     --download-icon: url('/images/DarkPages.svg');
@@ -1310,7 +1311,7 @@ span.highlight.highlight-i {
   --gray-border-color: #8D58C133;
   --search-background-color: #2C2F2F;
   --search-outer-background-color: rgba(142,142,142,0.4);
-  --github-lite-icon: url('/images/DiscussionDarkMode.svg');
+  --github-lite-icon: url('/images/Darkpages.svg');
   --edit-icon: url('/images/DarkPages.svg');
   --share-icon: url('/images/DarkPages.svg');
   --download-icon: url('/images/DarkPages.svg');
