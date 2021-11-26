@@ -3,12 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-	<div style="margin:-22px 25px 0 41px;" class="top-point" id="container">
-		<div class="show-search">
-		<div class="search-icon"></div>
-		<input class="src-input" name="query" placeholder="Search documents" type="text">
-		</div>
-        
+	<div style="margin:-22px 25px 0 41px;" class="top-point" id="container">        
 		<div class="content" style="text-align: left; height: auto;">
 		{{- with .Content -}}
 			{{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}

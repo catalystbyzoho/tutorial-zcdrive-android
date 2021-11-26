@@ -73,11 +73,7 @@
     {{- with ($.Scratch.Get "nextPage") -}}
     {{ if ne .Title "main" }} 
         <div style="display:flex; justify-content:flex-start; flex:1; margin: 20px;">
-            {{if or (eq .Type "faq") (eq .Type "whats-new")}}
-            <a class="next" href="{{.RelPermalink}}#faq-components" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
-            {{else}}
             <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
-            {{ end }}
                 <div style="border: 1px solid var(--font-blue-color); padding:5px; display: flex;">
                     <div style="display: block; margin-left: 13px; padding: 0px;">
                         <p style="display:flex; margin:15px 0 7px 0; font: normal normal 12px/13px zoho-puvi-medium; letter-spacing: 1.2px; color: var(--font-blue-color); opacity: 1;">START NOW</p>
@@ -96,7 +92,7 @@
     {{ if ne .Title "main" }}
         <div style="display:flex; justify-content:flex-start; flex:1; margin-left: 20px;">
             {{if or (eq .Type "faq") (eq .Type "whats-new")}}
-            <a class="next" href="{{.RelPermalink}}#faq-components" title="{{.Title}}" style="margin-left: 0px; cursor: pointer;">
+            <a class="next" href="{{.RelPermalink}}#catalyst-components" title="{{.Title}}" style="margin-left: 0px; cursor: pointer;">
             {{else}}
             <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-left: 0px; cursor: pointer;">
             {{end}}
@@ -119,7 +115,7 @@
                 <p style="font-size: 15px; justify-content:flex-end;" class="page-title">{{.Title}}</p>
             </div>
             {{if or (eq .Type "faq") (eq .Type "whats-new")}}
-            <a class="next" href="{{.RelPermalink}}#faq-components" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
+            <a class="next" href="{{.RelPermalink}}#catalyst-components" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
             {{else}}
             <a class="next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px; cursor: pointer;">
             {{end}}

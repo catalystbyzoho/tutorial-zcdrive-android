@@ -888,7 +888,7 @@ display: block;
   width: 90%; 
   margin:30px auto 30px auto;
 }
-#faq-components{
+#catalyst-components{
   position: absolute; 
   top:370px;
 }
@@ -904,7 +904,35 @@ display: block;
   .faq-article{
     top:0px; 
   }
-  #faq-components{
+  #catalyst-components{
     top:280px;
+  }
+}
+
+/* What's new page style */
+.whatsnew-sidebar{
+  height: auto !important; 
+  background-color: var(--body-color); 
+  width: 240px;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 100px;
+  align-self: flex-start; 
+  flex: 0 0 20em
+}
+.whatsnew-article{
+  top:100px; 
+  width: 97%; 
+  margin:30px auto 30px auto;
+}
+.whats-new-right-menu{
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 100px;
+    align-self: flex-start;
+}
+@media only screen and (max-width: 936px) {
+  .whatsnew-article{
+    top:0px; 
   }
 }
