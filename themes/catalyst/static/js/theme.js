@@ -44,7 +44,9 @@ switchDarkMode = function () {
     }
 
     const setModeButtonIcon = (mode) => {
-        darkModeTogglebuttonElement.innerHTML = modeIcons[mode]
+        if(darkModeTogglebuttonElement){
+            darkModeTogglebuttonElement.innerHTML = modeIcons[mode];
+        }
     }
 
     const applyCustomDarkModeSettings = (mode) => {

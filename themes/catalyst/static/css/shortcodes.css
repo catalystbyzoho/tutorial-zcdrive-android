@@ -1,0 +1,83 @@
+/* Note */
+.note{
+	padding: .75rem 1.25rem;
+	margin-bottom: 1rem;
+}
+.note-info{
+	font: normal normal normal 13px/20px zoho-puvi-regular;
+  color: var(--font-body-color);
+  background-color: var(--gray-color);	
+	border: 1px solid var(--gray-border-color);
+	border-radius: 2px;
+}
+
+
+/* code */
+.switch {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: flex;
+}
+.shortcode-code{
+  position: relative;
+  background: var(--menu-color);
+  text-align: left;
+  overflow: hidden;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.cpy-btn{
+  box-shadow: 0px 0px 6px #C7C7C729;
+  font: 13px/26px zoho-puvi-medium; 
+  padding: 0 10px;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background: var(--body-color);
+  color: var(--font-body-color);
+  cursor: pointer;
+}
+#preCodeBlock{
+  font: normal normal normal 13px/19px Roboto-Mono;
+  font-weight: inherit;
+  line-height: 24px;
+  color: var(--font-menu-color);
+  white-space: pre;
+}
+.shortcode-code-light{
+  background: #F6F7F8;
+  color: #000000;
+}
+.shortcode-cpy-btn-light{
+  background: #FFFFFF;
+  color: #393939;
+}
+.shortcode-icon {
+  background: var(--edit-icon) no-repeat -117px -25px;
+  background-color: var(--body-color);
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 6px #c7c7c729;
+  cursor: pointer;
+}
+.shortcode-light-icon-clicked {
+  background: url('/images/LightPages.svg') no-repeat -121px -29px;
+  background-color: #FFFFFF;
+}
+.shortcode-cpy-btn-dark{
+  background: #171717;
+  color: #DEDEDE;
+}
+.shortcode-code-dark{
+  background: #212124;
+  color: #F0F0F0;
+}
+.shortcode-dark-icon-clicked {
+  background: url('/images/DarkPages.svg') no-repeat -121px -29px;
+  background-color: #171717;
+}

@@ -860,8 +860,20 @@ display: block;
 .tutorial-page{
   margin:100px 0 0 0;
 }
+.tutorial-select-filter{
+  display: flex; 
+  margin-left: auto;
+}
+@media only screen and (max-width: 450px) {
+  .tutorial-list .input-icons{
+    width: 100%;
+  }
+  .tutorial-list .input-field{
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 991px) {
-  .tutorial-list{
+  .tutorial-select-filter{
     display: none;
   }
   .tutorial-page{
