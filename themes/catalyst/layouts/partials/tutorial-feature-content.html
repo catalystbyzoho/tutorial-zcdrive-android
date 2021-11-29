@@ -11,6 +11,7 @@
       <div class="search-icon"></div>
       <input class="input-field" 
       type="text" 
+      id="tutorialLocalSearch"
       placeholder="Search Topics & Tutorials"
       >
     </div>
@@ -103,10 +104,11 @@
       var showableContent = document.querySelectorAll(`.filterContent.${level}.${language}.${duration}`);
     }
     if(showableContent.length == 0){
-      document.getElementById("demo1").innerHTML = `<p style="margin: auto;">No Tutorial is available for this filter</p> `;
+      document.getElementById("demo1").innerHTML = "";
     }
     else{
-      for(var i=0;i<=showableContent.length;i++){
+      for(var i=0;i<showableContent.length;i++){
+
           var url = showableContent[i].getAttribute("url");
           var time = showableContent[i].getAttribute("duration");
           if(time == "forty-mins"){
@@ -121,11 +123,11 @@
           var node = document.createElement("div");
           
           node.innerHTML = `
-            <a href=${url}>
+            <a href=${url} class="tutorialSearchFun">
               <div class="feature-card feature">
                 <div style="display: flex;">
-                  <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${showableContent[i].getAttribute("level")}</p>
-                  <p style="background-color: var(--menu-color); color:var(--font-menu-color); padding:5px; margin-right:10px; font-size: 12px; text-transform: uppercase;">${time}</p>
+                  <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
+                  <p class="tutorial-box-text">${time}</p>
                 </div>
                   <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">${showableContent[i].getAttribute("name")}</p>
                   <p class="feature-p">${showableContent[i].getAttribute("content")}</p>

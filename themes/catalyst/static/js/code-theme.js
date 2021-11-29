@@ -7,7 +7,6 @@ window.onload = () => {
     }
     const theme = document.getElementsByName('codetheme');
     for (var i = 0; i < theme.length; i++) {
-      console.log(theme[i]);
       theme[i].classList.remove('light');
       theme[i].classList.add('dark');
       theme[i].classList.remove('light1');
@@ -23,7 +22,6 @@ window.onload = () => {
   function clickHandler(e) {
     const themeSwitcher = document.getElementsByName('theme-switch');
     if (e.checked) {
-      console.log("if");
       for (var i = 0; i < themeSwitcher.length; i++) {
         themeSwitcher[i].checked = true;
       }
@@ -39,9 +37,7 @@ window.onload = () => {
       }
     } 
     else {
-      console.log("else"+themeSwitcher.length);
       for (var i = 0; i < themeSwitcher.length; i++) {
-        console.log("for");
         themeSwitcher[i].checked = false;
       }
       const theme = document.getElementsByName('codetheme');

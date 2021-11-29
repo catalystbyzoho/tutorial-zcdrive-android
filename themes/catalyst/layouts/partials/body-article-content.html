@@ -1,12 +1,10 @@
 <div style="margin:101px 25px 0 41px;" class="top-point" id="container">
-
-  {{if not (in .Params.hide "breadcrumb")}}
+  
     <nav id="ariane" aria-label="breadcrumb">
         <ol class="ariane">
             {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
         </ol>
     </nav>
-  {{end}}
 
   {{ if ne .Type "docs" }}
     <div class="input-icons" id="innerSearchBar">

@@ -940,27 +940,15 @@ article section.page {
     align-items: stretch;
     -webkit-box-pack: end !important;
     justify-content: flex-end !important; }
-    article section.page div.chevrons a {
-      display: flex;
-      align-items: center !important;
-      -webkit-box-align: center !important;
-      justify-content: flex-end !important;
-      max-width: 70%; }
-      article section.page div.chevrons a.prev {
-        display: none; }
-      article section.page div.chevrons a.next div {
-        text-align: right;
-        justify-content: flex-end;
-        padding: 20px; }
-      article section.page div.chevrons a label {
-        font-size: 24px;
-        font-weight: 700;
-        cursor: pointer; }
-      article section.page div.chevrons a p {
-        font-size: 15px;
-        padding: 0px;
-        margin: 0px;
-        text-align: left; }
+    article section.page div.chevrons a.prev {
+      display: none; }
+    article section.page div.chevrons a.next div {
+      text-align: right;
+      justify-content: flex-end; }
+    article section.page div.chevrons a label {
+      font-size: 24px;
+      font-weight: 700;
+      cursor: pointer; }
 
 article section.page {
   line-height: 24px; }
@@ -1039,6 +1027,9 @@ article section.page div.content {
       color: var(--font-body-color); }
   article section.page div.content .table-width {
     width: 550px; }
+  @media screen and (min-width: 0px) and (max-width: 760px) {
+    article section.page div.content .table-width {
+      width: 100%; } }
   article section.page div.content .red {
     display: inline;
     border: 1px solid red;

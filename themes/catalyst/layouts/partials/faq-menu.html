@@ -62,18 +62,3 @@
   {{- end}}
  {{- end}}
 {{- end}}
-
-<script type="text/javascript">
-    var matches = document.querySelectorAll(`li[data-nav-id$="${window.location.pathname}"]`);
-    if (matches.length > 0) {
-        var menu = matches[0];
-        menu.classList.add("active");
-
-        var maxDepth = 10; // Avoid infinite loop !
-        var nextAncestor = menu.closest("li[data-nav-id]");
-        while (maxDepth-- >= 0 && nextAncestor !== null) {
-            nextAncestor.classList.add("parent");
-            nextAncestor = nextAncestor.parentNode.closest("li[data-nav-id]");
-        }
-    }
-</script>

@@ -1,0 +1,118 @@
+.catalyst-logo{
+    background: url('/images/CatalystLogo.svg') no-repeat 0 0;
+    width: 28px;
+    height: 32px;
+}
+.logo {
+    border-bottom: 1px solid var(--hr-color);
+    height: 75px;
+    position: fixed;
+    width: 370px;
+    z-index: 2;
+    top: 0px;
+    display: flex;
+    background-color: transparent;
+}
+.menu-title {
+    text-align: left;
+    font: normal normal 600 12px/13px zoho-puvi-semibold;
+    letter-spacing: 2.4px;
+    color: var(--font-body-color);
+    opacity: 1;
+    margin-bottom: 20px;
+}
+.custom-select{
+    text-align: left;
+    font: normal normal normal 14px/17px zoho-puvi-regular !important;
+    padding: 8.5px 10px !important;
+    color: var(--font-body-color);
+    background-color: var(--menu-color);
+    border: 1px solid var(--hr-color) !important;
+    outline: none !important; 
+    box-shadow: 0 0 0 0 !important; 
+}
+/* stepper menu style */
+
+.StepProgress {
+    position: relative;
+    padding-left: 45px;
+    list-style: none;
+}
+.StepProgress::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 10px;
+    height: 85.5%;
+    border-left: 1px solid var(--step-color);
+    margin-top: 50px;
+}
+.StepProgress-item {
+    position: relative;
+    counter-increment: list;
+}
+.StepProgress-item:not(:last-child) {
+    padding-bottom: 5px;
+}
+.StepProgress-item::before {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    height: 65px;
+    width: 10px;
+}
+.StepProgress-item::after {
+    content: '\2022';
+    display: inline-block;
+    position: absolute;
+    padding-top: 0px;
+    width: 21px;
+    height: 21px;
+    top: 3px;
+    left: -40.4px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid var(--step-color);
+    color: var(--step-color);
+    border-radius: 50%;
+    background-color: var(--body-color);
+}
+.StepProgress-item.is-done::before {
+    border-left: 1px solid var(--font-blue-color);
+}
+.StepProgress-item.is-done::after {
+    content: "\2713";
+    font-size: 12px;
+    padding-top: 1px;
+    color: var(--font-blue-color);
+    text-align: center;
+    border: 1px solid var(--font-blue-color);
+    background-color: var(--body-color);
+}
+.StepProgress-item.current::after {
+    content: '\2022';
+    padding-top: 0px;
+    width: 21px;
+    height: 21px;
+    top: 3px;
+    left: -40.4px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--font-blue-color) !important;
+    border: 1px solid var(--font-blue-color);
+    background-color: var(--body-color);
+}
+.StepProgress-child{
+    background-color: var(--step-color); 
+    width:5px; 
+    height: 5px; 
+    border-radius: 50%; 
+    margin-top: 7px;
+}
+.childactive{
+    background-color: var(--font-blue-color);
+}

@@ -1,7 +1,7 @@
 <div class="expand">
     <div class="expand-label" style="cursor: pointer; background-color: var(--menu-color); padding:15px 20px 0px 20px; border: 1px solid var(--hr-color); margin-top: 20px;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-up';});});">
         <h1 style="margin:0;"></h1>
-        <h6 style="font:16px/19px zoho-puvi-semibold; margin:0;" ref="{{ with .Get "id" }}{{.}}{{end}}">
+        <h6 style="font:16px/19px zoho-puvi-semibold; margin:0;" class="faq-question" ref="{{ with .Get "id" }}{{.}}{{end}}">
             {{ with .Get "question" }} {{.}} {{end}}
         </h6>
         <a class="anchor highlight" id="{{ with .Get "id" }}{{.}}{{end}}"></a>

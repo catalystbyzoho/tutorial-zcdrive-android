@@ -395,9 +395,7 @@ article section.page {
                     margin-top: 1px;     
                 }
             }
-            
         }
-
     }
 
     div.chevrons {
@@ -411,21 +409,13 @@ article section.page {
         -webkit-box-pack: end!important;
         justify-content: flex-end!important;
 
-        a{
-            display: flex;
-            align-items: center!important;
-            -webkit-box-align: center!important;
-            justify-content: flex-end!important;
-            
-            max-width: 70%;
-                        
+        a{              
             &.prev{
                 display: none
             }
             &.next div{
                 text-align: right;
                 justify-content: flex-end;
-                padding: 20px;
             }
 
             label{
@@ -433,16 +423,7 @@ article section.page {
                 font-weight: 700;
                 cursor: pointer;
             }
-            p{
-                font-size: 15px;
-                padding: 0px;
-                margin: 0px;
-                text-align: left;
-            }
-            
-        }
-
-        
+        }     
     }
 }
 article section.page {
@@ -555,6 +536,11 @@ article section.page div.content{
     }
     .table-width{
         width: 550px;
+    } 
+    @media screen and (min-width: 0px) and (max-width : 760px) {
+        .table-width{
+            width: 100%;
+        } 
     }
 
     .red{

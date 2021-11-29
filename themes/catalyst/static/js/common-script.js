@@ -1,3 +1,9 @@
+// Set Theme at initialSetup
+var initial_theme_setup = document.getElementById('dark-mode-button');
+initial_theme_setup.innerHTML='<div class="light-icon"></div><div>Light theme</div>';
+document.getElementById("checkbox-light").checked=true;
+document.getElementById("checkbox-dark").checked=false;
+
 // Active Link Script
     var activelink = window.location.pathname.split("/")[1];
     if(activelink == "docs"){
@@ -59,3 +65,24 @@
         } 
       });
     }
+
+// Suggestion script  
+    function initialSetup() {
+      $(".request-sec").show(), $(".feedback-sec").hide(), $(".reponse-sec").hide()
+    }
+    
+    function submitRating(e) {
+      $("[name=was_this_helpful]").val(e), "Yes" === e ? submitFeedback() : ($(".yes-no").hide(), $(".want-feature").hide(), $(".rating-form").addClass("full-width"), $(".feedback-sec").show())
+    }
+    
+    function hideFeedbackSec() {
+      $(".yes-no").show(), $(".want-feature").show(), $(".rating-form").removeClass("full-width"), $(".feedback-sec").hide()
+    }
+    
+    function submitFeedback(e) {
+      var a = $("[name=was_this_helpful]").val(),
+        s = $("#comments").val(),
+        i = $("#feedback_email").val();
+      $("[name=feedback]").val(s), $("[name=email]").val(i), $("[name=url]").val(location.href), "Yes" !== a && "No" !== a || $("#ratingForm").submit(), $(".request-sec").hide(), $(".reponse-sec").show(), $(".want-feature").show(), $(".rating-form").removeClass("full-width")
+    }
+    initialSetup();
