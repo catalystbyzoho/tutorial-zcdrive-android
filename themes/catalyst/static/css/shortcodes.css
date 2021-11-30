@@ -14,70 +14,158 @@
 
 /* code */
 .switch {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  display: flex;
-}
-.shortcode-code{
   position: relative;
-  background: var(--menu-color);
-  text-align: left;
-  overflow: hidden;
-  padding: 15px;
-  box-sizing: border-box;
-  margin-bottom: 30px;
-}
-.cpy-btn{
-  box-shadow: 0px 0px 6px #C7C7C729;
-  font: 13px/26px zoho-puvi-medium; 
-  padding: 0 10px;
+  display: flex;
+  margin:0;
   height: 24px;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-transform: uppercase;
-  background: var(--body-color);
-  color: var(--font-body-color);
+  top: 0px;
+  right: 0px;
+  float: right;
+}
+.switch input {
+  opacity: 0;
+}
+.code-light-icon {
+  background: url('/images/LightPages.svg') no-repeat -121px -29px;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
   cursor: pointer;
 }
-#preCodeBlock{
-  font: normal normal normal 13px/19px Roboto-Mono;
-  font-weight: inherit;
-  line-height: 24px;
-  color: var(--font-menu-color);
-  white-space: pre;
+.code-dark-icon {
+  background: url('/images/DarkPages.svg') no-repeat -514px -29px !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 4px !important;
+  margin-top: 0 !important;
+  cursor: pointer;
 }
-.shortcode-code-light{
-  background: #F6F7F8;
-  color: #000000;
-}
-.shortcode-cpy-btn-light{
-  background: #FFFFFF;
-  color: #393939;
-}
-.shortcode-icon {
-  background: var(--edit-icon) no-repeat -117px -25px;
-  background-color: var(--body-color);
+.theme-icon {
+  padding-top: 4.7px;
+  box-shadow: 0px 0px 6px #c7c7c729;
+  background-color: var(--body-color) !important;
   width: 24px;
   height: 24px;
-  margin-left: 12px;
-  border-radius: 2px;
-  box-shadow: 0px 0px 6px #c7c7c729;
+  margin-top: 0px !important;
+}
+
+pre.shortcode-light{
+  background-color: #F6F7F8 !important;
+  border-color: #EAEEF5 !important;
+}
+.shortcode-light code{
+  color: #000000 !important;
+}
+pre.shortcode-dark{
+  background-color: #212124 !important;
+  border-color: #2E2E38 !important;
+}
+.shortcode-dark code{
+  color: #F0F0F0 !important;
+}
+.shortcode-light .copy-to-clipboard p{
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+.shortcode-dark .copy-to-clipboard p{
+  background-color: #171717 !important;
+  color: #F0F0F0 !important;
+}
+.shortcode-light .theme-icon{
+  background-color: #FFFFFF !important;
+}
+.shortcode-dark .theme-icon{
+  background-color: #171717 !important;
+}
+
+/* Panel with adjustment  */
+#panel .hideCopyBtn .copy-to-clipboard{
+  display: none;
+}
+#panel .switch{
+  top: 10px;
+  right: 15px;
+}
+#panel .copy-to-clipboard{
+  margin-top: -50px;
+  margin-right: 36px;
+}
+#panel .panel-header{
+  padding: 10px 15px;
+  background-color: var(--menu-color);
+  color: var(--font-menu-color);
+  border: 0;
+  width: 90%;
+  overflow-x: auto;
+}
+#panel .panel-body{
+  background-color: var(--body-color);
+  padding: 15px;
+  border-top: 1px solid var(--hr-color);
+}
+#view-adjust.panel-body{
+  height: 150px;
+}
+#panel .panel-footer{
+  display: flex;
+  justify-content: center;
+  background-color: var(--menu-color);
+  position: relative;
+  border: 0;
+  border-top: 1px solid var(--hr-color);
+  color: var(--font-blue-color);
+  padding: 10px 15px;
+}
+.adjust-button{
+  font: normal normal medium 14px/26px zoho-puvi-medium !important;
+  color: var(--font-blue-color);
   cursor: pointer;
 }
-.shortcode-light-icon-clicked {
-  background: url('/images/LightPages.svg') no-repeat -121px -29px;
-  background-color: #FFFFFF;
+#view-adjust.fadecontent {
+  position: relative;
 }
-.shortcode-cpy-btn-dark{
-  background: #171717;
-  color: #DEDEDE;
+#view-adjust.fadecontent::after {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent, var(--body-color));
+  pointer-events: none;
 }
-.shortcode-code-dark{
-  background: #212124;
+
+#panel.shortcode-light .panel-header{
+  background-color: #F6F7F8;
+  color: #000000;
+}
+#panel.shortcode-dark .panel-header{
+  background-color: #212124;
   color: #F0F0F0;
 }
-.shortcode-dark-icon-clicked {
-  background: url('/images/DarkPages.svg') no-repeat -121px -29px;
+#panel.shortcode-light .panel-body{
+  background-color: #FFFFFF;
+  color: #000000;
+  border-top: 1px solid #EAEEF5;
+}
+#panel.shortcode-dark .panel-body{
   background-color: #171717;
+  color: #F0F0F0;
+  border-top: 1px solid #2E2E38;
+}
+#panel.shortcode-light .panel-footer{
+  background-color: #F6F7F8;
+  color: #000000;
+  border-top: 1px solid #EAEEF5;
+}
+#panel.shortcode-dark .panel-footer{
+  background-color: #212124;
+  color: #F0F0F0;
+  border-top: 1px solid #2E2E38;
+}
+#panel.shortcode-light #view-adjust.fadecontent::after {
+  background: linear-gradient(transparent, #FFFFFF);
+}
+#panel.shortcode-dark #view-adjust.fadecontent::after {
+  background: linear-gradient(transparent, #171717);
 }

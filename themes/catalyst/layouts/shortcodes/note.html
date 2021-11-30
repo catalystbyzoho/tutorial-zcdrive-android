@@ -1,7 +1,1 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
-<div class="note{{- " " -}}{{- if .IsNamedParams -}}
-{{- with .Get "theme" -}}note-{{.}}{{- else -}}note-info{{- end -}}
-{{- else -}}
-	{{- with .Get 0 -}}note-{{.}}{{- else -}}note-info{{- end -}}
-{{- end -}} 
-" role="note">{{- .Inner -}}</div>
+<div class="note note-info" role="note">{{- .Inner -}}</div>

@@ -7,13 +7,26 @@
   article section.page pre {
     border-radius: .2rem;
     overflow: auto;
-    padding: .5rem; }
+   }
     article section.page pre .copy-to-clipboard {
       float: right;
       position: relative;
-      height: 47px;
-      right: -30px;
-      top: 0px;
+      height: 24px;
+      background-color: var(--body-color);
+      box-shadow: 0px 0px 6px #c7c7c729;
+      text-transform: uppercase;
+}
+.copy-to-clipboard p{
+  margin: 0px !important;
+  box-shadow: 0px 0px 6px #C7C7C729; 
+  cursor:pointer; 
+  font: normal normal 13px/26px zoho-puvi-medium !important; 
+  background-color: var(--body-color); 
+  color: var(--font-body-color); 
+  height:24px; 
+  width: auto; 
+  padding:0px 8px; 
+  border: none;
 }
   article section.page pre[class*="language-"] {
     overflow: auto;
@@ -161,12 +174,12 @@ h6:hover .anchor {
   right: 100%;
   bottom: 50%;
   margin-right: 5px;
-  margin-bottom: -6px;
+  margin-bottom: 0px;
   transform: translateY(50%); }
 
 .tooltipped-w:before {
-  top: 50%;
-  bottom: 50%;
+  top: 28%;
+  bottom: 0;
   left: -5px;
   margin-top: 1px;
   border-left-color: rgba(0, 0, 0, 0.8); }

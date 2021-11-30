@@ -58,24 +58,11 @@ jQuery(document).ready(function() {
 
                 clipInit = true;
             }
-
-            code.before('<span class="copy-to-clipboard"><p style="box-shadow: 0px 0px 6px #C7C7C729; cursor:pointer; font: normal normal 13px/26px zoho-puvi-medium; background-color: var(--copy-background); color: var(--copy-font); height:24px; width: auto; padding:0px 8px; border: none;">COPY</p></span>');
+            code.before('<span class="copy-to-clipboard"><p>COPY</p></span>');
             $('.copy-to-clipboard').on('mouseleave', function() {
                 $(this).attr('aria-label', null).removeClass('tooltipped tooltipped-s tooltipped-w');
-            });
+            });   
         }
-        
-        $(document).ready(function(){
-            if(document.getElementById("hidecopy")){
-                document.querySelectorAll("pre#hidecopy span.copy-to-clipboard")[0].style.display="none";
-            }
-            if(document.querySelector("code[data] div#java pre span"))
-                document.querySelector("code[data] div#java pre span").remove();
-            if(document.querySelector("code[data] div#nodejs pre span"))
-                document.querySelector("code[data] div#nodejs pre span").remove();
-            if(document.querySelector("code[data] div#python pre span"))
-                document.querySelector("code[data] div#python pre span").remove();
-        });
     });
 
     // allow keyboard control for prev/next links
@@ -118,12 +105,3 @@ var getUrlParameter = function getUrlParameter(sPageURL) {
         return undefined;
     }
 };
-
-// clear auto create pre code block
-var autoclear = document.querySelectorAll("pre code pre code");
-for(var i=0;i<autoclear.length;i++){
-    autoclear[i].parentNode.parentNode.parentNode.querySelectorAll("label.panelswitch div.theme-icon")[0].style.marginTop = "0px";
-    var temp = autoclear[i].innerHTML;
-    autoclear[i].parentNode.parentNode.style.paddingTop = "25px";
-    autoclear[i].parentNode.parentNode.innerHTML = temp;
-}

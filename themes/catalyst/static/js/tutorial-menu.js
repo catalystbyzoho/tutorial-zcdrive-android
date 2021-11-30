@@ -1,5 +1,4 @@
 var matches = document.querySelectorAll(`li[data-nav-id$="${window.location.pathname}"]`);
-
 if (matches.length > 0) {
     var menu = matches[0];
     menu.classList.add("active");
