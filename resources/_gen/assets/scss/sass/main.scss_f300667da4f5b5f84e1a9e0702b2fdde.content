@@ -118,8 +118,7 @@ body {
       position: fixed;
       flex: 0 0 23.2em;
       -webkit-box-flex: 0;
-      height: 100vh;
-      overflow-y: auto; }
+      height: 100vh; }
     body article section.page {
       -webkit-box-flex: 1;
       flex: 1 auto;
@@ -248,8 +247,10 @@ article > aside {
     padding: 13px 20px 30px 30px; }
   article > aside .menu {
     list-style-type: none;
-    margin-top: 147px;
-    padding-left: 21px !important; }
+    margin-top: 127px;
+    padding-left: 21px !important;
+    height: calc(100vh - 130px);
+    overflow: auto; }
     article > aside .menu h6 {
       font: 16px/19px zoho-puvi-semibold;
       letter-spacing: 0px;

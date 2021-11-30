@@ -22,8 +22,10 @@ article>aside {
 
     .menu {
         list-style-type: none;
-        margin-top: 147px;
+        margin-top: 127px;
         padding-left: 21px !important;
+        height: calc(100vh - 130px);
+        overflow: auto;
         h6 {
             font: 16px/19px zoho-puvi-semibold;
             letter-spacing: 0px;
