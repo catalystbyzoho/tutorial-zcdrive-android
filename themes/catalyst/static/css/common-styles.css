@@ -544,6 +544,12 @@ display: block;
         text-align: center;
         margin-bottom: 12px;
     }
+    .main-head-title{
+      text-align: left; 
+      color: var(--font-body-color); 
+      font: normal normal 600 40px/60px zoho-puvi-semibold; 
+      margin-bottom: 40px;
+    }
     .main .content {
         font: normal normal normal 15px/26px zoho-puvi-regular;
         letter-spacing: 0px;
@@ -554,6 +560,14 @@ display: block;
     }
     #mainArticleSearch{
       display: none;
+    }
+    @media only screen and (max-width: 500px) {
+        .main .title {
+          font: normal normal 600 30px/48px zoho-puvi-bold;
+        }
+        .main-head-title{
+          font: normal normal 600 30px/40px zoho-puvi-semibold; 
+        }
     }
     @media only screen and (max-width: 991px) {
         .main{
@@ -581,6 +595,11 @@ display: block;
       background: var(--whats-new-icon) no-repeat -199px -40px;
       width: 40px;
       height: 40px;
+    }
+    @media only screen and (max-width: 400px) {
+      .feature{
+        width: 330px !important;
+      }
     }
     @media only screen and (max-width: 991px) {
         #indexFeatures .row{
@@ -654,6 +673,12 @@ display: block;
         text-align: left; 
         color: var(--font-body-color); 
         font: normal normal 600 40px/60px zoho-puvi-semibold;
+        margin-bottom: 15px !important;
+      }
+      .faq-sub-text{
+        text-align: left; 
+        color: var(--font-body-color); 
+        font: normal normal 600 24px/35px zoho-puvi-semibold;
         margin-bottom: 15px !important;
       }
       .accordion1 {
@@ -859,6 +884,11 @@ display: block;
         border-radius: 2px;
         opacity: 1;
       }
+      @media only screen and (max-width: 500px) {
+        .faq-text{
+          font: normal normal 600 30px/45px zoho-puvi-semibold;
+        }
+      }
 
 /* Tutorial list features */
 .tutorial-list{
@@ -1014,12 +1044,14 @@ display: block;
 }
 .prev-text{
   margin:18px 71px 7px 0; 
+  text-align: start;
   font: normal normal 12px/13px zoho-puvi-medium; 
   letter-spacing: 1.2px; 
   color: var(--font-blue-color); 
 }
 .next-text{
-  margin:18px 0 7px 0; 
+  margin:18px 0 7px 0;
+  text-align: end; 
   font: normal normal 12px/13px zoho-puvi-medium; 
   letter-spacing: 1.2px; 
   color: var(--font-blue-color); 
@@ -1049,7 +1081,14 @@ display: block;
       display: none;
   }
   .chevrons{
-      height: 55px;
+      height: 73px;
+      border: none !important;
+  }
+  .prev-text{
+    margin-top: 29px; 
+  }
+  .next-text{
+    margin-top: 29px; 
   }
 }
 @media (min-width: 600px) {

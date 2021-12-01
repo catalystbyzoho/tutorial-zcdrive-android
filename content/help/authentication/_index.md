@@ -29,14 +29,12 @@ The document is divided into five pages to cover the five features of Catalyst A
 
 To install it manually, you must execute this command from the Node.js function’s directory using your terminal.
 
-{{%code%}}
-scope=ZohoCatalyst.cache.CREATE
+{{%code%}}    scope=ZohoCatalyst.cache.CREATE
 {{%/code%}}
 
 If we enter the number of jobs as 2, the associated function, which returns the name object, is called two times parallelly and the input is passed to it. The output of the first iteration is generated as:
 
-{{%code%}}
-{
+{{%code%}}    {
     "project_details": {
     "id": 57127989012782,
     "project_name": "ShipmentTracking"

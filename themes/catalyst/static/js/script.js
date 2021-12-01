@@ -64,44 +64,4 @@ jQuery(document).ready(function() {
             });   
         }
     });
-
-    // allow keyboard control for prev/next links
-    jQuery(function() {
-        jQuery('.nav-prev').click(function(){
-            location.href = jQuery(this).attr('href');
-        });
-        jQuery('.nav-next').click(function() {
-            location.href = jQuery(this).attr('href');
-        });
-    });
-    jQuery(document).keydown(function(e) {
-      // prev links - left arrow key
-      if(e.which == '37') {
-        jQuery('.nav.nav-prev').click();
-      }
-      // next links - right arrow key
-      if(e.which == '39') {
-        jQuery('.nav.nav-next').click();
-      }
-    });
-
-    $('article a:not(:has(img)):not(.btn)').addClass('highlight');
 });
-
-// Get Parameters from some url
-var getUrlParameter = function getUrlParameter(sPageURL) {
-    var url = sPageURL.split('?');
-    var obj = {};
-    if (url.length == 2) {
-        var sURLVariables = url[1].split('&'),
-            sParameterName,
-            i;
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-            obj[sParameterName[0]] = sParameterName[1];
-        }
-        return obj;
-    } else {
-        return undefined;
-    }
-};

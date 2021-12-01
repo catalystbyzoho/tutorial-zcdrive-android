@@ -9,7 +9,7 @@
         <h1 class="faq-text">Catalyst Component help resources</h1>
         <ol>
           {{ range .help_component }}
-          <h3 class="faq-text" style="font-size: 30px;">{{ replaceRE "_" " " .title }}</h3>
+          <h3 class="faq-sub-text">{{ replaceRE "_" " " .title }}</h3>
           <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true" style="justify-content: center; display: grid;">
               {{ range .featuredpoints }}
                 <div style="margin-bottom: 20px;">

@@ -6,7 +6,7 @@
       {{ range .feature_item }}
       <div>
         <a href="{{.url}}">
-        <div class="feature-card feature" style="height: 218px; width: 360px;">
+        <div class="feature-card feature" style="height: 218px;">
             <div class="{{.icon}}" style="margin:20px 0;"></div>
             <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">{{ .name | title }}</p>
             <p class="feature-p" style="color: var(--font-lite-body-color);">{{ .content | markdownify }}</p>
