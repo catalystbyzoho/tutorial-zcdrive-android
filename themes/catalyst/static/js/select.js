@@ -28,8 +28,12 @@ var x, i, j, selElmnt, a, b, c;
             }
           }
           h.click();
-          filterContent();
-          filterLanguage();
+          if (typeof panelSelect === 'function') {
+            a.addEventListener("onclick", panelSelect(this));
+          }
+          if (typeof filterContent === 'function') {
+            a.addEventListener("onclick", filterContent());
+          }
       });
       b.appendChild(c);
     }

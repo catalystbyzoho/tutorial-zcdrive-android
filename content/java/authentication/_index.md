@@ -8,11 +8,13 @@ weight= 1
 +++
 
 # Authentication
+
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
 
 {{%image src="/images/help/data-store/delete.jpg" class="w70" alt="delete-table" %}}{{%/image%}}
 
 ### Introduction
+
 You can perform the following actions using Authentication from the remote console:
 * Add or remove the end-users of your application
 * Enable or disable their user accounts in your application
@@ -28,14 +30,12 @@ The document is divided into five pages to cover the five features of Catalyst A
 
 To install it manually, you must execute this command from the Node.js function’s directory using your terminal.
 
-{{%code%}}
-scope=ZohoCatalyst.cache.CREATE
+{{%code%}}    scope=ZohoCatalyst.cache.CREATE
 {{%/code%}}
 
 If we enter the number of jobs as 2, the associated function, which returns the name object, is called two times parallelly and the input is passed to it. The output of the first iteration is generated as:
 
-{{%code%}}
-{
+{{%code%}}    {
     "project_details": {
     "id": 57127989012782,
     "project_name": "ShipmentTracking"
@@ -102,6 +102,7 @@ The following values can be set for each parameter definition for a function:
 Every Catalyst project contains a default event listener that is created when the project is created. The behavior and functionality of the default event listener is completely different from that of a custom event listener. The default event listener is used to link a Catalyst component to a target function, and passes the component data to the function when it is invoked. 
 
 The following table describes the list of Catalyst components and the event occurrences in them that can be associated with the default event listener:
+{{%divtag%}}
 
 | Format      | Example |
 | :--- | :---: |
@@ -109,6 +110,8 @@ The following table describes the list of Catalyst components and the event occu
 | YYYY-MM-DD      | 2020-01-20      |
 | YYYY/MM/DD hh:mm:ss      | 2020/01/20 23:54:30     |
 | YYYY-MM-DDThh:mm:ss.sTZD      | 2020-01-20T05:19:31.665523 + 00:00      |
+
+{{%/divtag%}}
 
 {{%note%}} **Note:** Specifying the platform does not prevent the user from accessing other platforms of the application. However, it defines the primary platform that the user will access from their device and sets default values for opening the application in the appropriate medium.{{%/note%}}
 

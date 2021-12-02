@@ -1,12 +1,12 @@
-<pre id="panel">
+<pre id="panel" style="position: relative;" {{ with .Get "key" }} class="{{.}} panel-select-block" {{end}}>
+	<div class="customselect panel-select">
+		<select class="custom-select">
+			<option value="Java" selected>Java</option>
+			<option value="NodeJS">Node JS</option>
+			<option value="Python">Python</option>
+		</select>
+	</div>
 	<label class="switch">
-		<div class="customselect" style="margin-right: 63px;">
-			<select class="custom-select tutorial-filter">
-				<option value="Java" selected>Java</option>
-				<option value="NodeJS">Node JS</option>
-				<option value="Python">Python</option>
-			</select>
-		  </div>
 		<input name="theme-switch" type="checkbox" onclick="clickHandler(this)">
 		<div class="theme-icon">
 			<div name="icontheme" class="code-light-icon"></div>
@@ -14,12 +14,33 @@
 	</label>
 	<div>
 		{{- with .Get "header" -}}
-		<div class="panel-header" style="width: 70%;">
+		<div class="panel-header">
 			{{- htmlUnescape . | markdownify -}}
 		</div>
 		{{- end -}}
 		<div class="panel-body">
-			<code>{{.Inner}}</code>
+			<code></code>
 		</div>
 	</div>
 </pre>
+<div {{ with .Get "id" }} id="{{.}}" {{end}} {{ with .Get "key" }} class="{{.}} select-panel hide" {{end}} >{{.Inner}}</div>
+
+<script>
+	var s = document.querySelectorAll(".panel-select-block");
+	for(var i=0;i<s.length;i++){
+		var key = s[i].classList[0];
+		var opt = s[i].querySelector(`.${key} select.custom-select`);
+		var id_value = "Java";
+		var get_text = document.querySelector(`.${key}.select-panel #${id_value} code`).innerHTML;
+		var put_text = document.querySelector(`.${key} .panel-body code`);
+		put_text.innerHTML=get_text;
+	}
+	function panelSelect(e){
+		var key = e.closest("pre").classList[0];
+		var opt = e.closest("pre").querySelector(`.${key} select.custom-select`);
+		var id_value = opt.value;
+		var get_text = document.querySelector(`.${key}.select-panel #${id_value} code`).innerHTML;
+		var put_text = document.querySelector(`.${key} .panel-body code`);
+		put_text.innerHTML=get_text;
+	}
+</script>

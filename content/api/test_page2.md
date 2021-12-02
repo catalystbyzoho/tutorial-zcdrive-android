@@ -9,7 +9,7 @@ weight= 3
 {{% section path="/api/test_page2/" id="TestPage2" %}}
 
 <!-- Leftcontent -->
-{{%divtag LeftContent%}}
+{{%divtag class="LeftContent"%}}
 
 ### Fourth File
 
@@ -37,13 +37,13 @@ You will receive notifications in your Catalyst console about the updates of the
 
 {{%/divtag%}}
 <!-- Rightcontent -->
-{{%divtag RightContent%}}
+{{%divtag class="RightContent"%}}
 
-{{% panel_without_adjustment header="Sample Code" %}}
-    { 
-        “status”: “success”, 
-        “data”: “The table will be truncated Shortly. Kindly Check 
-    }
+{{% panel_without_adjustment header="Who invented the Light Bulb?" %}}    import java.io.InputStreamReader; 
+    import java.util.ArrayList; 
+    import java.util.logging.Level; 
+    import java.util.logging.Logger; 
+    import javax.servlet.ServletInputStream; 
 {{% /panel_without_adjustment %}}
 
 {{%/divtag%}}

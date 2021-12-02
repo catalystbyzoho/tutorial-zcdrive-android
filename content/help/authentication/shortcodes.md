@@ -261,8 +261,8 @@ YAllow you to highlight information or put it in a box. They create a colored bo
 
 ### Button
 
-{{%divtag red%}}Success{{%/divtag%}}
-{{%divtag green%}}Success{{%/divtag%}}
+{{%divtag class="red"%}}Success{{%/divtag%}}
+{{%divtag class="green"%}}Success{{%/divtag%}}
 
 
 ### Panel without Adjustment
@@ -285,9 +285,48 @@ YAllow you to highlight information or put it in a box. They create a colored bo
 
 ### Panel with Select
 
-{{% panel_with_select header="Who invented the Light Bulb?" %}}    import java.io.InputStreamReader; 
-    import java.util.ArrayList; 
-    import java.util.logging.Level; 
-    import java.util.logging.Logger; 
-    import javax.servlet.ServletInputStream; 
-{{% /panel_without_adjustment %}}
+{{% panel_with_select header="Who invented the Light Bulb?" key="key1" %}}
+{{% divtag id="Java" %}}
+    import java.key1.util.ArrayList; 
+    import java.key1.util.logging.Level; 
+    import java.key1.util.logging.Logger; 
+    import javax.key1.servlet.ServletInputStream;
+{{% /divtag %}} 
+{{% divtag id="NodeJS" %}}
+    import NodeJS.key1.util.ArrayList; 
+    import NodeJS.key1.util.logging.Level; 
+    import NodeJS.key1.util.logging.Logger; 
+    import NodeJSx.key1.servlet.ServletInputStream;
+{{% /divtag %}} 
+{{% divtag id="Python" %}}
+    import Python.key1.util.ArrayList; 
+    import Python.key1.util.logging.Level; 
+    import Python.key1.util.logging.Logger; 
+    import Pythonx.key1.servlet.ServletInputStream;
+{{% /divtag %}} 
+{{% /panel_with_select %}}
+
+{{% panel_with_select header="Who invented the Light Bulb?" key="key2" %}}
+{{% divtag id="Java" %}}
+    import java.key2.util.ArrayList; 
+    import java.key2.util.logging.Level; 
+    import java.key2.util.logging.Logger; 
+    import javax.key2.servlet.ServletInputStream;
+{{% /divtag %}} 
+{{% divtag id="NodeJS" %}}
+    import NodeJS.key2.util.ArrayList; 
+    import NodeJS.key2.util.logging.Level; 
+    import NodeJS.key2.util.logging.Logger; 
+    import NodeJSx.key2.servlet.ServletInputStream;
+{{% /divtag %}} 
+{{% divtag id="Python" %}}
+    import Python.key2.util.ArrayList; 
+    import Python.key2.util.logging.Level; 
+    import Python.key2.util.logging.Logger; 
+    import Pythonx.key2.servlet.ServletInputStream;
+{{% /divtag %}} 
+    import java.key2.util.ArrayList; 
+    import java.key2.util.logging.Level; 
+    import java.key2.util.logging.Logger; 
+    import javax.key2.servlet.ServletInputStream;
+{{% /panel_with_select %}}

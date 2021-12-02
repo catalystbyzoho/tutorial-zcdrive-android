@@ -169,3 +169,72 @@ pre.shortcode-dark{
 #panel.shortcode-dark #view-adjust.fadecontent::after {
   background: linear-gradient(transparent, #171717);
 }
+
+/* Panel Select */
+#panel .hide{
+  display: none;
+}
+.panel-select{
+  width: fit-content !important;
+  width: -moz-fit-content !important;
+  border: none;
+  box-shadow: 0px 0px 6px #c7c7c729;
+  position: absolute;
+  right: 115px;
+  top: 10px;
+}
+.panel-select .select-selected {
+  background-color: var(--body-color);
+  color: var(--font-body-color);
+  border: none;
+  height: 24px;
+  padding-top: 1px;
+}
+.panel-select .select-selected:after{
+  top: 12px;
+}
+.panel-select .select-selected.select-arrow-active:after{
+  top: 7px;
+}
+.shortcode-light .panel-select .select-selected {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.shortcode-dark .panel-select .select-selected {
+  background-color: #171717;
+  color: #F0F0F0;
+}
+.shortcode-light .panel-select .select-selected:after{
+  border-color: #000000 transparent transparent transparent;
+}
+.shortcode-dark .panel-select .select-selected:after{
+  border-color: #F0F0F0 transparent transparent transparent;
+}
+.shortcode-light .panel-select .select-selected.select-arrow-active:after{
+  border-color: transparent transparent #000000 transparent;
+}
+.shortcode-dark .panel-select .select-selected.select-arrow-active:after{
+  border-color: transparent transparent #F0F0F0 transparent;
+}
+.shortcode-light .panel-select .select-items {
+  background-color: #F6F7F8;
+  border: 1px solid #EAEEF5;
+}
+.shortcode-dark .panel-select .select-items {
+  background-color: #212124;
+  border: 1px solid #2E2E38;
+}
+.shortcode-light .panel-select .select-items div{
+  color: #000000;
+}
+.shortcode-dark .panel-select .select-items div{
+  color: #F0F0F0;
+}
+.shortcode-light .panel-select .select-items div:hover, .shortcode-light .panel-select .same-as-selected {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+.shortcode-dark .panel-select .select-items div:hover, .shortcode-dark .panel-select .same-as-selected {
+  background-color: #171717 !important;
+  color: #F0F0F0 !important;
+}

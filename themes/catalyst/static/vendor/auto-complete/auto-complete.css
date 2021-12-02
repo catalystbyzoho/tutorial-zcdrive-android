@@ -3,6 +3,7 @@
     text-align: left;
     cursor: default;
     border-top: 0;
+    box-sizing: border-box;
     height: 320px !important;
     overflow-y: auto;
     transition: left 0.1s ease-in-out;
@@ -26,6 +27,7 @@
     white-space: nowrap;
     overflow: auto;
     text-overflow: ellipsis;
+    padding: 10px 20px;
     font: 14px/17px zoho-puvi-regular;
     color: var(--font-lite-body-color);
 }

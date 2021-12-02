@@ -72,14 +72,23 @@ $( document ).ready(function() {
                 "(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}" +
                     term+"(?:\\s?(?:[\\w]+)\\s?){0,"+numContextWords+"}");
             item.context = text;
+            var url="";
+            var path = [];
+            path=item.uri.split("/");
+            for(var i=3; i<path.length; i++){
+                url += path[i];
+                if( i+2 < path.length){
+                    url += " > ";
+                }
+            }
             return '<div class="autocomplete-suggestion" ' +
                 'data-term="' + term + '" ' +
                 'data-title="' + item.title + '" ' +
                 'data-uri="'+ item.uri + '" ' +
                 'data-context="' + item.context + '">' +
-                '» ' + item.title +
-                '<div class="context">' +
-                (item.context || '') +'</div>' +
+                item.title +
+                '<div class="context" style="padding-top: 5px">' +
+                (url || '') +'</div>' +
                 '</div>';
         },
         /* onSelect callback fires when a search suggestion is chosen */
