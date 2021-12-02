@@ -1,26 +1,21 @@
-.autocomplete-suggestions {
+.global-autocomplete-suggestions {
     font: 14px/17px zoho-puvi-regular;
     text-align: left;
     cursor: default;
     border-top: 0;
-    height: 320px !important;
+    max-height: 80% !important;
+    height: auto;
+    overflow: auto;
     transition: left 0.1s ease-in-out;
-    background-color: var(--body-color);
     position: fixed;
     z-index: 9999;
-    overflow: hidden;
-    overflow-y: auto;
     box-sizing: border-box;
-    left: 47px;
-    top: 131px;
-    width: 276px;
-    max-height: 320px;
-    border: 1px solid var(--hr-color);
-    border-radius: 0px 0px 5px 5px;
-    display: none;
-    
+    left: 252px;
+    top: 84px;
+    width: 70%;
+    border-radius: 0px 0px 5px 5px;    
 }
-.autocomplete-suggestion {
+.global-autocomplete-suggestion {
     cursor: pointer;
     padding: 12px 10px;
     line-height: 23px;
@@ -32,24 +27,34 @@
     color: var(--font-lite-body-color);
 }
 
-.autocomplete-suggestion b {
+.global-autocomplete-suggestion b {
     font-weight: normal;
     color: #1f8dd6;
 }
 
-.autocomplete-suggestion.selected {
+.global-autocomplete-suggestion.selected {
     font: 14px/17px zoho-puvi-regular;
     background: var(--menu-color);
     color: var(--font-blue-color);
 }
 
-.autocomplete-suggestion:hover {
+.global-autocomplete-suggestion:hover {
     font: 14px/17px zoho-puvi-regular;
     background: var(--menu-color);
     color: var(--font-blue-color);
 }
 
-.autocomplete-suggestion > .context {
+.global-autocomplete-suggestion > .context {
     font: 14px/17px zoho-puvi-regular;
     display: block;
+}
+.left-search-content{
+    width: 50%;
+    background-color: var(--body-color);
+    color: var(--font-body-color);
+}
+.right-search-content{
+    width: 50%;
+    background-color: var(--menu-color);
+    color: var(--font-menu-color);
 }

@@ -5,9 +5,9 @@
     License: http://www.opensource.org/licenses/mit-license.php
 */
 
-var autoComplete = (function(){
+var globalAutoComplete = (function(){
     // "use strict";
-    function autoComplete(options){
+    function globalAutoComplete(options){
         if (!document.querySelector) return;
 
         // helpers
@@ -41,7 +41,7 @@ var autoComplete = (function(){
                 // escape special characters
                 search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
                 var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
-                return '<div class="autocomplete-suggestion" data-val="' + item + '">' + item.replace(re, "<b>$1</b>") + '</div>';
+                return '<div class="global-autocomplete-suggestion" data-val="' + item + '">' + item.replace(re, "<b>$1</b>") + '</div>';
             },
             onSelect: function(e, term, item){}
         };
@@ -54,7 +54,7 @@ var autoComplete = (function(){
 
             // create suggestions container "sc"
             that.sc = document.createElement('div');
-            that.sc.className = 'autocomplete-suggestions '+o.menuClass;
+            that.sc.className = 'global-autocomplete-suggestions '+o.menuClass;
 
             that.autocompleteAttr = that.getAttribute('autocomplete');
             that.setAttribute('autocomplete', 'off');
@@ -66,7 +66,7 @@ var autoComplete = (function(){
                 if (!resize) {
                     that.sc.style.display = 'block';
                     if (!that.sc.maxHeight) { that.sc.maxHeight = parseInt((window.getComputedStyle ? getComputedStyle(that.sc, null) : that.sc.currentStyle).maxHeight); }
-                    if (!that.sc.suggestionHeight) that.sc.suggestionHeight = that.sc.querySelector('.autocomplete-suggestion').offsetHeight;
+                    if (!that.sc.suggestionHeight) that.sc.suggestionHeight = that.sc.querySelector('.global-autocomplete-suggestion').offsetHeight;
                     if (that.sc.suggestionHeight)
                         if (!next) that.sc.scrollTop = 0;
                         else {
@@ -81,19 +81,19 @@ var autoComplete = (function(){
             addEvent(window, 'resize', that.updateSC);
             document.body.appendChild(that.sc);
 
-            live('autocomplete-suggestion', 'mouseleave', function(e){
-                var sel = that.sc.querySelector('.autocomplete-suggestion.selected');
+            live('global-autocomplete-suggestion', 'mouseleave', function(e){
+                var sel = that.sc.querySelector('.global-autocomplete-suggestion.selected');
                 if (sel) setTimeout(function(){ sel.className = sel.className.replace('selected', ''); }, 20);
             }, that.sc);
 
-            live('autocomplete-suggestion', 'mouseover', function(e){
-                var sel = that.sc.querySelector('.autocomplete-suggestion.selected');
+            live('global-autocomplete-suggestion', 'mouseover', function(e){
+                var sel = that.sc.querySelector('.global-autocomplete-suggestion.selected');
                 if (sel) sel.className = sel.className.replace('selected', '');
                 this.className += ' selected';
             }, that.sc);
 
-            live('autocomplete-suggestion', 'mousedown', function(e){
-                if (hasClass(this, 'autocomplete-suggestion')) { // else outside click
+            live('global-autocomplete-suggestion', 'mousedown', function(e){
+                if (hasClass(this, 'global-autocomplete-suggestion')) { // else outside click
                     var v = this.getAttribute('data-val');
                     that.value = v;
                     o.onSelect(e, v, this);
@@ -102,7 +102,7 @@ var autoComplete = (function(){
             }, that.sc);
 
             that.blurHandler = function(){
-                try { var over_sb = document.querySelector('.autocomplete-suggestions:hover'); } catch(e){ var over_sb = 0; }
+                try { var over_sb = document.querySelector('.global-autocomplete-suggestions:hover'); } catch(e){ var over_sb = 0; }
                 if (!over_sb) {
                     that.last_val = that.value;
                     that.sc.style.display = 'none';
@@ -128,9 +128,9 @@ var autoComplete = (function(){
                 var key = window.event ? e.keyCode : e.which;
                 // down (40), up (38)
                 if ((key == 40 || key == 38) && that.sc.innerHTML) {
-                    var next, sel = that.sc.querySelector('.autocomplete-suggestion.selected');
+                    var next, sel = that.sc.querySelector('.global-autocomplete-suggestion.selected');
                     if (!sel) {
-                        next = (key == 40) ? that.sc.querySelector('.autocomplete-suggestion') : that.sc.childNodes[that.sc.childNodes.length - 1]; // first : last
+                        next = (key == 40) ? that.sc.querySelector('.global-autocomplete-suggestion') : that.sc.childNodes[that.sc.childNodes.length - 1]; // first : last
                         next.className += ' selected';
                         console.log(next);
                         that.value = next.getAttribute('data-val');
@@ -150,7 +150,7 @@ var autoComplete = (function(){
                 else if (key == 27) { that.value = that.last_val; that.sc.style.display = 'none'; }
                 // enter
                 else if (key == 13 || key == 9) {
-                    var sel = that.sc.querySelector('.autocomplete-suggestion.selected');
+                    var sel = that.sc.querySelector('.global-autocomplete-suggestion.selected');
                     if (sel && that.sc.style.display != 'none') { o.onSelect(e, sel.getAttribute('data-val'), sel); setTimeout(function(){ that.sc.style.display = 'none'; }, 20); }
                 }
             };
@@ -207,14 +207,14 @@ var autoComplete = (function(){
             }
         };
     }
-    return autoComplete;
+    return globalAutoComplete;
 })();
 
 (function(){
     if (typeof define === 'function' && define.amd)
-        define('autoComplete', function () { return autoComplete; });
+        define('globalAutoComplete', function () { return globalAutoComplete; });
     else if (typeof module !== 'undefined' && module.exports)
-        module.exports = autoComplete;
+        module.exports = globalAutoComplete;
     else
-        window.autoComplete = autoComplete;
+        window.globalAutoComplete = globalAutoComplete;
 })();

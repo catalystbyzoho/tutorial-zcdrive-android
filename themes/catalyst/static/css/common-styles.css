@@ -376,8 +376,8 @@ display: block;
     background: var(--shortlist-icon) no-repeat -76px -30px;
     width: 15px;
     height: 15px;
-    margin-top: 8px;
-    margin-right: 11px;
+    margin: 15px 0 0 15px;
+    position: absolute;
 }
 .logo {
     border-bottom: 1px solid var(--hr-color);
