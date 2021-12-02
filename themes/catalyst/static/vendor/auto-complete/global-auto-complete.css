@@ -1,4 +1,9 @@
 .global-autocomplete-suggestions {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: 84px auto 0 auto;
     font: 14px/17px zoho-puvi-regular;
     text-align: left;
     cursor: default;
@@ -7,11 +12,8 @@
     height: auto;
     overflow: auto;
     transition: left 0.1s ease-in-out;
-    position: fixed;
     z-index: 9999;
     box-sizing: border-box;
-    left: 252px;
-    top: 84px;
     width: 70%;
     border-radius: 0px 0px 5px 5px;    
 }

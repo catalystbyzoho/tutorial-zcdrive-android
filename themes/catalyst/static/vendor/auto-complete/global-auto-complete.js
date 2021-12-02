@@ -65,6 +65,7 @@ var globalAutoComplete = (function(){
                 var rect = that.getBoundingClientRect();
                 if (!resize) {
                     that.sc.style.display = 'block';
+                    that.sc.style.position = 'fixed';
                     if (!that.sc.maxHeight) { that.sc.maxHeight = parseInt((window.getComputedStyle ? getComputedStyle(that.sc, null) : that.sc.currentStyle).maxHeight); }
                     if (!that.sc.suggestionHeight) that.sc.suggestionHeight = that.sc.querySelector('.global-autocomplete-suggestion').offsetHeight;
                     if (that.sc.suggestionHeight)
