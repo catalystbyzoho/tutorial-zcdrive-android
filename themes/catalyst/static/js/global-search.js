@@ -81,20 +81,16 @@ $( document ).ready(function() {
                     url += " > ";
                 }
             }
-            return  '<div style="display: flex;">'+  
-                        '<div class="left-search-content">'+
-                            '<div class="global-autocomplete-suggestion" ' +
-                                'data-term="' + term + '" ' +
-                                'data-title="' + item.title + '" ' +
-                                'data-uri="'+ item.uri + '" ' +
-                                'data-context="' + item.context + 
-                            '">' + 
-                                item.title +
-                                '<div class="context" style="padding-top: 5px">' + (url || '') + '</div>' +
-                            '</div>'+
-                        '</div>'+
-                        '<div class="right-search-content">'+
-                        '</div>'+
+            return  '<div class="global-autocomplete-suggestion" onmouseover="storeSearchContent(this)"' +
+                        'data-term="' + term + '" ' +
+                        'data-title="' + item.title + '" ' +
+                        'data-desc="' + item.description + '" ' +
+                        'data-tags="' + item.tags + '" ' +
+                        'data-uri="'+ item.uri + '" ' +
+                        'data-context="' + item.context + 
+                    '">' + 
+                        item.title +
+                        '<div class="context" style="padding-top: 5px">' + (url || '') + '</div>' +
                     '</div>';
         },
         /* onSelect callback fires when a search suggestion is chosen */
@@ -104,3 +100,24 @@ $( document ).ready(function() {
         }
     });
 });
+
+function storeSearchContent(e){
+    var array = [];
+    var title = e.getAttribute("data-title");
+    var desc = e.getAttribute("data-desc");
+    var tags = e.getAttribute("data-tags");
+    var page = e.getAttribute("data-uri").split("/")[3];
+
+    var toc = document.querySelector("#toc");
+    toc.innerHTML="";
+    var query = document.querySelector(".right-search-content");
+    query.children[0].innerHTML = page+" - "+title;
+    query.children[1].innerHTML = desc;
+
+    array=tags.split(",");
+    for(var i=0;i<array.length;i++){
+        var ele = document.createElement("div");
+        ele.innerHTML = array[i];
+        toc.appendChild(ele);
+    }
+}

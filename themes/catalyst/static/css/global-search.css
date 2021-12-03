@@ -20,24 +20,38 @@
   padding-top: 13px;
   font-size: 25px;
   cursor: pointer;
-  background-color: var(--search-background-color);
+  background-color: var(--body-color);
   color: var(--font-menu-color);
   cursor: pointer;
 }
 .search-modal input[type=text] {
   border: none;
-  background-color: var(--search-background-color);
+  background-color: var(--body-color);
   opacity: none;
   outline: none !important; 
   box-shadow: 0 0 0 0; 
   width: 100%;
+  border-radius: 5px 0 0 0;
   color: var(--font-menu-color);
-  font: normal normal normal 14px/17px zoho-puvi-regular;
-  padding: 2px 0 0 60px;
+  font: 20px/22px zoho-puvi-regular;
+  padding: 0 0 0 60px;
+}
+.search-modal input::placeholder {/* Firefox */
+  color: var(--font-at-color);
+  font: 20px/22px zoho-puvi-regular;
+}
+.search-modal input:-ms-input-placeholder {/* Internet Explorer 10-11 */
+  color: var(--font-at-color);
+  font: 20px/22px zoho-puvi-regular;
+}
+.search-modal input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--font-at-color);
+  font: 20px/22px zoho-puvi-regular;
 }
 .search-modal .cancel-btn{
-  background-color: var(--search-background-color); 
+  background-color: var(--body-color); 
   padding: 26px 20px 0px 50px; 
+  border-radius: 0 5px 0 0;
   cursor: pointer; 
   font:14px/17px zoho-puvi-regular; 
   color: var(--font-menu-color);
@@ -45,8 +59,9 @@
 }
 .global-search-block{
   display: flex; 
-  background-color: var(--search-background-color); 
+  background-color: var(--body-color); 
   height: 64px;
+  border-radius: 5px 5px 0 0;
 }
 .search-results{
   max-height: 600px;

@@ -37,10 +37,15 @@ if(ls == "dark"){
     function openGlobalsearch(){
         var modal = document.getElementById("myModal");
         modal.style.display = "block";
+        var val_nul = document.getElementById('global-search-by');
+        if(val_nul){
+            val_nul.value = '';
+        }
     }
     function closeGlobalsearch(){
         var modal = document.getElementById("myModal");
         modal.style.display = "none";
+        document.getElementById("GlobalSearchResults").style.position="";
     }
 
 //To Avoid last line in API Template

@@ -42,6 +42,7 @@ var globalAutoComplete = (function(){
                 search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
                 var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
                 return '<div class="global-autocomplete-suggestion" data-val="' + item + '">' + item.replace(re, "<b>$1</b>") + '</div>';
+                
             },
             onSelect: function(e, term, item){}
         };
@@ -65,7 +66,8 @@ var globalAutoComplete = (function(){
                 var rect = that.getBoundingClientRect();
                 if (!resize) {
                     that.sc.style.display = 'block';
-                    that.sc.style.position = 'fixed';
+                    document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
+
                     if (!that.sc.maxHeight) { that.sc.maxHeight = parseInt((window.getComputedStyle ? getComputedStyle(that.sc, null) : that.sc.currentStyle).maxHeight); }
                     if (!that.sc.suggestionHeight) that.sc.suggestionHeight = that.sc.querySelector('.global-autocomplete-suggestion').offsetHeight;
                     if (that.sc.suggestionHeight)
@@ -78,10 +80,28 @@ var globalAutoComplete = (function(){
                                 that.sc.scrollTop = selTop + scrTop;
                         }
                 }
+                setInitialValue();
+
             }
             addEvent(window, 'resize', that.updateSC);
-            document.body.appendChild(that.sc);
 
+            var search_element = document.createElement("div");
+            search_element.setAttribute("id","GlobalSearchResults");
+            search_element.setAttribute("class","global-search-result-container");
+
+            var right_search_content = document.createElement("div");
+            right_search_content.setAttribute("class","right-search-content");
+            var search_content = `<h2 class="global-search-title"></h2>
+            <p class="global-search-desc"></p>
+            <div class="global-toc">
+            <div class="global-toc-title">ON THIS PAGE</div>
+            <div id="toc"></div>
+            </div>`;
+            right_search_content.innerHTML = search_content;
+            
+            document.body.appendChild(search_element);
+            document.getElementById("GlobalSearchResults").appendChild(that.sc);
+            document.getElementById("GlobalSearchResults").appendChild(right_search_content);
             live('global-autocomplete-suggestion', 'mouseleave', function(e){
                 var sel = that.sc.querySelector('.global-autocomplete-suggestion.selected');
                 if (sel) setTimeout(function(){ sel.className = sel.className.replace('selected', ''); }, 20);
@@ -99,6 +119,7 @@ var globalAutoComplete = (function(){
                     that.value = v;
                     o.onSelect(e, v, this);
                     that.sc.style.display = 'none';
+                    document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
                 }
             }, that.sc);
 
@@ -107,6 +128,7 @@ var globalAutoComplete = (function(){
                 if (!over_sb) {
                     that.last_val = that.value;
                     that.sc.style.display = 'none';
+                    document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
                     setTimeout(function(){ that.sc.style.display = 'none'; }, 350); // hide suggestions on fast input
                 } else if (that !== document.activeElement) setTimeout(function(){ that.focus(); }, 20);
             };
@@ -178,6 +200,7 @@ var globalAutoComplete = (function(){
                     } else {
                         that.last_val = val;
                         that.sc.style.display = 'none';
+                        document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
                     }
                 }
             };
@@ -219,3 +242,27 @@ var globalAutoComplete = (function(){
     else
         window.globalAutoComplete = globalAutoComplete;
 })();
+
+//Initial value
+function setInitialValue(){
+    var e = document.querySelector(".global-autocomplete-suggestion");
+    e.classList.add("selected");
+    var array = [];
+    var title = e.getAttribute("data-title");
+    var desc = e.getAttribute("data-desc");
+    var tags = e.getAttribute("data-tags");
+    var page = e.getAttribute("data-uri").split("/")[3];
+
+    var toc = document.querySelector("#toc");
+    toc.innerHTML="";
+    var query = document.querySelector(".right-search-content");
+    query.children[0].innerHTML = page+" - "+title;
+    query.children[1].innerHTML = desc;
+
+    array=tags.split(",");
+    for(var i=0;i<array.length;i++){
+        var ele = document.createElement("div");
+        ele.innerHTML = array[i];
+        toc.appendChild(ele);
+    }
+};
