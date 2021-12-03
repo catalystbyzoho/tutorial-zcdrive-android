@@ -106,17 +106,41 @@ function storeSearchContent(e){
     var title = e.getAttribute("data-title");
     var desc = e.getAttribute("data-desc");
     var tags = e.getAttribute("data-tags");
-    var page = e.getAttribute("data-uri").split("/")[3];
+    var uri = e.getAttribute("data-uri");
+    var page = uri.split("/")[3];
 
     var toc = document.querySelector("#toc");
     toc.innerHTML="";
     var query = document.querySelector(".right-search-content");
-    query.children[0].innerHTML = page+" - "+title;
-    query.children[1].innerHTML = desc;
-
+    query.children[0].innerHTML = page+" | "+title;
+    var url="",ref="",ref_id="";
+    var path = [];
+    path=uri.split("/");
+    for(var i=3; i<path.length; i++){
+        url += path[i];
+        if( i+2 < path.length){
+            url += " > ";
+        }
+    }
+    query.children[1].innerHTML = url;
+    query.children[2].innerHTML = desc;
     array=tags.split(",");
     for(var i=0;i<array.length;i++){
-        var ele = document.createElement("div");
+        var ele = document.createElement("a");
+        var identity = array[i].toLowerCase().split(" ");
+        if(identity.length > 1){
+            var ref_id="";
+            for(var j=0;j<identity.length;j++){
+                ref_id += identity[j];
+                if(j+1 < identity.length){
+                    ref_id += "-";
+                }
+            }
+            ref = uri+"#"+ref_id;
+        }else{
+            ref = uri+"#"+identity[0];
+        }
+        ele.setAttribute("href",ref);
         ele.innerHTML = array[i];
         toc.appendChild(ele);
     }

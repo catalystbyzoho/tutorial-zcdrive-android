@@ -126,3 +126,8 @@
     margin:10px 0; 
     cursor: pointer;
 }
+@media only screen and (max-width: 1020px) {
+    .themebutton {
+        bottom: 30px;
+    }
+}

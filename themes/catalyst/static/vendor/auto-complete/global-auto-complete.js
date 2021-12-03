@@ -92,6 +92,7 @@ var globalAutoComplete = (function(){
             var right_search_content = document.createElement("div");
             right_search_content.setAttribute("class","right-search-content");
             var search_content = `<h2 class="global-search-title"></h2>
+            <div class="context" style="text-align:center"></div>
             <p class="global-search-desc"></p>
             <div class="global-toc">
             <div class="global-toc-title">ON THIS PAGE</div>
@@ -251,17 +252,41 @@ function setInitialValue(){
     var title = e.getAttribute("data-title");
     var desc = e.getAttribute("data-desc");
     var tags = e.getAttribute("data-tags");
-    var page = e.getAttribute("data-uri").split("/")[3];
+    var uri = e.getAttribute("data-uri");
+    var page = uri.split("/")[3];
 
     var toc = document.querySelector("#toc");
     toc.innerHTML="";
     var query = document.querySelector(".right-search-content");
-    query.children[0].innerHTML = page+" - "+title;
-    query.children[1].innerHTML = desc;
-
+    query.children[0].innerHTML = page+" | "+title;
+    var url="",ref="";
+    var path = [];
+    path=uri.split("/");
+    for(var i=3; i<path.length; i++){
+        url += path[i];
+        if( i+2 < path.length){
+            url += " > ";
+        }
+    }
+    query.children[1].innerHTML = url;
+    query.children[2].innerHTML = desc;
     array=tags.split(",");
     for(var i=0;i<array.length;i++){
-        var ele = document.createElement("div");
+        var ele = document.createElement("a");
+        var identity = array[i].toLowerCase().split(" ");
+        var ref_id="";
+        if(identity.length > 1){
+            for(var j=0;j<identity.length;j++){
+                ref_id += identity[j];
+                if(j+1 < identity.length){
+                    ref_id += "-";
+                }
+            }
+            ref = uri+"#"+ref_id;
+        }else{
+            ref = uri+"#"+identity[0];
+        }
+        ele.setAttribute("href",ref);
         ele.innerHTML = array[i];
         toc.appendChild(ele);
     }

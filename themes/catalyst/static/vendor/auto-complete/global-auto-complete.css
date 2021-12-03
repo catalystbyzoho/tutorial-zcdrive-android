@@ -95,18 +95,22 @@
     text-transform: capitalize;
 }
 .global-search-desc{
-    text-align: center;
     font: normal normal normal 14px/20px zoho-puvi-regular;
     padding: 10px 0;
+    margin: 15px 0;
     color: var(--font-menu-color);
 }
 .global-toc{
     border: 1px solid var(--hr-color);
 }
-.global-toc div{
+.global-toc a{
+    display: block;
     font: normal normal normal 14px/26px zoho-puvi-regular;
     color: var(--font-menu-color);
-    padding: 5px 10px;
+    padding: 5px 20px;
+}
+.global-toc a:hover{
+    color: var(--font-blue-color);
 }
 .global-toc-title{
     text-align: left;
