@@ -46,6 +46,7 @@ if(ls == "dark"){
         var modal = document.getElementById("myModal");
         modal.style.display = "none";
         document.getElementById("GlobalSearchResults").style.position="";
+        document.getElementById("GlobalSearchResults").style.display="none";
     }
 
 //To Avoid last line in API Template
