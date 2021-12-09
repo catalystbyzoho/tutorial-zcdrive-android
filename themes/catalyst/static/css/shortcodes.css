@@ -4,7 +4,7 @@
 	margin-bottom: 1rem;
 }
 .note-info{
-	font: normal normal normal 13px/20px zoho-puvi-regular;
+	font: normal normal normal 14px/20px zoho-puvi-regular;
   color: var(--font-body-color);
   background-color: var(--gray-color);	
 	border: 1px solid var(--gray-border-color);
@@ -188,6 +188,7 @@ pre.shortcode-dark{
   color: var(--font-body-color);
   border: none;
   height: 24px;
+  width: 97px;
   padding-top: 1px;
 }
 .panel-select .select-selected:after{

@@ -16,7 +16,7 @@
       >
     </div>
     <div class="tutorial-select-filter">
-      <div class="customselect" style="margin-top: 10px;">
+      <div class="customselect">
         <select class="custom-select tutorial-filter">
             <option value="AllLevels" selected>All Levels</option>
             <option value="Beginner">Beginner</option>
@@ -24,7 +24,7 @@
             <option value="Hard">Hard</option>
         </select>
       </div>
-      <div class="customselect" style="margin-left: 40px; margin-top: 10px;">
+      <div class="customselect" style="margin-left: 20px;">
         <select class="custom-select tutorial-filter">
             <option value="AllLanguages" selected>All Languages</option>
             <option value="Java">Java</option>
@@ -32,7 +32,7 @@
             <option value="Python">Python</option>
         </select>
       </div>
-      <div class="customselect" style="margin-left: 40px; margin-top: 10px;">
+      <div class="customselect" style="margin-left: 20px;">
         <select class="custom-select tutorial-filter">
             <option value="AllDurations" selected>All Durations</option>
             <option value="forty-mins">40 mins</option>
@@ -129,9 +129,9 @@
                   <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
                   <p class="tutorial-box-text">${time}</p>
                 </div>
-                  <p class="mb-2 feature-h" style="font: normal normal 24px/28px zoho-puvi-medium;">${showableContent[i].getAttribute("name")}</p>
+                  <p class="mb-2 feature-h">${showableContent[i].getAttribute("name")}</p>
                   <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
-                  <p style="color: var(--font-blue-color); font-size: 13px; word-spacing: 10px;">
+                  <p style="color: var(--font-blue-color); word-spacing: 10px; font: 15px/16px zoho-puvi-regular;">
                     ${showableContent[i].getAttribute("language1")}
                     ${showableContent[i].getAttribute("language2")}
                     ${showableContent[i].getAttribute("language3")}

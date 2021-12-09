@@ -43,7 +43,7 @@
     height: 37px;
     right: 30px;
     position: absolute;
-    background-color: var(--menu-color);
+    background-color: var(--body-color);
     color: var(--font-lite-body-color);
     font: normal normal normal 13px/16px zoho-puvi-regular;
     border: 1px solid var(--hr-color);
@@ -53,12 +53,15 @@
     padding:10px;
     display: flex;
 }
+.theme:hover{
+    background-color: var(--menu-color);
+}
 .language{
     width: 120px;
     height: 37px;
     right: 170px;
     position: absolute;
-    background-color: var(--menu-color);
+    background-color: var(--body-color);
     color: var(--font-lite-body-color);
     font: normal normal normal 13px/16px zoho-puvi-regular;
     border: 1px solid var(--hr-color);
@@ -67,6 +70,9 @@
     box-shadow: 0 0 0 0;
     padding:10px;
     display: flex;
+}
+.language:hover{
+    background-color: var(--menu-color);
 }
 .light-icon{
     background: var(--lang-icon) no-repeat -430px -30px;

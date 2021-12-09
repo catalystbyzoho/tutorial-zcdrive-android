@@ -19,9 +19,9 @@
   <body data-url="{{ .RelPermalink }}">
     {{ partial "global-search.html" . }}
     <article>
-      <aside class="hide-sidebar" id="responsiveSidebar" style="background-color: var(--body-color);">
+      <aside class="hide-sidebar" id="responsiveSidebar" style="background-color: var(--body-color);overflow: auto;">
         {{ partial "tutorial-sidebar.html" . }}    
-        <ul class="stepper-menu StepProgress" style="margin-top: 185px; margin-left: 30px;">
+        <ul class="stepper-menu StepProgress" style="margin-top: 175px; margin-left: 30px;">
           {{- partial "tutorial-menu.html" . }}
         </ul> 
       </aside>

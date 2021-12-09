@@ -12,28 +12,38 @@
 
       <div class="d-md-none d-lg-none d-sm-block">
         <ol style="padding: 5px 20px;">
-            {{ range .faq_item }}
-            <button class="accordion1">{{ .question }}</button>
-            <div class="panel1">
-                <p class="feature-p">{{ .answer }}</p>
+          {{ range .faq_item }}
+          <div class="faq-block">
+            <div class="plus-icon"></div>
+            <div class="faq-ques">
+              {{ .question }}
             </div>
-            {{ end }}
-            <a href="{{ .link }}">
-              <button class="accordion2">View all FAQ</button>
-            </a>
+            <div class="faq-ans">
+              {{ .answer }}
+            </div>
+          </div>
+          {{ end }}
+          <a href="{{ .link }}">
+            <button class="view-all-faq">View all FAQ</button>
+          </a>
         </ol>
       </div>
 
       <div class="tab-content col-md-6 d-none d-md-block" style="padding-right:0px; padding-left: 0px !important; margin-left: auto;">
-        <div id="accordion1">
+        <div>
             {{ range .faq_item }}
-            <button class="accordion1">{{ .question }}</button>
-            <div class="panel1">
-                <p class="faq-p">{{ .answer }}</p>
+            <div class="faq-block">
+              <div class="plus-icon"></div>
+              <div class="faq-ques">
+                {{ .question }}
+              </div>
+              <div class="faq-ans">
+                {{ .answer }}
+              </div>
             </div>
             {{ end }}
             <a href="{{ .link }}">
-              <button class="accordion2">View all FAQ</button>
+              <button class="view-all-faq">View all FAQ</button>
             </a>
         </div>  
       </div>

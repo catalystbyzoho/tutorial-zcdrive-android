@@ -1,13 +1,14 @@
 /* To bold the text for menu open in sidebar */
-i.fa-angle-down + a{
-    font: normal normal 600 15px/18px zoho-puvi-semibold;
-    color: #000000;
+.down-mini-icon + a{
+    font: 15px/18px zoho-puvi-semibold;
+    color: var(--font-body-color);
 }
 
 /* Table of Contents */
 .TableOfContents{
   background-color:var(--menu-color); 
   border: 1px solid var(--hr-color);
+  border-radius: 4px;
 }
 .TableOfContents label{
   font: 13px/16px zoho-puvi-semibold; 
@@ -24,13 +25,15 @@ i.fa-angle-down + a{
 	height: 44px;
 	background: #F0483D 0% 0% no-repeat padding-box;
 	text-align: center;
-	border-radius: 1px;
+	border-radius: 4px;
   padding-top: 7px;
-  font: normal normal normal 15px/30px zoho-puvi-regular;
-  color: #F0F0F0;
-  margin-left: 22px;
-  margin-top:1px;
+  cursor: pointer;
   list-style: none;
+  font: normal normal normal 15px/30px zoho-puvi-regular;
+  color: #F0F0F0 !important;
+}
+.access-button:hover{
+  box-shadow: 0px 0px 20px #A2A2A21A;
 }
 .list {
   margin:9px 22.5px 0 22px;
@@ -48,7 +51,7 @@ i.fa-angle-down + a{
   width: 11px;
   height: 2px;
   margin-top: 0px;
-  border-radius: 2px;
+  border-radius: 4px;
   opacity: 1;
 }
 .header-block{
@@ -110,7 +113,7 @@ i.fa-angle-down + a{
 }
 .logo-company-name{
   font: 12px/14px zoho-puvi-regular; 
-  color: var(--font-body-color); 
+  color: var(--font-lite-body-color); 
   padding-left: 0px;
 }
 .close-p{
@@ -285,7 +288,10 @@ display: flex;
 margin: 20px 0 10px 0; 
 }
 .footer-links a:hover{
-color: var(--font-lite-body-color);
+color: var(--hover-color);
+}
+.flexbox a:hover{
+  color: var(--hover-color);
 }
 .footer-at-block{
 display: flex; 
@@ -319,6 +325,30 @@ display: block;
         color: var(--font-at-color);
         font: 15px/18px zoho-puvi-regular;
     }
+    textarea::-webkit-input-placeholder {
+      color: var(--font-at-color);
+      font: 15px/18px zoho-puvi-regular;
+    }
+    
+    textarea:-moz-placeholder { /* Firefox 18- */
+      color: var(--font-at-color);
+      font: 15px/18px zoho-puvi-regular;
+    }
+    
+    textarea::-moz-placeholder {  /* Firefox 19+ */
+      color: var(--font-at-color);
+      font: 15px/18px zoho-puvi-regular; 
+    }
+    
+    textarea:-ms-input-placeholder {
+      color: var(--font-at-color);
+      font: 15px/18px zoho-puvi-regular;  
+    }
+    
+    textarea::placeholder {
+      color: var(--font-at-color);
+      font: 15px/18px zoho-puvi-regular;
+    }
     .input-search {
         width: 100%;
         position: relative;
@@ -348,6 +378,9 @@ display: block;
         margin-left: 1px;
         background-color: transparent;
         border: 1px solid var(--hr-color);           
+    }
+    .input-field:hover, .input-field:focus{
+      box-shadow: 0px 0px 20px #A2A2A21A;
     }
     [type=button].input-field {
       color: var(--font-at-color);
@@ -452,17 +485,32 @@ display: block;
 
   .customselect {
     position: relative;
-    background-color: var(--menu-color);
+    background-color: var(--body-color);
+    font-size: 15px;
+    font-family: zoho-puvi-regular;
     color: var(--font-menu-color);
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid var(--hr-color);
+  }
+  .customselect:hover{
+    box-shadow: 0px 0px 20px #A2A2A21A;
   }
   .customselect select {
     display: none;
   }
-  .select-selected {
-      background-color: var(--menu-color);
-      color: var(--font-menu-color);
+  .tutorial-select-filter .select-selected {
+    width: 140px;
+    padding-top: 11px;
+  }
+  .tutorial-select-filter .select-selected:after {
+    top: 20px;
+  }
+  .tutorial-select-filter .select-selected.select-arrow-active:after {
+    top: 16px;
+  }
+  .tutorial-select-filter.select-selected {
+      background-color: var(--body-color);
+      color: var(--font-body-color);
   }
   .select-selected:after {
     position: absolute;
@@ -472,10 +520,10 @@ display: block;
     width: 0;
     height: 0;
     border: 4px solid transparent;
-    border-color: var(--font-menu-color) transparent transparent transparent;
+    border-color: var(--font-body-color) transparent transparent transparent;
   }
   .select-selected.select-arrow-active:after {
-    border-color: transparent transparent var(--font-menu-color) transparent;
+    border-color: transparent transparent var(--font-body-color) transparent;
     top: 12px;
   }
   .select-items div {
@@ -485,14 +533,15 @@ display: block;
   }
   .select-selected {
     padding: 4px 30px 0 10px;
-    border: 1px solid transparent;
+    border-radius: 4px;
     cursor: pointer;
   }
   .select-items {
     position: absolute;
-    background-color: var(--menu-color);
-    color: var(--font-menu-color);
+    background-color: var(--body-color);
+    color: var(--font-body-color);
     border: 1px solid var(--hr-color);
+    border-radius: 0 0 4px 4px;
     margin-top: 2px;
     top: 100%;
     left: 0;
@@ -503,13 +552,13 @@ display: block;
     display: none;
   }
   .select-items div:hover, .same-as-selected {
-    background-color: var(--body-color);
-    color: var(--font-body-color);
+    background-color: var(--menu-color);
+    color: var(--font-menu-color);
   }
 
   /* Tutorial apps */
   .tutorial-filter {
-    background-color: var(--menu-color);
+    background-color: var(--body-color);
     font: 14px/17px zoho-puvi-regular;
     padding-left: 8px;
     outline: none !important;
@@ -681,57 +730,93 @@ display: block;
         font: normal normal 600 24px/35px zoho-puvi-semibold;
         margin-bottom: 15px !important;
       }
-      .accordion1 {
+      .faq-block{
+        margin-bottom: 16px;
+        position: relative;
+      }
+      .faq-ques{
         font: normal normal normal 16px/24px zoho-puvi-regular;
         background-color: var(--menu-color);
         color: var(--font-menu-color);
         border: 1px solid var(--hr-color);
         cursor: pointer;
-        padding: 20px 21px 20px 16px;
+        padding: 15px 50px 15px 15px;
         width: 100%;
-        display: flex;
-        text-align: left;
-        margin-bottom:16px;
-        border-radius: 2px;
-        outline: none !important; 
-        box-shadow: 0 0 0 0;
+        border-radius: 4px;
       }
-      .accordion2 {
+      .faq-ques:hover{
+        font: normal normal bold 16px/24px zoho-puvi-regular;
+      }
+      .faq-ans{
+        font: normal normal normal 16px/24px zoho-puvi-regular;
+        background-color: var(--body-color);
+        color: var(--font-body-color);
+        border: 1px solid var(--hr-color);
+        border-top: none;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        border-radius: 0 0 4px 4px;
+        display: none;
+      }
+      .active-faq .faq-ques{
+        border-radius: 4px 4px 0 0;
+      }
+      .active-faq .faq-ans{
+        display: block;
+      }
+      .active-faq .faq-ques{
+        font: normal normal bold 16px/24px zoho-puvi-regular;
+      }
+      .plus-icon{
+        background: var(--edit-icon) no-repeat -316px -99px;
+        width: 13px;
+        height: 13px;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        cursor: pointer;
+      }
+      .active-faq .plus-icon{
+        background: var(--edit-icon) no-repeat -359px -104px;
+        top: 27px;
+        right: 22px;
+      }
+      .view-all-faq {
         background-color: var(--body-color);
         color: var(--font-blue-color);
+        font: 16px/24px zoho-puvi-medium;
         cursor: pointer;
         padding: 13px;
         width: 100%;
         margin-bottom:16px;
-        border-radius: 2px;
+        border-radius: 4px;
         outline: none !important; 
         border: 1px solid var(--hr-color);
         text-align: center;
         box-shadow: 0 0 0 0;
       }
-      .active1, .accordion1:hover {
-        background-color: var(--menu-color);
+      .view-all-faq:hover {
+        box-shadow: 0px 0px 20px #A2A2A21A;
       }
-      .accordion1:after {
-        content: '\002B';
-        color: var(--font-lite-body-color);
-        font-weight: 0;
-        float: right;
-        font-size: 30px;
-        margin-left: auto;
-      } 
-      .active1:after {
-        content: "\2212";
-      }
-      .panel1 {
-        padding: 0 18px;
-        background-color: var(--body-color);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-      }
+      
 
     /* Main Help Content */
+      .right-mini-icon{
+        background: var(--edit-icon) no-repeat -247px -101px;
+        width: 6px;
+        height: 9px;
+        margin: 3px 10px 0 -17px;
+        cursor: pointer;
+      }
+      .down-mini-icon{
+        background: var(--edit-icon) no-repeat -281px -101px;
+        width: 6px;
+        height: 9px;
+        margin: 3px 10px 0 -17px;
+        cursor: pointer;
+        transform: rotateZ(90deg);
+      }
       .character-icon{
         background: var(--character-icon) no-repeat -277px -45px;
         width: 26px;
@@ -874,15 +959,14 @@ display: block;
         height: 31px;
       }
       .container a:hover{
-        color: var(--font-body-color);
+        color: var(--hover-color);
       }
       .add_div{
-        width: 2px;
-        height: 10px;
-        margin-top: 7px;
+        width: 3px;
+        height: 15px;
+        margin-top: 4px;
         margin-right: 15px;
-        border-radius: 2px;
-        opacity: 1;
+        border-radius: 4px;
       }
       @media only screen and (max-width: 500px) {
         .faq-text{
@@ -906,9 +990,11 @@ display: block;
 }
 .tutorial-box-text{
   color:var(--font-menu-color); 
+  background-color: var(--menu-color);
+  font: 10px/12px zoho-puvi-medium;
   padding:5px; 
   margin-right:10px; 
-  font-size: 12px; 
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 .tutorial-select-filter{
@@ -1037,7 +1123,7 @@ display: block;
 }
 .arrow-block{
   padding:11px;
-  border: 1px solid var(--font-menu-color);
+  border: 1px solid var(--hr-color);
   width: 40px; 
   height: 40px;
   margin: 15px;
@@ -1137,7 +1223,7 @@ margin-top: 50px
 }
 .rating-form{
 border: 1px solid var(--hr-color);
-border-radius: 2px;
+border-radius: 4px;
 float: left;
 padding: 10px 20px;
 background-color: var(--menu-color);
@@ -1159,6 +1245,7 @@ background-color: var(--body-color);
 font-weight: 100;
 font-size: 14px;
 margin-bottom: 8px;
+font: normal normal normal 15px/24px zoho-puvi-regular;
 color: var(--font-menu-color);
 }
 .rating-form .form-group {
@@ -1173,6 +1260,11 @@ border: 1px solid var(--font-blue-color);
 cursor: pointer;
 height: 25px;
 display: flex;
+font: normal normal normal 13px/24px zoho-puvi-regular;
+}
+.yes-no-btn:hover {
+  background: var(--body-color);
+  opacity: 8;
 }
 .feedback-sec:after,
 .yes-no:after {
@@ -1191,7 +1283,7 @@ color:var(--font-body-color);
 .feedback-sec .btn {
 padding: 5px 22px;
 font-weight: 700;
-border-radius: 3px;
+border-radius: 4px;
 border-color: #9fb6e2;
 background-color: transparent
 }
@@ -1231,11 +1323,11 @@ font-size: 13px
 .email-field {
   background: var(--body-color);
   border: 1px solid var(--hr-color);
-  border-radius: 2px;
+  border-radius: 4px;
   opacity: 0.8;
   width: 100%;
   height: 76px;
-  font: normal normal normal 13px/16px zoho-puvi-regular;
+  font: normal normal normal 15px/18px zoho-puvi-regular;
 }
 .yes-no-container{
   display: flex;
@@ -1248,6 +1340,7 @@ font-size: 13px
   box-shadow: 0 0 0 0;
   width: 88px; 
   height: 34px; 
+  border-radius: 4px;
   border: none; 
   cursor: pointer;
 }
@@ -1258,8 +1351,85 @@ font-size: 13px
   outline: none !important; 
   box-shadow: 0 0 0 0;
   margin-left: 95px; 
+  border-radius: 4px;
   width: 88px; 
   height: 34px; 
   border: none; 
   cursor: pointer;
+}
+
+/* What's New */
+.whatsnew-article .tab{
+  padding: 40px 0;
+}
+.whatsnew-article .tab h1{
+  font: normal normal 600 20px/24px zoho-puvi-semibold !important;
+  margin: 0 0 15px 0 !important;
+}
+.whatsnew-article .tab h2{
+  font: normal normal 600 18px/22px zoho-puvi-semibold !important;
+  margin: 15px 0 20px 0 !important;
+}
+.timeline-round-icon{
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #B6B6B680;;
+  margin: 9px 7px 0 0;
+}
+.timeline-right-icon{
+  background: var(--edit-icon) no-repeat -247px -101px;
+  width: 6px;
+  height: 9px;
+  margin: 5px 10px 0 -17px;
+  cursor: pointer;
+}
+.time-line{
+  margin: 0 0 15px 40px;
+}
+.hide-timeline{
+  display: none;
+}
+.open-timeline .hide-timeline{
+  display: flex;
+  margin: 10px;
+}
+.open-timeline .timeline-right-icon{
+  background: var(--edit-icon) no-repeat -281px -101px;
+  transform: rotateZ(90deg);
+}
+.year{
+  font-family: zoho-puvi-regular;
+  color: var(--font-body-color);
+}
+.open-timeline .year{
+  color: var(--font-blue-color);
+}
+.date{
+  font: normal normal normal 12px/26px zoho-puvi-regular;
+  letter-spacing: 1.2px;
+  color: var(--font-lite-body-color);;
+  text-transform: uppercase;
+}
+.version{
+  font: normal normal normal 14px/26px zoho-puvi-regular;
+  color: var(--font-body-color);
+}
+.timeline-block{
+  display: flex;
+  cursor: pointer;
+}
+#timelines p{
+  margin: 0;
+}
+.active-timeline .timeline-right-icon{
+  background: var(--edit-icon) no-repeat -281px -101px;
+  transform: rotateZ(90deg);
+}
+.active-timeline .open-timeline .hide-timeline{
+  display: flex;
+  margin: 10px;
+}
+.active-version-block .timeline-round-icon{
+  background: var(--font-blue-color);
 }

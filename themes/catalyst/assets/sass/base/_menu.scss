@@ -49,7 +49,7 @@ article>aside {
 
         // first menu level
         >.dd-item {
-            font: 14px/18px zoho-puvi-regular;
+            font: 15px/18px zoho-puvi-regular;
             letter-spacing: 0px;
             color: var(--font-lite-body-color);
             margin:20px 0;
@@ -59,6 +59,9 @@ article>aside {
                     padding-left:0px;
                     display: none;
                     color: var(--font-lite-body-color);
+                }
+                >a:hover{
+                    color: var(--hover-color);
                 }
                 > i {
                     display: none;
@@ -74,6 +77,9 @@ article>aside {
                 text-decoration: none;
                 padding-left:8px;
                 color: var(--font-lite-body-color);
+            }
+            a:hover{
+                color: var(--hover-color);
             }
             > a{               
                 padding-left:8px;
@@ -95,140 +101,7 @@ article>aside {
                 >div {
                     * {
                         color: var(--font-blue-color);
-                    }
-                }
-            }
-
-            &.haschildren{
-                &.parent{
-                    >a {
-                    padding-left:8px;                   
-                    }
-                    ul {
-                        padding-left:0;
-                    }
-                }
-                li {
-                    margin:20px 0;
-                }
-                ul {
-                    padding-left:0px;                    
-                }
-                ul a {
-                    padding-left:0px;
-                }
-                ul i {
-                    margin-left: -19px;
-                    margin-right: 6px;
-                }
-            }
-
-            &.parent{
-                >a {
-                 
-                }
-                >ul {
-                    display: block;
-                }
-            }
-
-            &.active {
-                li {
-                    margin:20px 0;
-                }
-
-                >a{
-                    color:var(--font-blue-color);
-                }
-
-                >ul {
-                    display: block;
-                }
-            }
-            
-            &.alwaysopen>ul {
-                display: block
-            }
-            
-            &.parent>ul {
-                display: block
-            }
-        }
-    }
-
-    .docs-menu {
-        list-style-type: none;
-        margin-top: 7rem;
-        padding-left: 21px !important;
-        h6 {
-            font: 16px/19px zoho-puvi-semibold;
-            letter-spacing: 0px;
-            color: var(--font-body-color);
-            text-transform: uppercase;
-            opacity: 1;
-            padding:10px 0 0 0;
-            margin-left:-6px;
-            margin-bottom: 0px;
-        }
-        hr {
-            margin-top: 1.8rem;
-            margin-left:-50px;
-        }
-        ul {
-            display: none;
-        } 
-        .ddexp{
-            cursor: pointer;
-        }
-
-        // first menu level
-        >.dd-item {
-            font: 14px/18px zoho-puvi-regular;
-            letter-spacing: 0px;
-            color: var(--font-lite-body-color);
-            margin:20px 0;
-            opacity: 1;
-            margin-top: 0px;
-                >a{
-                    padding-left:0px;
-                    display: none;
-                    color: var(--font-lite-body-color);
-                }
-                > i {
-                    display: none;
-                }
-        } 
-
-        // menu items
-        .dd-item {
-            padding-left: 16px;
-            
-            list-style: none;
-            a {
-                text-decoration: none;
-                padding-left:8px;
-                color: var(--font-lite-body-color);
-            }
-            > a{               
-                padding-left:8px;
-            }
-            > i {
-                    color:var(--font-lite-body-color);
-                    font-size: 12px;
-                    padding-right:5px;
-            }
-            ul {
-                padding-left: 0px;
-            }
-            &.active {
-
-                >ul {
-                    display: block;
-                }
-
-                >div {
-                    * {
-                        color: var(--font-blue-color);
+                        font: 15px/18px zoho-puvi-semibold;
                     }
                 }
             }
@@ -319,7 +192,7 @@ article>aside {
 
         // first menu level
         >.dd-item {
-            font: normal normal normal 14px/17px zoho-puvi-regular;
+            font: normal normal normal 15px/18px zoho-puvi-regular;
             letter-spacing: 0px;
             color: var(--font-menu-color);
             margin:20px 0;
@@ -429,8 +302,6 @@ article>aside {
     .stepper-menu {
         list-style-type: none;
         margin-top: 127px;
-        height: calc(100vh - 200px);
-        overflow-y: auto;
         h6 {
             font: 16px/19px zoho-puvi-semibold;
             letter-spacing: 0px;
@@ -454,7 +325,7 @@ article>aside {
 
         // first menu level
         >.dd-item {
-            font: 14px/18px zoho-puvi-regular;
+            font: 15px/18px zoho-puvi-regular;
             letter-spacing: 0px;
             color: var(--font-lite-body-color);
             opacity: 1;

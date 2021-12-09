@@ -12,142 +12,162 @@ article:
   type : "whats-new"
 ---
 
-### CLI Versions
+# CLI Versions
 
-{{< tabs >}}
+{{% tabs id="whatsNewTab" %}}
 
 {{% tab "All" %}} 
 
-{{% tag class="newfeature" %}}
-{{%bold%}}
-2020 - 19, December
-{{%/bold%}}
+{{% container id="java---125" %}}
 
-**Java - 1.2.4**
+# 2021 - 25, September
+## Java - 1.2.5
 
-{{% divtag class="red" %}}New feature{{%/divtag%}}
-
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
-
-{{%link%}}Application Performance Monitoring{{%/link%}}
-
-{{%/tag%}}
-
-{{% tag class="enhancements" %}}
-
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+{{% divtag class="newfeatures" %}}
+{{% divtag class="new-feature-badge" %}}New feature{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
 {{%link%}}Application Performance Monitoring{{%/link%}}
+{{%/divtag%}}
 
-{{%/tag%}}
+{{% divtag class="enhancements" %}}
+{{% divtag class="enhancement-badge" %}}Enhancement{{%/divtag%}}
 
-{{% tag class="bugfixes" %}}
+**Major upgrades in Catalyst Android and iOS SDK Packages:** We have revamped the Catalyst Android and iOS SDK packages to include a host of tools for Authentication, Data Store, Functions, and more. You will also now be able to {{%link%}}register your mobile app packages{{%/link%}} in the Catalyst console to download the configuration files to include in your mobile apps. Refer to our revamped {{%link%}}Android SDK documentation{{%/link%}} and {{%link%}}iOS SDK documentation{{%/link%}} for help.
+{{%/divtag%}}
 
-{{% divtag class="red" %}}Bug-Fixes{{%/divtag%}}
+{{% divtag class="enhancements" %}}
+{{% divtag class="enhancement-badge" %}}Enhancement{{%/divtag%}}
 
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+**Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
+{{%/divtag%}}
 
-{{%link%}}Application Performance Monitoring{{%/link%}}
+{{% divtag class="bugfixes" %}}
+{{% divtag class="bug-fix-badge" %}}BUG fix{{%/divtag%}}
 
-{{%/tag%}}
+**Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
+{{%/divtag%}}
 
-{{% tag class="deprecated" %}}
+{{%/container%}}
 
-{{% divtag class="green" %}}Deprecated{{%/divtag%}}
+{{% container id="java---124" %}}
 
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+# 2020 - 19, December
+## Java - 1.2.4
 
-{{%link%}}Application Performance Monitoring{{%/link%}}
-
-{{%/tag%}}
-
-{{% tag class="removed" %}}
-
-{{% divtag class="red" %}}Removed{{%/divtag%}}
-
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
-
-{{%link%}}Application Performance Monitoring{{%/link%}}
-
-{{%/tag%}}
-
-{{% tag class="enhancements" %}}
-
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+{{% divtag class="newfeatures" %}}
+{{% divtag class="new-feature-badge" %}}New feature{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
 {{%link%}}Application Performance Monitoring{{%/link%}}
+{{%/divtag%}}
 
-{{%/tag%}}
+{{% divtag class="enhancements" %}}
+{{% divtag class="enhancement-badge" %}}Enhancement{{%/divtag%}}
 
-{{% tag class="enhancements" %}}
+**Major upgrades in Catalyst Android and iOS SDK Packages:** We have revamped the Catalyst Android and iOS SDK packages to include a host of tools for Authentication, Data Store, Functions, and more. You will also now be able to {{%link%}}register your mobile app packages{{%/link%}} in the Catalyst console to download the configuration files to include in your mobile apps. Refer to our revamped {{%link%}}Android SDK documentation{{%/link%}} and {{%link%}}iOS SDK documentation{{%/link%}} for help.
+{{%/divtag%}}
 
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+{{% divtag class="enhancements" %}}
+{{% divtag class="enhancement-badge" %}}Enhancement{{%/divtag%}}
+
+**Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
+{{%/divtag%}}
+
+{{% divtag class="bugfixes" %}}
+{{% divtag class="bug-fix-badge" %}}BUG fix{{%/divtag%}}
+
+**Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
+{{%/divtag%}}
+
+{{%/container%}}
+
+
+{{% container id="java---123" %}}
+
+# 2020 - 09, December
+## Java - 1.2.3
+
+{{% divtag class="deprecated" %}}
+{{% divtag class="deprecated-badge" %}}Deprecated{{%/divtag%}}
+
+**Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
+{{%/divtag%}}
+
+{{%/container%}}
+
+{{% container id="java---122" %}}
+
+# 2020 - 19, November
+## Java - 1.2.2
+
+{{% divtag class="removed" %}}
+{{% divtag class="removed-badge" %}}Removed{{%/divtag%}}
+
+**Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
+{{%/divtag%}}
+
+{{%/container%}}
+
+{{% container id="java---121" %}}
+
+# 2019 - 5, May
+## Java - 1.2.1
+
+{{% divtag class="newfeatures" %}}
+{{% divtag class="new-feature-badge" %}}New feature{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
-{{%link%}}Application Performance Monitoring{{%/link%}}
+{{%/divtag%}}
 
-{{%/tag%}}
+{{%/container%}}
 
-{{% tag class="enhancements" %}}
+{{% container id="java---120" %}}
 
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+# 2018 - 1, July
+## Java - 1.2.0
 
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
-
-{{%link%}}Application Performance Monitoring{{%/link%}}
-
-{{%/tag%}}
-
-{{% tag class="enhancements" %}}
-
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+{{% divtag class="newfeatures" %}}
+{{% divtag class="new-feature-badge" %}}New feature{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
-{{%link%}}Application Performance Monitoring{{%/link%}}
+{{%/divtag%}}
 
-{{%/tag%}}
+{{%/container%}}
 
-{{% tag class="enhancements" %}}
+{{% container id="java---119" %}}
 
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+# 2017 - 5, June
+## Java - 1.1.9
 
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
-
-{{%link%}}Application Performance Monitoring{{%/link%}}
-
-{{%/tag%}}
-
-{{% tag class="enhancements" %}}
-
-{{% divtag class="green" %}}Enhancements{{%/divtag%}}
+{{% divtag class="newfeatures" %}}
+{{% divtag class="new-feature-badge" %}}New feature{{%/divtag%}}
 
 **Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
 
-{{%link%}}Application Performance Monitoring{{%/link%}}
+{{%/divtag%}}
 
-{{%/tag%}}
+{{%/container%}}
 
 {{% /tab %}}
 
-{{< tab "Enhancements">}} 
-{{< /tab >}}
+{{% tab "Enhancements"%}} 
+{{% /tab %}}
 
-{{< tab "Bug-Fixes">}} 
-{{< /tab >}}
+{{% tab "Bug Fixes"%}} 
+{{% /tab %}}
 
-{{< tab "New Features">}} 
-{{< /tab >}}
+{{% tab "New Features"%}} 
+{{% /tab %}}
 
-{{< tab "Deprecated">}} 
-{{< /tab >}}
+{{% tab "Deprecated"%}} 
+{{% /tab %}}
 
-{{< tab "Removed">}} 
-{{< /tab >}}
+{{% tab "Removed"%}} 
+{{% /tab %}}
 
-{{< /tabs >}}
+{{% /tabs %}}

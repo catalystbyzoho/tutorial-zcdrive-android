@@ -247,13 +247,17 @@ var globalAutoComplete = (function(){
 //Initial value
 function setInitialValue(){
     var e = document.querySelector(".global-autocomplete-suggestion");
-    e.classList.add("selected");
+    if(e){
+        e.classList.add("selected");
+    }
     var array = [];
+    if(e){
     var title = e.getAttribute("data-title");
     var desc = e.getAttribute("data-desc");
     var tags = e.getAttribute("data-tags");
     var uri = e.getAttribute("data-uri");
     var page = uri.split("/")[3];
+    
 
     var toc = document.querySelector("#toc");
     toc.innerHTML="";
@@ -289,5 +293,6 @@ function setInitialValue(){
         ele.setAttribute("href",ref);
         ele.innerHTML = array[i];
         toc.appendChild(ele);
+    }
     }
 };

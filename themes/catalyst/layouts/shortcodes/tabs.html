@@ -3,10 +3,10 @@
 {{ if .Inner }}{{ end }}
 {{ $group := printf "tabs-%d" .Ordinal }}
 
-<div class="tabs">
+<div class="tabs" {{ with .Get "id" }} id="{{.}}" {{end}}>
 {{- range $index, $tab := .Scratch.Get $group -}}
   <input type="radio" name="{{ $group }}" id="{{ printf "%s-%d" $group $index }}" {{ if not $index }}checked="checked"{{ end }} />
-  <label for="{{ printf "%s-%d" $group $index }}">
+  <label for="{{ printf "%s-%d" $group $index }}" tabname="{{ replaceRE "(\\s)" ""  $tab.Name }}">
     {{- $tab.Name -}}
   </label>
   <div class="tab" id="{{ replaceRE "(\\s)" ""  $tab.Name }}">
@@ -14,34 +14,106 @@
   </div>
 {{- end -}}
 </div>
+
 <script>
-  var enhancement = document.querySelectorAll("div#Enhancements.tab");
-  var enhancement_values = document.querySelectorAll("div#All.tab div.enhancements");
-  for(var i=0;i<enhancement_values.length;i++){
-    enhancement[0].appendChild(enhancement_values[i].cloneNode(true));
+  function addMargin() {
+    window.scrollTo(0, window.pageYOffset - 80);
   }
+  window.addEventListener('hashchange', addMargin);
 
   var newfeature = document.querySelectorAll("div#NewFeatures.tab");
-  var newfeature_values = document.querySelectorAll("div#All.tab div.newfeature");
-  for(var i=0;i<newfeature_values.length;i++){
-    newfeature[0].appendChild(newfeature_values[i].cloneNode(true));
-  }
-
-  var bugfixes = document.querySelectorAll("div#Bug-Fixes.tab");
-  var bugfixes_values = document.querySelectorAll("div#All.tab div.bugfixes");
-  for(var i=0;i<bugfixes_values.length;i++){
-    bugfixes[0].appendChild(bugfixes_values[i].cloneNode(true));
-  }
-
+  var enhancement = document.querySelectorAll("div#Enhancements.tab");
+  var bugfixes = document.querySelectorAll("div#BugFixes.tab");
   var deprecated = document.querySelectorAll("div#Deprecated.tab");
-  var deprecated_values = document.querySelectorAll("div#All.tab div.deprecated");
-  for(var i=0;i<deprecated_values.length;i++){
-    deprecated[0].appendChild(deprecated_values[i].cloneNode(true));
+  var removed = document.querySelectorAll("div#Removed.tab");
+
+  var values = document.querySelectorAll("div#All.tab div.whats-new-container");
+  for(var i=0;i<values.length;i++){
+    newfeature[0].appendChild(values[i].cloneNode(true));
+    enhancement[0].appendChild(values[i].cloneNode(true));
+    bugfixes[0].appendChild(values[i].cloneNode(true));
+    deprecated[0].appendChild(values[i].cloneNode(true));
+    removed[0].appendChild(values[i].cloneNode(true));
   }
 
-  var removed = document.querySelectorAll("div#Removed.tab");
-  var removed_values = document.querySelectorAll("div#All.tab div.removed");
-  for(var i=0;i<removed_values.length;i++){
-    removed[0].appendChild(removed_values[i].cloneNode(true));
+  //Enhancements
+  var enh = document.querySelectorAll("div#Enhancements.tab .whats-new-container");
+  for(var i=0;i<enh.length;i++){
+    var ele = enh[i].querySelectorAll(".enhancements");
+    if(ele.length > 0){
+      var n = enh[i].children.length;
+      for(var j=4;j<n;j++){
+        if(enh[i].children[j] && !enh[i].children[j].classList.value.includes("enhancements")){
+          enh[i].children[j].remove();
+          j--;
+        }
+      }
+    }else{
+      enh[i].remove();
+    }
+  }
+
+  //BugFixes
+  var enh = document.querySelectorAll("div#BugFixes.tab .whats-new-container");
+  for(var i=0;i<enh.length;i++){
+    var ele = enh[i].querySelectorAll(".bugfixes");
+    if(ele.length > 0){
+      for(var j=4;j<enh[i].children.length;j++){
+        if(enh[i].children[j] && !enh[i].children[j].classList.value.includes("bugfixes")){
+          enh[i].children[j].remove();
+          j--;
+        }
+      }
+    }else{
+      enh[i].remove();
+    }
+  }
+
+  //NewFeatures
+  var enh = document.querySelectorAll("div#NewFeatures.tab .whats-new-container");
+  for(var i=0;i<enh.length;i++){
+    var ele = enh[i].querySelectorAll(".newfeatures");
+    if(ele.length > 0){
+      for(var j=4;j<enh[i].children.length;j++){
+        if(enh[i].children[j] && !enh[i].children[j].classList.value.includes("newfeatures")){
+          enh[i].children[j].remove();
+          j--;
+        }
+      }
+    }else{
+      enh[i].remove();
+    }
+  }
+
+  //Deprecated
+  var enh = document.querySelectorAll("div#Deprecated.tab .whats-new-container");
+  for(var i=0;i<enh.length;i++){
+    var ele = enh[i].querySelectorAll(".deprecated");
+    if(ele.length > 0){
+      for(var j=4;j<enh[i].children.length;j++){
+        if(enh[i].children[j] && !enh[i].children[j].classList.value.includes("deprecated")){
+          enh[i].children[j].remove();
+          j--;
+        }
+      }
+    }else{
+      enh[i].remove();
+    }
+  }
+
+  //Removed
+  var enh = document.querySelectorAll("div#Removed.tab .whats-new-container");
+  for(var i=0;i<enh.length;i++){
+    var ele = enh[i].querySelectorAll(".removed");
+    if(ele.length > 0){
+      for(var j=4;j<enh[i].children.length;j++){
+        if(enh[i].children[j] && !enh[i].children[j].classList.value.includes("removed")){
+          enh[i].children[j].remove();
+          j--;
+        }
+      }
+    }else{
+      enh[i].remove();
+    }
   }
 </script>

@@ -60,6 +60,12 @@
     <clipPath id="clip-path-19">
       <rect id="Rectangle_548" data-name="Rectangle 548" width="16" height="16" transform="translate(1044 1341)" fill="#eaeaea"/>
     </clipPath>
+    <clipPath id="clip-path-21">
+      <rect id="Rectangle_551" data-name="Rectangle 551" width="13" height="13" transform="translate(1536 2225)" fill="#ad3939"/>
+    </clipPath>
+    <clipPath id="clip-path-22">
+      <rect id="Rectangle_552" data-name="Rectangle 552" width="13" height="13" transform="translate(1562 2225)" fill="#ad3939"/>
+    </clipPath>
   </defs>
   <g id="LightPages" transform="translate(78 -3485)">
     <rect id="Rectangle_403" data-name="Rectangle 403" width="860" height="143" transform="translate(-78 3485)" fill="rgba(255,255,255,0)"/>
@@ -233,6 +239,21 @@
         <circle id="Ellipse_241" data-name="Ellipse 241" cx="6.27" cy="6.27" r="6.27" transform="translate(2.351 2.351)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
         <line id="Line_175" data-name="Line 175" x1="3.409" y1="3.409" transform="translate(13.05 13.05)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
       </g>
+    </g>
+    <g id="Up-2" data-name="Up" transform="translate(1074.5 2063.5) rotate(90)">
+      <path id="chevron-down_2_2" data-name="chevron-down (2)" d="M6,13,9.5,9,13,13" transform="translate(1517.5 891.5)" fill="none" stroke="#393939" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <g id="Up-3" data-name="Up" transform="translate(1108.5 2063.5) rotate(90)">
+      <path id="chevron-down_2_3" data-name="chevron-down (2)" d="M6,13,9.5,9,13,13" transform="translate(1517.5 891.5)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <g id="Mask_Group_253" data-name="Mask Group 253" transform="translate(-1298 1359)" clip-path="url(#clip-path-21)">
+      <g id="plus" transform="translate(1532.75 2221.75)">
+        <line id="Line_176" data-name="Line 176" y2="11.375" transform="translate(9.75 4.063)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <line id="Line_177" data-name="Line 177" x2="11.375" transform="translate(4.063 9.75)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+    </g>
+    <g id="Mask_Group_254" data-name="Mask Group 254" transform="translate(-1281 1359)" clip-path="url(#clip-path-22)">
+      <line id="minus" x2="11.375" transform="translate(1562.813 2231.5)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
   </g>
 </svg>

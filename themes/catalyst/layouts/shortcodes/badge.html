@@ -1,6 +1,6 @@
 <span {{ with .Get "href" }} onclick="location.href='{{.}}'"{{end}} {{ if .Get "ref" }} onclick="location.href='{{relref . (.Get "ref") }}'"{{end}} class="badge badge-{{ if .IsNamedParams }}{{with .Get `theme`}}{{.}}{{else}}primary{{end}}{{else}}{{with .Get 0}}{{.}}{{else}}primary{{end}}{{end}}" style="    display: inline-block;
 padding: 2px 6px;
-font: normal normal normal 16px/21px Roboto-Mono;
+font: normal normal normal 15px/41px Roboto-Mono;
 letter-spacing: 0.8px;
 background-color: var(--menu-color);
 color: var(--font-body-color);

@@ -3,10 +3,10 @@
     --body-color: #FFFFFF;
     --hr-color: #EAEEF5;
     --menu-color: #F6F7F8;
-    --font-body-color: #000000;
-    --body-header-color: #000000;
+    --font-body-color: #222222;
+    --body-header-color: #222222;
     --font-lite-body-color: #393939;
-    --font-menu-color: #000000;
+    --font-menu-color: #222222;
     --font-suggestion-color: #989898;
     --font-at-color: #989898;
     --step-color: #d1d1d1;
@@ -17,6 +17,9 @@
     --gray-color: #8D58C14D;
     --gray-border-color: #8D58C134;
     --search-background-color: #EAEBEB;
+    --hover-color: #000000;
+    --search-shadow-color: #7B7B7B76;
+    --filter-shadow-color: #D3D3D376;
     --search-outer-background-color: rgba(142,142,142,0.4);
     --github-lite-icon: url('/images/LightPages.svg');
     --edit-icon: url('/images/LightPages.svg');
@@ -95,6 +98,9 @@
         --gray-color: #A3ACDB80;
         --gray-border-color: #8D58C134;
         --search-background-color: #2C2F2F;
+        --hover-color: #FFFFFF;
+        --search-shadow-color: #33333376;
+        --filter-shadow-color: #33333376;
         --search-outer-background-color: rgba(142,142,142,0.4);
         --github-lite-icon: url('/images/DarkPages.svg');
         --edit-icon: url('/images/DarkPages.svg');
@@ -170,6 +176,9 @@
     --gray-color: #8D58C14D;
     --gray-border-color: #8D58C133;
     --search-background-color: #2C2F2F;
+    --hover-color: #FFFFFF;
+    --search-shadow-color: #33333376;
+    --filter-shadow-color: #33333376;
     --search-outer-background-color: rgba(142,142,142,0.4);
     --github-lite-icon: url('/images/Darkpages.svg');
     --edit-icon: url('/images/DarkPages.svg');

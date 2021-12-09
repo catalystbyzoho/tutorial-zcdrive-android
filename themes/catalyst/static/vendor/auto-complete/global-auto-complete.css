@@ -72,7 +72,8 @@
     z-index: 9999;
     box-sizing: border-box;
     width: 70%;
-    border-radius: 0px 0px 5px 5px;   
+    border-radius: 0px 0px 5px 5px;  
+    box-shadow: 10px 25px 50px var(--search-shadow-color); 
 }
 @media only screen and (max-width: 1100px) {
     .global-search-result-container{

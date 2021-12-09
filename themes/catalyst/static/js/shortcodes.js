@@ -16,7 +16,7 @@ function clickHandler(e){
     e.closest("pre").classList.add("shortcode-dark");
   }
   else if(set_icon.classList.value.includes("code-dark-icon")){
-    set_icon.style="background: url('/images/LightPages.svg') no-repeat -514px -29px !important;";
+    set_icon.style="background: url('/images/LightPages.svg') no-repeat -121px -29px !important;";
     e.closest("pre").classList.remove("shortcode-dark");
     e.closest("pre").classList.add("shortcode-light");
   }
