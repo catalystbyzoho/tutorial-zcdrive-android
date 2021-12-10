@@ -10,7 +10,15 @@
 	border: 1px solid var(--gray-border-color);
 	border-radius: 2px;
 }
-
+.shortcode-badge{
+  padding: 2px 6px;
+  font: normal normal normal 15px/22px Roboto-Mono;
+  letter-spacing: 0.8px;
+  background-color: var(--menu-color);
+  color: var(--font-body-color);
+  border-radius: 4px;
+  border:1px solid var(--hr-color);
+}
 
 /* code */
 .switch {
@@ -94,12 +102,13 @@ pre.shortcode-dark{
   padding: 10px 15px;
   background-color: var(--menu-color);
   color: var(--font-menu-color);
+  font: 15px/24px zoho-puvi-medium;
   border: 0;
   width: 90%;
   overflow-x: auto;
 }
 #panel .panel-body{
-  background-color: var(--body-color);
+  background-color: var(--menu-color);
   padding: 15px;
   border-top: 1px solid var(--hr-color);
 }
@@ -131,7 +140,7 @@ pre.shortcode-dark{
   top: 0px;
   height: 100%;
   width: 100%;
-  background: linear-gradient(transparent, var(--body-color));
+  background: linear-gradient(transparent, var(--menu-color));
   pointer-events: none;
 }
 
@@ -144,12 +153,12 @@ pre.shortcode-dark{
   color: #F0F0F0;
 }
 #panel.shortcode-light .panel-body{
-  background-color: #FFFFFF;
+  background-color: #F6F7F8;
   color: #000000;
   border-top: 1px solid #EAEEF5;
 }
 #panel.shortcode-dark .panel-body{
-  background-color: #171717;
+  background-color: #212124;
   color: #F0F0F0;
   border-top: 1px solid #2E2E38;
 }
@@ -164,7 +173,7 @@ pre.shortcode-dark{
   border-top: 1px solid #2E2E38;
 }
 #panel.shortcode-light #view-adjust.fadecontent::after {
-  background: linear-gradient(transparent, #FFFFFF);
+  background: linear-gradient(transparent, #F6F7F8);
 }
 #panel.shortcode-dark #view-adjust.fadecontent::after {
   background: linear-gradient(transparent, #171717);

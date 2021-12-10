@@ -141,9 +141,9 @@ Java allow you to highlight information or put it in a box. They create a colore
 
 ### Badge
 
-{{% badge info %}}info{{% /badge %}}
-{{% badge light %}}light{{% /badge %}}
-{{% badge dark %}}dark{{% /badge %}}
+{{% badge %}}info{{% /badge %}}
+{{% badge %}}light{{% /badge %}}
+{{% badge %}}dark{{% /badge %}}
 
 
 ### Expand
@@ -259,12 +259,6 @@ YAllow you to highlight information or put it in a box. They create a colored bo
 
     Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
 {{% /panel_with_adjustment %}}
-
-
-### Button
-
-{{%divtag class="red"%}}Success{{%/divtag%}}
-{{%divtag class="green"%}}Success{{%/divtag%}}
 
 
 ### Panel without Adjustment

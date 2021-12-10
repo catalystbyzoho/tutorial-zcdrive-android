@@ -1,6 +1,6 @@
 /* To bold the text for menu open in sidebar */
 .down-mini-icon + a{
-    font: 15px/18px zoho-puvi-semibold;
+    font: 15px/18px zoho-puvi-medium;
     color: var(--font-body-color);
 }
 
@@ -23,16 +23,17 @@
 .access-button{
 	width: 150px;
 	height: 44px;
-	background: #F0483D 0% 0% no-repeat padding-box;
+	background: #F0483D;
 	text-align: center;
 	border-radius: 4px;
   padding-top: 7px;
   cursor: pointer;
   list-style: none;
   font: normal normal normal 15px/30px zoho-puvi-regular;
-  color: #F0F0F0 !important;
+  color: #FFFFFF !important;
 }
 .access-button:hover{
+  background-color: #EA3E33;
   box-shadow: 0px 0px 20px #A2A2A21A;
 }
 .list {
@@ -493,7 +494,7 @@ display: block;
     border: 1px solid var(--hr-color);
   }
   .customselect:hover{
-    box-shadow: 0px 0px 20px #A2A2A21A;
+    background-color: var(--menu-color);
   }
   .customselect select {
     display: none;
@@ -501,6 +502,9 @@ display: block;
   .tutorial-select-filter .select-selected {
     width: 140px;
     padding-top: 11px;
+  }
+  .tutorial-select-filter .customselect{
+    border-radius: 25px;
   }
   .tutorial-select-filter .select-selected:after {
     top: 20px;
@@ -527,12 +531,12 @@ display: block;
     top: 12px;
   }
   .select-items div {
-    padding: 3px 0 0 10px;
+    padding: 5px 0 5px 10px;
     border: 1px solid transparent;
     cursor: pointer;
   }
   .select-selected {
-    padding: 4px 30px 0 10px;
+    padding: 4px 20px 0 15px;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -806,14 +810,14 @@ display: block;
         background: var(--edit-icon) no-repeat -247px -101px;
         width: 6px;
         height: 9px;
-        margin: 3px 10px 0 -17px;
+        margin: 4px 6px 0 -17px;
         cursor: pointer;
       }
       .down-mini-icon{
         background: var(--edit-icon) no-repeat -281px -101px;
         width: 6px;
         height: 9px;
-        margin: 3px 10px 0 -17px;
+        margin: 4px 6px 0 -17px;
         cursor: pointer;
         transform: rotateZ(90deg);
       }
@@ -1000,6 +1004,19 @@ display: block;
 .tutorial-select-filter{
   display: flex; 
   margin-left: auto;
+  margin-top: 1px;
+}
+.tutorial-filter + .select-selected{
+  padding-top: 10px;
+}
+.tutorial-filter + .select-selected.select-arrow-active:after{
+  top: 15px;
+}
+.tutorial-filter + .select-selected:after{
+  top: 20px;
+}
+.TableOfContents .feature-p:hover{
+  color: var(--hover-color);
 }
 @media only screen and (max-width: 450px) {
   .tutorial-list .input-icons{
@@ -1127,6 +1144,9 @@ display: block;
   width: 40px; 
   height: 40px;
   margin: 15px;
+}
+.arrow-block:hover{
+  box-shadow: 0px 0px 20px #A2A2A21A;
 }
 .prev-text{
   margin:18px 71px 7px 0; 
