@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 	<div style="margin:-22px 25px 0 41px;" class="top-point" id="container">        
-		<div class="content" style="text-align: left; height: auto;">
+		<div class="content">
 		{{- with .Content -}}
 			{{ . | replaceRE "(<h[1-9]) id=\"([^\"]+)\"(.+)(</h[1-9]+>)" `${1} ref="${2}" ${3}${4}<a class="anchor" id="${2}"></a>` | safeHTML }}
 		{{- else -}}

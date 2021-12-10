@@ -152,7 +152,8 @@ if(ls == "dark"){
         }
       }  
       $(document).ready(function(){
-        var sectionIds = $(`.tab#${input} .whats-new-container h2`);
+        var activeTab = document.querySelector('input[name="tabs-0"]:checked').getAttribute("tabname");
+        var sectionIds = $(`.tab#${activeTab} .whats-new-container h2`);
         $(document).scroll(function(){
           sectionIds.each(function(){
             var str1 = "#";
@@ -161,7 +162,6 @@ if(ls == "dark"){
             var str3 = "year";
             var str4 = $(this)[0].previousElementSibling.previousElementSibling.innerText.split("-")[0].trim();
             var year = str3.concat(str4);
-            console.log(input);
             var containerOffset = $(container).offset().top;
             var containerHeight = $(container).outerHeight();
             var containerBottom = containerOffset + containerHeight;

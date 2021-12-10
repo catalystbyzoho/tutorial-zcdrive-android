@@ -529,6 +529,12 @@ body a {
 body {
   color: var(--font-body-color);
   background-color: var(--body-color) !important; }
+  body em {
+    font: italic normal normal 15px/24px Roboto; }
+  body ol {
+    padding-left: 35px; }
+  body ol li::marker {
+    font-weight: bold; }
   body div {
     color: var(--font-body-color); }
   body .activelink {
@@ -908,9 +914,9 @@ article section.page div.content {
   article section.page div.content li {
     margin: 1rem 0;
     font: 15px/24px zoho-puvi-regular;
-    letter-spacing: 0px;
-    color: var(--font-body-color);
-    opacity: 1; }
+    color: var(--font-body-color); }
+  article section.page div.content ol li {
+    padding-left: 2px; }
   article section.page div.content h1 {
     font: 24px/29px zoho-puvi-bold;
     letter-spacing: 0px;
@@ -933,9 +939,10 @@ article section.page div.content {
   article section.page div.content table {
     width: 100%;
     margin-bottom: 2em;
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
-    border: 1px solid var(--hr-color); }
+    border: 1px solid var(--hr-color);
+    border-radius: 4px; }
     article section.page div.content table th,
     article section.page div.content table td {
       padding: .25rem .75rem; }
@@ -945,16 +952,13 @@ article section.page div.content {
       vertical-align: middle;
       text-align: left !important;
       background: var(--menu-color);
-      color: var(--font-menu-color);
-      border-bottom: 0.5px solid var(--hr-color);
-      border-top: 0.5px solid var(--hr-color); }
+      color: var(--font-menu-color); }
     article section.page div.content table td {
       font: normal normal normal 15px/24px zoho-puvi-regular;
       padding: 0.5rem;
       text-align: left !important;
       vertical-align: middle;
-      border-bottom: 0.5px solid var(--hr-color);
-      border-top: 0.5px solid var(--hr-color);
+      border-top: 1px solid var(--hr-color);
       color: var(--font-body-color); }
   article section.page div.content .table-width {
     width: 550px; }

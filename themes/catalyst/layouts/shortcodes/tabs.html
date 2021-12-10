@@ -5,7 +5,7 @@
 
 <div class="tabs" {{ with .Get "id" }} id="{{.}}" {{end}}>
 {{- range $index, $tab := .Scratch.Get $group -}}
-  <input type="radio" name="{{ $group }}" id="{{ printf "%s-%d" $group $index }}" {{ if not $index }}checked="checked"{{ end }} />
+  <input type="radio" name="{{ $group }}" id="{{ printf "%s-%d" $group $index }}" {{ if not $index }}checked="checked"{{ end }} tabname="{{ replaceRE "(\\s)" ""  $tab.Name }}" />
   <label for="{{ printf "%s-%d" $group $index }}" tabname="{{ replaceRE "(\\s)" ""  $tab.Name }}">
     {{- $tab.Name -}}
   </label>
