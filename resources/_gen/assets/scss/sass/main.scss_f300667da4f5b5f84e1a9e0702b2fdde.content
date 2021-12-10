@@ -531,10 +531,13 @@ body {
   background-color: var(--body-color) !important; }
   body em {
     font: italic normal normal 15px/24px Roboto; }
+  body strong {
+    font: normal normal bold 15px/24px zoho-puvi-bold; }
   body ol {
     padding-left: 35px; }
   body ol li::marker {
-    font-weight: bold; }
+    font-weight: bolder;
+    font-size: 15px; }
   body div {
     color: var(--font-body-color); }
   body .activelink {
@@ -807,26 +810,28 @@ body {
       height: calc(100vh - 75px); }
       body article section.right-menu > div > * {
         margin-left: 0px; }
-      body article section.right-menu > div nav > ul {
+      body article section.right-menu > div nav ul {
         padding: 0px 20px;
         margin: 0px; }
-        body article section.right-menu > div nav > ul ul {
-          padding: 0px 0px 0px 0px;
-          margin: 0px 0px 0px 0px; }
-          body article section.right-menu > div nav > ul ul li {
-            padding-bottom: 15px; }
+        body article section.right-menu > div nav ul li.active a {
+          color: var(--font-blue-color);
+          font: 15px/18px zoho-puvi-regular; }
+        body article section.right-menu > div nav ul ul li a {
+          color: var(--font-body-color) !important;
+          font: 15px/18px zoho-puvi-regular; }
+      body article section.right-menu > div nav ul ul {
+        padding: 15px 0px 0px 25px;
+        margin: 0px 0px 0px 0px; }
+        body article section.right-menu > div nav ul ul li {
+          padding-bottom: 15px; }
+        body article section.right-menu > div nav ul ul li.active a {
+          color: var(--font-blue-color) !important;
+          font: 15px/18px zoho-puvi-regular; }
       body article section.right-menu > div ul {
         list-style-type: none; }
-      body article section.right-menu > div li.active a {
-        color: var(--font-blue-color);
-        font: 15px/18px zoho-puvi-regular;
-        letter-spacing: 0px;
-        opacity: 1; }
       body article section.right-menu > div li a {
         color: var(--font-lite-body-color);
-        font: 15px/18px zoho-puvi-regular;
-        letter-spacing: 0px;
-        opacity: 1; }
+        font: 15px/18px zoho-puvi-regular; }
   body footer {
     background: var(--body-color);
     opacity: 1;
@@ -924,18 +929,14 @@ article section.page div.content {
     opacity: 1;
     margin-top: 38px;
     margin-bottom: 0px; }
-  article section.page div.content h3 {
+  article section.page div.content h2 {
+    margin-top: 0.5em;
     font: normal normal bold 20px/24px zoho-puvi-bold;
-    letter-spacing: 0px;
     color: var(--font-body-color);
-    opacity: 1;
     margin-top: 38px; }
-  article section.page div.content h4 {
-    margin-top: 30px;
-    font: normal normal 600 18px/22px  zoho-puvi-semibold;
-    letter-spacing: 0px;
-    color: var(--font-body-color);
-    opacity: 1; }
+  article section.page div.content h3 {
+    font: normal normal bold 18px/22px zoho-puvi-bold;
+    color: var(--font-body-color); }
   article section.page div.content table {
     width: 100%;
     margin-bottom: 2em;
