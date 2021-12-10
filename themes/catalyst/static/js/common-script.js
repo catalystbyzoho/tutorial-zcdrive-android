@@ -1,3 +1,24 @@
+// Window onclick function
+window.addEventListener("click", function(event) {
+  //To close Theme Button
+  if(
+    !((event.srcElement.innerText == "Light theme") || 
+    (event.srcElement.innerText == "Dark theme") || 
+    (event.srcElement.classList.value.includes("theme")) ||
+    (event.srcElement.classList.value.includes("theme-text")) ||
+    (event.srcElement.classList.value.includes("dark-icon")) ||
+    (event.srcElement.classList.value.includes("light-icon")))
+  ){
+    document.getElementById('globalThemeSwitch').style.display="none";
+  }
+
+  //To close Global Search
+  var g_srch = event.srcElement.classList.value.includes("search-modal");
+  if(g_srch){
+    closeGlobalsearch();
+  }
+});
+
 // Set Theme at initialSetup
 const ls = localStorage.getItem('user-color-scheme');
 var initial_theme_setup = document.getElementById('dark-mode-button');

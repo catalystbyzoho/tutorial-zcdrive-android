@@ -126,7 +126,7 @@ pre.shortcode-dark{
   padding: 10px 15px;
 }
 .adjust-button{
-  font: normal normal medium 14px/26px zoho-puvi-medium !important;
+  font: 14px/26px zoho-puvi-medium !important;
   color: var(--font-blue-color);
   cursor: pointer;
 }
