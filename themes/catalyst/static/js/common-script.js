@@ -152,8 +152,7 @@ if(ls == "dark"){
         }
       }  
       $(document).ready(function(){
-        var activeTab = document.querySelector('input[name="tabs-0"]:checked').getAttribute("tabname");
-        var sectionIds = $(`.tab#${activeTab} .whats-new-container h2`);
+        var sectionIds = $(`.tab#${input} .whats-new-container h2`);
         $(document).scroll(function(){
           sectionIds.each(function(){
             var str1 = "#";
