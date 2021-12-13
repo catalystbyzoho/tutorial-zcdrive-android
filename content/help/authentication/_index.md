@@ -30,7 +30,6 @@ You can perform the following actions using Authentication from the remote conso
 * Reset their passwords
 
 
-
 * Access Catalyst's user sign-in code snippet that you can include in your application
 * Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
 * Create and manage roles to define the levels of access and permissions for users
