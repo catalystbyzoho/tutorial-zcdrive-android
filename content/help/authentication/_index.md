@@ -18,20 +18,28 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 You can perform the following actions using Authentication from the remote console:
 
+{{%list%}}1. **Add or remove the end-users of your application**{{%/list%}}
+{{%list%}}2. **Add or remove the end-users of your application**{{%/list%}}
+{{%list class="bold"%}}3. Add or remove the end-users of your application{{%/list%}}
+{{%list class="bold" %}}4. **Add or remove the end-users of your application**{{%/list%}}
+
+
 * Add or remove the end-users of your application
 * Enable or disable their user accounts in your application
 * Create templates for emails to invite new users to access the application
 * Reset their passwords
 
-1. Add or remove the end-users of your application
-2. Enable or disable their user accounts in your application
-3. Create templates for emails to invite new users to access the application
-**4.** Reset their passwords
-5. Access Catalyst's user sign-in code snippet that you can include in your application
-6. Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
-7. Create and manage roles to define the levels of access and permissions for users
-8. Authorize external domains and enable {{% highlight%}}CORS{{%/ highlight%}} and {{% highlight%}}iFrame{{%/ highlight%}} for your application in them
-* Authorize external domains and enable {{% badge%}}CORS{{%/ badge%}} and {{% badge%}}iFrame{{%/ badge%}} for your application in them
+
+
+* Access Catalyst's user sign-in code snippet that you can include in your application
+* Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
+* Create and manage roles to define the levels of access and permissions for users
+
+Access Catalyst's user sign-in code snippet that you can include in your application
+Configure {{%highlight i %}}Google and Zoho sign-in providers {{%/ highlight%}}for your *application*
+Create and manage roles to define the levels of access and permissions for users
+Authorize external domains and enable {{% highlight%}}CORS{{%/ highlight%}} and {{% highlight%}}iFrame{{%/ highlight%}} for your application in them
+Authorize external domains and enable {{% badge%}}CORS{{%/ badge%}} and {{% badge%}}iFrame{{%/ badge%}} for your application in them
 
 The document is divided into five pages to cover the five features of Catalyst Authentication: {{% bold %}}Users, Email Templates, Sign-in Method, Roles, Authorized Domains.{{%/ bold %}} Each section explains the key concepts, benefits, and implementation of each feature.
 
@@ -120,7 +128,7 @@ The following table describes the list of Catalyst components and the event occu
 
 {{%/divtag%}}
 
-{{%note%}} {{%bold%}}Note:{{%/bold%}} Specifying the platform does not prevent the user from accessing other platforms of the application. However, it defines the primary platform that the user will access from their device and sets default values for opening the application in the appropriate medium.{{%/note%}}
+{{%note%}} {{%bold class="bold-primary" %}}Note:{{%/bold%}} Specifying the platform does not prevent the user from accessing other platforms of the application. However, it defines the primary platform that the user will access from their device and sets default values for opening the application in the appropriate medium.{{%/note%}}
 
 ### SDK and API documentation
 

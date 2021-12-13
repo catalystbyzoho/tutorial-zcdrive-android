@@ -54,13 +54,13 @@
         <div class="tab-pane fade show active" id="{{ .title }}" role="tabpanel" aria-labelledby="{{ .title }}-tab">
             {{ range .featuredpoints }}
               <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
-                <div class="feature-card help text-left" >
-                  <a href="{{.link}}">
-                  <div class="{{.icon}}" style="margin:16px 0;"></div>
-                        <p class="help-h" style="text-align: left;">{{ .name }}</p>
+                <a href="{{.link}}">
+                  <div class="feature-card help text-left" >
+                    <div class="{{.icon}}" style="margin:16px 0;"></div>
+                    <p class="help-h" style="text-align: left;">{{ .name }}</p>
                     <p class="feature-p" style="text-align: left;">{{ .content }}</p>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </div>
             {{ end }}
         </div>
@@ -68,13 +68,13 @@
         <div class="tab-pane fade" id="{{ .title }}" role="tabpanel" aria-labelledby="{{ .title }}-tab">
             {{ range .featuredpoints }}
               <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
-                <div class="feature-card help text-left">
-                  <a href="{{.link}}">
-                  <div class="{{.icon}}" style="margin:16px 0;"></div>
-                        <p class="help-h" style="text-align: left;">{{ .name }}</p>
+                <a href="{{.link}}">
+                  <div class="feature-card help text-left">
+                    <div class="{{.icon}}" style="margin:16px 0;"></div>
+                    <p class="help-h" style="text-align: left;">{{ .name }}</p>
                     <p class="feature-p" style="text-align: left;">{{ .content }}</p>
-                  </a>
-                </div>
+                  </div>
+                </a>
               </div>
             {{ end }}
         </div>

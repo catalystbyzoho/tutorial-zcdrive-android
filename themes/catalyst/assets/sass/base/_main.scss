@@ -59,6 +59,9 @@ body{
     strong{
         font: normal normal bold 15px/24px zoho-puvi-bold;
     }
+    a{
+        cursor: pointer;
+    }
     ol{
         padding-left: 35px;
     }
@@ -321,21 +324,21 @@ body{
             margin-right:30px;
             line-height:20px;
             height: calc(100vh - 75px);
-            a:hover{
-                color: var(--hover-color) !important;
-            }
+            
             > div {
                 > *{
                     margin-left:0px;
                 } 
                 nav ul{
-                    
+                    a:hover{
+                        color: var(--hover-color);
+                    }
                     padding: 0px 20px;
                     margin: 0px;
                     font: 15px/18px zoho-puvi-regular;
                     ul{
                         li a{
-                            color: var(--font-lite-body-color) !important;
+                            color: var(--font-lite-body-color);
                         }
                     }
                     li.active a{
@@ -463,7 +466,7 @@ article section.page div.content{
     a{
         margin: 15px 0;
         font: normal normal normal 15px/22px zoho-puvi-regular;
-        color: var(--font-blue-color);
+        color: var(--font-blue-color) !important;
     }
 
     p {

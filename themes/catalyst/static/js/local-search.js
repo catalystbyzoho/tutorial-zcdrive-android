@@ -21,13 +21,13 @@ if(faq_search){
     faq_search.addEventListener('keyup',faqSearchFun);
 }
 function faqSearchFun(){
-    var a = document.querySelectorAll(".faq-question");
+    var a = document.querySelectorAll(".faq-ques");
     for(var i=0;i<a.length;i++){
         var val = document.getElementById("faqLocalSearch").value.toLowerCase();
         if(a[i].innerText.toLowerCase().indexOf(val) != -1){
-            a[i].parentElement.parentElement.style.display="block";
+            a[i].parentElement.style.display="block";
         }else{
-            a[i].parentElement.parentElement.style.display="none";
+            a[i].parentElement.style.display="none";
         }
     }
 }
