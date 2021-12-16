@@ -75,6 +75,7 @@ themeModeSwitcher = function () {
       }
       setLight.addEventListener('click', () => {
             let currentSetting = "light";
+            removeSetTheme(currentSetting);
             setLS(darkModeStorageKey, currentSetting);
             applyCustomDarkModeSettings(currentSetting);
             document.getElementById("checkbox-light").checked=true;
@@ -88,6 +89,7 @@ themeModeSwitcher = function () {
 
         setDark.addEventListener('click', () => {
             let currentSetting = "dark";
+            removeSetTheme(currentSetting);
             setLS(darkModeStorageKey, currentSetting);
             applyCustomDarkModeSettings(currentSetting);
             document.getElementById("checkbox-light").checked=false;
@@ -98,6 +100,24 @@ themeModeSwitcher = function () {
             }
             show_theme_block.style.display="none";
         });
+
+        function removeSetTheme(e){
+            if(e == "light"){
+                var themeChange = document.querySelectorAll("pre .theme-icon");
+                var themeIcon = document.querySelectorAll("div.theme-icon")
+                for(var i=0;i<themeChange.length;i++){
+                    themeIcon[i].children[0].style="";
+                    themeChange[i].parentElement.parentElement.classList.remove("shortcode-dark");
+                }
+            }else if(e == "dark"){
+                var themeChange = document.querySelectorAll("pre .theme-icon");
+                var themeIcon = document.querySelectorAll("div.theme-icon")
+                for(var i=0;i<themeChange.length;i++){
+                    themeIcon[i].children[0].style="";
+                    themeChange[i].parentElement.parentElement.classList.remove("shortcode-light");
+                }
+            }
+        }
 }; 
 
 // Set Theme at initialSetup

@@ -1,0 +1,54 @@
+<pre id="panel" style="position: relative;" {{ with .Get "key" }} class="{{.}} panel-import-block" {{end}}>
+    <div class="round round-import" onclick="callImport(this)">
+        <input type="checkbox" id="checkbox-import">
+        <label for="checkbox-import"></label>
+        <div class="import">Show imports</div> 
+    </div>
+	<div class="import-line"></div>
+	<label class="switch">
+		<input name="theme-switch" type="checkbox" onclick="clickHandler(this)">
+		<div class="theme-icon">
+			<div name="icontheme" class="code-light-icon"></div>
+		</div>
+	</label>
+	<div>
+		{{- with .Get "header" -}}
+		<div class="panel-header">
+			{{- htmlUnescape . | markdownify -}}
+		</div>
+		{{- end -}}
+		<div class="panel-body">
+			<code></code>
+		</div>
+	</div>
+</pre>
+<div {{ with .Get "id" }} id="{{.}}" {{end}} {{ with .Get "key" }} class="{{.}} import-panel hide" {{end}} >{{.Inner}}</div>
+
+<script>
+	var s = document.querySelectorAll(".panel-import-block");
+	for(var i=0;i<s.length;i++){
+		var key = s[i].classList[0];
+		s[i].querySelector("input").checked=false;
+		var id_value = "withoutImport";
+		var get_text = document.querySelector(`.${key}.import-panel #${id_value} code`).innerHTML;
+		var put_text = document.querySelector(`.${key} .panel-body code`);
+		put_text.innerHTML=get_text;
+	}
+	function callImport(e){
+		var key = e.closest("pre").classList[0];
+		if(e.children[0].checked){
+			e.children[0].checked=false;
+		}else{
+			e.children[0].checked=true;
+		}
+		var id_value;
+		if(e.children[0].checked){
+			id_value = "withImport";
+		}else{
+			id_value = "withoutImport";
+		}
+		var get_text = document.querySelector(`.${key}.import-panel #${id_value} code`).innerHTML;
+		var put_text = document.querySelector(`.${key} .panel-body code`);
+		put_text.innerHTML=get_text;
+	}
+</script>

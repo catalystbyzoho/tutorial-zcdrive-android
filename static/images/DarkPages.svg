@@ -258,5 +258,14 @@
     <g id="Mask_Group_256" data-name="Mask Group 256" transform="translate(-1281 1359)" clip-path="url(#clip-path-22)">
       <line id="minus" x2="11.375" transform="translate(1562.813 2231.5)" fill="none" stroke="#f0f0f0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
     </g>
+    <g id="SearchNormal-3" data-name="SearchNormal" transform="translate(-181.679 3458)" clip-path="url(#clip-path)">
+      <g id="search-3" data-name="search" transform="translate(489.112 123.432)">
+        <circle id="Ellipse_242" data-name="Ellipse 242" cx="6.27" cy="6.27" r="6.27" transform="translate(2.351 2.351)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <line id="Line_180" data-name="Line 180" x1="3.409" y1="3.409" transform="translate(13.05 13.05)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="Filternormal-2" data-name="Filternormal" transform="translate(350 3584)" clip-path="url(#clip-path-2)">
+      <path id="filter-2" data-name="filter" d="M16,2.182H1.455l5.818,6.45v4.459l2.909,1.364V8.632Z" transform="translate(-0.727 -0.818)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
   </g>
 </svg>

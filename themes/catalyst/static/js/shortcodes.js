@@ -1,24 +1,34 @@
 function clickHandler(e){
   var set_icon = e.nextElementSibling.children[0];
+  function themeDarkChange(){
+    var themeChange = document.querySelectorAll("pre .theme-icon");
+    var themeIcon = document.querySelectorAll("div.theme-icon")
+    for(var i=0;i<themeChange.length;i++){
+      themeIcon[i].children[0].style="background: url('/images/DarkPages.svg') no-repeat -514px -29px !important;";
+      themeChange[i].parentElement.parentElement.classList.remove("shortcode-light");
+      themeChange[i].parentElement.parentElement.classList.add("shortcode-dark");
+    }
+  }
+  function themeLightChange(){
+    var themeChange = document.querySelectorAll("pre .theme-icon");
+    var themeIcon = document.querySelectorAll("div.theme-icon")
+    for(var i=0;i<themeChange.length;i++){
+      themeIcon[i].children[0].style="background: url('/images/LightPages.svg') no-repeat -121px -29px !important;";
+      themeChange[i].parentElement.parentElement.classList.remove("shortcode-dark");
+      themeChange[i].parentElement.parentElement.classList.add("shortcode-light");
+    }
+  }
   if(e.closest("pre").classList.value.includes("shortcode-light")){
-    set_icon.style="background: url('/images/DarkPages.svg') no-repeat -514px -29px !important;";
-    e.closest("pre").classList.remove("shortcode-light");
-    e.closest("pre").classList.add("shortcode-dark");
+    themeDarkChange()
   }
   else if(e.closest("pre").classList.value.includes("shortcode-dark")){
-    set_icon.style="background: url('/images/LightPages.svg') no-repeat -121px -29px !important;";
-    e.closest("pre").classList.remove("shortcode-dark");
-    e.closest("pre").classList.add("shortcode-light");
+    themeLightChange()
   }
   else if(set_icon.classList.value.includes("code-light-icon")){
-    set_icon.style="background: url('/images/DarkPages.svg') no-repeat -514px -29px !important;";
-    e.closest("pre").classList.remove("shortcode-light");
-    e.closest("pre").classList.add("shortcode-dark");
+    themeDarkChange()
   }
   else if(set_icon.classList.value.includes("code-dark-icon")){
-    set_icon.style="background: url('/images/LightPages.svg') no-repeat -121px -29px !important;";
-    e.closest("pre").classList.remove("shortcode-dark");
-    e.closest("pre").classList.add("shortcode-light");
+    themeLightChange()
   }
 }
 

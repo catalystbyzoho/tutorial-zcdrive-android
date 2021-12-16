@@ -361,6 +361,9 @@ display: block;
         margin: 15px 0 0 15px;
         position: absolute;
     }
+    .input-icons:hover .search-icon{
+      background: var(--shortlist-icon) no-repeat -387px -98px;
+    }
     #innerSearchBar{
         display: none;
         margin: auto;
@@ -412,6 +415,9 @@ display: block;
     height: 15px;
     margin: 15px 0 0 15px;
     position: absolute;
+}
+.input-icons:hover .shortlist{
+  background: var(--shortlist-icon) no-repeat -428px -99px;
 }
 .logo {
     border-bottom: 1px solid var(--hr-color);

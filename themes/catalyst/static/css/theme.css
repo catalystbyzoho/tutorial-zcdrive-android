@@ -28,7 +28,7 @@
     width: 8px;
 }
 .round input[type="checkbox"]:checked + label {
-    background-color: #448bff;
+    background-color: #448bff !important;
     border: none;
 }
 .round input[type="checkbox"]:checked + label:after {
