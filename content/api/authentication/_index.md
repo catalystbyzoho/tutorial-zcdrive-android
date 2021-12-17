@@ -48,27 +48,6 @@ Authorization: Zoho-oauthtoken <br/>
 <!-- Rightcontent -->
 {{%divtag class="RightContent"%}}
 
-{{% panel_with_select header="Who invented the Light Bulb?" key="key3" %}}
-{{% divtag id="Java" %}}
-    import java.key1.util.ArrayList; 
-    import java.key1.util.logging.Level; 
-    import java.key1.util.logging.Logger; 
-    import javax.key1.servlet.ServletInputStream;
-{{% /divtag %}} 
-{{% divtag id="NodeJS" %}}
-    import NodeJS.key1.util.ArrayList; 
-    import NodeJS.key1.util.logging.Level; 
-    import NodeJS.key1.util.logging.Logger; 
-    import NodeJSx.key1.servlet.ServletInputStream;
-{{% /divtag %}} 
-{{% divtag id="Python" %}}
-    import Python.key1.util.ArrayList; 
-    import Python.key1.util.logging.Level; 
-    import Python.key1.util.logging.Logger; 
-    import Pythonx.key1.servlet.ServletInputStream;
-{{% /divtag %}} 
-{{% /panel_with_select %}}
-
 {{% panel_without_adjustment header="Who invented the Light Bulb?" %}}    import java.io.InputStreamReader; 
     import java.util.ArrayList; 
     import java.util.logging.Level; 

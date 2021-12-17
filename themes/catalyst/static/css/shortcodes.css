@@ -97,6 +97,9 @@ pre.shortcode-dark{
 }
 
 /* Panel with adjustment  */
+#panel{
+  position: relative;
+}
 #panel .hideCopyBtn .copy-to-clipboard{
   display: none;
 }
@@ -260,12 +263,98 @@ pre.shortcode-dark{
 }
 
 /* Panel Import */
-.round-import{
-  position: absolute !important; 
-  right: 270px !important; 
-  top: 13px !important; 
-  display: flex; 
+.set-scroll .panel-body{
+  max-height: 650px;
+  height: auto;
+  overflow-y: auto;
+}
+.copied-msg{
+  position: absolute;
+  right: 111px;
+  top: -6px;
+  z-index: 1000000;
+  padding: 5px 8px;
+  font: normal normal 11px/1.5 "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+  color: #fff !important;
+  text-align: center;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+}
+.copied-msg::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+.show-import-block{
+  display: flex;
   cursor: pointer;
+}
+.round-check label{
+  position: static;
+}
+.copytoclipboard{
+  box-shadow: 0px 0px 6px #c7c7c729;
+  text-transform: uppercase;
+  cursor: pointer;
+  font: normal normal 13px/26px zoho-puvi-medium !important;
+  background-color: var(--body-color);
+  color: var(--font-body-color);
+  height: 24px;
+  padding: 0px 8px;
+  margin-left: 15px;
+}
+.show-flex{
+  display: flex;
+}
+.right-header-panel{
+  display: flex; 
+  margin:10px 15px 0 auto;
+}
+.round-check{
+  display: flex; 
+  margin-top:3px;
+}
+.import-text{
+  white-space: nowrap; 
+  color: var(--font-body-color);
+  font: 14px zoho-puvi-regular;
+  margin: 4px 14px 0 11px;
+}
+#panel.shortcode-light .round input[type="checkbox"] + label{ 
+  background-color: #FFFFFF;
+  border-color: #B6B6B6 !important;
+}
+#panel.shortcode-dark .round input[type="checkbox"] + label{
+  background-color: #212124;
+  border-color: #B6B6B6 !important;
+}
+#panel .round label:after{
+  height: 5px;
+  left: 16px;
+  top: 5px;
+  width: 10px;
+}
+#panel .round input[type="checkbox"] + label{
+  border-radius: 4px; 
+  background-color: ;
+  border-color: #B6B6B6; 
+  box-shadow: 0px 0px 6px #c7c7c729; 
+  height: 17px; 
+  width: 17px;
+}
+#panel .import-line{
+  height: 20px;
+  padding: 1px;
+  border-radius: 25px;
+  background: #B6B6B6;
+  margin-top: 2px;
+  opacity: 0.5;
 }
 #panel.shortcode-light .round input[type="checkbox"] + label{ 
   background-color: #FFFFFF;
@@ -281,34 +370,17 @@ pre.shortcode-dark{
 #panel.shortcode-dark .round div.import{
   color: #F0F0F0 !important;
 }
-#panel .round label:after{
-  height: 6px;
-  left: 4px;
-  top: 5px;
-  width: 10px;
+.shortcode-light .import-text{
+  color: #000000 !important;
 }
-#panel .round input[type="checkbox"] + label{
-  border-radius: 4px; 
-  background-color: ;
-  border-color: #B6B6B6; 
-  box-shadow: 0px 0px 6px #c7c7c729; 
-  height: 18px; 
-  width: 18px;
+.shortcode-dark .import-text{
+  color: #F0F0F0 !important;
 }
-#panel .import-line{
-  height: 20px;
-  padding: 1px;
-  border-radius: 25px;
-  background: #B6B6B6;
-  position: absolute;
-  right: 119px;
-  top: 12px;
+.shortcode-light .copytoclipboard {
+  background-color: #FFFFFF;
+  color: #000000;
 }
-#panel .round div.import{
-  position: absolute; 
-  white-space: nowrap; 
-  top: 1px; 
-  left: 58px; 
-  font: 14px zoho-puvi-regular; 
-  color: var(--font-body-color);
+.shortcode-dark .copytoclipboard {
+  background-color: #212124;
+  color: #F0F0F0;
 }

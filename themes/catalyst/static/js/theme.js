@@ -104,17 +104,15 @@ themeModeSwitcher = function () {
         function removeSetTheme(e){
             if(e == "light"){
                 var themeChange = document.querySelectorAll("pre .theme-icon");
-                var themeIcon = document.querySelectorAll("div.theme-icon")
                 for(var i=0;i<themeChange.length;i++){
-                    themeIcon[i].children[0].style="";
-                    themeChange[i].parentElement.parentElement.classList.remove("shortcode-dark");
+                themeChange[i].children[0].style="";
+                themeChange[i].closest("pre").classList.remove("shortcode-dark");
                 }
             }else if(e == "dark"){
                 var themeChange = document.querySelectorAll("pre .theme-icon");
-                var themeIcon = document.querySelectorAll("div.theme-icon")
                 for(var i=0;i<themeChange.length;i++){
-                    themeIcon[i].children[0].style="";
-                    themeChange[i].parentElement.parentElement.classList.remove("shortcode-light");
+                  themeChange[i].children[0].style="";
+                  themeChange[i].closest("pre").classList.remove("shortcode-light");
                 }
             }
         }
