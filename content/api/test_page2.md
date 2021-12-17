@@ -41,12 +41,28 @@ You will receive notifications in your Catalyst console about the updates of the
 <!-- Rightcontent -->
 {{%divtag class="RightContent"%}}
 
-{{% panel_without_adjustment header="Who invented the Light Bulb?" %}}    import java.io.InputStreamReader; 
-    import java.util.ArrayList; 
-    import java.util.logging.Level; 
-    import java.util.logging.Logger; 
-    import javax.servlet.ServletInputStream; 
-{{% /panel_without_adjustment %}}
+{{% panel_with_import header="Who invented the Light Bulb?" %}}
+{{% divtag id="withImport" %}}
+    import Python.key1.util.ArrayList; 
+    import Python.key1.util.logging.Level; 
+    import Python.key1.util.logging.Logger; 
+    import Pythonx.key1.servlet.ServletInputStream;
+    public class AlienCityAIO implements CatalystAdvancedIOHandler { 
+        private static final Logger LOGGER = Logger.getLogger(AlienCityAIO.class.getName()); 
+        private static String TABLENAME = “AlienCity”; 
+        private static String COLUMNNAME = “CityName”; 
+        JSONObject responseData = new JSONObject(); 
+    }
+{{% /divtag %}} 
+{{% divtag id="withoutImport" %}}
+    public class AlienCityAIO implements CatalystAdvancedIOHandler { 
+        private static final Logger LOGGER = Logger.getLogger(AlienCityAIO.class.getName()); 
+        private static String TABLENAME = “AlienCity”; 
+        private static String COLUMNNAME = “CityName”; 
+        JSONObject responseData = new JSONObject(); 
+    }
+{{% /divtag %}}  
+{{% /panel_with_import %}}
 
 {{%/divtag%}}
 {{%/section%}}

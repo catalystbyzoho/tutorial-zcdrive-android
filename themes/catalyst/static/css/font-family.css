@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "zoho-puvi-semibold";
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Semibold.otf);
+}
+@font-face {
+    font-family: "zoho-puvi-bold";
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Bold.otf);
+}
+@font-face {
+    font-family: "zoho-puvi-regular";
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Regular.otf);
+}
+@font-face {
+    font-family: "zoho-puvi-medium";
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Medium.otf);
+}
+@font-face {
+    font-family: "zoho-puvi-thin";
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Thin.otf);
+}
+
+@font-face {
+    font-family:"Roboto-Mono";
+    font-weight:400;
+    font-style:normal;
+    src:url("//static.zohocdn.com/webfonts/robotomonoregular/font.eot");
+    src:url("//static.zohocdn.com/webfonts/robotomonoregular/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.svg#RobotoMono-Regular") format("svg");}
+ @font-face {
+    font-family:"Roboto";
+    font-weight:400;
+    font-style:italic;
+    src:url("//static.zohocdn.com/webfonts/robotoitalic/font.eot");
+    src:url("//static.zohocdn.com/webfonts/robotoitalic/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.svg#Roboto-Italic") format("svg");}
+ @font-face {
+    font-family:"Inconsolata";
+    font-weight:400;
+    font-style:normal;
+    src:url("//static.zohocdn.com/webfonts/inconsolataregular/font.eot");
+    src:url("//static.zohocdn.com/webfonts/inconsolataregular/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.svg#Inconsolata-Regular") format("svg");}

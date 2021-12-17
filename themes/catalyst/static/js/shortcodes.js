@@ -45,13 +45,6 @@ function adjustview(e){
   }
 }
 
-// Auto clear default pre code block
-var autoclear = document.querySelectorAll("pre code pre code");
-for(var i=0;i<autoclear.length;i++){
-    var temp = autoclear[i].innerHTML;
-    autoclear[i].parentNode.parentNode.innerHTML = temp;
-}
-
 //copy to clipboard
 function copyToClipboard(ele){
   var dummy = document.createElement("textarea");
@@ -70,3 +63,16 @@ function copyToClipboard(ele){
 	},2500);
 }
 
+// Auto clear default pre code block
+
+var autoclear = document.querySelectorAll("pre code pre code");
+for(var i=0;i<autoclear.length;i++){
+    var temp = autoclear[i].innerHTML;
+    autoclear[i].parentNode.parentNode.innerHTML = temp;
+}
+var autoclear = document.querySelectorAll("code p");
+for(var i=0;i<autoclear.length;i++){
+    var temp = autoclear[i].innerHTML;
+    autoclear[i].parentNode.innerHTML = temp;
+    autoclear[i].remove();
+}

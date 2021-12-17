@@ -1,10 +1,10 @@
 <pre id="panel" {{ with .Get "scroll" }} class="{{.}}" {{end}}>
     <div class="show-flex">
-        {{- with .Get "header" -}}
-        <div class="panel-header">
-            {{- htmlUnescape . | markdownify -}}
-        </div>
-        {{- end -}}
+		{{- with .Get "header" -}}
+		<div class="panel-header">
+			{{- htmlUnescape . | markdownify -}}
+		</div>
+		{{- end -}}
         <div class="right-header-panel">  
             <div class="copytoclipboard" onclick="copyToClipboard(this)">copy</div>
             <div class="show-flex" onclick="clickHandler(this)">

@@ -40,6 +40,7 @@ You will receive notifications in your Catalyst console about the updates of the
 {{%/divtag%}}
 <!-- Rightcontent -->
 {{%divtag class="RightContent"%}}
+{{%code%}}hugo server{{%/code%}}
 
 {{% panel_without_adjustment header="Who invented the Light Bulb?" %}}    import java.io.InputStreamReader; 
     import java.util.ArrayList; 
