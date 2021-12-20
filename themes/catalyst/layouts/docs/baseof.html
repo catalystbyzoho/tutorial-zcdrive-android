@@ -20,7 +20,7 @@
     <article>
       <aside class="hide-sidebar" id="responsiveSidebar">
         {{ partial "body-sidebar.html" . }}     
-        <ul class="menu" style="margin-top: 100px;">
+        <ul class="menu" style="margin-top: 75px; padding-top: 25px; height: calc(100vh - 75px);">
           {{ partial "help-menu.html" . }}
         </ul> 
       </aside>
@@ -47,10 +47,10 @@
       var c;
       if(b < a){
           c = (a-b)+ 130;
-          document.querySelector("ul.menu").style=`margin-top: 100px; height: calc(100vh - ${c}px);`;
+          document.querySelector("ul.menu").style=`margin-top: 75px; padding-top: 25px; height: calc(100vh - ${c}px);`;
       }
       else{
-        document.querySelector("ul.menu").style=`margin-top: 100px; height: calc(100vh - 130px);`;
+        document.querySelector("ul.menu").style=`margin-top: 75px; padding-top: 25px; height: calc(100vh - 75px);`;
       }
     });
   </script>
