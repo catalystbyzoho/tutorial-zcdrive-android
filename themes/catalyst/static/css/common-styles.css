@@ -468,6 +468,18 @@ display: block;
 #responsiveSidebarToHide{
     display: block;
 }
+.show-sidebar{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--search-outer-background-color);
+}
+@media only screen and (min-width: 936px) {
+  aside.show-sidebar{
+    width: 370px;
+    background-color: var(--menu-color);
+  }
+}
 @media only screen and (max-width: 936px) {
     aside.hide-sidebar{
         position: absolute !important;

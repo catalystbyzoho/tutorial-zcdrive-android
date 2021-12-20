@@ -51,7 +51,13 @@ if(ls == "dark"){
 // To show sidebar
     function showSideBar(){
         var ele = document.getElementById("responsiveSidebar");
-        ele.classList.toggle("hide-sidebar");  
+        if(ele.classList.value.includes("hide-sidebar")){
+          ele.classList.remove("hide-sidebar")
+          ele.classList.add("show-sidebar");
+        }else{
+          ele.classList.remove("show-sidebar");
+          ele.classList.add("hide-sidebar")
+        }
     }
 
 // Global Search Modal
