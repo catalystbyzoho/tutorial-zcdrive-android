@@ -1069,6 +1069,7 @@ span.highlight.highlight-i {
   --search-shadow-color: #7B7B7B76;
   --filter-shadow-color: #D3D3D376;
   --search-outer-background-color: rgba(142,142,142,0.4);
+  --scrollbar-color: rgba(142,142,142);
   --github-lite-icon: url('/images/LightPages.svg');
   --edit-icon: url('/images/LightPages.svg');
   --share-icon: url('/images/LightPages.svg');
@@ -1146,6 +1147,7 @@ span.highlight.highlight-i {
     --search-shadow-color: #33333376;
     --filter-shadow-color: #33333376;
     --search-outer-background-color: rgba(142,142,142,0.4);
+    --scrollbar-color: rgba(142,142,142);
     --github-lite-icon: url('/images/DarkPages.svg');
     --edit-icon: url('/images/DarkPages.svg');
     --share-icon: url('/images/DarkPages.svg');
@@ -1220,6 +1222,7 @@ span.highlight.highlight-i {
   --search-shadow-color: #33333376;
   --filter-shadow-color: #33333376;
   --search-outer-background-color: rgba(142,142,142,0.4);
+  --scrollbar-color: rgba(142,142,142);
   --github-lite-icon: url('/images/Darkpages.svg');
   --edit-icon: url('/images/DarkPages.svg');
   --share-icon: url('/images/DarkPages.svg');

@@ -1,3 +1,17 @@
+/* Overwrite the default to keep the scrollbar always visible */
+#panel:hover ::-webkit-scrollbar,
+ul.menu:hover ::-webkit-scrollbar{
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: var(--scrollbar-color);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+
 /* To bold the text for menu open in sidebar */
 .down-mini-icon + a{
     font: 15px/18px zoho-puvi-medium;
