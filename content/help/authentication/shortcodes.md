@@ -152,7 +152,7 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
     <td>A set of conditions based on which the records will be fetched</td>
   </tr>
   <tr class="hide-table-props">
-  	<td colspan="4">
+  	<td colspan="4" style="padding: 20px;">
       <table class="inner-table">
         <tr>
             <th>Attributes</th>
