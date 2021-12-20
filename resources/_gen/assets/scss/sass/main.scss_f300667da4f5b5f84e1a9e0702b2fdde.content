@@ -897,6 +897,7 @@ article section.page div.content {
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid var(--hr-color);
+    table-layout: fixed;
     border-radius: 4px; }
     article section.page div.content table th,
     article section.page div.content table td {
@@ -917,7 +918,7 @@ article section.page div.content {
       border-top: 1px solid var(--hr-color);
       color: var(--font-body-color); }
   article section.page div.content .table-width {
-    width: 550px; }
+    width: 650px; }
   @media screen and (min-width: 0px) and (max-width: 760px) {
     article section.page div.content .table-width {
       width: 100%; } }

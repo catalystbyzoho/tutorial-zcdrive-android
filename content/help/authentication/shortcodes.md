@@ -115,6 +115,7 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
 {{%/code%}}
 
 ### Table
+{{%divtag class="table-width"%}}
 
 | Component      | Event | Description |
 | :--- | :---: | :---: |
@@ -123,6 +124,70 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
 |            | Delete  | Delete a table |
 | Cache      | Put     | Put data in a segment |
 
+{{%/divtag%}}
+
+<table style="width:100%">
+  <tr>
+    <th>Attributes</th>
+    <th>Data Type</th>
+    <th>Mandatory</th>
+    <th>Description</th>
+  </tr>
+    <tr>
+    <td>table_identifier</td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>The unique ID of the table or the table name. You can obtain the table ID from Data Store or from the URL when the table is opened in the console.</td>
+  </tr>
+  <tr>
+    <td>query</td>
+    <td>JSON</td>
+    <td>No</td>
+    <td>The section where you can define the conditions and criteria for the bulk read job</td>
+  </tr>
+  <tr>
+    <td>criteria<br/><span class="table-props">Show properties</span></td>
+    <td>JSON</td>
+    <td>No</td>
+    <td>A set of conditions based on which the records will be fetched</td>
+  </tr>
+  <tr class="hide-table-props">
+  	<td colspan="4">
+      <table class="inner-table">
+        <tr>
+            <th>Attributes</th>
+            <th>Data Type</th>
+            <th>Mandatory</th>
+            <th>Description</th>
+        </tr>
+            <tr>
+            <td>table_identifier</td>
+            <td>String</td>
+            <td>Yes</td>
+            <td>The unique ID of the table or the table name. You can obtain the table ID from Data Store or from the URL when the table is opened in the console.</td>
+        </tr>
+        <tr>
+            <td>query</td>
+            <td>JSON</td>
+            <td>No</td>
+            <td>The section where you can define the conditions and criteria for the bulk read job</td>
+        </tr>
+        <tr>
+            <td>criteria<br/><span>Show properties</span></td>
+            <td>JSON</td>
+            <td>No</td>
+            <td>A set of conditions based on which the records will be fetched</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>callback</td>
+    <td>JSON</td>
+    <td>NO</td>
+    <td>The section where you can define the properties of the callback URL, where automatic JSON responses of the job statuses will be sent to</td>
+  </tr>
+</table>
 
 ### Badge
 

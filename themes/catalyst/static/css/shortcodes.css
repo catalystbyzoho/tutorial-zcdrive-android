@@ -30,6 +30,19 @@
 div.bold ol li::marker{
   font: normal normal bold 15px/24px zoho-puvi-bold;
 }
+/* Table */
+.inner-table{
+  width:100%; 
+  margin: 5px 0 !important;
+}
+.table-props{
+  color: var(--font-blue-color); 
+  font:14px zoho-puvi-regular;
+  cursor: pointer;
+}
+.hide-table-props{
+  display: none;
+}
 /* code */
 .switch {
   position: relative;

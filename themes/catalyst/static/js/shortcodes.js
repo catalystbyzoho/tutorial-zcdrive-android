@@ -45,6 +45,21 @@ function adjustview(e){
   }
 }
 
+//Table show props
+var tabProps = document.getElementsByClassName("table-props");
+var i;
+for (i = 0; i < tabProps.length; i++) {
+  tabProps[i].addEventListener("click", function() {
+    var ele = this.closest("tr").nextElementSibling.classList.toggle("hide-table-props");
+    if(ele){
+      this.innerText="Show properties";
+    }else{
+      this.innerText="Hide properties";
+    }
+  });
+}
+
+
 //copy to clipboard
 function copyToClipboard(ele){
   var dummy = document.createElement("textarea");
