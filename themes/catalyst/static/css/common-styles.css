@@ -1080,7 +1080,7 @@ padding-bottom: 40px;
 .faq-sidebar{
   height: auto !important; 
   background-color: var(--body-color); 
-  width: 240px;
+  width: 300px;
   position: -webkit-sticky; /* for Safari */
   position: sticky;
   top: 100px;
