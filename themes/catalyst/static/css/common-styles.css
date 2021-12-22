@@ -1014,6 +1014,9 @@ padding-bottom: 40px;
       }
 
 /* Tutorial list features */
+#tutorialSidepage .rating-form{
+  width: 100%;
+}
 .tutorial-list{
   display: flex; 
   padding-bottom: 20px; 

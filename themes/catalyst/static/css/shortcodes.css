@@ -141,6 +141,10 @@ pre.shortcode-dark{
 #view-adjust.panel-body{
   height: 120px;
 }
+#view-adjust.panel-body.import-block{
+  height: 100px;
+}
+  
 #panel .panel-footer{
   display: flex;
   justify-content: center;

@@ -1,0 +1,26 @@
+<pre id="panel" {{ with .Get "scroll" }} class="{{.}}" {{end}}>
+    <div class="show-flex">
+        {{- with .Get "header" -}}
+        <div class="panel-header">
+            {{- htmlUnescape . | markdownify -}}
+        </div>
+        {{- end -}}
+        <div class="right-header-panel">  
+            <div class="copytoclipboard" onclick="copyToClipboard(this)">copy</div>
+            <div class="show-flex" onclick="clickHandler(this)">
+                <input name="theme-switch" style="opacity: 0;" type="checkbox" >
+                <div class="theme-icon">
+                    <div name="icontheme" class="code-light-icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div id="view-adjust" class="panel-body fadecontent import-block">
+		<code>{{.Inner}}</code>
+	</div>
+	{{- with .Get "footer" -}}
+	<div class="panel-footer">
+		<div class="adjust-button" onclick="adjustview(this)">View more</div>
+	</div>
+	{{- end -}}
+</pre>

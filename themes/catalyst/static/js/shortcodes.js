@@ -40,7 +40,7 @@ function adjustview(e){
   }
   else{
     e.innerHTML = "View more";
-    e.parentNode.parentNode.querySelector("#view-adjust").style.height="150px";
+    e.parentNode.parentNode.querySelector("#view-adjust").style.height="";
     e.parentNode.parentNode.querySelector("#view-adjust").classList.add("fadecontent");
   }
 }
