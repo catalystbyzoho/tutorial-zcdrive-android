@@ -23,11 +23,15 @@
       <div style="display: flex;">
         {{- if ne $numberOfPages 0 }}
           {{- if .Params.alwaysopen}} 
-            <div class="right-mini-icon  category-icon" style="display: none;"></div>
-            <a href="#{{ replaceRE "(\\s)" ""  .LinkTitle }}"style="display: none;">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            <div class="category-icon" style="display: none;">
+              <div class="right-mini-icon"></div>
+              <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            </div>
           {{else}}
-            <div class="right-mini-icon  category-icon"></div>
-            <a href="#{{ replaceRE "(\\s)" ""  .LinkTitle }}" onclick="activateClass(this)" path="{{.Permalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            <div class="category-icon" style="display: flex;">
+              <div class="right-mini-icon"></div>
+              <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            </div>
           {{end}}
         {{- end}}
       </div>
@@ -51,7 +55,7 @@
     {{- if not .Params.Hidden }}
       <li data-nav-id="{{.Permalink}}" class="dd-item">
         <div>
-          <a href="#{{ replaceRE "(\\s)" ""  .LinkTitle }}" onclick="activateClass(this)" path="{{.Permalink}}">
+          <a class="file" href="#{{ replaceRE "(\\s)" ""  .LinkTitle }}" onclick="activateClass(this)" path="{{.Permalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
         </div>

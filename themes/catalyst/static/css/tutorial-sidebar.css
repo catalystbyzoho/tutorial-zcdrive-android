@@ -48,7 +48,7 @@
     top: 0;
     left: 45px;
     width: 10px;
-    height: 86.5%;
+    height: calc(100% - 85px);
     border-left: 1px solid var(--step-color);
     margin-top: 50px;
 }
@@ -111,11 +111,37 @@
 }
 .StepProgress-child{
     background-color: var(--step-color); 
-    width:5px; 
-    height: 5px; 
+    width:7px; 
+    height: 7px; 
     border-radius: 50%; 
-    margin-top: 7px;
+    margin-top: 10px;
 }
 .childactive{
     background-color: var(--font-blue-color);
+}
+.show-steps{
+    display: block !important;
+}
+.stepper-menu .steps{
+    font: 12px/26px zoho-puvi-regular; 
+    letter-spacing: 1.2px;
+    cursor: default;
+}
+.stepper-menu a.file{
+    font: 14px/26px zoho-puvi-regular; 
+    color: var(--font-menu-color);
+}
+.stepper-menu a.file:hover{
+    color: var(--font-body-color);
+}
+article > aside .stepper-menu .dd-item.active > div .StepProgress-child{
+    background-color: var(--font-blue-color);
+}
+article > aside .stepper-menu .dd-item.active > div a.file{
+    font: 14px/26px zoho-puvi-medium;
+    color: var(--font-body-color);
+}
+article > aside .stepper-menu .dd-item.active > div a.intro-file{
+    font: 14px/26px zoho-puvi-medium;
+    color: var(--font-blue-color);
 }

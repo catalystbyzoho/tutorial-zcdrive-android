@@ -13,7 +13,7 @@
           <li class="ex-ol-li" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true" style="justify-content: center; display: grid;">
               {{ range .featuredpoints }}
                 <div style="margin-bottom: 20px;">
-                  <div class="feature-card help text-left">
+                  <div class="feature-card help-block text-left">
                     <div class="{{.icon}}" style="margin:16px 0;"></div>
                       <a href="{{.link}}">
                           <p class="feature-p" style="text-align: left;">{{ .name }}</p>
@@ -55,7 +55,7 @@
             {{ range .featuredpoints }}
               <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
                 <a href="{{.link}}">
-                  <div class="feature-card help text-left" >
+                  <div class="feature-card help-block text-left" >
                     <div class="{{.icon}}" style="margin:16px 0;"></div>
                     <p class="help-h" style="text-align: left;">{{ .name }}</p>
                     <p class="feature-p" style="text-align: left;">{{ .content }}</p>
@@ -69,7 +69,7 @@
             {{ range .featuredpoints }}
               <div class="col-md-6 col-sm-6 mb-4" style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
                 <a href="{{.link}}">
-                  <div class="feature-card help text-left">
+                  <div class="feature-card help-block text-left">
                     <div class="{{.icon}}" style="margin:16px 0;"></div>
                     <p class="help-h" style="text-align: left;">{{ .name }}</p>
                     <p class="feature-p" style="text-align: left;">{{ .content }}</p>

@@ -16,7 +16,7 @@ article>aside {
         list-style-type: none;
         width: 370px;
         background-color: var(--menu-color);
-        margin-top: 127px;
+        margin-top: 147px;
         padding-left: 21px !important;
         height: calc(100vh - 130px);
         overflow: auto;
@@ -46,7 +46,7 @@ article>aside {
             font: 15px/18px zoho-puvi-regular;
             letter-spacing: 0px;
             color: var(--font-lite-body-color);
-            margin:20px 0;
+            margin:0;
             opacity: 1;
             margin-top: 0px;
                 >a{
@@ -96,142 +96,6 @@ article>aside {
                     a {
                         color: var(--font-blue-color);
                         font: 15px/18px zoho-puvi-medium;
-                    }
-                }
-            }
-
-            &.haschildren{
-                &.parent{
-                    >a {
-                    padding-left:8px;                   
-                    }
-                    ul {
-                        padding-left:0;
-                    }
-                }
-                li {
-                    margin:20px 0;
-                }
-                ul {
-                    padding-left:0px;                    
-                }
-                ul a {
-                    padding-left:0px;
-                }
-                ul i {
-                    margin-left: -19px;
-                    margin-right: 6px;
-                }
-            }
-
-            &.parent{
-                >a {
-                 
-                }
-                >ul {
-                    display: block;
-                }
-            }
-
-            &.active {
-                li {
-                    margin:20px 0;
-                }
-
-                >a{
-                    color:var(--font-blue-color);
-                }
-
-                >ul {
-                    display: block;
-                }
-            }
-            
-            &.alwaysopen>ul {
-                display: block
-            }
-            
-            &.parent>ul {
-                display: block
-            }
-        }
-    }
-
-    .main-menu {
-        list-style-type: none;
-        h6 {
-            font: normal normal bold 16px/19px zoho-puvi-bold;
-            letter-spacing: 0.8px;
-            color: var(--font-body-color);
-            text-transform: uppercase;
-            opacity: 1;
-            padding:10px 0;
-            margin-left:-6px;
-        }
-        hr {
-            margin-top: 1.8rem;
-            margin-left:-50px;
-        }
-        ul {
-            display: none;
-        } 
-        .ddexp{
-            cursor: pointer;
-        }
-        &.active {
-            a {
-                color: red;
-            }
-        }
-
-        // first menu level
-        >.dd-item {
-            font: normal normal normal 15px/18px zoho-puvi-regular;
-            letter-spacing: 0px;
-            color: var(--font-menu-color);
-            margin:20px 0;
-            opacity: 1;
-            margin-top: 0px;
-                >a{
-                    padding-left:0px;
-                    display: none;
-                    color: var(--font-menu-color);
-                }
-                > i {
-                    display: none;
-                }
-        } 
-
-        // menu items
-        .dd-item {
-            padding-left: 16px;
-            
-            list-style: none;
-            a {
-                text-decoration: none;
-                padding-left:8px;
-                color: var(--font-menu-color);
-            }
-            > a{               
-                padding-left:8px;
-            }
-            > i {
-                    color:var(--font-menu-color);
-                    font-size: 12px;
-                    padding-right:5px;
-            }
-            ul {
-                padding-left: 0px;
-            }
-            &.active {
-
-                >ul {
-                    display: block;
-                }
-
-                >div {
-                    * {
-                        color: var(--font-blue-color);
                     }
                 }
             }

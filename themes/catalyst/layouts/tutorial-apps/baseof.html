@@ -19,7 +19,7 @@
   <body data-url="{{ .RelPermalink }}">
     {{ partial "global-search.html" . }}
     <article>
-      <aside class="hide-sidebar" id="responsiveSidebar" style="background-color: var(--body-color);overflow: auto;">
+      <aside class="hide-sidebar t-sidebar" id="responsiveSidebar">
         {{ partial "tutorial-sidebar.html" . }}    
         <ul class="stepper-menu StepProgress">
           {{- partial "tutorial-menu.html" . }}
@@ -55,4 +55,5 @@
       }
     });
   </script>
+  <script src='{{"js/pagination.js" | relURL}}'></script>
 </html>

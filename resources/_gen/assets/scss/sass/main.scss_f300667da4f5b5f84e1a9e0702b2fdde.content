@@ -241,7 +241,7 @@ article > aside {
     list-style-type: none;
     width: 370px;
     background-color: var(--menu-color);
-    margin-top: 127px;
+    margin-top: 147px;
     padding-left: 21px !important;
     height: calc(100vh - 130px);
     overflow: auto; }
@@ -265,7 +265,7 @@ article > aside {
       font: 15px/18px zoho-puvi-regular;
       letter-spacing: 0px;
       color: var(--font-lite-body-color);
-      margin: 20px 0;
+      margin: 0;
       opacity: 1;
       margin-top: 0px; }
       article > aside .menu > .dd-item > a {
@@ -322,82 +322,6 @@ article > aside {
       article > aside .menu .dd-item.alwaysopen > ul {
         display: block; }
       article > aside .menu .dd-item.parent > ul {
-        display: block; }
-  article > aside .main-menu {
-    list-style-type: none; }
-    article > aside .main-menu h6 {
-      font: normal normal bold 16px/19px zoho-puvi-bold;
-      letter-spacing: 0.8px;
-      color: var(--font-body-color);
-      text-transform: uppercase;
-      opacity: 1;
-      padding: 10px 0;
-      margin-left: -6px; }
-    article > aside .main-menu hr {
-      margin-top: 1.8rem;
-      margin-left: -50px; }
-    article > aside .main-menu ul {
-      display: none; }
-    article > aside .main-menu .ddexp {
-      cursor: pointer; }
-    article > aside .main-menu.active a {
-      color: red; }
-    article > aside .main-menu > .dd-item {
-      font: normal normal normal 15px/18px zoho-puvi-regular;
-      letter-spacing: 0px;
-      color: var(--font-menu-color);
-      margin: 20px 0;
-      opacity: 1;
-      margin-top: 0px; }
-      article > aside .main-menu > .dd-item > a {
-        padding-left: 0px;
-        display: none;
-        color: var(--font-menu-color); }
-      article > aside .main-menu > .dd-item > i {
-        display: none; }
-    article > aside .main-menu .dd-item {
-      padding-left: 16px;
-      list-style: none; }
-      article > aside .main-menu .dd-item a {
-        text-decoration: none;
-        padding-left: 8px;
-        color: var(--font-menu-color); }
-      article > aside .main-menu .dd-item > a {
-        padding-left: 8px; }
-      article > aside .main-menu .dd-item > i {
-        color: var(--font-menu-color);
-        font-size: 12px;
-        padding-right: 5px; }
-      article > aside .main-menu .dd-item ul {
-        padding-left: 0px; }
-      article > aside .main-menu .dd-item.active > ul {
-        display: block; }
-      article > aside .main-menu .dd-item.active > div * {
-        color: var(--font-blue-color); }
-      article > aside .main-menu .dd-item.haschildren.parent > a {
-        padding-left: 8px; }
-      article > aside .main-menu .dd-item.haschildren.parent ul {
-        padding-left: 0; }
-      article > aside .main-menu .dd-item.haschildren li {
-        margin: 20px 0; }
-      article > aside .main-menu .dd-item.haschildren ul {
-        padding-left: 0px; }
-      article > aside .main-menu .dd-item.haschildren ul a {
-        padding-left: 0px; }
-      article > aside .main-menu .dd-item.haschildren ul i {
-        margin-left: -19px;
-        margin-right: 6px; }
-      article > aside .main-menu .dd-item.parent > ul {
-        display: block; }
-      article > aside .main-menu .dd-item.active li {
-        margin: 20px 0; }
-      article > aside .main-menu .dd-item.active > a {
-        color: var(--font-blue-color); }
-      article > aside .main-menu .dd-item.active > ul {
-        display: block; }
-      article > aside .main-menu .dd-item.alwaysopen > ul {
-        display: block; }
-      article > aside .main-menu .dd-item.parent > ul {
         display: block; }
   article > aside .stepper-menu {
     list-style-type: none; }
@@ -534,7 +458,7 @@ body {
     padding: 15px 30px; }
   body .sdk:hover {
     box-shadow: 5px 5px 16px var(--shadow-color); }
-  body .help {
+  body .help-block {
     background-color: var(--body-color);
     border: 1px solid var(--hr-color);
     border-radius: 4px;
@@ -542,7 +466,7 @@ body {
     height: 200px !important;
     padding: 10px 15px;
     overflow: auto; }
-  body .help:hover {
+  body .help-block:hover {
     box-shadow: 5px 5px 16px var(--shadow-color); }
   body .feature-p {
     text-align: left;
@@ -882,7 +806,7 @@ article section.page div.content {
     margin-bottom: 0px; }
   article section.page div.content h2 {
     margin-top: 0.5em;
-    font: normal normal bold 20px/24px zoho-puvi-bold;
+    font: normal normal bold 22px/26px zoho-puvi-bold;
     color: var(--font-body-color);
     margin-top: 38px; }
   article section.page div.content h3 {

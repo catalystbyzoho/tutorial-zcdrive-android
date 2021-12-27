@@ -70,7 +70,7 @@ body{
     .sdk:hover{
         box-shadow: 5px 5px 16px  var(--shadow-color); 
     }
-    .help{
+    .help-block{
         background-color: var(--body-color); 
         border: 1px solid var(--hr-color); 
         border-radius: 4px;
@@ -79,7 +79,7 @@ body{
         padding:10px 15px;
         overflow: auto;
     }
-    .help:hover{
+    .help-block:hover{
         box-shadow: 5px 5px 16px var(--shadow-color); 
     }
     .feature-p{
@@ -446,7 +446,7 @@ article section.page div.content{
 
     h2 {
         margin-top: 0.5em;
-        font: normal normal bold 20px/24px zoho-puvi-bold;
+        font: normal normal bold 22px/26px zoho-puvi-bold;
         color: var(--font-body-color);
         margin-top:38px;
     } 

@@ -11,10 +11,11 @@ function apiMenu(){
       var nextAncestor = menu.closest("li[data-nav-id]");
       while (maxDepth-- >= 0 && nextAncestor !== null) {
           nextAncestor.classList.add("parent");
-          var icon = nextAncestor.querySelector('div.category-icon');
+          var icon = nextAncestor.querySelector('.category-icon div');
           if (icon !== null) {
               icon.classList.remove('right-mini-icon');
               icon.classList.add('down-mini-icon');
+              icon.parentElement.parentElement.nextElementSibling.style.display="block";
           }
           nextAncestor = nextAncestor.parentNode.closest("li[data-nav-id]");
       }
@@ -27,12 +28,12 @@ function removeActiveClass(){
       anc[i].classList.remove("active");
     }
   }
-  var icons = document.querySelectorAll(".category-icon");
+  var icons = document.querySelectorAll(".category-icon div");
   for(var i=1;i<icons.length;i++){
     if((icons[i].classList.value.includes("down-mini-icon")) ){
       icons[i].classList.remove('down-mini-icon');
       icons[i].classList.add('right-mini-icon');
-      icons[i].parentNode.parentNode.childNodes[3].style.display="none";
+      icons[i].parentNode.parentNode.nextElementSibling.style.display="none";
     }
   }
 }
@@ -47,11 +48,7 @@ function addMargin() {
 window.addEventListener('hashchange', addMargin);
 
 $(document).ready(function(){
-  var sectionIds = $('.menu a');
-  for(var i=0;i<sectionIds.length -1 ;i++){
-    sectionIds[i] = sectionIds[i+1];
-  }
-  sectionIds.length = sectionIds.length-1;
+  var sectionIds = $('.menu a.file');
     $(document).scroll(function(){
         sectionIds.each(function(){
             var container = $(this).attr('href');
@@ -72,17 +69,11 @@ $(document).ready(function(){
                   var nextAncestor = menu.closest("li[data-nav-id]");
                   while (maxDepth-- >= 0 && nextAncestor !== null) {
                       nextAncestor.classList.add("parent");
-
-                      var icon = nextAncestor.querySelector('div.category-icon');
+                      var icon = nextAncestor.querySelector('.category-icon div');
                       if (icon !== null) {
                           icon.classList.remove('right-mini-icon');
                           icon.classList.add('down-mini-icon');
-                          var icons = document.querySelectorAll("div.category-icon");
-                          for(var i=0;i<icons.length;i++){
-                            if(icons[i].classList.value.includes("down-mini-icon")){
-                              icons[i].parentNode.parentNode.childNodes[3].style.display="block";
-                            }
-                          }
+                          icon.parentElement.parentElement.nextElementSibling.style.display="block";                      
                       }
                       nextAncestor = nextAncestor.parentNode.closest("li[data-nav-id]");
                   }

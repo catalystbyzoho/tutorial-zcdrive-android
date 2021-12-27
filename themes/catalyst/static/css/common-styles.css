@@ -1,6 +1,6 @@
 /* Overwrite the default to keep the scrollbar always visible */
-#panel:hover ::-webkit-scrollbar,
-ul.menu:hover ::-webkit-scrollbar{
+
+#panel:hover ::-webkit-scrollbar{
   -webkit-appearance: none;
   width: 7px;
 }
@@ -17,7 +17,10 @@ ul.menu:hover ::-webkit-scrollbar{
     font: 15px/18px zoho-puvi-medium;
     color: var(--font-body-color);
 }
-
+/* Pagination */
+.right-side-pagination{
+  justify-content:flex-end !important;
+}
 /* Table of Contents */
 .TableOfContents{
   background-color:var(--menu-color); 
@@ -596,6 +599,11 @@ padding-bottom: 40px;
   }
 
   /* Tutorial apps */
+  .t-sidebar{
+    background-color: var(--body-color);
+    overflow: auto; 
+    overflow-x: hidden;
+  }
   .tutorial-filter {
     background-color: var(--body-color);
     font: 14px/17px zoho-puvi-regular;
@@ -845,14 +853,14 @@ padding-bottom: 40px;
         background: var(--edit-icon) no-repeat -247px -101px;
         width: 6px;
         height: 9px;
-        margin: 4px 6px 0 -17px;
+        margin: 4px 9px 0 -17px;
         cursor: pointer;
       }
       .down-mini-icon{
         background: var(--edit-icon) no-repeat -281px -101px;
         width: 6px;
         height: 9px;
-        margin: 4px 6px 0 -17px;
+        margin: 4px 9px 0 -17px;
         cursor: pointer;
         transform: rotateZ(90deg);
       }

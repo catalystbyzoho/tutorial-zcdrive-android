@@ -1,40 +1,7 @@
-{{- $currentNode := . -}}
-
-{{- template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode -}}
-
-{{- define "menu-nextprev" -}}
-    {{- $currentNode := .currentnode -}}
-    {{- if ne .menu.Params.hidden true -}}
-        {{- if hasPrefix $currentNode.Permalink .menu.Permalink -}}
-            {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
-            {{- $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") -}}
-        {{- else -}}
-            {{- if eq ($currentNode.Scratch.Get "NextPageOK") "OK" -}}
-                {{- $currentNode.Scratch.Set "NextPageOK" nil -}}
-                {{- $currentNode.Scratch.Set "nextPage" .menu -}}
-            {{- end -}}
-        {{- end -}}
-        {{- $currentNode.Scratch.Set "prevPageTmp" .menu -}}
-
-            {{- $currentNode.Scratch.Set "pages" .menu.Pages -}}
-            {{- if .menu.IsHome -}}
-                {{- $currentNode.Scratch.Set "pages" .menu.Sections -}}
-            {{- else if .menu.Sections -}}
-                {{- $currentNode.Scratch.Set "pages" (.menu.Pages | union .menu.Sections) -}}
-            {{- end -}}
-            {{- $pages := ($currentNode.Scratch.Get "pages") -}}
-
-            {{- range $pages.ByWeight -}}
-                {{- template "menu-nextprev" dict "menu" . "currentnode" $currentNode -}}
-            {{- end -}}
-    {{- end -}}
-{{- end -}}
-
 {{ if and (eq .Type "tutorial-apps") (eq .Title "Introduction")}}
-    {{- with ($.Scratch.Get "nextPage") -}}
     {{ if ne .Title "main" }} 
-        <div class="pagination-block" style="margin: 15px 20px;">
-            <a class="previous" href="{{.RelPermalink}}" title="{{.Title}}">
+        <div class="pagination-block left-side-pagination" style="margin: 15px 20px;">
+            <a class="previous" href="" >
                 <div class="next-start-now-block">
                     <div class="next-start-now-text">
                         <p>START NOW</p>
@@ -46,46 +13,31 @@
             </a>
         </div>
     {{end}}
-    {{- end }}
 {{ else }}
-{{- if not $.Site.Params.disableNavChevron -}}
-    {{- with ($.Scratch.Get "prevPage") -}}
     {{ if ne .Title "main" }}
-        <div class="pagination-block">
-            {{if or (eq .Type "faq") (eq .Type "whats-new")}}
-            <a class="previous" href="{{.RelPermalink}}#catalyst-components" title="{{.Title}}">
-            {{else}}
-            <a class="previous" href="{{.RelPermalink}}" title="{{.Title}}">
-            {{end}}
+        <div class="pagination-block left-side-pagination">
+            <a class="previous" href="">
                 <div class="arrow-block">
                     <div class="reverseArrowIconLight"></div>
                 </div>
             </a>
             <div>
                 <p class="prev-text">PREVIOUS</p>
-                <p class="page-title">{{.Title}}</p>
+                <p class="page-title"></p>
             </div>
         </div> 
     {{end}}
-    {{ end -}}
-    {{- with ($.Scratch.Get "nextPage") -}}
     {{ if ne .Title "main" }} 
-        <div class="pagination-block" style="justify-content:flex-end;">
+        <div class="pagination-block right-side-pagination">
             <div>
                 <p class="next-text">NEXT</p>
-                <p class="page-title">{{.Title}}</p>
+                <p class="page-title"></p>
             </div>
-            {{if or (eq .Type "faq") (eq .Type "whats-new")}}
-            <a class="next" href="{{.RelPermalink}}#catalyst-components" title="{{.Title}}">
-            {{else}}
-            <a class="next" href="{{.RelPermalink}}" title="{{.Title}}">
-            {{end}}
+            <a class="next" href="">
                 <div class="arrow-block">
                     <div class="forwardArrowIconLight"></div>
                 </div>
             </a>
         </div>
     {{end}}
-    {{- end }}
-{{- end -}}
 {{ end }}

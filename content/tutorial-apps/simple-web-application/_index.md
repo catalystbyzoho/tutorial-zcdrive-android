@@ -1,5 +1,5 @@
 +++
-title = "main"
+title = "Simple Web Application"
 type = "tutorial-apps"
 description = ""
 weight = 0

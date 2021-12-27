@@ -18,14 +18,23 @@
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
-        ">
-      {{ if ne .Title "main"}}
-      <div>
+        " type="{{.Type}}">
+
+      <div style="display: flex;">
         {{- if ne $numberOfPages 0 }}
-          <a href="{{ .RelPermalink}}#catalyst-components">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+          {{- if .Params.alwaysopen}} 
+            <div class="category-icon" style="display: none;">
+              <div class="right-mini-icon"></div>
+              <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            </div>
+          {{else}}
+            <div class="category-icon" style="display: flex;">
+              <div class="right-mini-icon"></div>
+              <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            </div>
+          {{end}}
         {{- end}}
       </div>
-      {{ end }}
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- $pages := .Pages }}
@@ -47,15 +56,11 @@
       <li data-nav-id="{{.Permalink}}" class="dd-item">
         <div>
           {{- if .Params.head}} 
-          <h6 style="padding:0 0 20px 0; margin-left: -1px; color: var(--font-body-color);">{{safeHTML .Params.Pre}}{{.Params.head}}{{safeHTML .Params.Post}}</h6>
-          <a href="{{ .RelPermalink}}#catalyst-components">
-            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
-          </a>
-        {{else}}
-          <a href="{{ .RelPermalink}}#catalyst-components">
-            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
-          </a>
+          <h6 style="padding:0 0 20px 0; margin-left: -1px;">{{safeHTML .Params.Pre}}{{.Params.head}}{{safeHTML .Params.Post}}</h6>
           {{end}}
+          <a class="file" href="{{ .RelPermalink}}#catalyst-components" title="{{.LinkTitle}}">
+            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+          </a>
         </div>
       </li>
      {{- end}}

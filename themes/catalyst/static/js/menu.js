@@ -7,7 +7,7 @@ if (matches.length > 0) {
     var nextAncestor = menu.closest("li[data-nav-id]");
     while (maxDepth-- >= 0 && nextAncestor !== null) {
         nextAncestor.classList.add("parent");
-        var icon = nextAncestor.querySelector('div.category-icon');
+        var icon = nextAncestor.querySelector('div.category-icon div');
         if (icon !== null) {
             icon.classList.remove('right-mini-icon');
             icon.classList.add('down-mini-icon');

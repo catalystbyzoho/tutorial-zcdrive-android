@@ -16,17 +16,23 @@
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
-        ">
+        " type="{{.Type}}">
 
-      {{if ne .Title "main"}}
-      <div>
+      <div style="display: flex;">
         {{- if ne $numberOfPages 0 }}
-            <i class="fa fa-angle-right category-icon"></i>
-            <a href="{{ .RelPermalink}}">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+          {{- if .Params.alwaysopen}} 
+            <div class="category-icon" style="display: none;">
+              <div class="right-mini-icon"></div>
+              <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            </div>
+          {{else}}
+            <div class="category-icon" style="display: flex;">
+              <div class="right-mini-icon"></div>
+              <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
+            </div>
+          {{end}}
         {{- end}}
       </div>
-      {{end}}
-
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- $pages := .Pages }}
@@ -45,9 +51,9 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item">
+      <li data-nav-id="{{.Permalink}}" class="dd-item" type="{{.Type}}">
         <div>
-          <a href="{{ .RelPermalink}}">
+          <a class="file" href="{{.RelPermalink}}" title="{{.LinkTitle}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
         </div>

@@ -15,14 +15,13 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-
   <body data-url="{{ .RelPermalink }}">
     {{ partial "global-search.html" . }}
     <article>
       <aside class="hide-sidebar" id="responsiveSidebar">
         {{ partial "body-sidebar.html" . }}     
         <ul class="menu">
-          {{- partial "menu.html" . }}
+          {{ partial "menu.html" . }}
         </ul> 
       </aside>
       <section class="page">
@@ -41,4 +40,6 @@
     </footer>
     {{ partial "html-body-link.html" . }}
   </body>
+  <script src='{{"js/scroll-effect.js" | relURL}}'></script>
+  <script src='{{"js/pagination.js" | relURL}}'></script>
 </html>

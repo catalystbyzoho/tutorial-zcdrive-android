@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     jQuery('.category-icon').on('click', function() {
-        $( this ).toggleClass("down-mini-icon right-mini-icon") ;
+        $( this ).children('div').toggleClass("down-mini-icon right-mini-icon") ;
         $( this ).parent().parent().children('ul').toggle() ;
         return false;
     });

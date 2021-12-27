@@ -20,3 +20,11 @@ for(var i=0;i<done.length;i++){
         done[i].classList.add("is-done");
     }
 }
+
+//stay Active Parent till Child Active
+var a = document.querySelector("li.dd-item.haschildren.StepProgress-item.parent.is-done li.active");
+if(a){
+    var b = document.querySelector("li.dd-item.haschildren.StepProgress-item.parent.is-done");
+    b.classList.remove("is-done");
+    b.classList.add("current","active");
+}
