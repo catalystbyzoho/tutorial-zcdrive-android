@@ -16,7 +16,7 @@
         </div>
     </div>
 	<div id="view-adjust" class="panel-body fadecontent">
-		<code>{{.Inner}}</code>
+		<code {{ with .Get "lang" }} class="{{.}}" {{end}}>{{.Inner}}</code>
 	</div>
 	<div class="panel-footer">
 		<div class="adjust-button" onclick="adjustview(this)">View more</div>

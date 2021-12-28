@@ -144,12 +144,12 @@ pre.shortcode-dark{
 }
 #panel .panel-body{
   background-color: var(--codeblock-body-color);
-  padding: 20px 30px;
+  padding: 4px 14px 20px 14px;
   border-top: 1px solid var(--hr-color);
 }
 #view-adjust.panel-body{
   height: 120px;
-  padding: 20px 30px 40px 20px;
+  padding: 4px 14px 40px 14px;
 }
 #view-adjust.panel-body.import-block{
   height: 100px;
@@ -247,8 +247,8 @@ pre.shortcode-dark{
   box-shadow: 0px 0px 16px #171717 !important;
 }
 .panel-select .select-selected {
-  background-color: var(--body-color);
-  color: var(--font-body-color);
+  background-color: var(--codeblock-button-color);
+  color: var(--font-lite-body-color);
   border: none;
   height: 24px;
   width: 80px;
@@ -261,13 +261,19 @@ pre.shortcode-dark{
 .panel-select .select-selected.select-arrow-active:after{
   top: 7px;
 }
+.panel-select .select-items{
+  background-color: var(--codeblock-button-color);
+}
+.panel-select .select-items div{
+  color: var(--font-lite-body-color);
+}
 .shortcode-light .panel-select .select-selected {
   background-color: #FFFFFF;
-  color: #000000;
+  color: #393939;
 }
 .shortcode-dark .panel-select .select-selected {
   background-color: #2C2F2F;
-  color: #F0F0F0;
+  color: #B6B6B6;
 }
 .shortcode-light .panel-select .select-selected:after{
   border-color: #000000 transparent transparent transparent;
@@ -290,18 +296,18 @@ pre.shortcode-dark{
   border: 1px solid #2E2E38;
 }
 .shortcode-light .panel-select .select-items div{
-  color: #000000;
+  color: #393939;
 }
 .shortcode-dark .panel-select .select-items div{
-  color: #F0F0F0;
+  color: #B6B6B6;
 }
 .shortcode-light .panel-select .select-items div:hover, .shortcode-light .panel-select .same-as-selected {
   background-color: #F6F7F8 !important;
-  color: #000000 !important;
+  color: #393939 !important;
 }
 .shortcode-dark .panel-select .select-items div:hover, .shortcode-dark .panel-select .same-as-selected {
   background-color: #171717 !important;
-  color: #F0F0F0 !important;
+  color: #B6B6B6 !important;
 }
 
 /* Panel Import */
@@ -470,3 +476,31 @@ pre.shortcode-dark{
   display: none;
 }
 
+/* Syntax Hightlight styles */
+pre table,
+pre table td {
+  font: normal normal normal 16px/26px Inconsolata !important;
+  width: auto !important;
+  padding: 0 !important;
+  border: none !important;
+  margin: 0px !important;
+}
+pre table td.hljs-ln-code{
+  padding-left: 15px !important;
+}
+pre code.hljs{
+  padding-bottom: 0px !important;
+}
+pre.shortcode-light table td{
+  color: #000000 !important;
+}
+pre.shortcode-dark table td{
+  color:#F0F0F0 !important;
+}
+.hljs-ln-n:before {
+  content: attr(data-line-number);
+  color: #909090 !important;
+}
+.hljs-built_in, .hljs-keyword, .hljs-name, .hljs-selector-tag, .hljs-tag{
+  color: var(--font-blue-color) !important;
+}

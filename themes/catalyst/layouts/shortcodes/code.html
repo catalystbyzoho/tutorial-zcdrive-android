@@ -11,6 +11,6 @@
         </div>
     </div>
     <div class="panel-body" style="border-top: none; margin-top: -45px;">
-        <code class="language-javascript" data-lang="javascript">{{.Inner}}</code>
+        <code {{ with .Get "lang" }} class="{{.}}" {{end}}>{{.Inner}}</code>
     </div>
 </pre>

@@ -228,7 +228,6 @@ if(ls == "dark"){
   var activeElement = document.querySelector("aside li.active");
   if(activeElement){
     var p = activeElement.getBoundingClientRect().top;
-    console.log(p);
     if(p > 700){
         const root = document.querySelector('aside ul');
         root.scrollTo({

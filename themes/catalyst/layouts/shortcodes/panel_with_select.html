@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="panel-body">
-        <code></code>
+        <code {{ with .Get "lang" }} class="{{.}}" {{end}}></code>
     </div>
 </pre>
 <div {{ with .Get "id" }} id="{{.}}" {{end}} class="select-panel hide" >{{.Inner}}</div>

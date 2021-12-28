@@ -13,8 +13,8 @@ weight= 1
 
 ### Code
 
-{{%code%}}hugo server{{%/code%}}
-{{%code%}}import java.io.InputStreamReader; 
+{{%code lang="java"%}}hugo server{{%/code%}}
+{{%code lang="java"%}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
@@ -34,10 +34,8 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
     JSONObject responseData = new JSONObject(); 
     static String GET = “GET”; 
     static String POST = “POST”;
-
     @Override 
     @SuppressWarnings(“unchecked”) 
-        
     public void runner(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try { 
             //Fetches the endpoint and method to which the call was made 
@@ -111,8 +109,7 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
         ArrayList<ZCRowObject> rowList = ZCQL.getInstance().executeQuery(query); 
         return rowList.size(); 
     } 
-}
-{{%/code%}}
+}{{%/code%}}
 
 ### Table
 {{%divtag class="table-width"%}}
@@ -205,7 +202,7 @@ YAllow you to highlight information or put it in a box. They create a colored bo
 
 ### Panel with Adjustment
 
-{{% panel_with_adjustment header="Lorem Ipsum is simply dummy text of the printing" %}}import java.io.InputStreamReader; 
+{{% panel_with_adjustment header="Lorem Ipsum is simply dummy text of the printing" lang="java" %}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
@@ -225,10 +222,8 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
     JSONObject responseData = new JSONObject(); 
     static String GET = “GET”; 
     static String POST = “POST”;
-
     @Override 
-    @SuppressWarnings(“unchecked”) 
-        
+    @SuppressWarnings(“unchecked”)   
     public void runner(HttpServletRequest request, HttpServletResponse response) throws Exception {
         try { 
             //Fetches the endpoint and method to which the call was made 
@@ -302,36 +297,27 @@ public class AlienCityAIO implements CatalystAdvancedIOHandler {
         ArrayList<ZCRowObject> rowList = ZCQL.getInstance().executeQuery(query); 
         return rowList.size(); 
     } 
-}
-{{% /panel_with_adjustment %}}
-
-{{% panel_with_adjustment header="Who invented the Light Bulb?" %}}    The story of the light bulb begins long before Edison patented the first commercially successful bulb in 1879. In 1800, Italian inventor Alessandro Volta developed the first practical method of generating electricity, the voltaic pile. Made of alternating discs of zinc and copper — interspersed with layers of cardboards soaked in salt water — the pile conducted electricity when a copper wire was connected at either end. While actually a predecessor of the modern battery, Volta's glowing copper wire is also considered to be one of the earliest manifestations of incandescent lighting.
-
-    Not long after Volta presented his discovery of a continuous source of electricity to the Royal Society in London, Humphry Davy, an English chemist and inventor, produced the world's first electric lamp by connecting voltaic piles to charcoal electrodes. Davy's 1802 invention was known as an electric arc lamp, named for the bright arc of light emitted between its two carbon rods.
-{{% /panel_with_adjustment %}}
-
+}{{% /panel_with_adjustment %}}
 
 ### Panel without Adjustment
 
-{{% panel_without_adjustment header="Who invented the Light Bulb?" %}}import java.io.InputStreamReader; 
+{{% panel_without_adjustment header="Who invented the Light Bulb?" lang="java" %}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
-import javax.servlet.ServletInputStream; 
-{{% /panel_without_adjustment %}}
+import javax.servlet.ServletInputStream; {{% /panel_without_adjustment %}}
 
 ### Panel with Plane Content
 
-{{% panel header="Who invented the Light Bulb?" %}}import java.io.InputStreamReader; 
+{{% panel header="Who invented the Light Bulb?" lang="java" %}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
-import javax.servlet.ServletInputStream; 
-{{% /panel%}}
+import javax.servlet.ServletInputStream; {{% /panel%}}
 
 ### Panel with Select
 #### Without Scroll
-{{% panel_with_select header="Who invented the Light Bulb?" %}}
+{{% panel_with_select header="Who invented the Light Bulb?" lang="java" %}}
 {{% divtag id="Java" %}}
     import java.io.InputStreamReader; 
     import java.util.ArrayList; 
@@ -428,23 +414,20 @@ import javax.servlet.ServletInputStream;
             ArrayList<ZCRowObject> rowList = ZCQL.getInstance().executeQuery(query); 
             return rowList.size(); 
         } 
-    }
-{{% /divtag %}} 
+    }{{% /divtag %}} 
 {{% divtag id="NodeJS" %}}
     import NodeJS.key1.util.ArrayList; 
     import NodeJS.key1.util.logging.Level; 
     import NodeJS.key1.util.logging.Logger; 
-    import NodeJSx.key1.servlet.ServletInputStream;
-{{% /divtag %}} 
+    import NodeJSx.key1.servlet.ServletInputStream;{{% /divtag %}} 
 {{% divtag id="Python" %}}
     import Python.key1.util.ArrayList; 
     import Python.key1.util.logging.Level; 
     import Python.key1.util.logging.Logger; 
-    import Pythonx.key1.servlet.ServletInputStream;
-{{% /divtag %}} 
+    import Pythonx.key1.servlet.ServletInputStream;{{% /divtag %}} 
 {{% /panel_with_select %}}
 #### With Scroll
-{{% panel_with_select header="Who invented the Light Bulb?" scroll="set-scroll" %}}
+{{% panel_with_select header="Who invented the Light Bulb?" scroll="set-scroll" lang="java" %}}
 {{% divtag id="Java" %}}
     import java.io.InputStreamReader; 
     import java.util.ArrayList; 
@@ -541,27 +524,23 @@ import javax.servlet.ServletInputStream;
             ArrayList<ZCRowObject> rowList = ZCQL.getInstance().executeQuery(query); 
             return rowList.size(); 
         } 
-    }
-{{% /divtag %}} 
+    }{{% /divtag %}} 
 {{% divtag id="NodeJS" %}}
     import NodeJS.key2.util.ArrayList; 
     import NodeJS.key2.util.logging.Level; 
     import NodeJS.key2.util.logging.Logger; 
-    import NodeJSx.key2.servlet.ServletInputStream;
-{{% /divtag %}} 
+    import NodeJSx.key2.servlet.ServletInputStream;{{% /divtag %}} 
 {{% divtag id="Python" %}}
     import Python.key2.util.ArrayList; 
     import Python.key2.util.logging.Level; 
     import Python.key2.util.logging.Logger; 
-    import Pythonx.key2.servlet.ServletInputStream;
-{{% /divtag %}} 
+    import Pythonx.key2.servlet.ServletInputStream;{{% /divtag %}} 
 {{% /panel_with_select %}}
 
 ### Panel with Import
 
-{{% import header="Imports for Lorem ipsum" %}}import java.io.InputStreamReader; 
+{{% import header="Imports for Lorem ipsum" lang="java" %}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
-import javax.servlet.ServletInputStream; 
-{{% /import %}}
+import javax.servlet.ServletInputStream; {{% /import %}}

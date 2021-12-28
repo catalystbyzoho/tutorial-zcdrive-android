@@ -603,7 +603,8 @@ article section.page div.content{
         code {
             font: normal normal normal 16px/26px Inconsolata;
             white-space: pre-wrap;
-            color: var(--font-body-color)
+            color: var(--font-body-color);
+            background-color: transparent;
         }
     }
 }

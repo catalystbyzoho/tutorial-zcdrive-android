@@ -18,6 +18,6 @@
         </div>
     </div>
     <div class="import-body panel-body">
-        <code>{{.Inner}}</code>
+        <code {{ with .Get "lang" }} class="{{.}}" {{end}}>{{.Inner}}</code>
     </div>
 </pre>

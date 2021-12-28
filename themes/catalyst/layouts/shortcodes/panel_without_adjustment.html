@@ -16,6 +16,6 @@
         </div>
     </div>
     <div class="panel-body">
-        <code>{{.Inner}}</code>
+        <code {{ with .Get "lang" }} class="{{.}}" {{end}}>{{.Inner}}</code>
     </div>
 </pre>

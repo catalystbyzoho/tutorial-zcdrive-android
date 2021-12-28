@@ -46,8 +46,7 @@ You will receive notifications in your Catalyst console about the updates of the
     import java.util.ArrayList; 
     import java.util.logging.Level; 
     import java.util.logging.Logger; 
-    import javax.servlet.ServletInputStream; 
-{{% /panel_without_adjustment %}}
+    import javax.servlet.ServletInputStream; {{% /panel_without_adjustment %}}
 
 {{%/divtag%}}
 {{%/section%}}
