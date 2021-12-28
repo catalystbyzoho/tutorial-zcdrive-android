@@ -601,10 +601,9 @@ article section.page div.content{
         border: 1px solid var(--hr-color);
         background: var(--menu-color);
         code {
-            font: normal normal normal 13px/19px Roboto-Mono;
+            font: normal normal normal 16px/26px Inconsolata;
             white-space: pre-wrap;
-            line-height: 26px;
-            color: var(--font-menu-color)
+            color: var(--font-body-color)
         }
     }
 }

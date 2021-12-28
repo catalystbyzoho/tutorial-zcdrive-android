@@ -1,11 +1,11 @@
 <pre id="panel" {{ with .Get "scroll" }} class="{{.}}" {{end}}>
     <div class="show-flex">
-        {{- with .Get "header" -}}
-        <div class="panel-header">
-            {{- htmlUnescape . | markdownify -}}
-        </div>
-        {{- end -}}
-        <div class="right-header-panel">  
+		{{- with .Get "header" -}}
+		<div class="panel-header" style="cursor: pointer;" onclick="openImport(this)">
+			{{- htmlUnescape . | markdownify -}}
+		</div>
+		{{- end -}}
+        <div class="right-header-panel" id="importBlock">  
             <div class="copytoclipboard" onclick="copyToClipboard(this)">copy</div>
             <div class="show-flex" onclick="clickHandler(this)">
                 <input name="theme-switch" style="opacity: 0;" type="checkbox" >
@@ -13,14 +13,11 @@
                     <div name="icontheme" class="code-light-icon"></div>
                 </div>
             </div>
+            <div class="spliter"></div>
+            <div class="expand-close-icon" id="import-icon" onclick="openImport(this)"></div>
         </div>
     </div>
-	<div id="view-adjust" class="panel-body fadecontent import-block">
-		<code>{{.Inner}}</code>
-	</div>
-	{{- with .Get "footer" -}}
-	<div class="panel-footer">
-		<div class="adjust-button" onclick="adjustview(this)">View more</div>
-	</div>
-	{{- end -}}
+    <div class="import-body panel-body">
+        <code>{{.Inner}}</code>
+    </div>
 </pre>

@@ -267,5 +267,11 @@
     <g id="Filternormal-2" data-name="Filternormal" transform="translate(350 3584)" clip-path="url(#clip-path-2)">
       <path id="filter-2" data-name="filter" d="M16,2.182H1.455l5.818,6.45v4.459l2.909,1.364V8.632Z" transform="translate(-0.727 -0.818)" fill="none" stroke="#eaeaea" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
     </g>
+    <g id="Up-4" data-name="Up" transform="translate(1924 4493) rotate(180)">
+      <path id="chevron-down_2_4" data-name="chevron-down (2)" d="M6,13,9.5,9,13,13" transform="translate(1517.5 891.5)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+    <g id="Up-5" data-name="Up" transform="translate(438 3586)">
+      <path id="chevron-down_2_5" data-name="chevron-down (2)" d="M6,9l6,6,6-6" transform="translate(-6 -9)" fill="none" stroke="#b6b6b6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
   </g>
 </svg>

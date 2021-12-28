@@ -4,7 +4,7 @@ var str;
 
 for( var i=0;i<document.querySelectorAll("code").length;i++){
     str = document.querySelectorAll("code")[i].innerHTML;
-    var get = str.match(/\.(.+?)\(/g);
+    var get = str.match(/\.(.*?)\(/g);
     if (get != null){
         for(var j=0;j<get.length;j++){
             str = document.querySelectorAll("code")[i].innerHTML;

@@ -1,6 +1,7 @@
 :root {
     --color-mode: light;
     --body-color: #FFFFFF;
+    --codeblock-body-color: #F8F9FA;
     --hr-color: #EAEEF5;
     --menu-color: #F6F7F8;
     --font-body-color: #222222;
@@ -12,11 +13,13 @@
     --step-color: #d1d1d1;
     --font-blue-color: #448BFF;
     --button-background-color: #F0483D;
+    --button-shadow-color: #A2A2A234;
     --shadow-color:#A2A2A21A;
     --image-shadow-color: #C7C7C767;
     --gray-color: #8D58C14D;
     --gray-border-color: #8D58C134;
     --search-background-color: #EAEBEB;
+    --codeblock-button-color: #FFFFFF;
     --hover-color: #000000;
     --search-shadow-color: #7B7B7B76;
     --filter-shadow-color: #D3D3D376;
@@ -76,96 +79,13 @@
     --lang-icon: url('/images/LightPages.svg');
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-mode: dark;
-    }
-
-    :root:not([data-user-color-scheme]) {
-        --body-color: #171717;
-        --body-header-color: #FFFFFF;
-        --hr-color: #2E2E38;
-        --menu-color: #212124;
-        --font-body-color:#F0F0F0;
-        --font-lite-body-color: #DEDEDE;
-        --font-menu-color: #F0F0F0;
-        --font-suggestion-color: #656565;
-        --font-at-color: #656565;
-        --step-color: #454545;
-        --font-blue-color: #448BFF;
-        --button-background-color: #F0483D;
-        --shadow-color:#A2A2A20D;
-        --image-shadow-color: #C7C7C767;
-        --gray-color: #A3ACDB80;
-        --gray-border-color: #8D58C134;
-        --search-background-color: #2C2F2F;
-        --hover-color: #FFFFFF;
-        --search-shadow-color: #33333376;
-        --filter-shadow-color: #33333376;
-        --search-outer-background-color: rgba(142,142,142,0.4);
-        --scrollbar-color: rgba(142,142,142);
-        --github-lite-icon: url('/images/DarkPages.svg');
-        --edit-icon: url('/images/DarkPages.svg');
-        --share-icon: url('/images/DarkPages.svg');
-        --download-icon: url('/images/DarkPages.svg');
-        --right-icon: url('/images/DarkPages.svg');
-        --left-icon: url('/images/DarkPages.svg');
-        --thumpsup-icon: url('/images/DarkPages.svg');
-        --thumpsdown-icon: url('/images/DarkPages.svg');
-        --thumpsup-blue-icon: url('/images/DarkPages.svg');
-        --thumpsdown-blue-icon: url('/images/DarkPages.svg');
-        --shortlist-icon: url('/images/DarkPages.svg');
-        --search-icon: url('/images/DarkPages.svg');
-
-         // new
-        --getting-started-icon: url('/images/DarkHome.svg');
-        --tutorial-icon: url('/images/DarkHome.svg');
-        --whats-new-icon: url('/images/DarkHome.svg');
-        --character-icon: url('/images/DarkHome.svg');
-        --app-icon: url('/images/DarkHome.svg');
-        --face-icon: url('/images/DarkHome.svg');
-        --image-icon: url('/images/DarkHome.svg');
-        --object-icon: url('/images/DarkHome.svg');
-        --barcode-icon: url('/images/DarkHome.svg');
-        --java-icon: url('/images/DarkHome.svg');
-        --nodejs-icon: url('/images/DarkHome.svg');
-        --js-icon: url('/images/DarkHome.svg');
-        --android-icon: url('/images/DarkHome.svg');
-        --ios-icon: url('/images/DarkHome.svg');
-        --api-icon: url('/images/DarkHome.svg');
-        --cli-icon: url('/images/DarkHome.svg');
-        --auth-icon: url('/images/Component-HelpDark-icons.svg');
-        --data-store-icon: url('/images/Component-HelpDark-icons.svg');
-        --file-store-icon: url('/images/Component-HelpDark-icons.svg');
-        --cache-icon: url('/images/Component-HelpDark-icons.svg');
-        --zcql-icon: url('/images/Component-HelpDark-icons.svg');
-        --cron-icon: url('/images/Component-HelpDark-icons.svg');
-        --functions-icon: url('/images/Component-HelpDark-icons.svg');
-        --circuits-icon: url('/images/Component-HelpDark-icons.svg');
-        --security-rules-icon: url('/images/Component-HelpDark-icons.svg');
-        --search-icon: url('/images/Component-HelpDark-icons.svg');
-        --mail-icon: url('/images/Component-HelpDark-icons.svg');
-        --push-notifications-icon: url('/images/Component-HelpDark-icons.svg');
-        --event-listeners-icon: url('/images/Component-HelpDark-icons.svg');
-        --git-icon: url('/images/Component-HelpDark-icons.svg');
-        --api-gateway-icon: url('/images/Component-HelpDark-icons.svg');
-        --mobile-device-management-icon: url('/images/Component-HelpDark-icons.svg');
-        --crashes-icon: url('/images/Component-HelpDark-icons.svg');
-        --apm-icon: url('/images/Component-HelpDark-icons.svg');
-        --web-client-icon: url('/images/Component-HelpDark-icons.svg');
-        --domain-mapping-icon: url('/images/Component-HelpDark-icons.svg');
-        --logs-icon: url('/images/Component-HelpDark-icons.svg');
-        --metrics-icon: url('/images/Component-HelpDark-icons.svg');
-        --lang-icon: url('/images/DarkPages.svg');
-    }
-}
-
 [data-user-color-scheme='dark'] {
     --body-color: #171717;
+    --codeblock-body-color: #1B1B1F;
     --body-header-color: #FFFFFF;
     --hr-color: #343434;
     --menu-color: #222222;
-    --font-body-color:#EAEAEA;
+    --font-body-color:#F0F0F0;
     --font-lite-body-color: #DEDEDE;
     --font-menu-color: #B6B6B6;
     --font-suggestion-color: #8E8E8E;
@@ -174,10 +94,12 @@
     --font-blue-color: #448BFF;
     --button-background-color: #F0483D;
     --shadow-color:#A2A2A20D;
+    --button-shadow-color: #171717;
     --image-shadow-color: #C7C7C767;
     --gray-color: #8D58C14D;
     --gray-border-color: #8D58C134;
     --search-background-color: #2C2F2F;
+    --codeblock-button-color: #2C2F2F;
     --hover-color: #FFFFFF;
     --search-shadow-color: #33333376;
     --filter-shadow-color: #33333376;

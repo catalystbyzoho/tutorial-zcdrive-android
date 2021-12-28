@@ -223,3 +223,27 @@ if(ls == "dark"){
       toc_query[i].classList.remove("open-timeline");
     }
   }
+
+  //Show Sidebar Active Element Always Visible
+  var activeElement = document.querySelector("aside li.active");
+  if(activeElement){
+    var p = activeElement.getBoundingClientRect().top;
+    console.log(p);
+    if(p > 700){
+        const root = document.querySelector('aside ul');
+        root.scrollTo({
+          top: p,
+          left: 0,
+          behavior: 'smooth',
+        });
+    }
+    //For Tutorial
+    if(p > 700){
+      const root = document.querySelector('aside');
+      root.scrollTo({
+        top: p,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
+  }

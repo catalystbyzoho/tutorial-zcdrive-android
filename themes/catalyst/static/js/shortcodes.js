@@ -45,6 +45,19 @@ function adjustview(e){
   }
 }
 
+//Open Import
+function openImport(e){
+  e.closest("pre").querySelector(".panel-body").classList.toggle("import-body");
+  var cls = e.closest("pre").querySelector("#import-icon").classList;
+  if(cls.value.includes("expand-close-icon")){
+    cls.remove("expand-close-icon");
+    cls.add("expand-open-icon");
+  }else{
+    cls.add("expand-close-icon");
+    cls.remove("expand-open-icon");
+  }
+}
+
 //Table show props
 var tabProps = document.getElementsByClassName("table-props");
 var i;
