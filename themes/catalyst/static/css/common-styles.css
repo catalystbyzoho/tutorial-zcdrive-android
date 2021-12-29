@@ -31,7 +31,6 @@
   font: 13px/16px zoho-puvi-semibold; 
   letter-spacing: 2.6px; 
   color: var(--font-menu-color); 
-  opacity: 1; 
   padding:18px 10px 17px 19px; 
   margin-bottom: 0px;
 }
@@ -60,7 +59,6 @@
     font: 15px/18px zoho-puvi-regular;
     letter-spacing: 0px;
     color: var(--font-lite-body-color);
-    opacity: 1;
 }
 .list a:hover{
   color: var(--font-blue-color);
@@ -70,7 +68,6 @@
   height: 2px;
   margin-top: 0px;
   border-radius: 4px;
-  opacity: 1;
 }
 .header-block{
   padding:0 29px 0 40px;
@@ -400,7 +397,7 @@ padding-bottom: 40px;
         margin-top: 1px;
         margin-left: 1px;
         background-color: transparent;
-        border: 1px solid var(--hr-color);           
+        border: 1px solid var(--search-border-color);           
     }
     .input-field:hover, .input-field:focus{
       box-shadow: 0px 0px 20px #A2A2A21A;
@@ -570,19 +567,21 @@ padding-bottom: 40px;
   .select-items div {
     padding: 5px 0 5px 10px;
     border: 1px solid transparent;
+    white-space: nowrap;
     cursor: pointer;
   }
   .select-selected {
     padding: 4px 20px 0 15px;
     border-radius: 4px;
     cursor: pointer;
+    white-space: nowrap;
   }
   .select-items {
     position: absolute;
     background-color: var(--body-color);
     color: var(--font-body-color);
     border: 1px solid var(--hr-color);
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px;
     padding: 5px 0;
     margin-top: 2px;
     top: 100%;
@@ -636,7 +635,6 @@ padding-bottom: 40px;
         font: normal normal 600 40px/48px zoho-puvi-bold;
         letter-spacing: 0px;
         color: var(--body-header-color);
-        opacity: 1;
         text-align: center;
         margin-bottom: 12px;
     }
@@ -650,7 +648,6 @@ padding-bottom: 40px;
         font: normal normal normal 15px/26px zoho-puvi-regular;
         letter-spacing: 0px;
         color: var(--font-body-color);
-        opacity: 1;
         text-align: center;
         margin-bottom: 34px;
     }
@@ -1251,7 +1248,6 @@ padding-bottom: 40px;
       font: normal normal normal 14px/17px zoho-puvi-regular;
       letter-spacing: 0px;
       color: var(--font-menu-color);
-      opacity: 1;
   }
 }
 
@@ -1332,7 +1328,6 @@ font: normal normal normal 13px/24px zoho-puvi-regular;
 }
 .yes-no-btn:hover {
   background: var(--body-color);
-  opacity: 8;
 }
 .feedback-sec:after,
 .yes-no:after {
@@ -1392,7 +1387,6 @@ font-size: 13px
   background: var(--body-color);
   border: 1px solid var(--hr-color);
   border-radius: 4px;
-  opacity: 0.8;
   width: 100%;
   height: 76px;
   font: normal normal normal 15px/18px zoho-puvi-regular;

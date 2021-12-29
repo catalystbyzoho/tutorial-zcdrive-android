@@ -252,19 +252,29 @@ pre.shortcode-dark{
   background-color: var(--codeblock-button-color);
   color: var(--font-lite-body-color);
   border: none;
-  height: 24px;
-  width: 80px;
-  border-radius: 3px;
-  padding: 0px 20px 0 8px
+  border-radius: 4px;
+  padding: 1px 26px 0 8px
 }
 .panel-select .select-selected:after{
-  top: 12px;
+  background: var(--edit-icon) no-repeat -470px -102px;
+	width: 10px;
+	height: 7px;
+  top: 11px;
+  right: 6px;
+  border: none;
 }
 .panel-select .select-selected.select-arrow-active:after{
-  top: 7px;
+  background: var(--edit-icon) no-repeat -470px -102px;
+	width: 10px;
+	height: 7px;
+  transform: rotate(180deg);
+  top: 11px;
+  right: 6px;
+  border: none;
 }
 .panel-select .select-items{
   background-color: var(--codeblock-button-color);
+  width: 78px;
 }
 .panel-select .select-items div{
   color: var(--font-lite-body-color);
@@ -278,16 +288,16 @@ pre.shortcode-dark{
   color: #B6B6B6;
 }
 .shortcode-light .panel-select .select-selected:after{
-  border-color: #000000 transparent transparent transparent;
+  background: url('/images/LightPages.svg') no-repeat -470px -102px;
 }
 .shortcode-dark .panel-select .select-selected:after{
-  border-color: #F0F0F0 transparent transparent transparent;
+  background: url('/images/DarkPages.svg') no-repeat -470px -102px;
 }
 .shortcode-light .panel-select .select-selected.select-arrow-active:after{
-  border-color: transparent transparent #000000 transparent;
+  background: url('/images/LightPages.svg') no-repeat -470px -102px;
 }
 .shortcode-dark .panel-select .select-selected.select-arrow-active:after{
-  border-color: transparent transparent #F0F0F0 transparent;
+  background: url('/images/DarkPages.svg') no-repeat -470px -102px;
 }
 .shortcode-light .panel-select .select-items {
   background-color: #FFFFFF;
@@ -414,9 +424,14 @@ pre.shortcode-dark{
   height: 20px;
   padding: 1px;
   border-radius: 25px;
-  background: #B6B6B6;
+  background: var(--hr-color);
   margin: 2px 20px 0 20px;
-  opacity: 0.5;
+}
+#panel.shortcode-light .spliter{
+  background: #EAEEF5;
+}
+#panel.shortcode-dark .spliter{
+  background: #343434;
 }
 #panel.shortcode-light .round input[type="checkbox"] + label{ 
   background-color: #FFFFFF;

@@ -952,6 +952,7 @@ span.highlight.highlight-i {
   --gray-color: #8D58C14D;
   --gray-border-color: #8D58C134;
   --search-background-color: #EAEBEB;
+  --search-border-color: #E8E8E8;
   --codeblock-button-color: #FFFFFF;
   --hover-color: #000000;
   --search-shadow-color: #7B7B7B76;
@@ -1030,6 +1031,7 @@ span.highlight.highlight-i {
   --gray-color: #8D58C14D;
   --gray-border-color: #8D58C134;
   --search-background-color: #2C2F2F;
+  --search-border-color: #454545;
   --codeblock-button-color: #2C2F2F;
   --hover-color: #FFFFFF;
   --search-shadow-color: #33333376;
