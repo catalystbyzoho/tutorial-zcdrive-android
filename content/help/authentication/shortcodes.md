@@ -14,7 +14,7 @@ weight= 1
 ### Code
 
 {{%code lang="java"%}}hugo server{{%/code%}}
-{{%code lang="java"%}}import java.io.InputStreamReader; 
+{{%code lang="java" scroll="set-scroll" %}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 
@@ -202,7 +202,7 @@ YAllow you to highlight information or put it in a box. They create a colored bo
 
 ### Panel with Adjustment
 
-{{% panel_with_adjustment header="Lorem Ipsum is simply dummy text of the printing" lang="java" %}}import java.io.InputStreamReader; 
+{{% panel_with_adjustment header="Lorem Ipsum is simply dummy text of the printing" lang="java" scroll="set-scroll" %}}import java.io.InputStreamReader; 
 import java.util.ArrayList; 
 import java.util.logging.Level; 
 import java.util.logging.Logger; 

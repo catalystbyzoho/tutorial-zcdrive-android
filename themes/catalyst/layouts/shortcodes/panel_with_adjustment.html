@@ -15,10 +15,10 @@
             </div>
         </div>
     </div>
-	<div id="view-adjust" class="panel-body fadecontent">
+	<div id="view-adjust" class="panel-body fadecontent" onclick="adjustview(this)">
 		<code {{ with .Get "lang" }} class="{{.}}" {{end}}>{{.Inner}}</code>
 	</div>
 	<div class="panel-footer">
-		<div class="adjust-button" onclick="adjustview(this)">View more</div>
+		<div class="adjust-button" onclick="adjustview(this,'btn')">View more</div>
 	</div>
 </pre>

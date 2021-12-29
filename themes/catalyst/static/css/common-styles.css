@@ -787,7 +787,7 @@ padding-bottom: 40px;
         color: var(--font-body-color);
         border: 1px solid var(--hr-color);
         cursor: pointer;
-        padding: 20px 50px 20px 30px;
+        padding: 18px 50px 14px 30px;
         width: 100%;
         border-radius: 4px;
       }
@@ -800,8 +800,7 @@ padding-bottom: 40px;
         color: var(--font-body-color);
         border: 1px solid var(--hr-color);
         border-top: none;
-        cursor: pointer;
-        padding: 20px 30px;
+        padding: 16px 30px;
         width: 100%;
         border-radius: 0 0 4px 4px;
         display: none;
@@ -820,13 +819,13 @@ padding-bottom: 40px;
         width: 13px;
         height: 13px;
         position: absolute;
-        top: 30px;
+        top: 26px;
         right: 30px;
         cursor: pointer;
       }
       .active-faq .plus-icon{
         background: var(--edit-icon) no-repeat -359px -104px;
-        top: 35px;
+        top: 31px;
         right: 30px;
       }
       .view-all-faq {

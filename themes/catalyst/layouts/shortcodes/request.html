@@ -1,17 +1,11 @@
-<div class="c1">
-    <div class="c21">
-        <div {{ with .Get "class" }} class={{.}} {{end}}>
+<div class="request-block">
+        <div {{ with .Get "class" }} class="{{.}} req-btn" {{end}}>
             {{- with .Get "req" -}}
-            <p>
             {{- htmlUnescape . | markdownify -}}
-            </p>
             {{- end -}}
         </div>
-        <div class="apigray">
-            <p>
-                {{.Inner}}
-            </p>
+        <div class="request-body">
+            {{.Inner}}
         </div>
-    </div>
 </div>
 <hr style="margin-top:30px;"/>

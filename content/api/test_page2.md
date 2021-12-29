@@ -32,7 +32,7 @@ You will receive notifications in your Catalyst console about the updates of the
 
 ### Request Method & End point 2
 <!-- shortcode 2 -->
-{{%request class="apigreen" req="DELETE" %}}/v1/project/{project_id}/segment/{segment_id}/cache{{%/request%}}
+{{%request class="apigreen" req="GET" %}}/v1/project/{project_id}/segment/{segment_id}/cache{{%/request%}}
 {{%request_id id="project_id" data="Numerical" %}}The unique ID of the project{{%/request_id%}}
 {{%request_id id="segment_id" data="The unique ID of the cache segment" %}}The unique ID of the project{{%/request_id%}}
 <!-- shortcode 2 ends -->

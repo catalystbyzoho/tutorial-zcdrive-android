@@ -31,19 +31,24 @@ function clickHandler(e){
 }
 
 //Panel with Adjustment
-function adjustview(e){
-  var data = e.innerHTML;
-  if(data == "View more"){
-    e.innerHTML = "View less";
-    e.parentNode.parentNode.querySelector("#view-adjust").style.height="auto";
-    e.parentNode.parentNode.querySelector("#view-adjust").classList.remove("fadecontent");
+function adjustview(e,type){
+  var pre_tag = e.closest("pre");
+  var data = pre_tag.querySelector(".adjust-button");
+  if(data.innerText == "View more"){
+    data.innerHTML = "View less";
+    data.parentNode.parentNode.querySelector("#view-adjust").style.height="auto";
+    data.parentNode.parentNode.querySelector("#view-adjust").classList.remove("fadecontent");
   }
   else{
-    e.innerHTML = "View more";
-    e.parentNode.parentNode.querySelector("#view-adjust").style.height="";
-    e.parentNode.parentNode.querySelector("#view-adjust").classList.add("fadecontent");
+    if(type == "btn"){
+      pre_tag.querySelector(".panel-body").scrollTo({top: 0, behavior: "smooth"});
+      data.innerHTML = "View more";
+      data.parentNode.parentNode.querySelector("#view-adjust").style.height="";
+      data.parentNode.parentNode.querySelector("#view-adjust").classList.add("fadecontent");
+    }
   }
 }
+
 
 //Open Import
 function openImport(e){

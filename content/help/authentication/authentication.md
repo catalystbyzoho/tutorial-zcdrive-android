@@ -45,7 +45,7 @@ To install it manually, you must execute this command from the Node.js functionâ
 
 If we enter the number of jobs as 2, the associated function, which returns the name object, is called two times parallelly and the input is passed to it. The output of the first iteration is generated as:
 
-{{%code lang="java" %}}{
+{{%code lang="json" %}}{
     "project_details": {
     "id": 57127989012782,
     "project_name": "ShipmentTracking"
