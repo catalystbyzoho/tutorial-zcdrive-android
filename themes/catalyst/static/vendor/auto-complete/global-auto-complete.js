@@ -92,7 +92,7 @@ var globalAutoComplete = (function(){
             var right_search_content = document.createElement("div");
             right_search_content.setAttribute("class","right-search-content");
             var search_content = `<h2 class="global-search-title"></h2>
-            <div class="context" style="text-align:center"></div>
+            <div class="context" style="text-align:center;"></div>
             <p class="global-search-desc"></p>
             <div class="global-toc">
             <div class="global-toc-title">ON THIS PAGE</div>

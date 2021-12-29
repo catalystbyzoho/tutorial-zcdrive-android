@@ -44,6 +44,7 @@
 .global-autocomplete-suggestion > .context {
     font: 14px/17px zoho-puvi-regular;
     display: block;
+    text-transform: capitalize;
 }
 .right-search-content{
     background-color: var(--menu-color);
@@ -54,6 +55,9 @@
     border-radius: 0px 0px 5px 0px;
     margin-left: auto;
     overflow: auto; 
+}
+.context{
+    text-transform: capitalize;
 }
 .global-search-result-container{
     bottom: 0;
