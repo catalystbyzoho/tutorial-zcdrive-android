@@ -1,5 +1,5 @@
 [{{ range $index, $page := .Site.Pages }}
-    {{- if ne $page.Type "json" -}}
+    {{- if and (ne $page.Type "json") (eq $page.IsPage true) -}}
         {{- if and $index (gt $index 0) -}},{{- end }}
         {
             "uri": "{{ $page.Permalink }}",

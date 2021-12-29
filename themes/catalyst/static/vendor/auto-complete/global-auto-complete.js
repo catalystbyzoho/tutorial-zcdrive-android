@@ -120,7 +120,7 @@ var globalAutoComplete = (function(){
                     that.value = v;
                     o.onSelect(e, v, this);
                     that.sc.style.display = 'none';
-                    document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
+                    document.getElementById("GlobalSearchResults").style="position:static; display:none;";
                 }
             }, that.sc);
 
@@ -129,11 +129,11 @@ var globalAutoComplete = (function(){
                 if (!over_sb) {
                     that.last_val = that.value;
                     that.sc.style.display = 'none';
-                    document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
+                    document.getElementById("GlobalSearchResults").style="position:static; display:none;";
                     setTimeout(function(){ that.sc.style.display = 'none'; }, 350); // hide suggestions on fast input
                 } else if (that !== document.activeElement) setTimeout(function(){ that.focus(); }, 20);
             };
-            addEvent(that, 'blur', that.blurHandler);
+            // addEvent(that, 'blur', that.blurHandler);      //for avoiding click event
 
             var suggest = function(data){
                 var val = that.value;
@@ -201,7 +201,7 @@ var globalAutoComplete = (function(){
                     } else {
                         that.last_val = val;
                         that.sc.style.display = 'none';
-                        document.getElementById("GlobalSearchResults").style="position:fixed; display:flex;";
+                        document.getElementById("GlobalSearchResults").style="position:static; display:none;";
                     }
                 }
             };
