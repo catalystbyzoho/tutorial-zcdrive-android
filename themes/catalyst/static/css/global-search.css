@@ -19,10 +19,10 @@
 .search-modal .closebtn {
   padding-top: 13px;
   font-size: 25px;
-  cursor: pointer;
   background-color: var(--body-color);
   color: var(--font-menu-color);
   cursor: pointer;
+  opacity: 0.7;
 }
 .search-modal input[type=text] {
   border: none;
@@ -50,7 +50,7 @@
 }
 .search-modal .cancel-btn{
   background-color: var(--body-color); 
-  padding: 26px 20px 0px 50px; 
+  padding: 26px 20px 0px 0px; 
   border-radius: 0 5px 0 0;
   cursor: pointer; 
   font:14px/17px zoho-puvi-regular; 

@@ -420,12 +420,12 @@ pre.shortcode-dark{
   height: 17px; 
   width: 17px;
 }
-#panel .spliter{
+.spliter{
   height: 20px;
   padding: 1px;
   border-radius: 25px;
   background: var(--hr-color);
-  margin: 2px 20px 0 20px;
+  margin: 2px 16px 0 16px;
 }
 #panel.shortcode-light .spliter{
   background: #EAEEF5;
