@@ -41,7 +41,7 @@ function adjustview(e,type){
   }
   else{
     if(type == "btn"){
-      pre_tag.querySelector(".panel-body").scrollTo({top: 0, behavior: "smooth"});
+      pre_tag.querySelector(".panel-body").scrollTo({top: 0, behavior: "auto"});
       data.innerHTML = "View more";
       data.parentNode.parentNode.querySelector("#view-adjust").style.height="";
       data.parentNode.parentNode.querySelector("#view-adjust").classList.add("fadecontent");
