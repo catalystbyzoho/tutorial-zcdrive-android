@@ -1,5 +1,5 @@
 <pre id="panel" {{ with .Get "scroll" }} class="{{.}} panel-select-block" {{end}} class="panel-select-block">
-    <div class="show-flex">
+    <div class="code-block-header">
 		{{- with .Get "header" -}}
 		<div class="panel-header">
 			{{- htmlUnescape . | markdownify -}}

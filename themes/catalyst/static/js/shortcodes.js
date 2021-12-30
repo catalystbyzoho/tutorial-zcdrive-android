@@ -82,7 +82,8 @@ for (i = 0; i < tabProps.length; i++) {
 function copyToClipboard(ele){
   var dummy = document.createElement("textarea");
   document.body.appendChild(dummy);
-  dummy.value = ele.closest("pre").querySelector("code").innerText;
+  var text = ele.closest("pre").querySelector("code").innerText.trim();
+  dummy.value = text.replace(/[\t\r\n]{1,}/g, "\n");
   dummy.select();
   document.execCommand("copy");
   document.body.removeChild(dummy);

@@ -524,17 +524,20 @@ import javax.servlet.ServletInputStream; {{% /panel%}}
             ArrayList<ZCRowObject> rowList = ZCQL.getInstance().executeQuery(query); 
             return rowList.size(); 
         } 
-    }{{% /divtag %}} 
+    }
+    {{% /divtag %}} 
 {{% divtag id="NodeJS" %}}
     import NodeJS.key2.util.ArrayList; 
     import NodeJS.key2.util.logging.Level; 
     import NodeJS.key2.util.logging.Logger; 
-    import NodeJSx.key2.servlet.ServletInputStream;{{% /divtag %}} 
+    import NodeJSx.key2.servlet.ServletInputStream;
+    {{% /divtag %}} 
 {{% divtag id="Python" %}}
     import Python.key2.util.ArrayList; 
     import Python.key2.util.logging.Level; 
     import Python.key2.util.logging.Logger; 
-    import Pythonx.key2.servlet.ServletInputStream;{{% /divtag %}} 
+    import Pythonx.key2.servlet.ServletInputStream;
+    {{% /divtag %}} 
 {{% /panel_with_select %}}
 
 ### Panel with Import

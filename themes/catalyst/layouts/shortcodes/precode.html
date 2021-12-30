@@ -1,1 +1,1 @@
-<div id="{{ with .Get "id" }}{{.}}{{end}}" key="{{ with .Get "key" }}{{.}}{{end}}" style="display: none;">{{.Inner}}</div>
+<pre{{ with .Get "id" }} id="{{.}}" {{end}} {{ with .Get "class" }} class="{{.}}" {{end}}><code>{{.Inner}}</code></pre>

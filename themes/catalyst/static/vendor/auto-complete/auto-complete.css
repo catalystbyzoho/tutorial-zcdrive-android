@@ -38,13 +38,13 @@
 }
 
 .autocomplete-suggestion.selected {
-    font: 14px/17px zoho-puvi-regular;
+    font: 14px/17px zoho-puvi-medium;
     background: var(--menu-color);
     color: var(--font-blue-color);
 }
 
 .autocomplete-suggestion:hover {
-    font: 14px/17px zoho-puvi-regular;
+    font: 14px/17px zoho-puvi-medium;
     background: var(--menu-color);
     color: var(--font-blue-color);
 }
