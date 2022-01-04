@@ -4,8 +4,22 @@
         <div class="global-search-icon" style="position: absolute; margin: 15px 10px 0px 20px;"></div>
         <input type="text" data-search-input id="global-search-by" placeholder="Search documents">
         <span class="closebtn" onclick="document.getElementById('global-search-by').value = ''">×</span>
-        <div class="spliter" style="margin:22px 25px 0 25px;"></div>
+        <div class="spliter" style="margin:24px 25px 0 25px;"></div>
         <div onclick="closeGlobalsearch()" class="cancel-btn">Cancel</div>
       </div>
     </div>
 </div>
+<script>
+  function searchValue(){
+    var search_value = document.getElementById("global-search-by").value;
+    var btn = document.querySelector(".closebtn");
+    if(search_value.length > 0){
+      btn.style.display = "block";
+      btn.nextElementSibling.style.display = "";
+    }else{
+      btn.style.display = "none";
+      btn.nextElementSibling.style.display = "none";
+    }
+  }
+  setInterval(searchValue,100);
+</script>
