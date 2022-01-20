@@ -15,7 +15,7 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-  <body data-url="{{ .RelPermalink }}">
+  <body data-url="{{ .RelPermalink }}" type="{{ .Type }}">
     {{ partial "global-search.html" . }}
     <article>
       <aside class="hide-sidebar" id="responsiveSidebar">

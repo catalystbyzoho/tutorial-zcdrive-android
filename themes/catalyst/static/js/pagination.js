@@ -16,6 +16,7 @@ if(currparentType == "tutorial-apps"){
     currentnode = document.querySelector("li.current a.file").getAttribute("href");
     currparent = document.querySelector("li.current a.file").closest(".haschildren").querySelector("a.folder").innerText;
 }
+
 for(var itr=0;itr<nodelist.length;itr++){
     if(nodelist[itr].getAttribute("href") == currentnode){
         prev = itr-1;
@@ -39,6 +40,7 @@ for(var itr=0;itr<nodelist.length;itr++){
         break;
     }
 }
+
 if(document.querySelector("li.current a.file").innerText == "Introduction" && currparentType == "tutorial-apps"){
     var element = document.querySelectorAll("a.file")[next];
     var href = element.getAttribute("href");

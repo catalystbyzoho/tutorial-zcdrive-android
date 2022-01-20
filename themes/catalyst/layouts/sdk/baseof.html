@@ -15,12 +15,12 @@
       <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
     {{end}}
   </head>
-  <body data-url="{{ .RelPermalink }}">
+  <body data-url="{{ .RelPermalink }}" class="sdk-layout" type="{{.Type}}" linktitle={{.LinkTitle}}>
     {{ partial "global-search.html" . }}
     <article>
       <aside class="hide-sidebar" id="responsiveSidebar">
-        {{ partial "body-sidebar.html" . }}     
-        <ul class="menu">
+        {{ partial "sdk-sidebar.html" . }}     
+        <ul class="menu" style="margin-top: 5px; margin-left: -32px;">
           {{ partial "menu.html" . }}
         </ul> 
       </aside>
@@ -40,6 +40,39 @@
     </footer>
     {{ partial "html-body-link.html" . }}
   </body>
-  <script src='{{"js/scroll-effect.js" | relURL}}'></script>
+  <script>
+    var ele = document.getElementById("announcement");
+    if(ele){
+      var version,url,span,ref,i,lang,version_block,key_ele;
+      span = ele.querySelector("span");
+      ref = ele.querySelector("a");
+      lang = span.getAttribute("id");
+      version_block = document.getElementById("versionDetails");
+      key_ele=version_block.querySelectorAll("div");
+      for(i=0;i<key_ele.length;i++){
+        if(key_ele[i].getAttribute("language") == lang){
+          version = key_ele[i].getAttribute("version");
+          url = key_ele[i].getAttribute("url");
+          break;
+        }
+      }
+      span.innerText = version;
+      ref.setAttribute("href",url);
+    }
+  </script>
+  <script>
+    document.addEventListener("scroll", function(){
+      var a = document.querySelector("aside").getBoundingClientRect().height;
+      var b = document.getElementById("footerBlock").getBoundingClientRect().top;
+      var c;
+      if(b < a){
+          c = (a-b)+ 170;
+          document.querySelector("ul.menu").style=`margin-top: 5px; margin-left: -32px; height: calc(100vh - ${c}px);`;
+      }
+      else{
+        document.querySelector("ul.menu").style=`margin-top: 5px; margin-left: -32px; height: calc(100vh - 5px);`;
+      }
+    });
+  </script>
   <script src='{{"js/pagination.js" | relURL}}'></script>
 </html>

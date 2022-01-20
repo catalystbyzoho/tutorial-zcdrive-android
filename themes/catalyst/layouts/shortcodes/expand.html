@@ -6,6 +6,8 @@
     </h6>
     <a class="anchor highlight" style="margin:0" id="{{ with .Get "id" }}{{.}}{{end}}"></a>
     <div class="faq-ans">
-        {{- .Inner | safeHTML | markdownify -}}
+        <div style="padding: 16px 30px;">
+            {{- .Inner | safeHTML | markdownify -}}
+        </div>
     </div>
   </div>

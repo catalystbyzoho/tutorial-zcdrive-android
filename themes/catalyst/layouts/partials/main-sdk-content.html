@@ -1,5 +1,6 @@
 {{ with .Params.sdk }}
 {{ if .enable }}
+<div id="sdk-components" style="position: absolute; top:1600px;"></div>
 <section style="margin:132px 0 150px 0;" id="indexSdk">
   <div class="container" style="background-color: var(--body-color);">
     <p class="main-head-title">SDK’s and Toolkits</p>
@@ -9,7 +10,7 @@
         <a href="{{.link}}">
           <div class="feature-card sdk text-center">
               <div class="{{.icon}}" style="margin:10px auto; "></div>
-              <p class="feature-p" style="text-align: center;">{{ .name | title }}</p>
+              <p class="feature-p" style="text-align: center;">{{ .name }}</p>
           </div>
         </a>
       </div>

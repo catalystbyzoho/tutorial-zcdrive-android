@@ -16,11 +16,18 @@
     <li data-nav-id="{{.Permalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
-        " type="{{.Type}}">
+        " type="{{.LinkTitle}}">
 
       <div style="display: flex;">
         {{- if ne $numberOfPages 0 }}
           {{- if .Params.alwaysopen}} 
+            {{ with .Params.version }}
+            <div id="versionDetails" style="display: none;">
+              {{ range .latest_version }}
+                <div language="{{.language}}" version="{{.version}}" url="{{.url}}">{{.name}}</div>
+              {{ end }}
+            </div>
+            {{ end }}
             <div class="category-icon" style="display: none;">
               <div class="right-mini-icon"></div>
               <a class="folder">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
@@ -51,10 +58,10 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item" type="{{.Type}}">
+      <li data-nav-id="{{.Permalink}}" class="dd-item" type="{{.LinkTitle}}">
         <div>
-          <a class="file" href="{{.RelPermalink}}" title="{{.LinkTitle}}">
-            {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+          <a class="file" href="{{.RelPermalink}}" title="{{.Title}}">
+            {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}
           </a>
         </div>
       </li>

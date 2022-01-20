@@ -112,6 +112,9 @@ article>aside {
                 li {
                     margin:20px 0;
                 }
+                li:empty{
+                    margin:0;
+                }
                 ul {
                     padding-left:0px;                    
                 }

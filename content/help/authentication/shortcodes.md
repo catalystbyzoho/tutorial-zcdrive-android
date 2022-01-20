@@ -7,6 +7,8 @@ weight= 1
 
 #
 
+{{%announcement%}}You are using old version of SDK to get lattest version {{%span id="java"%}}{{%/span%}} {{%link href="#" target="_self" %}}click here{{%/link%}}{{%/announcement%}}
+
 ### Note
 
 {{%note%}}This is an note !{{%/note%}}

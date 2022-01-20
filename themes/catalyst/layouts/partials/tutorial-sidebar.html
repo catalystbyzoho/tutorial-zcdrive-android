@@ -14,10 +14,38 @@
     <div class="search" style="padding: 13px 100px 20px 30px; z-index: 1; background-color: var(--body-color);">
         <p class="menu-title">ON THIS TUTORIAL</p>
         <div class="customselect" style="width: 240px; height: 44px;">
-            <select class="custom-select tutorial-filter">
-                <option value="Java" selected>Java</option>
-                <option value="NodeJS">Node JS</option>
-                <option value="Python">Python</option>
+            {{ with .Params.language }}
+            <select class="custom-select tutorial-filter" lang="{{.current_language}}">
+            {{ range .language_item }}
+                <option url="{{.url}}" value="{{.name}}">{{.name}}</option>
+                {{ end }}
             </select>
+            {{ end }}
         </div>
     </div>
+
+<script>
+    //Tutorial Change Directory
+    var initialLoading = function(){
+    if(document.querySelector("select")){
+        var lang = document.querySelector("select").getAttribute("lang");
+        localStorage.setItem("user-prefer-language", lang);
+        var ele = document.querySelectorAll("select option");
+        for(var i=0;i<ele.length;i++){
+            if(ele[i].value == lang){
+                ele[i].selected = true;
+                break;
+            }
+        }
+    }
+    }();
+    function changeDirectory(e){
+    var selected_value = e.innerText;
+    var ele = e.parentElement.parentElement.querySelectorAll("option");
+    for(var i=0;i<ele.length;i++){
+        if(ele[i].innerText == selected_value){
+            window.location.href=ele[i].getAttribute("url");
+        }
+    }
+    }
+</script>

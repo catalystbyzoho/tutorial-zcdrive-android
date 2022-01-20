@@ -29,7 +29,6 @@
             <option value="AllLanguages" selected>All Languages</option>
             <option value="Java">Java</option>
             <option value="NodeJS">Node JS</option>
-            <option value="Python">Python</option>
         </select>
       </div>
       <div class="customselect" style="margin-left: 20px;">
@@ -46,15 +45,16 @@
   <div class="tutorial-block">
     {{ range .feature_item }}
     <div 
-      class="filterContent {{.level}} {{.duration}} {{.language1}} {{.language2}} {{.language3}}" 
+      class="filterContent {{.level}} {{.duration}} {{.language1}} {{.language2}}" 
       url="{{.url}}" 
       level="{{.level}}"
       duration="{{.duration}}"
       name="{{.name}}"
       content="{{.content}}" 
       language1="{{.language1}}"
+      language1_url="{{.language1_url}}"
       language2="{{.language2}}"
-      language3="{{.language3}}"
+      language2_url="{{.language2_url}}"
      >
     </div>
     {{ end }}
@@ -123,23 +123,33 @@
           var node = document.createElement("div");
           
           node.innerHTML = `
-            <a href=${url} class="tutorialSearchFun">
-              <div class="feature-card feature">
+              <div onclick="tutorial_call(this)" class="feature-card feature cp" java="${showableContent[i].getAttribute("language1_url")}" node="${showableContent[i].getAttribute("language2_url")}">
                 <div style="display: flex;">
                   <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
                   <p class="tutorial-box-text">${time}</p>
                 </div>
                   <p class="mb-2 feature-h">${showableContent[i].getAttribute("name")}</p>
                   <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
-                  <p style="color: var(--font-blue-color); word-spacing: 10px; font: 15px/16px zoho-puvi-regular;">
-                    ${showableContent[i].getAttribute("language1")}
-                    ${showableContent[i].getAttribute("language2")}
-                    ${showableContent[i].getAttribute("language3")}
-                  </p>
-              </div>
-            </a>`;
+                  <div class="lang-block">
+                    <a href="${showableContent[i].getAttribute("language1_url")}" onclick="set_prefer_lang(this)">${showableContent[i].getAttribute("language1")}</a>
+                    <a href="${showableContent[i].getAttribute("language2_url")}" onclick="set_prefer_lang(this)">${showableContent[i].getAttribute("language2")}</a>
+                  </div>
+              </div>`;
           document.getElementById("demo").appendChild(node);
       }
     }
+  }
+  function tutorial_call(e){
+    if(localStorage.getItem("user-prefer-language") == "Java"){
+      window.location.href=e.getAttribute("java");
+    }else if(localStorage.getItem("user-prefer-language") == "NodeJS"){
+      window.location.href=e.getAttribute("node");
+    }else{
+      window.location.href=e.getAttribute("java");
+    }
+  }
+  function set_prefer_lang(e){
+    localStorage.setItem("user-prefer-language", e.innerText);
+    $(this).stopPropagation();
   }
 </script>

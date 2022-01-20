@@ -52,7 +52,16 @@ function adjustview(e,type){
 
 //Open Import
 function openImport(e){
-  e.closest("pre").querySelector(".panel-body").classList.toggle("import-body");
+  var panel = e.closest("pre").querySelector(".panel-body");
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+    panel.style.padding="0px 0px 0px 14px";
+    panel.style.borderTop="none";
+  } else {
+    panel.style.maxHeight = (panel.scrollHeight+15) + "px";
+    panel.style.padding="0px 0px 16px 14px";
+    panel.style.borderTop="1px solid";
+  } 
   var cls = e.closest("pre").querySelector("#import-icon").classList;
   if(cls.value.includes("expand-close-icon")){
     cls.remove("expand-close-icon");

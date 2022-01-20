@@ -3,7 +3,6 @@
     text-align: left;
     cursor: default;
     border-top: 0;
-    height: 320px !important;
     transition: left 0.1s ease-in-out;
     background-color: var(--body-color);
     position: fixed;
@@ -19,6 +18,9 @@
     border-radius: 0px 0px 5px 5px;
     display: none;
     box-shadow: 10px 25px 50px var(--filter-shadow-color);
+}
+.sdk-layout .autocomplete-suggestions {
+    top: 222px;
 }
 .autocomplete-suggestion {
     cursor: pointer;

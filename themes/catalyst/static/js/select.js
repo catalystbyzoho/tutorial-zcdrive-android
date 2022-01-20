@@ -31,9 +31,13 @@ var x, i, j, selElmnt, a, b, c;
           if (typeof panelSelect === 'function') {
             a.addEventListener("onclick", panelSelect(this));
           }
+          if (typeof changeDirectory === 'function') {
+            a.addEventListener("onclick", changeDirectory(this));
+          }
           if (typeof filterContent === 'function') {
             a.addEventListener("onclick", filterContent());
           }
+          
       });
       b.appendChild(c);
     }

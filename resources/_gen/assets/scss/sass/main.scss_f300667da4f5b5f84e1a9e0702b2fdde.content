@@ -304,6 +304,8 @@ article > aside {
         padding-left: 0; }
       article > aside .menu .dd-item.haschildren li {
         margin: 20px 0; }
+      article > aside .menu .dd-item.haschildren li:empty {
+        margin: 0; }
       article > aside .menu .dd-item.haschildren ul {
         padding-left: 0px; }
       article > aside .menu .dd-item.haschildren ul a {

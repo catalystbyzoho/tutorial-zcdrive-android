@@ -2,9 +2,9 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-{{if eq .Type "tutorial-apps"}}
+<!-- {{if eq .Type "tutorial-apps"}} -->
 {{- template "section-tree-steps" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-{{end}}
+<!-- {{end}} -->
 {{- end}}
 
 <!-- templates -->

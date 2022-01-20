@@ -41,23 +41,23 @@ sdk:
       
     - name : "Java"
       icon : "java-icon"
-      link : "/java/authentication/authentication/"
+      link : "/sdk/java/v1/authentication/authentication/"
       
     - name : "Node JS"
       icon : "nodejs-icon"
-      link : "/nodejs/authentication/authentication/"
+      link : "/sdk/nodejs/v1/authentication/authentication/"
 
     - name : "Android"
       icon : "android-icon"
-      link : "/android/authentication/authentication/"
+      link : "/sdk/android/v1/authentication/authentication/"
 
     - name : "iOS"
       icon : "ios-icon"
-      link : "/ios/authentication/authentication/"
+      link : "/sdk/ios/v1/authentication/authentication/"
 
     - name : "Java Script"
       icon : "js-icon"
-      link : "/javascript/authentication/authentication/"
+      link : "/sdk/javascript/v1/authentication/authentication/"
 
     - name : "REST API"
       icon : "api-icon"

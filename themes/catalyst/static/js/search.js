@@ -81,15 +81,47 @@ $( document ).ready(function() {
                     url += " > ";
                 }
             }
-            return '<div class="autocomplete-suggestion" ' +
-                'data-term="' + term + '" ' +
-                'data-title="' + item.title + '" ' +
-                'data-uri="'+ item.uri + '" ' +
-                'data-context="' + item.context + '">' +
-                item.title +
-                '<div class="context" style="padding-top: 5px">' +
-                (url || '') +'</div>' +
-                '</div>';
+            var type = document.body.getAttribute("type");
+            if(type == "help"){
+                if(item.type == "help"){
+                    return '<div class="autocomplete-suggestion" ' +
+                        'data-term="' + term + '" ' +
+                        'data-title="' + item.title + '" ' +
+                        'data-uri="'+ item.uri + '" ' +
+                        'data-context="' + item.context + '">' +
+                        item.title +
+                        '<div class="context" style="padding-top: 5px">' +
+                        (url || '') +'</div>' +
+                        '</div>';
+                }else{
+                    return '';
+                }
+            }else if(type == "sdk"){
+                var link= document.body.getAttribute("linktitle");
+                if(item.linktitle == link){
+                    return '<div class="autocomplete-suggestion" ' +
+                        'data-term="' + term + '" ' +
+                        'data-title="' + item.title + '" ' +
+                        'data-uri="'+ item.uri + '" ' +
+                        'data-context="' + item.context + '">' +
+                        item.title +
+                        '<div class="context" style="padding-top: 5px">' +
+                        (url || '') +'</div>' +
+                        '</div>';
+                }else{
+                    return '';
+                }
+            }else{
+                return '<div class="autocomplete-suggestion" ' +
+                        'data-term="' + term + '" ' +
+                        'data-title="' + item.title + '" ' +
+                        'data-uri="'+ item.uri + '" ' +
+                        'data-context="' + item.context + '">' +
+                        item.title +
+                        '<div class="context" style="padding-top: 5px">' +
+                        (url || '') +'</div>' +
+                        '</div>';
+            }
         },
         /* onSelect callback fires when a search suggestion is chosen */
         onSelect: function(e, term, item) {
