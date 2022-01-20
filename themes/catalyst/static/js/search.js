@@ -111,8 +111,9 @@ $( document ).ready(function() {
                 }else{
                     return '';
                 }
-            }else{
-                return '<div class="autocomplete-suggestion" ' +
+            }else if(type == "api"){
+                if(item.type == "api"){
+                    return '<div class="autocomplete-suggestion" ' +
                         'data-term="' + term + '" ' +
                         'data-title="' + item.title + '" ' +
                         'data-uri="'+ item.uri + '" ' +
@@ -121,6 +122,9 @@ $( document ).ready(function() {
                         '<div class="context" style="padding-top: 5px">' +
                         (url || '') +'</div>' +
                         '</div>';
+                }else{
+                    return '';
+                }
             }
         },
         /* onSelect callback fires when a search suggestion is chosen */
