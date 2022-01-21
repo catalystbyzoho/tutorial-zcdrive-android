@@ -11,9 +11,9 @@
         <div class="close-sidebar-icon"></div>
         <p class="close-p">Close</p>
     </div>
-    <div class="search" style="padding: 13px 100px 20px 30px; z-index: 1; background-color: var(--body-color);">
+    <div class="search" style="padding: 13px 30px 20px 30px; z-index: 1; background-color: var(--body-color);">
         <p class="menu-title">ON THIS TUTORIAL</p>
-        <div class="customselect" style="width: 240px; height: 44px;">
+        <div class="customselect" style="width: 310px; height: 44px; border-radius: 23px;">
             {{ with .Params.language }}
             <select class="custom-select tutorial-filter" lang="{{.current_language}}">
             {{ range .language_item }}
