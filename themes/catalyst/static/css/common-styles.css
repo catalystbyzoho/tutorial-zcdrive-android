@@ -432,6 +432,24 @@ padding-bottom: 40px;
     margin: 15px 0 0 15px;
     position: absolute;
 }
+.sdk-sidebar{
+  display: flex;
+  width: 370px;
+  padding: 13px 30px 20px 30px;
+  z-index: 1;
+  background-color: var(--menu-color);
+  margin-top: 75px;
+  display: flex;
+}
+.sdk-version-title{
+  font: 15px/18px zoho-puvi-regular;
+  color: var(--font-lite-body-color);
+  white-space: nowrap;
+  padding: 14px 10px 0 0;
+}
+.sdk-version-title span{
+  text-transform: uppercase;
+}
 .input-icons:hover .shortlist{
   background: var(--shortlist-icon) no-repeat -428px -99px;
 }

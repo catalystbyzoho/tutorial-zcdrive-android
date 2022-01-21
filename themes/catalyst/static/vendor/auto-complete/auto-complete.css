@@ -11,7 +11,7 @@
     overflow-y: auto;
     box-sizing: border-box;
     left: 31px;
-    top: 132px;
+    top: 133px;
     width: 308px;
     max-height: 320px;
     border: 1px solid var(--hr-color);
@@ -20,7 +20,7 @@
     box-shadow: 10px 25px 50px var(--filter-shadow-color);
 }
 .sdk-layout .autocomplete-suggestions {
-    top: 222px;
+    top: 190px;
 }
 .autocomplete-suggestion {
     cursor: pointer;
