@@ -37,7 +37,7 @@ sdk:
 
     - name : "Command Line Interface (CLI)"
       icon : "cli-icon"
-      link : "/cli/java-applet/"
+      link : "/cli/v1/authentication/authentication/"
       
     - name : "Java"
       icon : "java-icon"
@@ -189,6 +189,16 @@ help:
             content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
           - name: "Metrics"
             icon: "metrics-icon"
+            link: "/help/authentication/authentication/"
+            content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      - title: "Deployment_and_Billing"
+        featuredpoints:
+          - name: "Environments"
+            icon: "web-client-icon"
+            link: "/help/authentication/authentication/"
+            content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          - name: "Billing"
+            icon: "logs-icon"
             link: "/help/authentication/authentication/"
             content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 

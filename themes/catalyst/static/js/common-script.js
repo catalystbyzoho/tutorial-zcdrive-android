@@ -260,7 +260,7 @@ if(ls == "dark"){
   }
 
   //SDK Margin Issue
-  if(document.body.getAttribute("type")=="sdk"){
+  if((document.body.getAttribute("type")=="sdk")  || (document.body.getAttribute("type")=="cli")){
     var ele = document.querySelectorAll("article > aside .menu .dd-item.haschildren li");
     for(var i=0;i<ele.length;i++){
       if((window.getComputedStyle(ele[i]).height == '0px')){

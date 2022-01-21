@@ -96,7 +96,7 @@ $( document ).ready(function() {
                 }else{
                     return '';
                 }
-            }else if(type == "sdk"){
+            }else if(type == "sdk" || type == "cli"){
                 var link= document.body.getAttribute("linktitle");
                 if(item.linktitle == link){
                     return '<div class="autocomplete-suggestion" ' +
