@@ -3,28 +3,42 @@
 	padding: .75rem 1.25rem;
 	margin-bottom: 1rem;
 }
+.note p{
+  font: 13px/20px zoho-puvi-regular !important;
+  color: var(--font-lite-body-color) !important;
+  margin: 0 !important;
+}
+.note .shortcode-badge{
+  font: 12px/20px zoho-puvi-regular !important;
+}
 .note a{
-  font: normal normal normal 13px/20px zoho-puvi-regular !important;
+  font: 13px/20px zoho-puvi-regular !important;
+}
+.note .shortcode-badge a{
+  font: 12px/20px zoho-puvi-regular !important;
 }
 .note-info{
-	font: normal normal normal 13px/20px zoho-puvi-regular;
+	font: 13px/20px zoho-puvi-regular;
   color: var(--font-lite-body-color);
   background-color: var(--gray-color);	
 	border: 1px solid var(--gray-border-color);
 	border-radius: 4px;
 }
 .bold-primary{
-  font: normal normal 600 13px/20px zoho-puvi-semibold;
+  font: 13px/20px zoho-puvi-semibold;
   color: var(--font-lite-body-color);
 }
 .shortcode-badge{
   padding: 2px 6px;
-  font: normal normal normal 15px/22px Roboto-Mono;
+  font: 13px/22px Roboto-Mono,arial;
   letter-spacing: 0.8px;
   background-color: var(--menu-color);
   color: var(--font-body-color);
   border-radius: 4px;
   border:1px solid var(--hr-color);
+}
+.shortcode-badge a{
+  font: 14px/22px zoho-puvi-regular !important;
 }
 /* New Version */
 .announcement-block{
@@ -58,6 +72,14 @@ div.bold ol li::marker{
   display: none;
 }
 /* code */
+.cli #cliCommand{
+  display: block !important;
+  margin-top: 17px; 
+  margin: 17px 0 0 16px;
+  font: 16px/26px zoho-puvi-regular;
+  letter-spacing: 0px;
+  opacity: 0.3;
+}
 .switch {
   position: relative;
   display: flex;
@@ -530,7 +552,7 @@ pre.shortcode-dark{
 /* Syntax Hightlight styles */
 pre table,
 pre table td {
-  font: normal normal normal 16px/26px Inconsolata !important;
+  font: normal normal normal 16px/26px Inconsolata,arial !important;
   width: auto !important;
   padding: 0 !important;
   border: none !important;
@@ -598,4 +620,99 @@ pre.shortcode-dark table td{
   color: #F0483D;
   border: 1px solid #F0483D;
   border-radius: 5px;
+}
+
+/* Nested Fields */
+.yes-down-arrow-icon{
+  background: var(--edit-icon) no-repeat -470px -102px;
+  width: 10px;
+  height: 7px;
+  margin-top: 10px;
+  margin-left: -14px;
+  cursor: pointer;
+}
+.right-arrow.yes-down-arrow-icon{
+  transform: rotate(-90deg);
+}
+.yes-nested-fields{
+  padding: 20px 20px 10px 20px;
+  border: 1px solid var(--hr-color);
+  border-radius: 4px;
+}
+.yes-exp-none{
+  display: none;
+}
+#close-nested-child{
+  display: none;
+}
+.nested-title{
+  font: 14px/26px Inconsolata-Bold !important;
+  color: var(--hover-color) !important;
+  margin: 0 !important;
+  padding: 0 7px 0 4px !important;
+}
+.nested-split{
+  height: 10px;
+  padding: 0.5px;
+  background: var(--hr-color);
+  margin: 8px 0 0 0;
+}
+.nested-textformat, 
+.nested-condition,
+.nested-maxlength{
+  font: 12px/26px zoho-puvi-regular !important;
+  color: var(--font-at-color) !important;
+  margin: 0 !important;
+  padding: 0 7px !important;
+}
+.nested-data{
+  font: 14px/20px zoho-puvi-regular !important;
+  color: var(--font-body-color) !important;
+  padding: 10px 0 !important;
+  margin: 0 !important;
+}
+.nested-data p{
+  font: 14px/20px zoho-puvi-regular !important;
+  color: var(--font-body-color) !important;
+  margin: 0 !important;
+}
+.nested-button{
+  font: 12px/26px zoho-puvi-regular;
+  color: var(--font-blue-color);
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.nested-maxlength {
+  position: relative;
+  display: inline-block;
+}
+.nested-maxlength .tooltip-maxlength {
+  visibility: hidden;
+  width: 75px;
+  height: 25px;
+  font: 12px/26px zoho-puvi-regular;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -38px;
+}
+.nested-maxlength .tooltip-maxlength::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.nested-maxlength:hover .tooltip-maxlength {
+  visibility: visible;
 }

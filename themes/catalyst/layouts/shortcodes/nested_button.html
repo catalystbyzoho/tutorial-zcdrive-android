@@ -1,0 +1,12 @@
+<div class="nested-button" onclick="openNestedChild(this)">Show Child Properties</div>
+<script>
+    function openNestedChild(e){
+        if(e.innerText == "Show Child Properties"){
+            e.innerText = "Hide Child Properties";
+            e.nextElementSibling.nextElementSibling.style.display="block";
+        }else{
+            e.innerText = "Show Child Properties";
+            e.nextElementSibling.nextElementSibling.style.display="none";
+        }
+    }
+</script>

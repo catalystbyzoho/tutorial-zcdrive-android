@@ -1,33 +1,32 @@
-{{ if and (eq .Type "tutorial-apps") (eq .Title "Introduction")}}
-    {{ if ne .Title "main" }} 
-        <div class="pagination-block left-side-pagination" style="margin: 15px 20px;">
-            <a class="previous" href="" >
-                <div class="next-start-now-block">
-                    <div class="next-start-now-text">
-                        <p>START NOW</p>
-                    </div>
-                    <div class="forward-blue-border">
-                        <div class="forwardArrowIconBlue"></div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    {{end}}
-{{ else }}
-    {{ if ne .Title "main" }}
-        <div class="pagination-block left-side-pagination">
-            <a class="previous" href="">
-                <div class="arrow-block">
-                    <div class="reverseArrowIconLight"></div>
-                </div>
-            </a>
-            <div>
-                <p class="prev-text">PREVIOUS</p>
-                <p class="page-title"></p>
+
+{{ if ne .Title "main" }}
+    <div class="pagination-block left-side-pagination">
+        <a class="previous" href="">
+            <div class="arrow-block">
+                <div class="reverseArrowIconLight"></div>
             </div>
-        </div> 
-    {{end}}
-    {{ if ne .Title "main" }} 
+        </a>
+        <div>
+            <p class="prev-text">PREVIOUS</p>
+            <p class="page-title"></p>
+        </div>
+    </div> 
+{{end}}
+{{ if and (eq .Type "tutorial-apps") (eq .Title "Prerequisites") }} 
+    <div class="pagination-block right-side-pagination" style="margin: 15px 20px;">
+        <a class="start" href="" >
+            <div class="next-start-now-block">
+                <div class="next-start-now-text">
+                    <p>START NOW</p>
+                </div>
+                <div class="forward-blue-border">
+                    <div class="forwardArrowIconBlue"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+{{else}}
+    {{ if ne .Title "main" }}
         <div class="pagination-block right-side-pagination">
             <div>
                 <p class="next-text">NEXT</p>
@@ -40,4 +39,4 @@
             </a>
         </div>
     {{end}}
-{{ end }}
+{{end}}

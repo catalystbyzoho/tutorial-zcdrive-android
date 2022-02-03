@@ -51,5 +51,24 @@ import java.util.logging.Level;
 import java.util.logging.Logger; 
 import javax.servlet.ServletInputStream; {{% /panel%}}
 
+{{% panel_with_select header="Who invented the Light Bulb?" %}}
+{{% divtag id="Java" %}}
+    import java.io.InputStreamReader; 
+    import java.util.ArrayList; 
+    import java.util.logging.Level; 
+    import java.util.logging.Logger; 
+    import javax.servlet.ServletInputStream; {{% /divtag %}} 
+{{% divtag id="NodeJS" %}}
+    import NodeJS.key1.util.ArrayList; 
+    import NodeJS.key1.util.logging.Level; 
+    import NodeJS.key1.util.logging.Logger; 
+    import NodeJSx.key1.servlet.ServletInputStream;{{% /divtag %}} 
+{{% divtag id="Python" %}}
+    import Python.key1.util.ArrayList; 
+    import Python.key1.util.logging.Level; 
+    import Python.key1.util.logging.Logger; 
+    import Pythonx.key1.servlet.ServletInputStream;{{% /divtag %}} 
+{{% /panel_with_select %}}
+
 {{%/divtag%}}
 {{%/section%}}

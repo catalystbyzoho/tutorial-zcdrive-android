@@ -4,7 +4,7 @@ body{
         font: italic normal normal 15px/24px Roboto;
     }
     strong{
-        font: normal normal bold 15px/24px zoho-puvi-bold;
+        font: 15px/24px zoho-puvi-semibold;
     }
     a{
         cursor: pointer;
@@ -170,17 +170,17 @@ body{
         -o-transition: visibility 0s .2s, opacity .2s linear;
         transition: visibility 0s .2s, opacity .2s linear
     }
-    .w10 { width: 10%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w20 { width: 20%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w30 { width: 30%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w40 { width: 40%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w50 { width: 50%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w60 { width: 60%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w70 { width: 70%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w80 { width: 80%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w90 { width: 90%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .w100 { width: 100%; box-shadow: 0px 0px 16px var(--image-shadow-color);}
-    .c1 { width: 100%; }
+    .w10 { width: 10%;}
+    .w20 { width: 20%;}
+    .w30 { width: 30%;}
+    .w40 { width: 40%;}
+    .w50 { width: 50%;}
+    .w60 { width: 60%;}
+    .w70 { width: 70%;}
+    .w80 { width: 80%;}
+    .w90 { width: 90%;}
+    .w100 { width: 100%;}
+    .c1 { width: 100%;}
     .c21 { width: 100%; display: flex;}
     .c2 { width: 63%;padding-right: 30px;}
     .c2 b{margin-right: 15px;}
@@ -570,7 +570,7 @@ article section.page div.content{
     img {
         border: 0;
         max-width: 100%;
-        margin: 1.5rem auto 1.5rem 0;
+        margin: 10px auto 10px 0;
         display: block;
 
 
@@ -595,7 +595,7 @@ article section.page div.content{
         border: 1px solid var(--hr-color);
         background: var(--menu-color);
         code {
-            font: normal normal normal 16px/26px Inconsolata;
+            font: normal normal normal 16px/26px Inconsolata,arial;
             white-space: pre-wrap;
             color: var(--font-body-color);
             background-color: transparent;

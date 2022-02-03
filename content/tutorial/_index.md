@@ -23,6 +23,7 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/simple-web-application/nodejs/introduction"
       duration: "forty-mins"
+      status: ""
 
     # feature item loop
     - name : "Microservice"
@@ -34,6 +35,7 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/microservice/nodejs/introduction"
       duration: "fortyfive-mins"
+      status: ""
 
     # feature item loop
     - name : "Event Function"
@@ -45,6 +47,7 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/microservice/nodejs/introduction"
       duration: "sixty-mins"
+      status: ""
 
     # feature item loop
     - name : "React App"
@@ -56,6 +59,7 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/microservice/nodejs/introduction"
       duration: "forty-mins"
+      status: ""
 
     # feature item loop
     - name : "React App with CI/CD"
@@ -67,6 +71,7 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/microservice/nodejs/introduction"
       duration: "fortyfive-mins"
+      status: ""
 
     # feature item loop
     - name : "To-Do List App"
@@ -78,6 +83,7 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/microservice/nodejs/introduction"
       duration: "sixty-mins"
+      status: ""
 
     # feature item loop
     - name : "Cron Function"
@@ -89,5 +95,6 @@ feature:
       language2: "NodeJS"
       language2_url: "/tutorial-apps/microservice/nodejs/introduction"
       duration: "forty-mins"
+      status: ""
   
 ---

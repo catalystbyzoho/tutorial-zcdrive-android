@@ -53,12 +53,18 @@
   {{- else}}
     {{- if not .Params.Hidden }}
       {{if lt .Weight 0}}
-        {{if eq .LinkTitle "Introduction"}}
+        {{if or (eq .Title "Introduction") (eq .Title "Prerequisites")}} 
           <li data-nav-id="{{.Permalink}}" class="dd-item
             {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
           " type="{{.Type}}">
-            <div style="margin-left: -40px;">
+            <!-- <div style="margin-left: -40px;">
               <a class="file intro-file" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">
+                {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
+              </a>
+            </div> -->
+            <div style="display: flex; margin-left: -33px;">
+              <div class="StepProgress-child"></div>
+              <a class="file" href="{{ .RelPermalink}}" title="{{.LinkTitle}}" style="margin-left: 10px;">
                 {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
               </a>
             </div>

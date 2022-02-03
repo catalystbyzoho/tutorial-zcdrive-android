@@ -48,9 +48,9 @@
     top: 0;
     left: 45px;
     width: 10px;
-    height: calc(100% - 85px);
+    height: calc(100% - 115px);
     border-left: 1px solid var(--step-color);
-    margin-top: 50px;
+    margin-top: 80px;
 }
 .StepProgress-item {
     position: relative;
@@ -141,7 +141,7 @@ article > aside .stepper-menu .dd-item.active > div a.file{
     font: 14px/26px zoho-puvi-medium;
     color: var(--font-body-color);
 }
-article > aside .stepper-menu .dd-item.active > div a.intro-file{
+/* article > aside .stepper-menu .dd-item.active > div a.intro-file{
     font: 14px/26px zoho-puvi-medium;
     color: var(--font-blue-color);
-}
+} */

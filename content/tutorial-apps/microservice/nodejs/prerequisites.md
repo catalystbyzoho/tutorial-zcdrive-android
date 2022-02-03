@@ -4,7 +4,7 @@ description: "The Data Store in Catalyst is a cloud-based relational database ma
 tags : [ "Description", "Common operations", "Instance methods" ]
 type: "tutorial-apps"
 layout: "single"
-weight: 2
+weight: -1
 language:
   current_language: "NodeJS"
   language_item:

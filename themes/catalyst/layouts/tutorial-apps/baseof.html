@@ -16,7 +16,7 @@
     {{end}}
   </head>
 
-  <body data-url="{{ .RelPermalink }}">
+  <body data-url="{{ .RelPermalink }}" is-last={{.Params.is_last}}>
     {{ partial "global-search.html" . }}
     <article>
       <aside class="hide-sidebar t-sidebar" id="responsiveSidebar">

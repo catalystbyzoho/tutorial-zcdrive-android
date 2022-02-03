@@ -49,3 +49,14 @@
         url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff") format("woff"),
         url("//static.zohocdn.com/webfonts/inconsolataregular/font.ttf") format("truetype"),
         url("//static.zohocdn.com/webfonts/inconsolataregular/font.svg#Inconsolata-Regular") format("svg");}
+       
+@font-face {
+    font-family:"Inconsolata-Bold";
+    font-weight:700;
+    font-style:normal;
+    src:url("//static.zohocdn.com/webfonts/inconsolatabold/font.eot");
+    src:url("//static.zohocdn.com/webfonts/inconsolatabold/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.svg#Inconsolata-Bold") format("svg");}
