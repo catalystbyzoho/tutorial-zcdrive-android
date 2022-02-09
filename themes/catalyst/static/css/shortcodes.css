@@ -9,6 +9,8 @@
   margin: 0 !important;
 }
 .note .shortcode-badge{
+  background-color: var(--note-badge);
+  border: none;
   font: 12px/20px zoho-puvi-regular !important;
 }
 .note a{
@@ -383,6 +385,10 @@ pre.shortcode-dark{
 #importBlock .copied-msg{
   right: 170px;
 }
+.request-block .copied-msg {
+  right: 67px;
+  top: -4px;
+}
 .copied-msg::after {
   content: "";
   position: absolute;
@@ -581,6 +587,7 @@ pre.shortcode-dark table td{
 .request-block{
   display: flex;
   width: 100%;
+  position: relative;
   background-color: var(--menu-color);
   border: 1px solid var(--hr-color);
   border-radius: 4px;
@@ -588,9 +595,15 @@ pre.shortcode-dark table td{
 }
 .request-body{
   width: auto;
-  overflow-x: auto;
   padding: 3px 8px 3px 11px;
-  font: normal normal normal 16px/26px Inconsolata;
+  font: 16px/26px Inconsolata;
+}
+.request-body p{
+  font: 16px/26px Inconsolata !important;
+  margin: 0 !important;
+}
+.ft-st a{
+  font: 14px/20px zoho-puvi-regular !important;
 }
 .scope{
   background: var(--menu-color);
@@ -611,14 +624,24 @@ pre.shortcode-dark table td{
   text-transform: uppercase;
   text-align: center;
 }
-.apigreen{
-  color: #239835;
-  border: 1px solid #239835;
+.apired{
+  color: #FA3E3D;
+  border: 1px solid #FA3E3D;
   border-radius: 5px;
 }
-.apired{
-  color: #F0483D;
-  border: 1px solid #F0483D;
+.apiblue{
+  color: #61AFFE;
+  border: 1px solid #61AFFE;
+  border-radius: 5px;
+}
+.apigreen{
+  color: #4ACC90;
+  border: 1px solid #4ACC90;
+  border-radius: 5px;
+}
+.apiyellow{
+  color: #FCA12F;
+  border: 1px solid #FCA12F;
   border-radius: 5px;
 }
 

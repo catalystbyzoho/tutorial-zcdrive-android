@@ -108,8 +108,7 @@
     }
     else{
       for(var i=0;i<showableContent.length;i++){
-
-          var url = showableContent[i].getAttribute("url");
+        var url = showableContent[i].getAttribute("url");
           var time = showableContent[i].getAttribute("duration");
           if(time == "forty-mins"){
             time = "40 mins";
@@ -120,7 +119,6 @@
           if(time == "sixty-mins"){
             time = "60 mins";
           }
-          var node = document.createElement("div");
 
           var name,language1,language2,local_lang1,local_lang2,language1_url,language2_url,status,status1="",status2="";
           name = showableContent[i].getAttribute("name");
@@ -155,25 +153,162 @@
           }else{
             status="";
           }
-          
-          node.innerHTML = `
-              <div onclick="tutorial_call(this)" class="feature-card feature cp tutorialSearchFun" java="${language1_url}" node="${language2_url}">
-                <div style="display: flex;">
-                  <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
-                  <p class="tutorial-box-text">${time}</p>
-                  <div class="tutorial-status-block ${status}">
-                    <div class="${status}-icon"></div>
-                    <p class="status-text">${status}</p>
+          if(status == "ongoing"){
+            var node = document.createElement("div");
+            node.innerHTML = `
+                <div onclick="tutorial_call(this)" class="feature-card feature cp tutorialSearchFun" java="${language1_url}" node="${language2_url}">
+                  <div style="display: flex;">
+                    <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
+                    <p class="tutorial-box-text">${time}</p>
+                    <div class="tutorial-status-block ${status}">
+                      <div class="${status}-icon"></div>
+                      <p class="status-text">${status}</p>
+                    </div>
                   </div>
-                </div>
-                  <p class="mb-2 feature-h">${name}</p>
-                  <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
-                  <div class="lang-block">
-                    <a href="${language1_url}" onclick="set_prefer_lang(this)">${language1}</a>
-                    <a href="${language2_url}" onclick="set_prefer_lang(this)">${language2}</a>
+                    <p class="mb-2 feature-h">${name}</p>
+                    <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
+                    <div class="lang-block">
+                      <a href="${language1_url}" onclick="set_prefer_lang(this)">${language1}</a>
+                      <a href="${language2_url}" onclick="set_prefer_lang(this)">${language2}</a>
+                    </div>
+                </div>`;
+            document.getElementById("demo").appendChild(node);
+          }
+      }for(var i=0;i<showableContent.length;i++){
+        var url = showableContent[i].getAttribute("url");
+          var time = showableContent[i].getAttribute("duration");
+          if(time == "forty-mins"){
+            time = "40 mins";
+          }
+          if(time == "fortyfive-mins"){
+            time = "45 mins";
+          }
+          if(time == "sixty-mins"){
+            time = "60 mins";
+          }
+
+          var name,language1,language2,local_lang1,local_lang2,language1_url,language2_url,status,status1="",status2="";
+          name = showableContent[i].getAttribute("name");
+          language1 = showableContent[i].getAttribute("language1");
+          language2 = showableContent[i].getAttribute("language2");
+          local_lang1 = name.replace(/\s/g,'')+"-"+language1.replace(/\s/g,'');
+          local_lang2 = name.replace(/\s/g,'')+"-"+language2.replace(/\s/g,'');
+          if(JSON.parse(localStorage.getItem(local_lang1)) && (JSON.parse(localStorage.getItem(local_lang1)).status!="completed")){
+            language1_url = JSON.parse(localStorage.getItem(local_lang1)).current_step;
+          }else{
+            language1_url = showableContent[i].getAttribute("language1_url");
+            status = "";
+          }
+          if(JSON.parse(localStorage.getItem(local_lang1))){
+            status1 = JSON.parse(localStorage.getItem(local_lang1)).status;
+          }
+          if(JSON.parse(localStorage.getItem(local_lang2)) && (JSON.parse(localStorage.getItem(local_lang2)).status!="completed")){
+            language2_url = JSON.parse(localStorage.getItem(local_lang2)).current_step;
+          }else{
+            language2_url = showableContent[i].getAttribute("language2_url");
+            status = "";
+          }
+          if(JSON.parse(localStorage.getItem(local_lang2))){
+            status2 = JSON.parse(localStorage.getItem(local_lang2)).status;
+          }
+          if(status1=="completed"){
+            status="completed";
+          }else if(status2=="completed"){
+            status="completed";
+          }else if((status1 == "ongoing") || (status2 == "ongoing")){
+            status="ongoing";
+          }else{
+            status="";
+          }
+          if(status == ""){
+            var node = document.createElement("div");
+            node.innerHTML = `
+                <div onclick="tutorial_call(this)" class="feature-card feature cp tutorialSearchFun" java="${language1_url}" node="${language2_url}">
+                  <div style="display: flex;">
+                    <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
+                    <p class="tutorial-box-text">${time}</p>
+                    <div class="tutorial-status-block ${status}">
+                      <div class="${status}-icon"></div>
+                      <p class="status-text">${status}</p>
+                    </div>
                   </div>
-              </div>`;
-          document.getElementById("demo").appendChild(node);
+                    <p class="mb-2 feature-h">${name}</p>
+                    <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
+                    <div class="lang-block">
+                      <a href="${language1_url}" onclick="set_prefer_lang(this)">${language1}</a>
+                      <a href="${language2_url}" onclick="set_prefer_lang(this)">${language2}</a>
+                    </div>
+                </div>`;
+            document.getElementById("demo").appendChild(node);
+          }
+      }
+      for(var i=0;i<showableContent.length;i++){
+        var url = showableContent[i].getAttribute("url");
+          var time = showableContent[i].getAttribute("duration");
+          if(time == "forty-mins"){
+            time = "40 mins";
+          }
+          if(time == "fortyfive-mins"){
+            time = "45 mins";
+          }
+          if(time == "sixty-mins"){
+            time = "60 mins";
+          }
+
+          var name,language1,language2,local_lang1,local_lang2,language1_url,language2_url,status,status1="",status2="";
+          name = showableContent[i].getAttribute("name");
+          language1 = showableContent[i].getAttribute("language1");
+          language2 = showableContent[i].getAttribute("language2");
+          local_lang1 = name.replace(/\s/g,'')+"-"+language1.replace(/\s/g,'');
+          local_lang2 = name.replace(/\s/g,'')+"-"+language2.replace(/\s/g,'');
+          if(JSON.parse(localStorage.getItem(local_lang1)) && (JSON.parse(localStorage.getItem(local_lang1)).status!="completed")){
+            language1_url = JSON.parse(localStorage.getItem(local_lang1)).current_step;
+          }else{
+            language1_url = showableContent[i].getAttribute("language1_url");
+            status = "";
+          }
+          if(JSON.parse(localStorage.getItem(local_lang1))){
+            status1 = JSON.parse(localStorage.getItem(local_lang1)).status;
+          }
+          if(JSON.parse(localStorage.getItem(local_lang2)) && (JSON.parse(localStorage.getItem(local_lang2)).status!="completed")){
+            language2_url = JSON.parse(localStorage.getItem(local_lang2)).current_step;
+          }else{
+            language2_url = showableContent[i].getAttribute("language2_url");
+            status = "";
+          }
+          if(JSON.parse(localStorage.getItem(local_lang2))){
+            status2 = JSON.parse(localStorage.getItem(local_lang2)).status;
+          }
+          if(status1=="completed"){
+            status="completed";
+          }else if(status2=="completed"){
+            status="completed";
+          }else if((status1 == "ongoing") || (status2 == "ongoing")){
+            status="ongoing";
+          }else{
+            status="";
+          }
+          if(status == "completed"){
+            var node = document.createElement("div");
+            node.innerHTML = `
+                <div onclick="tutorial_call(this)" class="feature-card feature cp tutorialSearchFun" java="${language1_url}" node="${language2_url}">
+                  <div style="display: flex;">
+                    <p class="tutorial-box-text">${showableContent[i].getAttribute("level")}</p>
+                    <p class="tutorial-box-text">${time}</p>
+                    <div class="tutorial-status-block ${status}">
+                      <div class="${status}-icon"></div>
+                      <p class="status-text">${status}</p>
+                    </div>
+                  </div>
+                    <p class="mb-2 feature-h">${name}</p>
+                    <p class="feature-p">${showableContent[i].getAttribute("content")}</p>
+                    <div class="lang-block">
+                      <a href="${language1_url}" onclick="set_prefer_lang(this)">${language1}</a>
+                      <a href="${language2_url}" onclick="set_prefer_lang(this)">${language2}</a>
+                    </div>
+                </div>`;
+            document.getElementById("demo").appendChild(node);
+          }
       }
     }
   }

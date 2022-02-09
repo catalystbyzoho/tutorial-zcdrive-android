@@ -23,31 +23,6 @@ The truncate operation deletes all the records in the table, while retaining its
 
 You will receive notifications in your Catalyst console about the updates of the operation.
 
-{{% nested_fields children="open" border="no" expandable="yes" title="criteria" textformat="json" condition="optional" maxlength="200" %}}
-The operator that will bind the criteria groups together. 
-<br/><br/>
-Supported Operators:AND, OR 
-<br/><br/>
-If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
-<br/>
-{{% nested_button%}}
-{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" maxlength=" " %}}
-The operator that will bind the criteria groups together. 
-<br/><br/>
-Supported Operators:AND, OR 
-<br/><br/>
-If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
-<br/>
-{{% nested_button%}}
-{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" maxlength=" " %}}
-The operator that will bind the criteria groups together. 
-<br/>
-<hr/>
-If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
-{{% /nested_fields %}}
-{{% /nested_fields %}}
-{{% /nested_fields %}}
-
 ### Request Method & End point 1
 <!-- shortcode 1 -->
 {{%request class="apired" req="DELETE" %}}/v1/project/{project_id}/segment/{segment_id}/cache{{%/request%}}

@@ -26,18 +26,50 @@ This API enables you to add a new end-user to the Catalyst application for a spe
 
 {{%note%}}{{%bold class="bold-primary"%}}Note:{{%/bold%}} You will be able to add only 25 users in your application in the {{%link href="https://catalyst.zoho.com/help/environments.html"%}}development environment{{%/link%}}. After you deploy your application to production, you can include any number of end-users in it.{{%/note%}}
 
+#### Nested Fields
+
+{{% nested_fields children="open" border="no" expandable="yes" title="criteria" textformat="json" condition="optional" maxsize="200" %}}
+The operator that will bind the criteria groups together. 
+<br/><br/>
+Supported Operators:AND, OR 
+<br/><br/>
+If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
+<br/>
+{{% nested_button%}}
+{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" %}}
+The operator that will bind the criteria groups together. 
+<br/><br/>
+Supported Operators:AND, OR 
+<br/><br/>
+If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
+<br/>
+{{% nested_button%}}
+{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" %}}
+The operator that will bind the criteria groups together. 
+<br/>
+<hr/>
+If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
+{{% /nested_fields %}}
+{{% /nested_fields %}}
+{{% /nested_fields %}}
+
+<br/>
 
 #### Request URL
 <!-- shortcode 1 -->
-{{%request class="apired" req="POST" %}} /v1/project/{project_id}/project-user/signup{{%/request%}}
+
+{{%request class="apigreen" req="GET" %}}<p>https://api.catalyst.zoho.com/baas/v1/project/{project_id}/project-user/signup{project_id}/project-user/signup</p>{{%/request%}}
+{{%request class="apiyellow" req="POST" %}}<p>https://api.catalyst.zoho.com/baas/v1/project/{project_id}/project-user/signup{project_id}/project-user/signup</p>{{%/request%}}
+{{%request class="apiblue" req="PUT" %}}<p>https://api.catalyst.zoho.com/baas/v1/project/{project_id}/project-user/signup{project_id}/project-user/signup</p>{{%/request%}}
+{{%request class="apired" req="DELETE" %}}<p>https://api.catalyst.zoho.com/baas/v1/project/{project_id}/project-user/signup{project_id}/project-user/signup</p>{{%/request%}}
 
 {{%request_id id="project_id" data="Numerical" %}}The {{%link href="https://catalyst.zoho.com/help/general-settings.html"%}}unique ID of the project{{%/link%}}{{%/request_id%}}
 
 
 ### Request Headers
 {{%scope%}} **Authorization:** Zoho-oauthtoken 1000.910*************************** 16.2f****************************57 <br>
- {{%bold%}}Content-Type:{{%/bold%}} application/json <br>
- {{%bold%}}PROJECT_ID:{{%/bold%}} {project_id}
+ {{%bold class="bold"%}}Content-Type:{{%/bold%}} application/json <br>
+ {{%bold class="bold"%}}PROJECT_ID:{{%/bold%}} {project_id}
 {{%/scope%}}
 
 ### Scope

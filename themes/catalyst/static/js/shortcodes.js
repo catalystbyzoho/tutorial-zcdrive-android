@@ -105,6 +105,23 @@ function copyToClipboard(ele){
 		document.querySelector(".copied-msg").remove();
 	},2500);
 }
+function copyRequest(ele){
+  var dummy = document.createElement("textarea");
+  document.body.appendChild(dummy);
+  var text = ele.previousElementSibling.innerText.trim();
+  dummy.value = text;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  var msg = document.createElement('p');
+  msg.classList.add("copied-msg");
+  var text = document.createTextNode("Copied");
+  msg.appendChild(text);
+  ele.after(msg);
+	setTimeout(function(){
+		document.querySelector(".copied-msg").remove();
+	},2500);
+}
 
 // Auto clear default pre code block
 
