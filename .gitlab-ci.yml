@@ -28,4 +28,4 @@ publishtolocal:
     - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf catalyst/'
     - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" * "$LOCAL_SERVER":~/Documents/catalyst_visual/docs/hugo/catalyst-docs/
    only: 
-    - master
+    - hugo-template-docs
