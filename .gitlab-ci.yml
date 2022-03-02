@@ -24,9 +24,9 @@ publishtolocal:
     #- cd catalyst-docs/
     #- hugo version
     #- cd public/
-    - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/*'
+    #- sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/*'
     - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" * "$LOCAL_SERVER":~/Documents/catalyst_visual/docs/hugo/catalyst-docs/
-    - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'killall hugo'
-    - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'cd ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/ && hugo server -p 8765 --bind 10.51.9.74 &'
+    #- sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'killall hugo'
+    #- sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'cd ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/ && hugo server -p 8765 --bind 10.51.9.74 &'
    only:
     - hugo-template-docs
