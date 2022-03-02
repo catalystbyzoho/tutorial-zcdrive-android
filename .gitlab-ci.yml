@@ -24,7 +24,7 @@ publishtolocal:
     #- cd catalyst-docs/
     #- hugo version
     #- cd public/
-    - echo $LOCAL_USERNAME
+    - echo $LOCAL_USER_NAME
     - echo $LOCAL_SERVER
     - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/*'
     - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" * "$LOCAL_SERVER":~/Documents/catalyst_visual/docs/hugo/catalyst-docs/
