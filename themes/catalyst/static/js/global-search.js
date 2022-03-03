@@ -75,13 +75,14 @@ $( document ).ready(function() {
             var url="";
             var path = [];
             path=item.uri.split("/");
-            for(var i=3; i<path.length; i++){
+            for(var i=1; i<path.length; i++){
                 url += path[i];
                 if( i+2 < path.length){
                     url += " > ";
                 }
             }
-            return  '<div class="global-autocomplete-suggestion" onmouseover="storeSearchContent(this)"' +
+            if(item.uri != "/404.html"){
+                return  '<div class="global-autocomplete-suggestion" onmouseover="storeSearchContent(this)"' +
                         'data-term="' + term + '" ' +
                         'data-title="' + item.title + '" ' +
                         'data-desc="' + item.description + '" ' +
@@ -92,6 +93,9 @@ $( document ).ready(function() {
                         item.title +
                         '<div class="context" style="padding-top: 5px">' + (url || '') + '</div>' +
                     '</div>';
+            }else{
+                return '';
+            }
         },
         /* onSelect callback fires when a search suggestion is chosen */
         onSelect: function(e, term, item) {
@@ -107,7 +111,7 @@ function storeSearchContent(e){
     var desc = e.getAttribute("data-desc");
     var tags = e.getAttribute("data-tags");
     var uri = e.getAttribute("data-uri");
-    var page = uri.split("/")[3];
+    var page = uri.split("/")[1];
 
     var toc = document.querySelector("#toc");
     toc.innerHTML="";
@@ -116,7 +120,7 @@ function storeSearchContent(e){
     var url="",ref="",ref_id="";
     var path = [];
     path=uri.split("/");
-    for(var i=3; i<path.length; i++){
+    for(var i=1; i<path.length; i++){
         url += path[i];
         if( i+2 < path.length){
             url += " > ";

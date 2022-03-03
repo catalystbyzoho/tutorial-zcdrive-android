@@ -9,34 +9,34 @@
     {{ if .p1.Parent }}
         {{ if .p1.Parent.IsHome}}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}">
+                <a class="text-link" href="/">
                     Resources
                 </a>
             </li>
             {{ if eq .p1.Type "tutorial-apps" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}/tutorial/">
+                <a class="text-link" href="/tutorial/">
                     Tutorial
                 </a>
             </li>
             {{ end }}
             {{ if eq .p1.Type "help" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}#help-components">
+                <a class="text-link" href="/#help-components">
                     Help Components
                 </a>
             </li>
             {{ end }}
             {{ if eq .p1.Type "sdk" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}#sdk-components">
+                <a class="text-link" href="/#sdk-components">
                     SDK
                 </a>
             </li>
             {{ end }}
             {{ if eq .p1.Type "cli" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}#sdk-components">
+                <a class="text-link" href="/#sdk-components">
                     CLI
                 </a>
             </li>

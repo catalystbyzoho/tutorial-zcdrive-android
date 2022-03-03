@@ -23,32 +23,40 @@
     font-family:"Roboto-Mono";
     font-weight:400;
     font-style:normal;
-    src:url("/Roboto_Mono/robotomonoregular.woff2") format("woff2"),
-        url("/Roboto_Mono/robotomonoregular.woff") format("woff"),
-        url("/Roboto_Mono/robotomonoregular.ttf") format("truetype");
-    }
+    src:url("//static.zohocdn.com/webfonts/robotomonoregular/font.eot");
+    src:url("//static.zohocdn.com/webfonts/robotomonoregular/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/robotomonoregular/font.svg#RobotoMono-Regular") format("svg");}
  @font-face {
     font-family:"Roboto";
     font-weight:400;
     font-style:italic;
-    src:url("/Roboto_Mono/roboto_italics.woff2") format("woff2"),
-        url("/Roboto_Mono/roboto_italics.woff") format("woff"),
-        url("/Roboto_Mono/roboto_italics.ttf") format("truetype");    
-    }
+    src:url("//static.zohocdn.com/webfonts/robotoitalic/font.eot");
+    src:url("//static.zohocdn.com/webfonts/robotoitalic/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/robotoitalic/font.svg#Roboto-Italic") format("svg");}
  @font-face {
     font-family:"Inconsolata";
     font-weight:400;
     font-style:normal;
-    src:url("/Inconsolata/inconsolata.woff2") format("woff2"),
-        url("/Inconsolata/inconsolata.woff") format("woff"),
-        url("/Inconsolata/inconsolata.ttf") format("truetype");    
-    }
+    src:url("//static.zohocdn.com/webfonts/inconsolataregular/font.eot");
+    src:url("//static.zohocdn.com/webfonts/inconsolataregular/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/inconsolataregular/font.svg#Inconsolata-Regular") format("svg");}
        
 @font-face {
     font-family:"Inconsolata-Bold";
     font-weight:700;
     font-style:normal;
-    src:url("/Inconsolata/inconsolata_bold.woff2") format("woff2"),
-        url("/Inconsolata/inconsolata_bold.woff") format("woff"),
-        url("/Inconsolata/inconsolata_bold.ttf") format("truetype");
-    }
+    src:url("//static.zohocdn.com/webfonts/inconsolatabold/font.eot");
+    src:url("//static.zohocdn.com/webfonts/inconsolatabold/font.eot?#iefix") format("eot"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.woff2") format("woff2"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.woff") format("woff"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.ttf") format("truetype"),
+        url("//static.zohocdn.com/webfonts/inconsolatabold/font.svg#Inconsolata-Bold") format("svg");}

@@ -13,7 +13,7 @@
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
-    <li data-nav-id="{{.Permalink}}" class="dd-item
+    <li data-nav-id="{{.RelPermalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
@@ -48,7 +48,7 @@
   {{- else}}
     {{- if not .Params.Hidden }}
     {{if gt .Weight 0}}
-      <li data-nav-id="{{.Permalink}}" class="dd-item">
+      <li data-nav-id="{{.RelPermalink}}" class="dd-item">
         <div>
           <a href="{{ .RelPermalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}

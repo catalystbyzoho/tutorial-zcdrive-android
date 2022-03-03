@@ -75,7 +75,7 @@ $( document ).ready(function() {
             var url="";
             var path = [];
             path=item.uri.split("/");
-            for(var i=3; i<path.length; i++){
+            for(var i=1; i<path.length; i++){
                 url += path[i];
                 if( i+2 < path.length){
                     url += " > ";
@@ -83,7 +83,7 @@ $( document ).ready(function() {
             }
             var type = document.body.getAttribute("type");
             if(type == "help"){
-                if(item.type == "help"){
+                if(item.type == "help" && url !=""){
                     return '<div class="autocomplete-suggestion" ' +
                         'data-term="' + term + '" ' +
                         'data-title="' + item.title + '" ' +
@@ -98,7 +98,7 @@ $( document ).ready(function() {
                 }
             }else if(type == "sdk" || type == "cli"){
                 var link= document.body.getAttribute("linktitle");
-                if(item.linktitle == link){
+                if(item.linktitle == link  && url !=""){
                     return '<div class="autocomplete-suggestion" ' +
                         'data-term="' + term + '" ' +
                         'data-title="' + item.title + '" ' +
@@ -112,7 +112,7 @@ $( document ).ready(function() {
                     return '';
                 }
             }else if(type == "api"){
-                if(item.type == "api"){
+                if(item.type == "api" && url !=""){
                     return '<div class="autocomplete-suggestion" ' +
                         'data-term="' + term + '" ' +
                         'data-title="' + item.title + '" ' +

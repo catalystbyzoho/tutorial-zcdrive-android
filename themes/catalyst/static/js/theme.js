@@ -61,10 +61,7 @@ themeModeSwitcher = function () {
     const applyCustomDarkModeSettings = (mode) => {
         const currentSetting = mode || getLS(darkModeStorageKey);
 
-        if (currentSetting === getModeFromCSSMediaQuery()) {
-            nowMode = getModeFromCSSMediaQuery()
-            resetRootDarkModeAttributeAndLS();
-        } else if (validColorModeKeys[currentSetting]) {
+        if (validColorModeKeys[currentSetting]) {
             nowMode = currentSetting
             rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
         } else {
@@ -163,10 +160,7 @@ switchDarkMode = function () {
     
         const currentSetting = mode || getLS(darkModeStorageKey);
   
-        if (currentSetting === getModeFromCSSMediaQuery()) {
-            nowMode = getModeFromCSSMediaQuery()
-            resetRootDarkModeAttributeAndLS();
-        } else if (validColorModeKeys[currentSetting]) {
+        if (validColorModeKeys[currentSetting]) {
             nowMode = currentSetting
             rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
         } else {
