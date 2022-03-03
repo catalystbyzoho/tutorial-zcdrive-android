@@ -274,16 +274,16 @@ height: 18px;
 	height: 18px;
 }
 .twitter-icon{
-  background: var(--edit-icon) no-repeat -645px -97px;
-	width: 16px;
-	height: 14px;
-  margin: -1px 5px 0 7px;
+  background: url(/images/image_1.svg) no-repeat -1px -2px;
+  width: 23px;
+  height: 20px;
+  margin: -3px 1px 0 10px;
 }
 .linkedin-icon{
-  background: var(--edit-icon) no-repeat -691px -96px;
-	width: 16px;
-	height: 16px;
-  margin: -2px 5px 0 10px;
+  background: url(/images/image_1.svg) no-repeat -22px -2px;
+  width: 23px;
+  height: 20px;
+  margin: -3px 1px 0 10px;
 }
 
 .contactsupportLight{

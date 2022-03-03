@@ -4,7 +4,7 @@ description: "The Data Store in Catalyst is a cloud-based relational database ma
 tags : [ "Description", "Common operations", "Instance methods" ]
 type: "whats-new"
 layout: "single"
-weight: 3
+weight: 4
 
 article:
   title : "Release Notes"
@@ -155,13 +155,13 @@ article:
 
 {{% /tab %}}
 
+{{% tab "New Features"%}} 
+{{% /tab %}}
+
 {{% tab "Enhancements"%}} 
 {{% /tab %}}
 
 {{% tab "Bug Fixes"%}} 
-{{% /tab %}}
-
-{{% tab "New Features"%}} 
 {{% /tab %}}
 
 {{% tab "Deprecated"%}} 

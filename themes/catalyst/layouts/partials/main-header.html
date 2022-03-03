@@ -1,6 +1,6 @@
 <div style="padding:0 29px 0 0; display: flex;">
   <div class="logo" style="background: var(--body-color); width: auto;">
-    <a class="logo-anchor" href="/">
+    <a class="logo-anchor" href="https://catalyst.zoho.com/" target="_blank">
       <div class="catalyst-logo"></div>
       <div class="logo-title-block">
         <p class="logo-product-name">Catalyst</p>
@@ -18,13 +18,13 @@
   {{ end }}
   <nav class="shortcuts">
     <li class="list">
-      {{ if (eq .Type "docs") }}
-      <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer" style="color:var(--font-blue-color); font-family: zoho-puvi-medium;">
+      {{ if (eq .Type "home") }}
+      <a id="docs" href="/" target="_self" rel="noopener noreferrer" style="color:var(--font-blue-color); font-family: zoho-puvi-medium;">
         Docs
         <div class="add_div1" id="docs-line" style="background-color:var(--font-blue-color)"></div>
       </a>
       {{ else }}
-      <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">
+      <a id="docs" href="/" target="_self" rel="noopener noreferrer">
         Docs
         <div class="add_div1" id="docs-line"></div>
       </a>
@@ -75,7 +75,7 @@
   </nav>
   <nav class="header-menu-list hide" id="headerMenuList">
     <li class="list">
-      <a id="docs" href="/docs/quick-start-guide" target="_self" rel="noopener noreferrer">
+      <a id="docs" href="/" target="_self" rel="noopener noreferrer">
         Docs
         <div class="add_div1" id="docs-line"></div>
       </a>
@@ -103,7 +103,7 @@
     </a>
   </nav>
   <div class="right-header">
-    {{ if ne .Type "docs" }}
+    {{ if ne .Type "getting-started" }}
       <div class="global-search-icon" onclick="openGlobalsearch()"></div>  
     {{end}}
     <div class="right-menu-icon" onclick="showHeaderDowndown()"></div>  

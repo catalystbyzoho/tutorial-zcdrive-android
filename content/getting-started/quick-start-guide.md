@@ -1,14 +1,13 @@
 +++
 date= ""
-title= "Deployment"
+title= "Quick Start Guide"
 description= "The Data Store in Catalyst is a cloud-based relational database management system which stores the persistent data of your application. This data repository includes the data from the application’s backend and the data of the application’s end users."
 tags = [ "Description", "Common operations", "Instance methods" ]
 weight= 1
-type= "deployment-and-billing"
+type= "getting-started"
 layout= "single"
 +++
-# Deployment
-
+#
 This quick start guide will familiarize you with setting up the Catalyst work environment in under ten minutes. With this guide, you can quickly learn the basic steps involved in developing a Catalyst application.
 
 You can access detailed step-by-step tutorials on building applications and microservices involving different Catalyst components from the Tutorials section.

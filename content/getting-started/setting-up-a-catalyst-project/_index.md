@@ -1,7 +1,7 @@
 +++
 date= ""
 title= "Setting up a Catalyst Project"
-type= "docs"
+type= "getting-started"
 layout= "single"
 weight= 4
 +++
