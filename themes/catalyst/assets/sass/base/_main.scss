@@ -82,6 +82,18 @@ body{
     .help-block:hover{
         box-shadow: 5px 5px 16px var(--shadow-color); 
     }
+    .deploy-bill-block {
+        background-color: var(--body-color);
+        border: 1px solid var(--hr-color);
+        border-radius: 4px;
+        width: 100% !important;
+        height: 185 !important;
+        padding: 10px 15px;
+        overflow: auto;
+    }
+    .deploy-bill-block:hover{
+        box-shadow: 5px 5px 16px var(--shadow-color); 
+    }
     .feature-p{
         text-align: left;
         font: normal normal normal 15px/27px zoho-puvi-regular;

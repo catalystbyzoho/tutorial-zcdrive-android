@@ -2,13 +2,13 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-{{if or (eq .Type "help") (eq .Type "docs")}}
+{{if or (or (eq .Type "help") (eq .Type "docs")) (eq .Type "deployment-and-billing")}}
 {{- template "section-tree-nav-help" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
 {{end}}
 {{- end}}
 
 <!-- templates -->
-{{- define "section-tree-nav-help" }}
+{{- define "section-tree-nav-help" }} 
 {{- $showvisitedlinks := .showvisitedlinks }}
 {{- $currentNode := .currentnode }}
  {{- with .sect}}

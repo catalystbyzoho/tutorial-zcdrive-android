@@ -232,6 +232,9 @@ display: flex;
 flex-wrap: wrap; 
 justify-content:center;
 }
+.footer-contactus{
+  display: flex;
+}
 .footer-at{
 font: normal normal normal 12px/30px zoho-puvi-regular, Roboto, sans-serif;
 text-align: center;
@@ -265,37 +268,58 @@ background: var(--edit-icon) no-repeat -159px -95px;
 width: 18px;
 height: 18px;
 }
+.blog{
+  background: var(--edit-icon) no-repeat -733px -93px;
+	width: 16px;
+	height: 18px;
+}
+.twitter-icon{
+  background: var(--edit-icon) no-repeat -645px -97px;
+	width: 16px;
+	height: 14px;
+  margin: -1px 5px 0 7px;
+}
+.linkedin-icon{
+  background: var(--edit-icon) no-repeat -691px -96px;
+	width: 16px;
+	height: 16px;
+  margin: -2px 5px 0 10px;
+}
 
 .contactsupportLight{
 background: url('/images/LightPages.svg') no-repeat -202px -97px;
 width: 16px;
 height: 16px;
 }
-.ZPprivacy {
-padding: 0 20px;
-margin: auto;
-box-sizing: border-box;
+.dF{
+  display: flex;
 }
-.footer-links ul {
+.ZPprivacy {
 list-style: none;
 margin-bottom: 5px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+padding: 0 20px;
+margin: auto;
+box-sizing: border-box;
 }
-.footer-links ul li {
+.ZPprivacy li a:hover {
+  color: var(--hover-color);
+}
+.ZPprivacy li {
 border-right: 1px solid var(--font-lite-body-color);
 padding: 0 10px 0 7px;
 margin-bottom: 10px;
 line-height: 12px;
 }
-.footer-links ul li a{
+.ZPprivacy li a{
 font: normal normal normal 13px zoho-puvi-regular, Roboto, sans-serif;
 }
-.footer-links ul li:first-child {
+.ZPprivacy li:first-child {
 padding-left: 0;
 }
-.footer-links ul li:last-child {
+.ZPprivacy li:last-child {
 padding-right: 0;
 border-right: 0;
 }
@@ -313,6 +337,14 @@ color: var(--hover-color);
 display: flex; 
 margin: 0 auto;
 padding-bottom: 20px;
+}
+.writeus-text{
+  font: 13px zoho-puvi-regular;
+  color: var(--font-body-color);
+}
+.support-email{
+  font: 13px zoho-puvi-regular;
+  color: var(--font-blue-color) !important;
 }
 @media screen and (min-width: 761px) and (max-width : 1020px) {
 .footer-at-block{
@@ -832,6 +864,7 @@ padding-bottom: 40px;
         margin-bottom: 16px;
         position: relative;
         border: 1px solid var(--hr-color);
+        border-radius: 4px;
       }
       .faq-ques{
         font: normal normal normal 16px/24px zoho-puvi-regular;
@@ -1055,12 +1088,12 @@ padding-bottom: 40px;
         height: 31px;
       }
       .deployment-icon{
-        background: var(--metrics-icon) no-repeat -1104px -46px;
+        background: var(--app-icon) no-repeat -1104px -46px;
         width: 30px;
         height: 30px;
       }
       .billing-icon{
-        background: var(--metrics-icon) no-repeat -1164px -46px;
+        background: var(--app-icon) no-repeat -1164px -46px;
         width: 30px;
         height: 30px;
       }

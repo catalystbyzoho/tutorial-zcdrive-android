@@ -202,6 +202,22 @@ help:
             link: "/help/authentication/authentication/"
             content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
+
+# Deployment and Billing
+
+deploy_and_bill:
+  enable : true
+  content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  deploy_and_bill_item:
+    - name: "Deployment"
+      icon: "deployment-icon"
+      link: "/deployment-and-billing/deployment"
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    - name: "Billing"
+      icon: "billing-icon"
+      link: "/deployment-and-billing/billing"
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
 # FAQ
 
 faq:

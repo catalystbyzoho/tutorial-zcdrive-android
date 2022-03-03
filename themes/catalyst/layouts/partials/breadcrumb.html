@@ -41,6 +41,13 @@
                 </a>
             </li>
             {{ end }}
+            {{ if eq .p1.Type "deployment-and-billing" }}
+            <li>
+                <a class="text-link" href="/#deployment-and-billing-components">
+                    Deployment and Billing
+                </a>
+            </li>
+            {{ end }}
 
         {{else}}
           {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}	

@@ -243,6 +243,7 @@ article > aside {
     background-color: var(--menu-color);
     margin-top: 147px;
     padding-left: 21px !important;
+    padding-bottom: 10px;
     height: calc(100vh - 130px);
     overflow: auto; }
     article > aside .menu h6 {
@@ -469,6 +470,16 @@ body {
     padding: 10px 15px;
     overflow: auto; }
   body .help-block:hover {
+    box-shadow: 5px 5px 16px var(--shadow-color); }
+  body .deploy-bill-block {
+    background-color: var(--body-color);
+    border: 1px solid var(--hr-color);
+    border-radius: 4px;
+    width: 100% !important;
+    height: 185 !important;
+    padding: 10px 15px;
+    overflow: auto; }
+  body .deploy-bill-block:hover {
     box-shadow: 5px 5px 16px var(--shadow-color); }
   body .feature-p {
     text-align: left;

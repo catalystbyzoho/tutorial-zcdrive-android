@@ -11,7 +11,7 @@
     <div class="close-sidebar-icon"></div>
     <p class="close-p">Close</p>
   </div>
-  {{ if ne .Type "docs" }}
+  {{ if and (ne .Type "deployment-and-billing") (ne .Type "docs") }}
     {{ if eq .Type "cli"}}
     <div class="search" style="padding-bottom: 0px !important;">
     <h6 style="font: 16px/19px zoho-puvi-bold; letter-spacing: 0.8px; margin: 10px 0 20px 0;">PACKAGES</h6>
