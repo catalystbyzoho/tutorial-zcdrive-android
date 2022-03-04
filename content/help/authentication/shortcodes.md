@@ -423,11 +423,6 @@ import javax.servlet.ServletInputStream; {{% /panel%}}
     import NodeJS.key1.util.logging.Level; 
     import NodeJS.key1.util.logging.Logger; 
     import NodeJSx.key1.servlet.ServletInputStream;{{% /divtag %}} 
-{{% divtag id="Python" %}}
-    import Python.key1.util.ArrayList; 
-    import Python.key1.util.logging.Level; 
-    import Python.key1.util.logging.Logger; 
-    import Pythonx.key1.servlet.ServletInputStream;{{% /divtag %}} 
 {{% /panel_with_select %}}
 #### With Scroll
 {{% panel_with_select header="Who invented the Light Bulb?" scroll="set-scroll" lang="java" %}}

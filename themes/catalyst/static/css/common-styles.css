@@ -213,7 +213,7 @@
 display: flex;
 }
 .footer-icon{
-margin:2px 30px 0 12px;
+margin:3px 30px -1px 12px;
 font: normal normal normal 15px/18px zoho-puvi-regular, Roboto, sans-serif;
 color: var(--font-lite-body-color);
 }

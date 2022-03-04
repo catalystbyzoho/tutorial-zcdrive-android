@@ -7,11 +7,7 @@
 		{{- end -}}
         <div class="right-header-panel">
 			<div class="customselect panel-select">
-				<select class="custom-select">
-					<option value="Java" selected>Java</option>
-					<option value="NodeJS">Node JS</option>
-					<option value="Python">Python</option>
-				</select>
+				<select class="custom-select"></select>
 			</div>
 			<div class="spliter"></div>
             <div class="copytoclipboard" onclick="copyToClipboard(this)">copy</div>
@@ -32,11 +28,25 @@
 <script>
 	var s = document.querySelectorAll(".panel-select-block");
 	for(var i=0;i<s.length;i++){
-		var opt = s[i].querySelector('select.custom-select');
-		var id_value = "Java";
-		var get_text = s[i].nextElementSibling.querySelector(`.select-panel #${id_value} code`).innerHTML;
 		var put_text = s[i].querySelector('.panel-body code');
-		put_text.innerHTML=get_text;
+		if(put_text.innerHTML.length == 0){
+			var opt = s[i].querySelector('select.custom-select');
+			var id_value = s[i].nextElementSibling.children[0].getAttribute("id");
+			var get_text = s[i].nextElementSibling.querySelector(`.select-panel #${id_value} code`).innerHTML;
+			put_text.innerHTML=get_text;
+
+			var l,j,node,select_block = s[i].nextElementSibling.children;
+			for(j=0;j<select_block.length;j++){
+				l = select_block[j].getAttribute("id");
+				node = document.createElement("option");
+				if(j == 0){
+					node.setAttribute("selected",true);
+				}
+				node.setAttribute("value",l);
+				node.innerText = l;
+				s[i].querySelector(".custom-select").appendChild(node);
+			}
+		}
 	}
 	function panelSelect(e){
 		var ele = e.closest("pre");
