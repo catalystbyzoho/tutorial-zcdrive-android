@@ -269,7 +269,7 @@ width: 18px;
 height: 18px;
 }
 .blog{
-  background: var(--edit-icon) no-repeat -733px -93px;
+  background: url('/images/LightPages.svg') no-repeat -733px -93px;
 	width: 16px;
 	height: 18px;
 }
@@ -1087,10 +1087,10 @@ padding-bottom: 40px;
         width: 29px;
         height: 31px;
       }
-      .deployment-icon{
-        background: var(--app-icon) no-repeat -1104px -46px;
+      .environment-icon{
+        background: var(--app-icon) no-repeat -1224px -45px;
         width: 30px;
-        height: 30px;
+        height: 31px;
       }
       .billing-icon{
         background: var(--app-icon) no-repeat -1164px -46px;

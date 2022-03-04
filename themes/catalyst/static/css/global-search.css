@@ -50,7 +50,7 @@
 }
 .search-modal .cancel-btn{
   background-color: var(--body-color); 
-  padding: 26px 20px 0px 0px; 
+  padding: 24px 20px 0px 0px; 
   border-radius: 0 5px 0 0;
   cursor: pointer; 
   font:14px/17px zoho-puvi-regular; 

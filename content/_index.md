@@ -199,7 +199,7 @@ deploy_and_bill:
   content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
   deploy_and_bill_item:
     - name: "Environments"
-      icon: "deployment-icon"
+      icon: "environment-icon"
       link: "/deployment-and-billing/environments"
       content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     - name: "Billing"
