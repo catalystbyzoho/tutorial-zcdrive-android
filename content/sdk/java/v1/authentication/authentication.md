@@ -6,6 +6,15 @@ type: "sdk"
 layout: "single"
 linkTitle : "javav1"
 weight: 1
+related_link:
+  enable : true
+  related_link_item:
+    - name : "Add New User - API"
+      url: "/"
+    - name : "Add New User - Java SDK"
+      url: "/"
+    - name : "Add New User - Web SDK"
+      url: "/"
 version:
   current_version: "v1"
   version_item:
