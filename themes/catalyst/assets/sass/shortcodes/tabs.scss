@@ -6,7 +6,7 @@
 
     label {
         display: inline-block;
-        padding: 15px;
+        padding: 10px 15px;
         margin:0;
         cursor: pointer;
     }
@@ -27,7 +27,7 @@
 
         &:checked+label {
             color: var(--font-blue-color);
-            border-bottom: 1px solid var(--font-blue-color);
+            border-bottom: 2px solid var(--font-blue-color);
             z-index: 1;
             +.tab {
                 display: block;

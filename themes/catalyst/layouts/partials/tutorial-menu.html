@@ -27,7 +27,7 @@
           {{- if .Params.alwaysopen}} 
             <a class="file" href="{{ .RelPermalink}}" style="display: none;">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
           {{else}}
-            <a class="steps">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
+            <a class="steps" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
             <a class="file" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">
               {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
             </a>
@@ -87,7 +87,7 @@
           {{- if .Params.alwaysopen}} {{else}} StepProgress-item{{end}}
         " type="{{.Type}}">
           <div>
-            <a class="steps">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
+            <a class="steps" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
             <a class="file" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">
               {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
             </a>

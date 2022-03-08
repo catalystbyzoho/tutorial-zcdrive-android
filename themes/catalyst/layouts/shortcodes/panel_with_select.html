@@ -34,7 +34,6 @@
 			var id_value = s[i].nextElementSibling.children[0].getAttribute("id");
 			var get_text = s[i].nextElementSibling.querySelector(`.select-panel #${id_value} code`).innerHTML;
 			put_text.innerHTML=get_text;
-
 			var l,j,node,select_block = s[i].nextElementSibling.children;
 			for(j=0;j<select_block.length;j++){
 				l = select_block[j].getAttribute("id");

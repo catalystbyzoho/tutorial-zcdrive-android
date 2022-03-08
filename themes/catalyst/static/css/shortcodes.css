@@ -584,6 +584,10 @@ pre table td.hljs-ln-code{
 pre code.hljs{
   padding-bottom: 0px !important;
 }
+pre code.hljs::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
 pre.shortcode-light table td{
   color: #000000 !important;
 }

@@ -1,5 +1,5 @@
 /* Overwrite the default to keep the scrollbar always visible */
-
+html{scroll-behavior:smooth}
 #panel:hover ::-webkit-scrollbar{
   -webkit-appearance: none;
   width: 7px;
@@ -179,6 +179,13 @@
   margin: 6px 0 0 30px;
   cursor: pointer;
 }
+.local-closebtn{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+}
 @media only screen and (max-width: 990px) {
   .header-block{
     padding:0 29px 0 0;
@@ -277,13 +284,13 @@ height: 18px;
   background: url(/images/image_1.svg) no-repeat -1px -2px;
   width: 23px;
   height: 20px;
-  margin: -3px 1px 0 10px;
+  margin: -3px 1px 0 5px;
 }
 .linkedin-icon{
   background: url(/images/image_1.svg) no-repeat -22px -2px;
   width: 23px;
   height: 20px;
-  margin: -3px 1px 0 10px;
+  margin: -3px 1px 0 7px;
 }
 
 .contactsupportLight{
@@ -308,7 +315,7 @@ box-sizing: border-box;
   color: var(--hover-color);
 }
 .ZPprivacy li {
-border-right: 1px solid var(--font-lite-body-color);
+border-right: 1px solid #ccc;
 padding: 0 10px 0 7px;
 margin-bottom: 10px;
 line-height: 12px;
@@ -419,7 +426,7 @@ padding-bottom: 40px;
     }
     .input-field {
         width: 400px;
-        padding: 10px 10px 10px 36px;
+        padding: 10px 30px 10px 36px;
         text-align: left; 
         border-radius:35px; 
         outline: none !important; 
