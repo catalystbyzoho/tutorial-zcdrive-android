@@ -690,6 +690,27 @@ article section.page {
       display: flex;
       flex-wrap: wrap;
       list-style: none; }
+      article section.page #ariane ol li:last-child {
+        display: list-item; }
+        article section.page #ariane ol li:last-child:after {
+          display: none;
+          margin: -2px 5px;
+          content: '';
+          background: url("/images/LightPages.svg") no-repeat -604px -31px;
+          width: 10px;
+          height: 11px; }
+        article section.page #ariane ol li:last-child a {
+          color: var(--font-lite-body-color); }
+        article section.page #ariane ol li:last-child a:hover {
+          color: var(--font-blue-color); }
+        article section.page #ariane ol li:last-child.active {
+          margin-top: 1px; }
+          article section.page #ariane ol li:last-child.active:after {
+            display: inline-block;
+            content: "";
+            background: url("/images/LightPages.svg") no-repeat -604px -31px;
+            width: 0px;
+            height: 0px; }
       article section.page #ariane ol li {
         display: list-item; }
         article section.page #ariane ol li:after {

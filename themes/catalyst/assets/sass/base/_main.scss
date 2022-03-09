@@ -342,6 +342,33 @@ article section.page {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
+            li:last-child{
+                display: list-item;
+                &:after{
+                    display: none;
+                    margin:-2px 5px; 
+                    content: '';
+                    background: url('/images/LightPages.svg') no-repeat -604px -31px;
+                    width: 10px;
+                    height: 11px;
+                }
+                a {
+                    color: var(--font-lite-body-color);
+                }
+                a:hover{
+                    color: var(--font-blue-color);
+                }
+                &.active{
+                    &:after{
+                        display: inline-block;
+                        content: "";  
+                        background: url('/images/LightPages.svg') no-repeat -604px -31px;
+                        width: 0px;
+                        height: 0px;
+                    }
+                    margin-top: 1px;     
+                }
+            }
             li{
                 display: list-item;
                 &:after{
@@ -358,7 +385,6 @@ article section.page {
                 a:hover{
                     color: var(--font-blue-color);
                 }
-
                 &.active{
                     &:after{
                         display: inline-block;
@@ -369,7 +395,7 @@ article section.page {
                     }
                     margin-top: 1px;     
                 }
-            }
+            }  
         }
     }
 
