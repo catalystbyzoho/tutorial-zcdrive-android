@@ -15,12 +15,12 @@ jQuery(document).ready(function() {
     });
 
     clip.on('success', function (e) {
-        debugger
         e.clearSelection();
         $(e.trigger).attr('aria-label', 'Copied').addClass('tooltipped tooltipped-s');
     });
 });
 
+//Sidebar Transition Menu
 var acc = document.getElementsByClassName("category-icon");
 var i;
 for (i = 0; i < acc.length; i++) {

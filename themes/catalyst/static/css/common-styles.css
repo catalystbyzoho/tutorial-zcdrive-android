@@ -873,7 +873,8 @@ padding-bottom: 40px;
         border-radius: 4px;
       }
       .faq-ques{
-        font: normal normal normal 16px/24px zoho-puvi-regular;
+        display: flex;
+        font: 16px/24px zoho-puvi-regular;
         background-color: var(--menu-color);
         color: var(--font-body-color);
         cursor: pointer;
@@ -881,11 +882,43 @@ padding-bottom: 40px;
         width: 100%;
         border-radius: 4px;
       }
+      .faq-ques .hovlink {
+        background: url(/images/DarkPages.svg) no-repeat -644px -30px;
+        width: 14px;
+        height: 14px;
+        margin: 5px 0 0 3px;
+        display: none;
+      }
       .faq-ques:hover{
         font: normal normal bold 16px/24px zoho-puvi-regular;
       }
+      .faq-ques:hover .hovlink{
+        display: block;
+      }
+      .faq-copied-msg {
+        position: relative;
+        z-index: 1000000;
+        padding: 4px 8px 3px 8px;
+        margin: 0 0 0 10px !important;
+        font: normal normal 11px/1.5 "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+        color: #fff !important;
+        text-align: center;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 3px;
+      }
+      .faq-copied-msg::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+      }
       .faq-ans{
-        font: normal normal normal 16px/24px zoho-puvi-regular;
+        font: 16px/24px zoho-puvi-regular;
         background-color: var(--body-color);
         color: var(--font-body-color);
         width: 100%;
