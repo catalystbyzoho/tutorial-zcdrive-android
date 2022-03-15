@@ -16,6 +16,7 @@
     <li data-nav-id="{{.RelPermalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
+        weight{{.Weight}}
         " type="{{.LinkTitle}}">
 
       <div style="display: flex;">

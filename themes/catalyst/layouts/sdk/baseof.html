@@ -20,7 +20,7 @@
     <article>
       <aside class="hide-sidebar" id="responsiveSidebar">
         {{ partial "sdk-sidebar.html" . }}     
-        <ul class="menu" style="margin-top: 5px; margin-left: -32px; width: 402px;">
+        <ul class="menu" style="height: calc(100vh - 160px); margin-top: 5px; margin-left: -32px; width: 402px;">
           {{ partial "menu.html" . }}
         </ul> 
       </aside>
@@ -66,11 +66,11 @@
       var b = document.getElementById("footerBlock").getBoundingClientRect().top;
       var c;
       if(b < a){
-          c = (a-b)+ 170;
-          document.querySelector("ul.menu").style=`margin-top: 5px; margin-left: -32px; height: calc(100vh - ${c}px);`;
+          c = (a-b)+ 160;
+          document.querySelector("ul.menu").style=`margin-top: 5px; margin-left: -32px; width: 402px; height: calc(100vh - ${c}px);`;
       }
       else{
-        document.querySelector("ul.menu").style=`margin-top: 5px; margin-left: -32px; height: calc(100vh - 5px);`;
+        document.querySelector("ul.menu").style=`margin-top: 5px; margin-left: -32px; width: 402px; height: calc(100vh - 160px);`;
       }
     });
   </script>

@@ -6,12 +6,6 @@
 .logo {
     border-bottom: 1px solid var(--hr-color);
     height: 75px;
-    position: fixed;
-    width: 370px;
-    z-index: 2;
-    top: 0px;
-    display: flex;
-    background-color: transparent;
 }
 .menu-title {
     text-align: left;
@@ -48,7 +42,7 @@
     top: 0;
     left: 45px;
     width: 10px;
-    height: calc(100% - 115px);
+    height: calc(100% - 125px);
     border-left: 1px solid var(--step-color);
     margin-top: 80px;
 }
@@ -68,8 +62,7 @@
     height: 65px;
     width: 10px;
 }
-.StepProgress-item::after {
-    content: '\2022';
+.StepProgress-item-after {
     display: inline-block;
     position: absolute;
     padding-top: 0px;
@@ -80,14 +73,17 @@
     text-align: center;
     font-size: 30px;
     border: 1px solid var(--step-color);
-    color: var(--step-color);
     border-radius: 50%;
     background-color: var(--body-color);
+}
+.StepProgress-item-after::before{
+    content: '\2022';
+    color: var(--step-color);
 }
 .StepProgress-item.is-done::before {
     border-left: 1px solid var(--font-blue-color);
 }
-.StepProgress-item.is-done::after {
+.StepProgress-item.is-done .StepProgress-item-after{
     content: "\2713";
     font-size: 12px;
     padding-top: 1px;
@@ -96,18 +92,27 @@
     border: 1px solid var(--font-blue-color);
     background-color: var(--body-color);
 }
-.StepProgress-item.current::after {
-    content: '\2022';
-    padding-top: 0px;
+.StepProgress-item.is-done .StepProgress-item-after::before{
+    content: "\2713";
+    font-size: 12px;
+    padding-top: 1px;
+    color: var(--font-blue-color);
+    text-align: center;
+}
+.StepProgress-item.current .StepProgress-item-after{
     width: 21px;
     height: 21px;
-    top: 3px;
-    left: -40.4px;
-    font-size: 30px;
-    text-align: center;
-    color: var(--font-blue-color) !important;
     border: 1px solid var(--font-blue-color);
     background-color: var(--body-color);
+}
+.StepProgress-item.current .StepProgress-item-after::before{
+    content: '\2022';
+    font-size: 30px;
+    padding-top: 0px;
+    top: 3px;
+    left: -40.4px;
+    text-align: center;
+    color: var(--font-blue-color) !important;
 }
 .StepProgress-child{
     background-color: var(--step-color); 
@@ -141,7 +146,3 @@ article > aside .stepper-menu .dd-item.active > div a.file{
     font: 14px/26px zoho-puvi-medium;
     color: var(--font-body-color);
 }
-/* article > aside .stepper-menu .dd-item.active > div a.intro-file{
-    font: 14px/26px zoho-puvi-medium;
-    color: var(--font-blue-color);
-} */

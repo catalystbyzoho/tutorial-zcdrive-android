@@ -1,5 +1,7 @@
 body{
-    color: var(--font-body-color);
+    color: var(--font-body-color) !important;
+    background-color: var(--body-color) !important;
+
     em{
         font: italic normal normal 15px/24px Roboto;
     }
@@ -19,7 +21,6 @@ body{
     div{
         color: var(--font-body-color);
     }
-    background-color: var(--body-color) !important;
     .activelink{
         color: var(--font-blue-color);
     }
@@ -203,7 +204,7 @@ body{
     .light { font: 13px/26px zoho-puvi-regular; text-transform: lowercase; }
     .ft-st { font: 14px/20px zoho-puvi-regular;}
     .LeftContent {
-        width: 60%; 
+        width: 53%; 
         margin-right: 15px;
     }
     .RightContent {
@@ -211,7 +212,7 @@ body{
         position: sticky;
         top: 110px;
         align-self: flex-start; 
-        width: 40%; 
+        width: 45%; 
     }
     header {
         
@@ -247,8 +248,6 @@ body{
                 }
             }
         }
-    
-
     }
 
 
@@ -427,9 +426,6 @@ article section.page {
         }     
     }
 }
-article section.page {
-     line-height:24px;
-}
 article section.page div.content{
     margin-top: 0;
 
@@ -449,9 +445,7 @@ article section.page div.content{
     p {
             margin: 16px 0;
             font: 15px/24px zoho-puvi-regular;
-            letter-spacing: 0px;
             color: var(--font-body-color);
-            opacity: 1;
     }
     ul{
         padding-left: 36px;
@@ -543,22 +537,21 @@ article section.page div.content{
         opacity: 1;
         margin-top:38px;
         margin-bottom: 0px;
-   }
-
+    }
     h2 {
         margin-top: 0.5em;
-        font: normal normal bold 22px/26px zoho-puvi-bold;
+        font: 22px/26px zoho-puvi-bold;
         color: var(--font-body-color);
         margin-top:38px;
     } 
     h3 {
         margin-top: 0.5em;
-        font: normal normal bold 20px/24px zoho-puvi-bold;
+        font: 20px/24px zoho-puvi-bold;
         color: var(--font-body-color);
         margin-top:38px;
     } 
     h4{
-        font: normal normal bold 18px/22px zoho-puvi-bold;
+        font: 18px/22px zoho-puvi-bold;
         color: var(--font-body-color);
     }
     // TABLE
@@ -679,17 +672,13 @@ article section.page div.content{
         max-width: 100%;
         margin: 10px auto 10px 0;
         display: block;
-
-
         &.inline {
             display: inline !important;
          
             vertical-align: bottom;
         }
-
         &.inline {
             display: inline !important;
-         
             vertical-align: bottom;
         }
     }
@@ -702,7 +691,7 @@ article section.page div.content{
         border: 1px solid var(--hr-color);
         background: var(--menu-color);
         code {
-            font: normal normal normal 16px/26px Inconsolata,arial;
+            font: 16px/26px Inconsolata,arial;
             white-space: pre-wrap;
             color: var(--font-body-color);
             background-color: transparent;

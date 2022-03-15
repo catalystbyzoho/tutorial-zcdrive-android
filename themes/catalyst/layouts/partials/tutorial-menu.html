@@ -2,9 +2,7 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-<!-- {{if eq .Type "tutorial-apps"}} -->
 {{- template "section-tree-steps" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-<!-- {{end}} -->
 {{- end}}
 
 <!-- templates -->
@@ -34,6 +32,7 @@
           {{end}}
         {{- end}}
       </div>
+      <a class="StepProgress-item-after" href="{{ .RelPermalink}}" title="{{.LinkTitle}}"></a>
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- $pages := .Pages }}
@@ -92,6 +91,7 @@
               {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
             </a>
           </div>
+          <a class="StepProgress-item-after" href="{{ .RelPermalink}}" title="{{.LinkTitle}}"></a>
         </li>
       {{end}}
      {{- end}}

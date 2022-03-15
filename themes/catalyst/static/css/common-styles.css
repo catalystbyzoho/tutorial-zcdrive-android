@@ -1,5 +1,4 @@
 /* Overwrite the default to keep the scrollbar always visible */
-html{scroll-behavior:smooth}
 #panel:hover ::-webkit-scrollbar{
   -webkit-appearance: none;
   width: 7px;

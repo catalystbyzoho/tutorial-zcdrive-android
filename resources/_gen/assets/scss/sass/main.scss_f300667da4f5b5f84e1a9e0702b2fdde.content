@@ -1,59 +1,3 @@
-body article section.page div.content div.checklist-header .form-control-file {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 6em;
-  outline: none;
-  visibility: hidden;
-  cursor: pointer;
-  background-color: #c61c23;
-  box-shadow: 0 0 5px solid currentColor; }
-  body article section.page div.content div.checklist-header .form-control-file:before {
-    content: attr(data-title);
-    position: absolute;
-    top: 0.5em;
-    left: 0;
-    width: 100%;
-    min-height: 4em;
-    line-height: 0.5em;
-    padding-top: 1.5em;
-    opacity: 1;
-    visibility: visible;
-    text-align: center;
-    border: 0.25em dashed currentColor;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    overflow: hidden; }
-  body article section.page div.content div.checklist-header .form-control-file:hover:before {
-    border-style: solid;
-    box-shadow: inset 0px 0px 0px 0.25em currentColor; }
-
-body article section.page div.content h2 a {
-  margin-left: 0.2em;
-  text-decoration: none; }
-
-body article section.page div.content div.checklist-footer {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: center; }
-
-body #TableOfContents > ul li input {
-  margin-right: 0.3em;
-  display: none; }
-
-body #TableOfContents > ul li i {
-  margin-right: 0.3em;
-  color: var(--font-menu-color); }
-  body #TableOfContents > ul li i.fa-check-circle {
-    color: green; }
-  body #TableOfContents > ul li i.fa-dot-circle {
-    color: #999999; }
-
-body #TableOfContents > ul li:not(.cl-ready):not(.cl-done):not(.cl-doing) input {
-  visibility: hidden; }
-
-body #TableOfContents > ul li.cl-ready input, body #TableOfContents > ul li.cl-doing input, body #TableOfContents > ul li.cl-done input {
-  visibility: visible; }
-
 * {
   box-sizing: border-box; }
 
@@ -62,13 +6,11 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   vertical-align: baseline; }
 
 body {
-  margin: 0px 0px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column;
-  min-height: 100vh;
   text-rendering: optimizeLegibility; }
   body header {
     flex-shrink: 0;
@@ -81,27 +23,18 @@ body {
     body header > * {
       width: 100%;
       padding: 0; }
-    body header div.burger {
-      display: none;
-      margin-top: 12px; }
   body article {
     -webkit-box-flex: 1;
     flex-grow: 1;
     display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
     min-height: calc(100vh - 45px);
-    padding-top: 0px;
     left: 0;
     min-height: 100%;
     position: relative;
     z-index: 1;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    display: -webkit-box;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-flow: row nowrap;
@@ -125,21 +58,6 @@ body {
       margin-left: 370px;
       max-width: 100%;
       min-width: 0; }
-      body article section.page .jump-to-section {
-        display: none;
-        margin-top: 0.5em;
-        margin-left: 0.2em; }
-        body article section.page .jump-to-section ul {
-          padding-left: 10px; }
-        body article section.page .jump-to-section nav {
-          display: none;
-          position: absolute;
-          border: 1px solid;
-          padding: 1em 30px;
-          border-radius: 3px;
-          min-width: 25%;
-          max-width: 50%;
-          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25); }
     body article section.right-menu {
       margin-right: 0;
       align-self: flex-start;
@@ -259,7 +177,9 @@ article > aside {
       margin-top: 1.8rem;
       margin-left: -50px; }
     article > aside .menu ul {
-      display: none; }
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out; }
     article > aside .menu .ddexp {
       cursor: pointer; }
     article > aside .menu > .dd-item {
@@ -295,7 +215,9 @@ article > aside {
       article > aside .menu .dd-item ul {
         padding-left: 0px; }
       article > aside .menu .dd-item.active > ul {
-        display: block; }
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out; }
       article > aside .menu .dd-item.active > div a {
         color: var(--font-blue-color);
         font: 15px/18px zoho-puvi-medium; }
@@ -314,18 +236,22 @@ article > aside {
       article > aside .menu .dd-item.haschildren ul i {
         margin-left: -19px;
         margin-right: 6px; }
-      article > aside .menu .dd-item.parent > ul {
-        display: block; }
       article > aside .menu .dd-item.active li {
         margin: 20px 0; }
       article > aside .menu .dd-item.active > a {
         color: var(--font-blue-color); }
       article > aside .menu .dd-item.active > ul {
-        display: block; }
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out; }
       article > aside .menu .dd-item.alwaysopen > ul {
-        display: block; }
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out; }
       article > aside .menu .dd-item.parent > ul {
-        display: block; }
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out; }
   article > aside .stepper-menu {
     list-style-type: none; }
     article > aside .stepper-menu h6 {
@@ -406,7 +332,7 @@ body a {
   text-decoration: none; }
 
 body {
-  color: var(--font-body-color);
+  color: var(--font-body-color) !important;
   background-color: var(--body-color) !important; }
   body em {
     font: italic normal normal 15px/24px Roboto; }
@@ -601,7 +527,7 @@ body {
   body .ft-st {
     font: 14px/20px zoho-puvi-regular; }
   body .LeftContent {
-    width: 60%;
+    width: 53%;
     margin-right: 15px; }
   body .RightContent {
     position: -webkit-sticky;
@@ -609,7 +535,7 @@ body {
     position: sticky;
     top: 110px;
     align-self: flex-start;
-    width: 40%; }
+    width: 45%; }
   body header {
     background-color: var(--body-color);
     border-bottom: 1px solid var(--hr-color); }
@@ -752,9 +678,6 @@ article section.page {
       font-weight: 700;
       cursor: pointer; }
 
-article section.page {
-  line-height: 24px; }
-
 article section.page div.content {
   margin-top: 0; }
   article section.page div.content a.anchor {
@@ -769,9 +692,7 @@ article section.page div.content {
   article section.page div.content p {
     margin: 16px 0;
     font: 15px/24px zoho-puvi-regular;
-    letter-spacing: 0px;
-    color: var(--font-body-color);
-    opacity: 1; }
+    color: var(--font-body-color); }
   article section.page div.content ul {
     padding-left: 36px;
     margin-top: 22px; }
@@ -836,16 +757,16 @@ article section.page div.content {
     margin-bottom: 0px; }
   article section.page div.content h2 {
     margin-top: 0.5em;
-    font: normal normal bold 22px/26px zoho-puvi-bold;
+    font: 22px/26px zoho-puvi-bold;
     color: var(--font-body-color);
     margin-top: 38px; }
   article section.page div.content h3 {
     margin-top: 0.5em;
-    font: normal normal bold 20px/24px zoho-puvi-bold;
+    font: 20px/24px zoho-puvi-bold;
     color: var(--font-body-color);
     margin-top: 38px; }
   article section.page div.content h4 {
-    font: normal normal bold 18px/22px zoho-puvi-bold;
+    font: 18px/22px zoho-puvi-bold;
     color: var(--font-body-color); }
   article section.page div.content table {
     width: 100%;
@@ -956,7 +877,7 @@ article section.page div.content {
     border: 1px solid var(--hr-color);
     background: var(--menu-color); }
     article section.page div.content pre code {
-      font: normal normal normal 16px/26px Inconsolata,arial;
+      font: 16px/26px Inconsolata,arial;
       white-space: pre-wrap;
       color: var(--font-body-color);
       background-color: transparent; }

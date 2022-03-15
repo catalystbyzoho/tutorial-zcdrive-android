@@ -3,7 +3,6 @@ article>aside {
     z-index: 3;
     padding: 0;
     
-    
     div.search{
         position: fixed;
         left: 0px;
@@ -36,13 +35,14 @@ article>aside {
             margin-left:-50px;
         }
         ul {
-            display: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
         } 
         .ddexp{
             cursor: pointer;
         }
 
-        // first menu level
         >.dd-item {
             font: 15px/18px zoho-puvi-regular;
             letter-spacing: 0px;
@@ -63,7 +63,6 @@ article>aside {
                 }
         } 
 
-        // menu items
         .dd-item {
             padding-left: 16px;
             
@@ -88,11 +87,11 @@ article>aside {
                 padding-left: 0px;
             }
             &.active {
-
                 >ul {
-                    display: block;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
                 }
-
                 >div {
                     a {
                         color: var(--font-blue-color);
@@ -128,35 +127,30 @@ article>aside {
                 }
             }
 
-            &.parent{
-                >a {
-                 
-                }
-                >ul {
-                    display: block;
-                }
-            }
-
             &.active {
                 li {
                     margin:20px 0;
                 }
-
                 >a{
                     color:var(--font-blue-color);
                 }
-
                 >ul {
-                    display: block;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
                 }
             }
             
             &.alwaysopen>ul {
-                display: block
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
             }
             
             &.parent>ul {
-                display: block
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
             }
         }
     }
@@ -184,26 +178,23 @@ article>aside {
             cursor: pointer;
         }
 
-        // first menu level
         >.dd-item {
             font: 15px/18px zoho-puvi-regular;
             letter-spacing: 0px;
             color: var(--font-lite-body-color);
             opacity: 1;
             margin-top: 0px;
-                >a{
-                    padding-left:0px;
-                    display: none;
-                    color: var(--font-lite-body-color);
-                }
-                > i {
-                    display: none;
-                }
+            >a{
+                padding-left:0px;
+                display: none;
+                color: var(--font-lite-body-color);
+            }
+            > i {
+                display: none;
+            }
         } 
 
-        // menu items
         .dd-item {
-            
             list-style: none;
             a {
                 text-decoration: none;
@@ -290,16 +281,12 @@ article>aside {
             }
         }
     }
-
-
     section {
         margin: 2rem 0rem;
     }
 }
-
 body{
     a{
         text-decoration: none;
     }
 }
-
