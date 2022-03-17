@@ -1,5 +1,4 @@
 /* Overwrite the default to keep the scrollbar always visible */
-
 #panel:hover ::-webkit-scrollbar{
   -webkit-appearance: none;
   width: 7px;
@@ -179,6 +178,13 @@
   margin: 6px 0 0 30px;
   cursor: pointer;
 }
+.local-closebtn{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+}
 @media only screen and (max-width: 990px) {
   .header-block{
     padding:0 29px 0 0;
@@ -213,7 +219,7 @@
 display: flex;
 }
 .footer-icon{
-margin:2px 30px 0 12px;
+margin:3px 30px -1px 12px;
 font: normal normal normal 15px/18px zoho-puvi-regular, Roboto, sans-serif;
 color: var(--font-lite-body-color);
 }
@@ -231,6 +237,9 @@ color: var(--font-body-color);
 display: flex; 
 flex-wrap: wrap; 
 justify-content:center;
+}
+.footer-contactus{
+  display: flex;
 }
 .footer-at{
 font: normal normal normal 12px/30px zoho-puvi-regular, Roboto, sans-serif;
@@ -265,36 +274,58 @@ background: var(--edit-icon) no-repeat -159px -95px;
 width: 18px;
 height: 18px;
 }
+.blog{
+  background: url('/images/LightPages.svg') no-repeat -733px -93px;
+	width: 16px;
+	height: 18px;
+}
+.twitter-icon{
+  background: url(/images/image_1.svg) no-repeat -1px -2px;
+  width: 23px;
+  height: 20px;
+  margin: -3px 1px 0 5px;
+}
+.linkedin-icon{
+  background: url(/images/image_1.svg) no-repeat -22px -2px;
+  width: 23px;
+  height: 20px;
+  margin: -3px 1px 0 7px;
+}
 
 .contactsupportLight{
 background: url('/images/LightPages.svg') no-repeat -202px -97px;
 width: 16px;
 height: 16px;
 }
-.ZPprivacy {
-padding: 0 20px;
-margin: auto;
-box-sizing: border-box;
+.dF{
+  display: flex;
 }
-.footer-links ul {
+.ZPprivacy {
 list-style: none;
 margin-bottom: 5px;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+padding: 0 20px;
+margin: auto;
+box-sizing: border-box;
 }
-.footer-links ul li {
-border-right: 1px solid var(--font-lite-body-color);
+.ZPprivacy li a:hover {
+  color: var(--hover-color);
+}
+.ZPprivacy li {
+border-right: 1px solid #ccc;
 padding: 0 10px 0 7px;
 margin-bottom: 10px;
+line-height: 12px;
 }
-.footer-links ul li a{
+.ZPprivacy li a{
 font: normal normal normal 13px zoho-puvi-regular, Roboto, sans-serif;
 }
-.footer-links ul li:first-child {
+.ZPprivacy li:first-child {
 padding-left: 0;
 }
-.footer-links ul li:last-child {
+.ZPprivacy li:last-child {
 padding-right: 0;
 border-right: 0;
 }
@@ -312,6 +343,14 @@ color: var(--hover-color);
 display: flex; 
 margin: 0 auto;
 padding-bottom: 20px;
+}
+.writeus-text{
+  font: 13px zoho-puvi-regular;
+  color: var(--font-body-color);
+}
+.support-email{
+  font: 13px zoho-puvi-regular;
+  color: var(--font-blue-color) !important;
 }
 @media screen and (min-width: 761px) and (max-width : 1020px) {
 .footer-at-block{
@@ -386,7 +425,7 @@ padding-bottom: 40px;
     }
     .input-field {
         width: 400px;
-        padding: 10px 10px 10px 36px;
+        padding: 10px 30px 10px 36px;
         text-align: left; 
         border-radius:35px; 
         outline: none !important; 
@@ -831,9 +870,11 @@ padding-bottom: 40px;
         margin-bottom: 16px;
         position: relative;
         border: 1px solid var(--hr-color);
+        border-radius: 4px;
       }
       .faq-ques{
-        font: normal normal normal 16px/24px zoho-puvi-regular;
+        display: flex;
+        font: 16px/24px zoho-puvi-regular;
         background-color: var(--menu-color);
         color: var(--font-body-color);
         cursor: pointer;
@@ -841,11 +882,43 @@ padding-bottom: 40px;
         width: 100%;
         border-radius: 4px;
       }
+      .faq-ques .hovlink {
+        background: url(/images/DarkPages.svg) no-repeat -644px -30px;
+        width: 14px;
+        height: 14px;
+        margin: 5px 0 0 3px;
+        display: none;
+      }
       .faq-ques:hover{
         font: normal normal bold 16px/24px zoho-puvi-regular;
       }
+      .faq-ques:hover .hovlink{
+        display: block;
+      }
+      .faq-copied-msg {
+        position: relative;
+        z-index: 1000000;
+        padding: 4px 8px 3px 8px;
+        margin: 0 0 0 10px !important;
+        font: normal normal 11px/1.5 "Lato", "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif !important;
+        color: #fff !important;
+        text-align: center;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 3px;
+      }
+      .faq-copied-msg::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent black transparent transparent;
+      }
       .faq-ans{
-        font: normal normal normal 16px/24px zoho-puvi-regular;
+        font: 16px/24px zoho-puvi-regular;
         background-color: var(--body-color);
         color: var(--font-body-color);
         width: 100%;
@@ -1052,6 +1125,16 @@ padding-bottom: 40px;
         background: var(--metrics-icon) no-repeat -913px -189px;
         width: 29px;
         height: 31px;
+      }
+      .environment-icon{
+        background: var(--app-icon) no-repeat -1224px -45px;
+        width: 30px;
+        height: 31px;
+      }
+      .billing-icon{
+        background: var(--app-icon) no-repeat -1164px -46px;
+        width: 30px;
+        height: 30px;
       }
       .container a:hover{
         color: var(--hover-color);

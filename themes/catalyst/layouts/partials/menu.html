@@ -13,9 +13,10 @@
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
-    <li data-nav-id="{{.Permalink}}" class="dd-item
+    <li data-nav-id="{{.RelPermalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
+        weight{{.Weight}}
         " type="{{.LinkTitle}}">
 
       <div style="display: flex;">
@@ -58,7 +59,7 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item" type="{{.LinkTitle}}">
+      <li data-nav-id="{{.RelPermalink}}" class="dd-item" type="{{.LinkTitle}}">
         <div>
           <a class="file" href="{{.RelPermalink}}" title="{{.Title}}">
             {{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}

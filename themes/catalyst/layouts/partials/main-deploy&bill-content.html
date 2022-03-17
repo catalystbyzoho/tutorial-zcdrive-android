@@ -1,0 +1,53 @@
+{{ with .Params.deploy_and_bill }}
+{{ if .enable }}
+<div id="deployment-and-billing-components" style="position: absolute; top:2100px;"></div>
+<section data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" data-aos-once="true" style="margin:132px 0 150px 0;">
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div id="nav-pills-out" class="d-md-block nav flex-column nav-pills col-md-5" id="v-pills-tab"
+        role="tablist" aria-orientation="vertical" style="padding-right: 0px !important;">
+        <p class="faq-text">Deployments and Billing</p>
+        <p class="feature-p" style="margin-bottom: 25px;">{{ .content }}</p>
+      </div>
+
+      <div class="d-md-none d-lg-none d-sm-block">
+        <ol style="padding: 5px 20px;">
+          {{ range .deploy_and_bill_item }}
+          <div style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
+            <a href="{{.link}}">
+              <div class="feature-card deploy-bill-block text-left" >
+                <div style="display: flex;">
+                  <div class="{{.icon}}" style="margin:16px 0;"></div>
+                  <p class="help-h" style="margin: 22px 0 0 20px; text-align: left;">{{ .name }}</p>
+                </div>
+                <p class="feature-p" style="text-align: left;">{{ .content }}</p>
+              </div>
+            </a>
+          </div>
+          {{ end }}
+        </ol>
+      </div>
+
+      <div class="tab-content col-md-6 d-none d-md-block" style="padding-right:0px; padding-left: 0px !important; margin-left: auto;">
+        <div>
+            {{ range .deploy_and_bill_item }}
+            <div style="display: flex; padding-right: 0px; padding-left:18px; margin-bottom: 18px !important;">
+              <a href="{{.link}}">
+                <div class="feature-card deploy-bill-block text-left" >
+                  <div style="display: flex;">
+                    <div class="{{.icon}}" style="margin:16px 0;"></div>
+                    <p class="help-h" style="margin: 22px 0 0 20px; text-align: left;">{{ .name }}</p>
+                  </div>
+                  <p class="feature-p" style="text-align: left;">{{ .content }}</p>
+                </div>
+              </a>
+            </div>
+            {{ end }}
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

@@ -122,6 +122,30 @@ function copyRequest(ele){
 		document.querySelector(".copied-msg").remove();
 	},2500);
 }
+<<<<<<< HEAD
+=======
+function copyHyperLink(event,currentElement){
+  event.stopPropagation();
+  var ref = currentElement.closest(".faq-block").getAttribute("ref");
+  var url = document.location.origin + document.location.pathname;
+  var link = url + "#" + ref;
+
+  var dummy = document.createElement("textarea");
+  document.body.appendChild(dummy);
+  dummy.value = link;
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  var msg = document.createElement('p');
+  msg.classList.add("faq-copied-msg");
+  var text = document.createTextNode("Copied");
+  msg.appendChild(text);
+  currentElement.after(msg);
+	setTimeout(function(){
+		document.querySelector(".faq-copied-msg").remove();
+	},2500);
+}
+>>>>>>> 2d77d63a193ec74c6f223b1a07b40cd818928d5c
 
 // Auto clear default pre code block
 

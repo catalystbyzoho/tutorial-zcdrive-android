@@ -11,6 +11,11 @@
     src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Regular.otf);
 }
 @font-face {
+    font-family: "zoho-puvi-regular-bold";
+    font-weight: bold;
+    src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Regular.otf);
+}
+@font-face {
     font-family: "zoho-puvi-medium";
     src: url(/Zoho_Puvi/OpenType-PS/Zoho-Puvi-Medium.otf);
 }

@@ -3,8 +3,7 @@
         {{ with .Get "expandable" }}<div class="{{.}}-down-arrow-icon right-arrow" onclick="openExpand(this)"></div>{{ end }}
         {{ with .Get "title" }}<span class="nested-title">{{.}}</span>{{ end }}
         {{ with .Get "textformat" }}<span class="nested-textformat">{{.}}</span>{{ end }}
-        {{ with .Get "condition" }}<div class="nested-split"></div><span class="nested-condition">{{.}}</span>{{ end }}
-        {{ with .Get "maxlength" }}<div class="nested-split"></div><span class="nested-maxlength">{{.}}<span class="tooltip-maxlength">Max Length</span></span>{{ end }}
+        {{ with .Get "condition" }}<div class="nested-split"></div><span class="nested-condition">{{.}}</span>{{ end }}{{ with .Get "maxsize" }}<div class="nested-split"></div><span class="nested-maxlength">{{.}}<span class="tooltip-maxlength">Max Size</span></span>{{ end }}
     </div>
     <div {{ with .Get "expandable" }}class="{{.}}-exp-none nested-data"{{end}} class="nested-data">{{.Inner}}</div>
 </div>

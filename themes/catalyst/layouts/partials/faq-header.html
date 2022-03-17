@@ -1,7 +1,40 @@
 <div class="faq-header">
-    <div class="input-icons" >
+    <div class="input-icons" style="position: relative;">
       <div class="search-icon"></div>
       <input class="input-field" type="text" id="faqLocalSearch" placeholder="Search Topics & FAQ's">
+      <span class="local-closebtn" onclick="clearSearchValue()">×</span>
     </div>  
 </div>
-    
+
+<script>
+// FAQ Search
+var faq_search = document.getElementById("faqLocalSearch");
+if(faq_search){
+    faq_search.addEventListener('keyup',faqSearchFun);
+}
+function clearSearchValue(){
+    document.getElementById('faqLocalSearch').value = '';
+    faqSearchFun();
+  }
+function faqSearchFun(){
+    localfaqsearchValue();
+    function localfaqsearchValue(){
+        var search_value = document.getElementById("faqLocalSearch").value;
+        var btn = document.querySelector("#faqLocalSearch").parentElement.children[2];
+        if(search_value.length > 0){
+          btn.style.display = "block";
+        }else{
+          btn.style.display = "none";
+        }
+    }
+    var a = document.querySelectorAll(".faq-ques");
+    for(var i=0;i<a.length;i++){
+        var val = document.getElementById("faqLocalSearch").value.toLowerCase();
+        if(a[i].innerText.toLowerCase().indexOf(val) != -1){
+            a[i].parentElement.style.display="block";
+        }else{
+            a[i].parentElement.style.display="none";
+        }
+    }
+}
+</script>

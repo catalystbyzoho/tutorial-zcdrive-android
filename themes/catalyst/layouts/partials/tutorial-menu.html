@@ -2,9 +2,7 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-<!-- {{if eq .Type "tutorial-apps"}} -->
 {{- template "section-tree-steps" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
-<!-- {{end}} -->
 {{- end}}
 
 <!-- templates -->
@@ -15,7 +13,7 @@
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
-    <li data-nav-id="{{.Permalink}}" class="
+    <li data-nav-id="{{.RelPermalink}}" class="
         dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
@@ -27,13 +25,14 @@
           {{- if .Params.alwaysopen}} 
             <a class="file" href="{{ .RelPermalink}}" style="display: none;">{{safeHTML .Params.Pre}}{{.Title}}{{safeHTML .Params.Post}}</a>
           {{else}}
-            <a class="steps">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
+            <a class="steps" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
             <a class="file" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">
               {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
             </a>
           {{end}}
         {{- end}}
       </div>
+      <a class="StepProgress-item-after" href="{{ .RelPermalink}}" title="{{.LinkTitle}}"></a>
       {{- if ne $numberOfPages 0 }}
         <ul>
           {{- $pages := .Pages }}
@@ -54,7 +53,7 @@
     {{- if not .Params.Hidden }}
       {{if lt .Weight 0}}
         {{if or (eq .Title "Introduction") (eq .Title "Prerequisites")}} 
-          <li data-nav-id="{{.Permalink}}" class="dd-item
+          <li data-nav-id="{{.RelPermalink}}" class="dd-item
             {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
           " type="{{.Type}}">
             <!-- <div style="margin-left: -40px;">
@@ -70,7 +69,7 @@
             </div>
           </li>
         {{else}}
-          <li data-nav-id="{{.Permalink}}" class="dd-item
+          <li data-nav-id="{{.RelPermalink}}" class="dd-item
             {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
           " style="padding-left: 10px;" type="{{.Type}}">
             <div style="display: flex;">
@@ -82,16 +81,17 @@
           </li>
         {{end}}
       {{else}}
-        <li data-nav-id="{{.Permalink}}" class="dd-item
+        <li data-nav-id="{{.RelPermalink}}" class="dd-item
           {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
           {{- if .Params.alwaysopen}} {{else}} StepProgress-item{{end}}
         " type="{{.Type}}">
           <div>
-            <a class="steps">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
+            <a class="steps" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">STEP {{safeHTML .Params.Pre}}{{.Weight}}{{safeHTML .Params.Post}}</a><br />
             <a class="file" href="{{ .RelPermalink}}" title="{{.LinkTitle}}">
               {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
             </a>
           </div>
+          <a class="StepProgress-item-after" href="{{ .RelPermalink}}" title="{{.LinkTitle}}"></a>
         </li>
       {{end}}
      {{- end}}

@@ -8,6 +8,20 @@
   color: var(--font-lite-body-color) !important;
   margin: 0 !important;
 }
+.note li{
+  font: 13px/20px zoho-puvi-regular !important;
+  color: var(--font-lite-body-color) !important;
+  margin: 0 !important;
+}
+.note li strong{
+  font: 13px/20px zoho-puvi-semibold !important;
+}
+.note li::marker{
+  font-size: 13px;
+}
+.note div.bold ol li::marker {
+  font: 13px/24px zoho-puvi-bold;
+}
 .note .shortcode-badge{
   background-color: var(--note-badge);
   border: none;
@@ -570,6 +584,10 @@ pre table td.hljs-ln-code{
 pre code.hljs{
   padding-bottom: 0px !important;
 }
+pre code.hljs::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
 pre.shortcode-light table td{
   color: #000000 !important;
 }
@@ -594,7 +612,10 @@ pre.shortcode-dark table td{
   padding: 11px;
 }
 .request-body{
+<<<<<<< HEAD
   width: auto;
+=======
+>>>>>>> 2d77d63a193ec74c6f223b1a07b40cd818928d5c
   padding: 3px 8px 3px 11px;
   font: 16px/26px Inconsolata;
 }
@@ -629,20 +650,45 @@ pre.shortcode-dark table td{
   border: 1px solid #FA3E3D;
   border-radius: 5px;
 }
+<<<<<<< HEAD
+=======
+.apired + .request-body{
+  width: 82%;
+  overflow-x: auto;
+}
+>>>>>>> 2d77d63a193ec74c6f223b1a07b40cd818928d5c
 .apiblue{
   color: #61AFFE;
   border: 1px solid #61AFFE;
   border-radius: 5px;
 }
+<<<<<<< HEAD
+=======
+.apiblue + .request-body{
+  width: 86%;
+  overflow-x: auto;
+}
+>>>>>>> 2d77d63a193ec74c6f223b1a07b40cd818928d5c
 .apigreen{
   color: #4ACC90;
   border: 1px solid #4ACC90;
   border-radius: 5px;
 }
+<<<<<<< HEAD
+=======
+.apigreen + .request-body{
+  width: 85%;
+  overflow-x: auto;
+}
+>>>>>>> 2d77d63a193ec74c6f223b1a07b40cd818928d5c
 .apiyellow{
   color: #FCA12F;
   border: 1px solid #FCA12F;
   border-radius: 5px;
+}
+.apiyellow + .request-body{
+  width: 85%;
+  overflow-x: auto;
 }
 
 /* Nested Fields */

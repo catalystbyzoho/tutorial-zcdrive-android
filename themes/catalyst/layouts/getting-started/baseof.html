@@ -1,0 +1,58 @@
+{{- $redirectURL := "" }}
+{{ with .Params.redirect}}
+  {{ if or (hasPrefix . "http:") (hasPrefix . "https:") }}
+    {{ $redirectURL = . }}
+  {{ else }}
+    {{ $redirectURL = ref $ .}}
+  {{ end }}
+{{ end }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}{{ end }}</title>
+    {{ partial "html-head-link.html" . }}
+    {{if ne $redirectURL "" }}
+      <meta http-equiv="refresh" content="0;{{ $redirectURL }}">
+    {{end}}
+  </head>
+
+  <body data-url="{{ .RelPermalink }}">
+    <article>
+      <aside class="hide-sidebar" id="responsiveSidebar">
+        {{ partial "body-sidebar.html" . }}     
+        <ul class="menu" style="margin-top: 75px; padding-top: 25px; height: calc(100vh - 80px);">
+          {{ partial "help-menu.html" . }}
+        </ul> 
+      </aside>
+      <section class="page">
+        <header>
+            {{ partial "body-header.html" . }}
+        </header>
+        {{ block "main" . }}{{ end }}
+      </section>
+      <section class="right-menu">
+        {{ block "sidepage" . }}{{ end }}
+      </section>
+    </article>
+    {{ partial "scroll-top.html" . }}
+    <footer>
+      {{ partial "body-footer.html" . }}
+    </footer>
+    {{ partial "html-body-link.html" . }}
+  </body>
+  <script>
+    document.addEventListener("scroll", function(){
+      var a = document.querySelector("aside").getBoundingClientRect().height;
+      var b = document.getElementById("footerBlock").getBoundingClientRect().top;
+      var c;
+      if(b < a){
+          c = (a-b)+ 80;
+          document.querySelector("ul.menu").style=`margin-top: 75px; padding-top: 25px; height: calc(100vh - ${c}px);`;
+      }
+      else{
+        document.querySelector("ul.menu").style=`margin-top: 75px; padding-top: 25px; height: calc(100vh - 80px);`;
+      }
+    });
+  </script>
+  <script src='{{"js/pagination.js" | relURL}}'></script>
+</html>

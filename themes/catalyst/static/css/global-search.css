@@ -12,7 +12,6 @@
 }
 .modal-content-block {
   margin: auto;
-  background: var(--search-background-color);
   border-radius: 5px 5px 0px 0px;
   width: 70%;
 }
@@ -31,7 +30,7 @@
   outline: none !important; 
   box-shadow: 0 0 0 0; 
   width: 100%;
-  border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 5px;
   color: var(--font-menu-color);
   font: 20px/22px zoho-puvi-regular;
   padding: 0 0 0 60px;
@@ -50,8 +49,8 @@
 }
 .search-modal .cancel-btn{
   background-color: var(--body-color); 
-  padding: 26px 20px 0px 0px; 
-  border-radius: 0 5px 0 0;
+  padding: 24px 20px 0px 0px; 
+  border-radius: 0 5px 5px 0;
   cursor: pointer; 
   font:14px/17px zoho-puvi-regular; 
   color: var(--font-menu-color);
@@ -61,7 +60,7 @@
   display: flex; 
   background-color: var(--body-color); 
   height: 64px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
 }
 .search-results{
   max-height: 600px;

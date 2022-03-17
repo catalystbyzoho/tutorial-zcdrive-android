@@ -3,11 +3,11 @@
     <div class="footer-ref">
       <div class="flexbox">
         <div class="catalystcommunityLight icons"></div>
-        <a href="https://www.zoho.com/catalyst"><p class="footer-icon">Catalyst Community</p></a>
+        <a href="https://forums.catalyst.zoho.com/portal/en/community/recent?src=footer" target="_blank"><p class="footer-icon">Catalyst Community</p></a>
       </div>
       <div class="flexbox">
         <div class="stackoverflowLight"></div>
-        <a href="https://www.zoho.com/catalyst"><p class="footer-icon">Stack Overflow</p></a>
+        <a href="https://www.zoho.com/catalyst" target="_blank"><p class="footer-icon">Stack Overflow</p></a>
       </div>
       <!-- <div class="flexbox">
         <div class="slackcommunityLight icons"></div>
@@ -15,30 +15,52 @@
       </div> -->
       <div class="flexbox">
         <div class="githubLight icons"></div>
-        <a href="https://www.zoho.com/catalyst"><p class="footer-icon">GitHub</p></a>
+        <a href="https://github.com/catalystbyzoho?src=footer" target="_blank"><p class="footer-icon">GitHub</p></a>
       </div>
       <div class="flexbox">
-        <div class="contactsupportLight icons"></div>
-        <a href="https://www.zoho.com/catalyst"><p class="footer-icon">Contact Support</p></a>
+        <div class="blog icons"></div>
+        <a href="/blog/?src=footer" target="_blank"><p class="footer-icon">Blogs</p></a>
       </div>
     </div>
     <hr style="background-color: var(--hr-color); margin-top: 20px;"/>
+    <div class="footer-contactus">
+      <ul class="ZPprivacy"> 
+        <li><span class="writeus-text">Write to us: </span><a href="mailto:support@zohocatalyst.com" class="support-email" target="_blank">support@zohocatalyst.com</a></li>
+        <li class="dF">
+          <span class="writeus-text">Connect :</span>
+          <a href="https://twitter.com/CatalystByZoho?src=footer" class="dF" target="_blank">
+            <div class="twitter-icon"></div>
+            Twitter
+          </a>
+          <a href="https://www.linkedin.com/company/catalyst-serverless-platform-by-zoho?src=footer" class="dF" target="_blank">
+            <div class="linkedin-icon"></div>
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+    <hr style="background-color: var(--hr-color); margin-top: 5px;"/>
     <div class="footer-links">
         <ul class="ZPprivacy"> 
-          <li><a href="https://www.zoho.com/catalyst">Zoho Home</a></li>
-          <li><a href="https://www.zoho.com/catalyst">Contact Us</a></li>
-          <li><a href="https://www.zoho.com/catalyst">Security</a></li>
-          <li><a href="https://www.zoho.com/catalyst">IPR Complaints</a></li>
-          <li><a href="https://www.zoho.com/catalyst"> Anti-spam Policy</a></li>
-          <li class="footer-terms"><a href="https://www.zoho.com/catalyst">Terms of Service</a></li>
-          <li><a href="https://www.zoho.com/catalyst">Privacy Policy</a></li>
-          <li class="cookie-policy" style="display: inline-block;"><a href="https://www.zoho.com/catalyst">Cookie Policy</a></li>
-          <li><a href="https://www.zoho.com/catalyst" class="gdprc">GDPR Compliance</a></li>
-          <li><a href="https://www.zoho.com/catalyst">Abuse Policy</a></li>
+          <li><a href="https://www.zoho.com/" target="_blank">Zoho Home</a></li>
+          <li><a href="https://www.zoho.com/contactus.html" target="_blank">Contact Us</a></li>
+          <li><a href="https://www.zoho.com/security.html" target="_blank">Security</a></li>
+          <li><a href="https://www.zoho.com/ipr-complaints.html" target="_blank">IPR Complaints</a></li>
+          <li><a href="https://www.zoho.com/policy.html" target="_blank"> Anti-spam Policy</a></li>
+          <li class="footer-terms"><a href="https://www.zoho.com/terms.html" target="_blank">Terms of Service</a></li>
+          <li><a href="https://www.zoho.com/privacy.html" target="_blank">Privacy Policy</a></li>
+          <li class="cookie-policy" style="display: inline-block;"><a href="https://www.zoho.com/privacy/cookie-policy.html" target="_blank">Cookie Policy</a></li>
+          <li><a href="https://www.zoho.com/gdpr.html" class="gdprc" target="_blank">GDPR Compliance</a></li>
+          <li><a href="https://www.zoho.com/abuse-policy/" target="_blank">Abuse Policy</a></li>
         </ul>
     </div>
     <div class="footer-at-block">
-        <p class="footer-at">© 2021, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
+        <p class="footer-at">© <span id="year"></span>, Zoho Corporation Pvt. Ltd. All Rights Reserved.</p>
         {{ partial "theme.html" . }}
     </div>
 </div>
+<script>
+  const d = new Date();
+  let year = d.getFullYear();
+  document.getElementById("year").innerHTML=year;
+</script>

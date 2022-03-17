@@ -1,5 +1,7 @@
 body{
-    color: var(--font-body-color);
+    color: var(--font-body-color) !important;
+    background-color: var(--body-color) !important;
+
     em{
         font: italic normal normal 15px/24px Roboto;
     }
@@ -19,7 +21,6 @@ body{
     div{
         color: var(--font-body-color);
     }
-    background-color: var(--body-color) !important;
     .activelink{
         color: var(--font-blue-color);
     }
@@ -80,6 +81,18 @@ body{
         overflow: auto;
     }
     .help-block:hover{
+        box-shadow: 5px 5px 16px var(--shadow-color); 
+    }
+    .deploy-bill-block {
+        background-color: var(--body-color);
+        border: 1px solid var(--hr-color);
+        border-radius: 4px;
+        width: 100% !important;
+        height: 185 !important;
+        padding: 10px 15px;
+        overflow: auto;
+    }
+    .deploy-bill-block:hover{
         box-shadow: 5px 5px 16px var(--shadow-color); 
     }
     .feature-p{
@@ -191,7 +204,7 @@ body{
     .light { font: 13px/26px zoho-puvi-regular; text-transform: lowercase; }
     .ft-st { font: 14px/20px zoho-puvi-regular;}
     .LeftContent {
-        width: 60%; 
+        width: 53%; 
         margin-right: 15px;
     }
     .RightContent {
@@ -199,7 +212,7 @@ body{
         position: sticky;
         top: 110px;
         align-self: flex-start; 
-        width: 40%; 
+        width: 45%; 
     }
     header {
         
@@ -235,8 +248,6 @@ body{
                 }
             }
         }
-    
-
     }
 
 
@@ -330,6 +341,33 @@ article section.page {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
+            li:last-child{
+                display: list-item;
+                &:after{
+                    display: none;
+                    margin:-2px 5px; 
+                    content: '';
+                    background: url('/images/LightPages.svg') no-repeat -604px -31px;
+                    width: 10px;
+                    height: 11px;
+                }
+                a {
+                    color: var(--font-lite-body-color);
+                }
+                a:hover{
+                    color: var(--font-blue-color);
+                }
+                &.active{
+                    &:after{
+                        display: inline-block;
+                        content: "";  
+                        background: url('/images/LightPages.svg') no-repeat -604px -31px;
+                        width: 0px;
+                        height: 0px;
+                    }
+                    margin-top: 1px;     
+                }
+            }
             li{
                 display: list-item;
                 &:after{
@@ -346,7 +384,6 @@ article section.page {
                 a:hover{
                     color: var(--font-blue-color);
                 }
-
                 &.active{
                     &:after{
                         display: inline-block;
@@ -357,7 +394,7 @@ article section.page {
                     }
                     margin-top: 1px;     
                 }
-            }
+            }  
         }
     }
 
@@ -389,9 +426,6 @@ article section.page {
         }     
     }
 }
-article section.page {
-     line-height:24px;
-}
 article section.page div.content{
     margin-top: 0;
 
@@ -411,9 +445,7 @@ article section.page div.content{
     p {
             margin: 16px 0;
             font: 15px/24px zoho-puvi-regular;
-            letter-spacing: 0px;
             color: var(--font-body-color);
-            opacity: 1;
     }
     ul{
         padding-left: 36px;
@@ -429,6 +461,75 @@ article section.page div.content{
     ol li{
         padding-left: 2px;
     }
+    .mT0{
+        margin-top: 0px;
+    }
+    .mT1{
+        margin-top: 1px;
+    }
+    .mT2{
+        margin-top: 2px;
+    }
+    .mT3{
+        margin-top: 3px;
+    }
+    .mT4{
+        margin-top: 4px;
+    }
+    .mT5{
+        margin-top: 5px;
+    }
+    .mT6{
+        margin-top: 6px;
+    }
+    .mT7{
+        margin-top: 7px;
+    }
+    .mT8{
+        margin-top: 8px;
+    }
+    .mT9{
+        margin-top: 9px;
+    }
+    .mT10{
+        margin-top: 10px;
+    }
+    .mB0{
+        margin-bottom: 0px;
+    }
+    .mB1{
+        margin-bottom: 1px;
+    }
+    .mB2{
+        margin-bottom: 2px;
+    }
+    .mB3{
+        margin-bottom: 3px;
+    }
+    .mB4{
+        margin-bottom: 4px;
+    }
+    .mB5{
+        margin-bottom: 5px;
+    }
+    .mB6{
+        margin-bottom: 6px;
+    }
+    .mB7{
+        margin-bottom: 7px;
+    }
+    .mB8{
+        margin-bottom: 8px;
+    }
+    .mB9{
+        margin-bottom: 9px;
+    }
+    .mB10{
+        margin-bottom: 10px;
+    }
+    .mB30{
+        margin: 0 0 30px 0;
+    }
     h1 {     
         font: 24px/29px zoho-puvi-bold;   
         letter-spacing: 0px;
@@ -436,22 +537,21 @@ article section.page div.content{
         opacity: 1;
         margin-top:38px;
         margin-bottom: 0px;
-   }
-
+    }
     h2 {
         margin-top: 0.5em;
-        font: normal normal bold 22px/26px zoho-puvi-bold;
+        font: 22px/26px zoho-puvi-bold;
         color: var(--font-body-color);
         margin-top:38px;
     } 
     h3 {
         margin-top: 0.5em;
-        font: normal normal bold 20px/24px zoho-puvi-bold;
+        font: 20px/24px zoho-puvi-bold;
         color: var(--font-body-color);
         margin-top:38px;
     } 
     h4{
-        font: normal normal bold 18px/22px zoho-puvi-bold;
+        font: 18px/22px zoho-puvi-bold;
         color: var(--font-body-color);
     }
     // TABLE
@@ -497,19 +597,19 @@ article section.page div.content{
         } 
     }
     .newfeatures{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .enhancements{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .bugfixes{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .deprecated{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .removed{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     .new-feature-badge{
         display: inline;
@@ -572,17 +672,13 @@ article section.page div.content{
         max-width: 100%;
         margin: 10px auto 10px 0;
         display: block;
-
-
         &.inline {
             display: inline !important;
          
             vertical-align: bottom;
         }
-
         &.inline {
             display: inline !important;
-         
             vertical-align: bottom;
         }
     }
@@ -595,7 +691,7 @@ article section.page div.content{
         border: 1px solid var(--hr-color);
         background: var(--menu-color);
         code {
-            font: normal normal normal 16px/26px Inconsolata,arial;
+            font: 16px/26px Inconsolata,arial;
             white-space: pre-wrap;
             color: var(--font-body-color);
             background-color: transparent;

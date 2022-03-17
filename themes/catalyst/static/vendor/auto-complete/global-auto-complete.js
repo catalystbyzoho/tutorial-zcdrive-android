@@ -256,7 +256,7 @@ function setInitialValue(){
     var desc = e.getAttribute("data-desc");
     var tags = e.getAttribute("data-tags");
     var uri = e.getAttribute("data-uri");
-    var page = uri.split("/")[3];
+    var page = uri.split("/")[1];
     
 
     var toc = document.querySelector("#toc");
@@ -266,7 +266,7 @@ function setInitialValue(){
     var url="",ref="";
     var path = [];
     path=uri.split("/");
-    for(var i=3; i<path.length; i++){
+    for(var i=1; i<path.length; i++){
         url += path[i];
         if( i+2 < path.length){
             url += " > ";

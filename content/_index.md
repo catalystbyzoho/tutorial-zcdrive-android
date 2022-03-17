@@ -1,7 +1,6 @@
 ---
-
+type: "home"
 #ARTICLE
-
 article:
   type: "home"
   title : "Catalyst Help Documentation"
@@ -14,7 +13,7 @@ feature:
   feature_item:
 
     - name : "Getting Started"
-      url: "/docs/quick-start-guide"
+      url: "/getting-started/quick-start-guide"
       icon : "getting-started-icon"
       content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
       
@@ -191,16 +190,22 @@ help:
             icon: "metrics-icon"
             link: "/help/authentication/authentication/"
             content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-      - title: "Deployment_and_Billing"
-        featuredpoints:
-          - name: "Environments"
-            icon: "web-client-icon"
-            link: "/help/authentication/authentication/"
-            content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-          - name: "Billing"
-            icon: "logs-icon"
-            link: "/help/authentication/authentication/"
-            content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
+
+# Deployment and Billing
+
+deploy_and_bill:
+  enable : true
+  content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+  deploy_and_bill_item:
+    - name: "Environments"
+      icon: "environment-icon"
+      link: "/deployment-and-billing/environments"
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    - name: "Billing"
+      icon: "billing-icon"
+      link: "/deployment-and-billing/billing"
+      content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 
 # FAQ
 

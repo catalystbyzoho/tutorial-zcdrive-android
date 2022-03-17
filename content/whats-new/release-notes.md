@@ -39,6 +39,8 @@ We have introduced the {{%badge%}}APM feature{{%/badge%}} in the console which p
 {{%link%}}Application Performance Monitoring{{%/link%}}
 {{%/divtag%}}
 
+<hr class="mB30"/>
+
 {{% divtag class="enhancements" %}}
 {{% divtag class="enhancement-badge" %}}Enhancement{{%/divtag%}}
 
@@ -50,6 +52,8 @@ We have introduced the {{%badge%}}APM feature{{%/badge%}} in the console which p
 
 **Profiles and Permissions:** We have introduced a new permission to add or delete mobile SDK packages for Android and iOS apps from the console.
 {{%/divtag%}}
+
+<hr class="mB30"/>
 
 {{% divtag class="bugfixes" %}}
 {{% divtag class="bug-fix-badge" %}}BUG fix{{%/divtag%}}
@@ -71,6 +75,8 @@ We have introduced the {{%badge%}}APM feature{{%/badge%}} in the console which p
 
 {{%link%}}Application Performance Monitoring{{%/link%}}
 {{%/divtag%}}
+
+<hr class="mB30"/>
 
 {{% divtag class="enhancements" %}}
 {{% divtag class="enhancement-badge" %}}Enhancement{{%/divtag%}}
@@ -163,13 +169,13 @@ We have introduced the {{%badge%}}APM feature{{%/badge%}} in the console which p
 
 {{% /tab %}}
 
+{{% tab "New Features"%}} 
+{{% /tab %}}
+
 {{% tab "Enhancements"%}} 
 {{% /tab %}}
 
 {{% tab "Bug Fixes"%}} 
-{{% /tab %}}
-
-{{% tab "New Features"%}} 
 {{% /tab %}}
 
 {{% tab "Deprecated"%}} 

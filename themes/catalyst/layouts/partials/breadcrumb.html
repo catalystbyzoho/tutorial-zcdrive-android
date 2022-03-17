@@ -9,35 +9,42 @@
     {{ if .p1.Parent }}
         {{ if .p1.Parent.IsHome}}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}">
-                    Resources
+                <a class="text-link" href="/">
+                    Docs
                 </a>
             </li>
             {{ if eq .p1.Type "tutorial-apps" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}/tutorial/">
+                <a class="text-link" href="/tutorial/">
                     Tutorial
                 </a>
             </li>
             {{ end }}
             {{ if eq .p1.Type "help" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}#help-components">
+                <a class="text-link" href="/#help-components">
                     Help Components
                 </a>
             </li>
             {{ end }}
             {{ if eq .p1.Type "sdk" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}#sdk-components">
+                <a class="text-link" href="/#sdk-components">
                     SDK
                 </a>
             </li>
             {{ end }}
             {{ if eq .p1.Type "cli" }}
             <li>
-                <a class="text-link" href="{{.p1.Site.BaseURL}}#sdk-components">
+                <a class="text-link" href="/#sdk-components">
                     CLI
+                </a>
+            </li>
+            {{ end }}
+            {{ if eq .p1.Type "deployment-and-billing" }}
+            <li>
+                <a class="text-link" href="/#deployment-and-billing-components">
+                    Deployment and Billing
                 </a>
             </li>
             {{ end }}
@@ -49,10 +56,12 @@
         {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
     {{ end }}
     {{ if ne .p1.Title "main"}}
+        {{if eq .p1.IsPage false }}
         <li class="{{ if eq .p1 .p2 }}active{{ end }}">
             {{if and (ne .p1 .p2) (eq .p1.IsPage true)}}<a class="text-link" href="{{ .p1.RelPermalink }}">{{ end }}
                 {{ .p1.Title }}
             {{if and (ne .p1 .p2) (eq .p1.IsPage true)}}</a>{{ end }}
         </li>
+        {{ end }}
     {{end}}
 {{ end }}

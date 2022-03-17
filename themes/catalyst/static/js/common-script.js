@@ -1,17 +1,5 @@
 // Window onclick function
 window.addEventListener("click", function(event) {
-  //To close Theme Button
-  if(
-    !((event.srcElement.innerText == "Light theme") || 
-    (event.srcElement.innerText == "Dark theme") || 
-    (event.srcElement.classList.value.includes("theme")) ||
-    (event.srcElement.classList.value.includes("theme-text")) ||
-    (event.srcElement.classList.value.includes("dark-icon")) ||
-    (event.srcElement.classList.value.includes("light-icon")))
-  ){
-    document.getElementById('globalThemeSwitch').style.display="none";
-  }
-
   //To close Global Search
   var g_srch = event.srcElement.classList.value.includes("search-modal");
   if(g_srch){
@@ -21,20 +9,15 @@ window.addEventListener("click", function(event) {
 
 // Set Theme at initialSetup
 const ls = localStorage.getItem('user-color-scheme');
-var initial_theme_setup = document.getElementById('dark-mode-button');
 if(ls == "dark"){
-  initial_theme_setup.innerHTML='<div class="dark-icon"></div><div>Dark theme</div>';
-  document.getElementById("checkbox-light").checked=false;
-  document.getElementById("checkbox-dark").checked=true;
+  document.getElementById('slider').checked = true;
   var rep_icon = document.querySelectorAll(".theme-icon");
   for(var i=0;i<rep_icon.length;i++){
     rep_icon[i].children[0].classList.remove("code-light-icon");
     rep_icon[i].children[0].classList.add("code-dark-icon");
   }
 }else{
-  initial_theme_setup.innerHTML='<div class="light-icon"></div><div>Light theme</div>';
-  document.getElementById("checkbox-light").checked=true;
-  document.getElementById("checkbox-dark").checked=false;
+  document.getElementById('slider').checked = false;
   var rep_icon = document.querySelectorAll(".theme-icon");
   for(var i=0;i<rep_icon.length;i++){
     rep_icon[i].children[0].classList.remove("code-dark-icon");
@@ -261,10 +244,5 @@ if(ls == "dark"){
 
   //SDK Margin Issue
   if((document.body.getAttribute("type")=="sdk")  || (document.body.getAttribute("type")=="cli")){
-    var ele = document.querySelectorAll("article > aside .menu .dd-item.haschildren li");
-    for(var i=0;i<ele.length;i++){
-      if((window.getComputedStyle(ele[i]).height == '0px')){
-        ele[i].style.margin="0px";
-      }
-    }
+    document.querySelector(".dd-item.active").closest(".parent.weight0").style="position: fixed; top: 140px;";
   }

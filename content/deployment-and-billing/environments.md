@@ -1,46 +1,34 @@
 +++
 date= ""
-title= "Quick Start Guide"
+title= "Environments"
 description= "The Data Store in Catalyst is a cloud-based relational database management system which stores the persistent data of your application. This data repository includes the data from the application’s backend and the data of the application’s end users."
 tags = [ "Description", "Common operations", "Instance methods" ]
 weight= 1
-type= "docs"
+type= "deployment-and-billing"
 layout= "single"
 +++
-
-# Quick Start Guide
+# Deployment
 
 This quick start guide will familiarize you with setting up the Catalyst work environment in under ten minutes. With this guide, you can quickly learn the basic steps involved in developing a Catalyst application.
 
-**You can access detailed step-by-step tutorials on building applications and microservices involving different Catalyst components from the {{%link href="https://catalyst.zoho.com/help/users.html"%}}Tutorials{{%/link%}} section.**
-
-{{%link href="https://catalyst.zoho.com/help/"%}}Access all Catalyst resources{{%/link%}} and check out the various help sections available.
-
-{{%note%}} {{%bold class="bold-primary" %}}Note:{{%/bold%}}  Refer to the links provided in this guide for detailed help on various topics.
-{{%/note%}}
-
-<br>
-
-<div class="wrapper"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/Dj9LMG6IPxE" title="YouTube video player" width="650"></iframe></div>
-
-<br>
+You can access detailed step-by-step tutorials on building applications and microservices involving different Catalyst components from the Tutorials section.
 
 ### Prerequisites:
 
-1. {{%link href="https://nodejs.org/en/download/"%}}Node.js and NPM{{%/link%}} for your platform to install Catalyst CLI and to develop Node.js functions 
-2. {{%link href="https://www.oracle.com/java/technologies/downloads/"%}}Java SE Development Kit{{%/link%}} to develop Java functions 
-3. Any IDE tool for coding the {{%link href="https://catalyst.zoho.com/help/project-directory-structure.html#Client"%}}client{{%/link%}} or the {{%link href="https://catalyst.zoho.com/help/functions.html"%}}functions{{%/link%}}.
+1. Node.js and NPM for your platform to install Catalyst CLI and to develop Node.js functions 
+2. Java SE Development Kit to develop Java functions 
+3. Any IDE tool for coding the client or the functions.
 
 ### Step 1: Create a Catalyst project
 
-The first step in developing a Catalyst application is to {{%link href="https://catalyst.zoho.com/help/catalyst-console.html"%}}create a Catalyst project{{%/link%}} for it.
+The first step in developing a Catalyst application is to create a Catalyst project for it.
 
-1. Log in to the Catalyst console and click **Create a new Project**. 
+1. Log in to the Catalyst console and click Create a new Project. 
 2. Enter the project’s name in the pop-up window. 
-3. Click **Create**. 
-4. Click **Access Project** to open it.
+3. Read and accept Zoho Catalyst’s terms of service and click Create. 
+4. Click Access Project to open it.
 
-You can now set up and work with the Catalyst components from the console. Refer to the **Component Help resources** to learn about the Catalyst components in detail.
+You can now set up and work with the Catalyst components from the console. Refer to the Component Help resources to learn about the Catalyst components in detail.
 
 ### Step 2: Install Catalyst CLI
 

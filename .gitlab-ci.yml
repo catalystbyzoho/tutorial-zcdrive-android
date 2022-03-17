@@ -16,14 +16,17 @@ publishtolocal:
     - apk add sshpass
     - apk add git
     - apk add rsync
-    - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.tar.gz
-    - tar -xvf hugo_0.53_Linux-64bit.tar.gz
-    - mv hugo /usr/local/bin/
-    - git clone "https://$GIT_USER:$GIT_PASS@git.csez.zohocorpin.com/BaaS/catalyst-docs.git"
-    - cd catalyst-docs/
-    - hugo
-    - cd public/
-    - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf catalyst/'
-    - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" catalyst/ "$LOCAL_SERVER":catalyst/
-   only: 
-    - master
+    #- wget https://github.com/gohugoio/hugo/releases/download/v0.92.2/hugo_extended_0.92.2_Linux-64bit.tar.gz
+    #- tar -xvf hugo_extended_0.92.2_Linux-64bit.tar.gz
+    #- mv hugo /usr/bin/
+    - ls
+    #- git clone "https://$GIT_USER:$GIT_PASS@git.csez.zohocorpin.com/BaaS/catalyst-docs.git"
+    #- cd catalyst-docs/
+    #- hugo version
+    #- cd public/
+    - sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'rm -rf ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/content/*'
+    - rsync -ratlz --rsh="/usr/bin/sshpass -p $LOCAL_PASS ssh -o StrictHostKeyChecking=no -l $LOCAL_USER_NAME" * "$LOCAL_SERVER":~/Documents/catalyst_visual/docs/hugo/catalyst-docs/
+    #- sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'killall hugo'
+    #- sshpass -p "$LOCAL_PASS" ssh -o StrictHostKeyChecking=no "$LOCAL_USER_NAME"@"$LOCAL_SERVER" 'cd ~/Documents/catalyst_visual/docs/hugo/catalyst-docs/ && hugo server -p 8765 --bind 10.51.9.74 &'
+   only:
+    - hugo-template-docs

@@ -15,7 +15,7 @@
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
-    <li data-nav-id="{{.Permalink}}" class="dd-item
+    <li data-nav-id="{{.RelPermalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         ">
@@ -53,9 +53,9 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item">
+      <li data-nav-id="{{.RelPermalink}}" class="dd-item">
         <div>
-          <a class="file" href="#{{ replaceRE "(\\s)" ""  .LinkTitle }}" onclick="activateClass(this)" path="{{.Permalink}}">
+          <a class="file" href="#{{ replaceRE "(\\s)" ""  .LinkTitle }}" onclick="activateClass(this)" path="{{.RelPermalink}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}
           </a>
         </div>

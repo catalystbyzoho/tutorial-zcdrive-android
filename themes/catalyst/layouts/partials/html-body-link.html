@@ -14,14 +14,7 @@
 <link href='{{"vendor/auto-complete/auto-complete.css" | relURL}}' rel="stylesheet">
 <script src='{{"vendor/auto-complete/global-auto-complete.js" | relURL}}'></script>
 <link href='{{"vendor/auto-complete/global-auto-complete.css" | relURL}}' rel="stylesheet">
-<script type="text/javascript">
-    {{ if .Site.IsMultiLingual }}
-        var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
-    {{ else }}
-        var baseurl = "{{.Site.BaseURL}}";
-    {{ end }}
-</script>
+<script type="text/javascript">var baseurl = "";</script>
 <script src='{{"js/search.js" | relURL}}'></script>
-<script src='{{"js/local-search.js" | relURL}}'></script>
 <script src='{{"js/global-search.js" | relURL}}'></script>
 <script src='{{"js/select.js" | relURL}}'></script>

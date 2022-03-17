@@ -1,13 +1,13 @@
-<div class="faq-block">
-    <h1 style="margin:0;"></h1>
+<div class="faq-block" ref="{{ with .Get "id" }}{{.}}{{end}}">
     <div class="plus-icon"></div>
-    <h6 class="faq-ques" style="margin:0" ref="{{ with .Get "id" }}{{.}}{{end}}">
+    <div class="faq-ques">
         {{ with .Get "question" }} {{.}} {{end}}
-    </h6>
+        <div class="hovlink" onclick="copyHyperLink(event,this)"></div>
+    </div>
     <a class="anchor highlight" style="margin:0" id="{{ with .Get "id" }}{{.}}{{end}}"></a>
     <div class="faq-ans">
-        <div style="padding: 16px 30px;">
-            {{- .Inner | safeHTML | markdownify -}}
-        </div>
+      <div style="padding: 16px 30px;">
+        {{- .Inner | safeHTML | markdownify -}}
+      </div>
     </div>
-  </div>
+</div>

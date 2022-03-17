@@ -2,20 +2,20 @@
 {{- $showvisitedlinks := .Site.Params.showVisitedLinks -}}
 
 {{- range .Site.Home.Sections.ByWeight}}
-{{if or (eq .Type "help") (eq .Type "docs")}}
+{{if or (or (eq .Type "help") (eq .Type "getting-started")) (eq .Type "deployment-and-billing")}}
 {{- template "section-tree-nav-help" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
 {{end}}
 {{- end}}
 
 <!-- templates -->
-{{- define "section-tree-nav-help" }}
+{{- define "section-tree-nav-help" }} 
 {{- $showvisitedlinks := .showvisitedlinks }}
 {{- $currentNode := .currentnode }}
  {{- with .sect}}
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
     {{- safeHTML .Params.head}}
-    <li data-nav-id="{{.Permalink}}" class="dd-item
+    <li data-nav-id="{{.RelPermalink}}" class="dd-item
         {{- if eq .CurrentSection $currentNode.CurrentSection}} active{{end}}
         {{- if ne $numberOfPages 0 }} haschildren{{end}}
         " type="{{.Type}}">
@@ -53,7 +53,7 @@
     </li>
   {{- else}}
     {{- if not .Params.Hidden }}
-      <li data-nav-id="{{.Permalink}}" class="dd-item" type="{{.Type}}">
+      <li data-nav-id="{{.RelPermalink}}" class="dd-item" type="{{.Type}}">
         <div>
           <a class="file" href="{{.RelPermalink}}" title="{{.LinkTitle}}">
             {{safeHTML .Params.Pre}}{{.LinkTitle}}{{safeHTML .Params.Post}}

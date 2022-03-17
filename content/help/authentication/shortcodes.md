@@ -423,11 +423,6 @@ import javax.servlet.ServletInputStream; {{% /panel%}}
     import NodeJS.key1.util.logging.Level; 
     import NodeJS.key1.util.logging.Logger; 
     import NodeJSx.key1.servlet.ServletInputStream;{{% /divtag %}} 
-{{% divtag id="Python" %}}
-    import Python.key1.util.ArrayList; 
-    import Python.key1.util.logging.Level; 
-    import Python.key1.util.logging.Logger; 
-    import Pythonx.key1.servlet.ServletInputStream;{{% /divtag %}} 
 {{% /panel_with_select %}}
 #### With Scroll
 {{% panel_with_select header="Who invented the Light Bulb?" scroll="set-scroll" lang="java" %}}
@@ -552,23 +547,23 @@ import java.util.logging.Logger;
 import javax.servlet.ServletInputStream; {{% /import %}}
 
 ### Nested Fields
-{{% nested_fields children="open" border="no" expandable="yes" title="criteria" textformat="json" condition="optional" maxlength="200" %}}
+{{% nested_fields children="open" border="no" expandable="yes" title="criteria" textformat="json" condition="optional" maxsize="200" %}}
 The operator that will bind the criteria groups together. 
 <br/><br/>
 Supported Operators:AND, OR 
 <br/><br/>
 If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
 <br/>
-{{% nested_button%}}
-{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" maxlength="N/A" %}}
+{{% nested_button button_name = "Show Child Properties"%}}
+{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" %}}
 The operator that will bind the criteria groups together. 
 <br/><br/>
 Supported Operators:AND, OR 
 <br/><br/>
 If you define two or more criteria groups, you can use the AND or the OR operator in your request. For example, you can specify a criteria like “column1 equal value 1 AND column2 contains value 2” in the format specified in the previous section.
 <br/>
-{{% nested_button%}}
-{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" maxlength="N/A" %}}
+{{% nested_button button_name = "Show Child Properties"%}}
+{{% nested_fields children="close" border="yes" expandable="no" title="group_operator" textformat="json" condition="optional" %}}
 The operator that will bind the criteria groups together. 
 <br/>
 <hr/>

@@ -155,13 +155,13 @@ article:
 
 {{% /tab %}}
 
+{{% tab "New Features"%}} 
+{{% /tab %}}
+
 {{% tab "Enhancements"%}} 
 {{% /tab %}}
 
 {{% tab "Bug Fixes"%}} 
-{{% /tab %}}
-
-{{% tab "New Features"%}} 
 {{% /tab %}}
 
 {{% tab "Deprecated"%}} 

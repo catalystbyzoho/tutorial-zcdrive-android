@@ -1,7 +1,11 @@
   <div class="rating-form no-print" id="color-change">
     <div class="request-sec">
       <div class="yes-no">
-        <p class="rating-qtn">Was this document helpful?</p>
+        {{ if (eq .Type "tutorial-apps") }}
+        <p class="rating-qtn">Was this tutorial helpful?</p>
+        {{ else }}
+        <p class="rating-qtn">Was this document helpful?</p> 
+        {{ end }}
         <div class="yes-no-container">
           <div class="yes-no-btn yes-btn" onclick="submitRating('Yes');">
             <div class="thumbsup"></div>
@@ -22,7 +26,7 @@
           <textarea class="form email-field" placeholder="Want to say any additional feedbacks?" id="feedback_email"></textarea>
         </div>
         <div style="display: flex;">
-          <button class="skip-btn" onclick="hideFeedbackSec();">Skip</button>
+          <button class="skip-btn" onclick="submitFeedback();">Skip</button>
           <button class="submit-btn" onclick="submitFeedback();">Submit</button> 
         </div>
       </div>

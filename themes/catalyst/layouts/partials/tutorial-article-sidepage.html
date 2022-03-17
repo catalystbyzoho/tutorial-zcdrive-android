@@ -2,8 +2,8 @@
     <div class="TableOfContents" style="padding-bottom: 5px; margin-bottom: 15px;">
         {{ with .Params.component_involved }}
             {{ if .enable }}
-            <p class="feature-p" style="padding:20px 20px 0px 20px;">Time to Complete : {{ .Duration }}</p>
-            <p class="feature-p" style="margin:5px 20px;">Difficulty Level : {{ .Difficulty_level }}</p>
+            <p class="feature-p" style="padding:20px 20px 0px 20px;"><span style="opacity: 0.6;">Time to Complete : </span>{{ .Duration }}</p>
+            <p class="feature-p" style="margin:5px 20px;"><span style="opacity: 0.6;">Difficulty Level : </span>{{ .Difficulty_level }}</p>
             {{ end }}
         {{ end }}
     </div>
@@ -36,7 +36,7 @@
     </div>
     <div class="TableOfContents" style="border: none; margin-top: 20px;">
         <div id="tutorialSidepage">
-            {{ partial "suggestion-page.html"}}
+            {{ partial "suggestion-page.html" . }}
         </div>
     </div>
 {{ end }}

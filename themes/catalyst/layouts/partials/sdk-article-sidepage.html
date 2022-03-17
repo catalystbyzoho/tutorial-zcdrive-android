@@ -1,0 +1,16 @@
+<div class="TableOfContents">
+    <label>ON THIS PAGE</label>
+    {{ .TableOfContents }}
+</div>
+<div class="TableOfContents" style="padding-bottom: 5px; margin-top: 15px;">
+    <label>RELATED LINKS</label>           
+    {{ with .Params.related_link }}
+    {{ if .enable }}
+        {{ range .related_link_item }}
+            <a href="{{ .url }}">
+                <p class="feature-p" style="margin:0px 20px 10px 20px;">{{ .name }}</p>
+            </a>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+</div>

@@ -1,25 +1,4 @@
-<div class="themebutton" id="globalThemeSwitch" style="display: none;">
-    <div class="select-theme">Select theme</div>
-    <div class="theme-block" id="setlight">
-        <div class="lightbutton"></div>
-        <div class="theme-text">
-            Light theme
-        </div>
-        <div class="round">
-            <input type="checkbox" id="checkbox-light"/>
-            <label for="checkbox-light" style="margin-left: 45px; margin-top: 5px;"></label>
-        </div>
-    </div>
-    <div class="theme-block" id="setdark">
-        <div class="darkbutton"></div>
-        <div class="theme-text">
-            Dark theme
-        </div>
-        <div class="round">
-            <input type="checkbox" id="checkbox-dark"/>
-            <label for="checkbox-dark" style="margin-left: 45px; margin-top: 5px;"></label>
-        </div>
-    </div>
-</div>
-<button class="language"><div class="lang-icon"></div><div>English (US)</div></button>
-<button id="dark-mode-button" class="theme" onclick="themeModeSwitcher()"></button>
+<label id="switch" class="switch">
+    <input type="checkbox" onchange="themeModeSwitcher()" id="slider">
+    <span class="slider round"></span>
+</label>
