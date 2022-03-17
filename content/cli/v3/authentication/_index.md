@@ -5,5 +5,5 @@ title= "Authentication"
 type= "cli"
 layout= "single"
 linkTitle = "cliv3"
-weight= 1
+weight= 3
 +++

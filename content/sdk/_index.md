@@ -11,7 +11,7 @@ version:
       url: "/sdk/java/v1/authentication/authentication/"
     - language : "nodejs"
       version : "nodejs 1.2.3"
-      url: "/sdk/nodejs/v1/authentication/authentication/"
+      url: "/sdk/nodejs/v3/overview/"
     - language : "android"
       version : "android 1.2.3"
       url: "/sdk/android/v1/authentication/authentication/"

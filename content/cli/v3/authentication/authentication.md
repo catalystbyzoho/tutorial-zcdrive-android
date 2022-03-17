@@ -5,7 +5,7 @@ tags : [ "Description", "Common operations", "Instance methods" ]
 type: "cli"
 layout: "single"
 linkTitle : "cliv3"
-weight: 1
+weight: 3
 version:
   current_version: "v3"
   version_item:

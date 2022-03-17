@@ -582,11 +582,10 @@ body {
   body .inline {
     display: flex; }
   body .bold {
-    font: 14px/26px Inconsolata;
-    font-weight: bold;
+    font: 15px/26px Inconsolata-Bold;
     margin-right: 15px; }
   body .light {
-    font: 12px/26px zoho-puvi-regular;
+    font: 13px/26px zoho-puvi-regular;
     text-transform: lowercase; }
   body .ft-st {
     font: 14px/20px zoho-puvi-regular; }
@@ -949,6 +948,7 @@ span.highlight.highlight-i {
   --hover-color: #000000;
   --search-shadow-color: #7B7B7B76;
   --filter-shadow-color: #D3D3D376;
+  --note-badge: #8D58C14D;
   --search-outer-background-color: rgba(142,142,142,0.4);
   --scrollbar-color: rgba(142,142,142);
   --github-lite-icon: url('/images/LightPages.svg');
@@ -1028,6 +1028,7 @@ span.highlight.highlight-i {
   --hover-color: #FFFFFF;
   --search-shadow-color: #33333376;
   --filter-shadow-color: #33333376;
+  --note-badge: #634484;
   --search-outer-background-color: rgba(142,142,142,0.4);
   --scrollbar-color: rgba(142,142,142);
   --github-lite-icon: url('/images/Darkpages.svg');

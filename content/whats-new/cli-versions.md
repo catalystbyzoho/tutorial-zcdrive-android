@@ -4,7 +4,7 @@ description: "The Data Store in Catalyst is a cloud-based relational database ma
 tags : [ "Description", "Common operations", "Instance methods" ]
 type: "whats-new"
 layout: "single"
-weight: 6
+weight: 7
 
 article:
   title : "Release Notes"

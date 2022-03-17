@@ -1,16 +1,15 @@
 +++
 date= ""
-title= "Signup user"
+title= "Add New User"
 description= "Authentication API"
 tags = [ "Description", "Common operations", "Instance methods" ]
 type= "api"
 layout= "single"
 weight= 1
-
 +++
 
+{{% section path="/api/authentication/signup-user/" id="AddNewUser" %}}
 
-{{% section path="/api/authentication/signup-user/" id="Signupuser" %}}
 <!-- Leftcontent -->
 {{%divtag class="LeftContent"%}}
 
@@ -18,35 +17,41 @@ weight= 1
 
 {{%link href="https://catalyst.zoho.com/help/authentication.html"%}}Catalyst Authentication{{%/link%}} features enable you to add end-users to your Catalyst serverless applications, configure their user accounts and roles, and manage user sign-in and authentication of your application.
 
-### Add a New User
+## Add a New User
 
-#### Description
+### Description
 
-This API enables you to add a new end-user to the Catalyst application for a specific platform. When the user has signed up, unique identification values such as {{%link href="https://catalyst.zoho.com/help/users.html"%}}{{%badge%}}ZUID{{%/badge%}}, {{%badge%}}userID{{%/badge%}}, {{%badge%}}ZAAID{{%/badge%}}{{%/link%}} are created for them.
+This API enables you to add a new end-user to the Catalyst application for a specific platform. When the user has signed up, unique identification values such as {{%link href="https://catalyst.zoho.com/help/users.html"%}}ZUID, userID, ZAAID{{%/link%}} are created for them.
 
 {{%note%}}{{%bold class="bold-primary"%}}Note:{{%/bold%}} You will be able to add only 25 users in your application in the {{%link href="https://catalyst.zoho.com/help/environments.html"%}}development environment{{%/link%}}. After you deploy your application to production, you can include any number of end-users in it.{{%/note%}}
 
+### Request Details
+<br>
 
 #### Request URL
 <!-- shortcode 1 -->
-{{%request class="apired" req="POST" %}} /v1/project/{project_id}/project-user/signup{{%/request%}}
-
-{{%request_id id="project_id" data="Numerical" %}}The {{%link href="https://catalyst.zoho.com/help/general-settings.html"%}}unique ID of the project{{%/link%}}{{%/request_id%}}
+{{%request class="apiyellow" req="POST" %}}<p>https://api.catalyst.zoho.com/baas/v1/project/{project_id}/project-user/signup</p>{{%/request%}}
 
 
-### Request Headers
+{{%request_id id="project_id" data="Numerical" %}}The {{%link href="https://catalyst.zoho.com/help/general-settings.html"%}}unique ID{{%/link%}} of the project{{%/request_id%}}
+
+
+#### Request Headers
 {{%scope%}} **Authorization:** Zoho-oauthtoken 1000.910*************************** 16.2f****************************57 <br>
- {{%bold%}}Content-Type:{{%/bold%}} application/json <br>
- {{%bold%}}PROJECT_ID:{{%/bold%}} {project_id}
+ {{%bold class="bold-primary"%}}Content-Type:{{%/bold%}} application/json <br>
+ {{%bold class="bold-primary"%}}PROJECT_ID:{{%/bold%}} {project_id}
 {{%/scope%}}
+<br>
 
-### Scope
+#### Scope
 {{%scope%}}
 scope=ZohoCatalyst.projects.users.CREATE
 {{%/scope%}}
 <br>
 {{%note%}} {{%bold class="bold-primary"%}}Note:{{%/bold%}} Passing the {{%badge%}}{{%link href="https://catalyst.zoho.com/help/roles.html#Creating_Role"%}}role_id{{%/link%}}{{%/badge%}} of the role that the user must be assigned to, is optional. If you pass the {{%badge%}}role_id{{%/badge%}} in the API, authentication becomes mandatory. If you skip passing the {{%badge%}}role_id{{%/badge%}}, Catalyst does not authenticate the request and you need not specify the scope.{{%/note%}}
 <br>
+
+#### Request JSON Properties
 
 {{%request_id id="ZAID" data="String" %}} {{%link href="https://catalyst.zoho.com/help/general-settings.html"%}}Unique identifier{{%/link%}} that maps an application to a project <br> Mandatory: Yes <br> Max Size: 100{{%/request_id%}}
 
@@ -55,19 +60,27 @@ scope=ZohoCatalyst.projects.users.CREATE
 
 {{%request_id id="redirect_url" data="String" %}} The URL to be redirected to, after the user signs up for the application <br> Mandatory: No <br> Max Size: 200{{%/request_id%}}
 
-{{%request_id id="user_details" data="JSON" %}} The JSON that contains the details of the user <br> Mandatory: Yes{{%/request_id%}}
-
-**user_details JSON**
+{{% nested_fields children="open" border="no" expandable="no" title="user_details" textformat="json" condition="mandatory" maxlength=" " %}}
+ The JSON that contains the details of the user 
+{{% nested_button%}}
+{{% nested_fields children="close" border="yes" expandable="no" title="user_details" textformat="json" condition="mandatory" maxlength=" " %}}
 
 {{%request_id id="first_name" data="String" %}} First name of the user <br> Mandatory: No <br> Max Size: 100{{%/request_id%}}
 {{%request_id id="last_name" data="String" %}} Last name of the user <br> Mandatory: Yes <br> Max Size: 100{{%/request_id%}}
 {{%request_id id="email_id" data="String" %}} Email address of the user <br> Mandatory: Yes <br> Max Size: N/A{{%/request_id%}}
 {{%request_id id="role_id" data="String" %}} Unique identification of the role the user must be assigned to <br> Mandatory: No <br> Max Size: N/A{{%/request_id%}}
 
+{{% /nested_fields %}}
+{{% /nested_fields %}}
+ <br>
+
+
+### Response Details
+
+The response will contain the details of the user added in the {{%badge%}}data{{%/badge%}} key, including the metadata and identification values such as {{%badge%}}zaid{{%/badge%}}, {{%badge%}}user_id{{%/badge%}}, and {{%badge%}}org_id{{%/badge%}} that were generated.
 
 
 <!-- shortcode 1 ends -->
-
 
 {{%/divtag%}}
 <!-- Rightcontent -->
@@ -92,8 +105,7 @@ scope=ZohoCatalyst.projects.users.CREATE
 }'
 {{% /panel_without_adjustment %}}
 
-{{% panel_without_adjustment header="Sample Response" lang="bash"%}}curl -X POST \
- {
+{{% panel_without_adjustment header="Sample Response" lang="bash"%}}
     "status": "success",
     "data": {
         "zaid": 1010309726,

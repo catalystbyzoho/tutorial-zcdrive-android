@@ -19,7 +19,7 @@ article:
 
 {{%expand question="How do I deploy a project to the Catalyst remote console?" id="hello" %}}
 
-Once you create and test your application in your local machine using the CLI or any other tool, you can deploy the project to the Catalyst remote console in three ways:
+Once you create and test your {{%badge%}}application{{%/badge%}} in your local machine using the CLI or any other tool, you can deploy the project to the Catalyst remote console in three ways:
 
 {{% bold %}} 1 . Using Catalyst CLI: {{% /bold %}}
 
@@ -27,13 +27,27 @@ You can deploy your project from the Catalyst CLI by executing the catalyst depl
 
 {{%bold%}} 2 . Uploading the files manually:{{% /bold %}}
 
-* **Client component:** You can upload your project’s client package manually to the Catalyst console and host the client component. Refer to the {{%link%}}Web Client Hosting help page{{%/link%}} for a detailed explanation.
+* **Client component:** You can upload your project’s client package manually to the Catalyst console and host the client component. Refer to the {{%link%}}Web Client Hosting help page{{%/link%}} for a detailed explanation.<br>
+{{%image src="/images/faq/catalyst_cli_options_project.jpg" class="w100" alt="cli-version" %}}{{%/image%}}
 * **Functions:** You can create functions in your project directly from the Catalyst remote console, instead of creating them in your local machine. You can learn more about this from the {{%link%}}Functions help page.{{%/link%}}
 * **Android or iOS application:** You can upload the source files of your Android or iOS application in Device Management in the Catalyst console. Refer to the {{%link%}}Device Management help page{{%/link%}} for a detailed explanation.
+
+{{%note%}}{{%bold class="bold-primary"%}}Note:{{%/bold%}} This is a note. {{%badge%}}Badge{{%/badge%}} in note.{{%/note%}}
 
 {{%bold%}} 3 . Downloading your project files from a GitHub repository:{{% /bold %}}
 
 You can deploy the client and functions together or individually from your GitHub repository. You can learn more about this from the {{%link%}}GitHub Integration help page.{{%/link%}}
+
+{{%divtag%}}
+
+| Format      | Example |
+| :--- | :---: |
+| YYYY-MM-DD      | 2020-01-20      |
+| YYYY-MM-DD      | 2020-01-20      |
+| YYYY/MM/DD hh:mm:ss      | 2020/01/20 23:54:30     |
+| YYYY-MM-DDThh:mm:ss.sTZD      | 2020-01-20T05:19:31.665523 + 00:00      |
+
+{{%/divtag%}}
 
 {{% /expand%}}
 

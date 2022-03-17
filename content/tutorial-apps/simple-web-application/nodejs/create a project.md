@@ -1,6 +1,6 @@
 ---
 title: "Create a project"
-description: "TCreate a single-page serverless web application using Catalyst Advanced I/O Function and Catalyst Data Store that allows you to report or look up alien encounters in a city."
+description: "Create a single-page serverless web application using Catalyst Advanced I/O Function and Catalyst Data Store that allows you to report or look up alien encounters in a city."
 tags : [ "Description", "Common operations", "Instance methods" ]
 type: "tutorial-apps"
 layout: "single"

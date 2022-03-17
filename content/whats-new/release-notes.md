@@ -1,15 +1,16 @@
 ---
-title: "Release Notes"
+title: "All Release Notes"
 description: "The Data Store in Catalyst is a cloud-based relational database management system which stores the persistent data of your application. This data repository includes the data from the application’s backend and the data of the application’s end users."
 tags : [ "Description", "Common operations", "Instance methods" ]
 type: "whats-new"
 layout: "single"
-head: "LATEST UPDATES"
+head: "RELEASE NOTES"
 weight: 1
 
 article:
   title : "Release Notes"
-  content : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> lorem Ipsum has been the industry’s standard dummy text"
+  content : "Java SDK: v1.2.5 | Node.js SDK: v2.3.4 | Web SDK: v1.2.4 <br>
+  CLI: v10.2"
   type : "whats-new"
   
 ---
@@ -28,7 +29,12 @@ article:
 {{% divtag class="newfeatures" %}}
 {{% divtag class="new-feature-badge" %}}New feature{{%/divtag%}}
 
-**Application Performance Monitoring:** We have introduced the APM feature in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application
+**Application Performance Monitoring:** We have introduced the {{%badge%}}APM feature{{%/badge%}} in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application.
+<br>
+
+We have introduced the {{%badge%}}APM feature{{%/badge%}} in the console which provides valuable and in-depth insights about the executions of the {{%link%}}functions{{%/link%}} in your Catalyst application.
+
+{{%note%}}{{%bold class="bold-primary"%}}Note:{{%/bold%}} This is a note. {{%badge%}}Badge{{%/badge%}} in note.{{%/note%}}
 
 {{%link%}}Application Performance Monitoring{{%/link%}}
 {{%/divtag%}}
@@ -55,7 +61,7 @@ article:
 
 {{% container id="java---124" %}}
 
-# 2020 - 19, December
+# 2020 - December
 ## Java - 1.2.4
 
 {{% divtag class="newfeatures" %}}
