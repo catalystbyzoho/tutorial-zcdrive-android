@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ZCDrive</string>
+    <string name="url_scheme">home</string>
+    <string name="login_failed">Login Failed !</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="uploading">Uploading</string>
+    <string name="uploaded_successfully">Uploaded Successfully</string>
+    <string name="uploaded_failed">Uploaded Failed</string>
+    <string name="uploaded_image">Uploaded Image</string>
+    <string name="add">add</string>
+    <string name="session_expired">Session Expired</string>
+    <string name="response">Response</string>
+    <string name="file">File</string>
+    <string name="file_name">File Name</string>
+    <string name="uploaded_time">Uploaded Time</string>
+    <string name="delete">Delete</string>
+    <string name="pdf">PDF</string>
+    <string name="files">Files (0) </string>
+    <string name="type_of_file">Type Of File</string>
+    <string name="download">Download</string>
+    <string name="view">View</string>
+    <string name="landing_text">Upload and Download your files with ZCDrive</string>
+    <string name="folder_image">folder_image</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="already_a_user">Already a user ,</string>
+    <string name="login_underline"> <u>Login</u></string>
+    <string name="no_files">No Files</string>
+</resources>
